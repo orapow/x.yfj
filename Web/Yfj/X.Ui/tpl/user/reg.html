@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>会员注册 | 综合商城-通用行业</title>
+    #parse("user/com/_head.html")
+    <link href="/css/web/common.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/web/major_maincolor.css?major=3" rel="stylesheet" type="text/css" css_name="css_major" />
+    <style type="text/css">
+        .x-form .lbe { height: 35px; line-height: 35px; font-size: 14px; }
+        .x-form input { height: 25px; line-height: 25px; }
+    </style>
+</head>
+<body>
+    #parse("_top.html")
+    <div class="login_content defined_logon_boxNew login_img">
+        <div class="register_box" style="margin: 0px auto; background-color: rgb(255, 255, 255);">
+            <div class="login_login_content_titlebox">
+                <ul class="login_login_content_title">
+                    <li><a href="/user/login.html" id="to_logon">登录</a></li>
+                    <li class="checked"><a href="javascript:void(0)" id="to_register">注册</a></li>
+                </ul>
+            </div>
+            <div class="Register_ContentBox">
+                <x:form api="user.reg">
+                    <x:text name="uid" title="用户名" tip="请输入用户名" size="4" chk="no|len:6," />
+                    <x:text name="pwd" title="输入密码" tip="请输入密码" size="4" chk="no" tp="2" />
+                    <x:text name="rpwd" title="重复密码" tip="请重复输入密码" size="4" chk="no|re:pwd,0" tp="2" />
+                    <x:text name="email" title="电子邮箱" tip="可用于找回密码和接收服务信息" size="4" chk="t:mail" />
+                    <hr />
+                    <x:text name="invt" title="推荐人" tip="帐号/电话/邮箱都可以" size="4" />
+                    <x:row>
+                        <x:text size="2" name="code" title="验证码" tip="5位验证码" chk="no|len:5|t:num" /> <img onclick="changecode()" id="id_yzm" style="display:none;" />
+                    </x:row>
+                    <x:row title="阅读协议">
+                        <x:pick src="loc:同意|不同意" mode="2" name="is_agree" def="2" /> 《<a>注册协议</a>》
+                    </x:row>
+                    <br />
+                    <button class="btn btn-large" type="submit" style="border:none; width: 100%; background: #ec4245; color:white;">立即登陆</button>
+                </x:form>
+            </div>
+        </div>
+    </div>
+    #parse("_foot.html")
+    <script type="text/javascript">
+        $(function () {
+
+            $(".x-form").xform({
+                prepost: function (d) {
+                    console.log(JSON.stringify(d));
+                    if (d.is_agree != 1) { x.alert("请仔细阅读并同意注册协议！"); return false; }
+                    else return true;
+                }
+            });
+
+            $("#id_code").click(function () {
+                changecode();
+            });
+
+        })
+
+        function changecode() {
+            if (!id_uid.value) return;
+            $("#id_yzm").attr("src", "/com/code-" + id_uid.value + "-" + new Date().getTime() + ".html").show();
+        }
+
+    </script>
+</body>
+</html>

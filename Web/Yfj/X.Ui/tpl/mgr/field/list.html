@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>扩展属性 - $cfg.name</title>
+</head>
+<body>
+    <!--<div class="title">
+        <span class="main">扩展属性</span> - <span class="sub">商品管理</span>
+    </div>-->
+    <div class="search">
+        <x:form>
+            <x:text name="key" tip="搜索名称" size="4" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+            <div class="btns">
+                <a class="btn btn-primary" href="edit-${pid}.html"><i class="icon-plus"></i>新增属性</a>
+            </div>
+        </x:form>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <script type="text/javascript">
+
+        $("form:eq(0)").xform({
+            callback: function (d) {
+                d.page = 1;
+                g.getlist(d);
+            }
+        });
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30, pid: "$pid" },
+            api: "mgr.field.list",
+            fs: [
+                { t: "名称", f: "{name}", w: 160, align: "left" },
+                { t: "类型", f: "{type}", w: 60, align: "center" },
+                { t: "多值录入", f: "{muti}", w: 50, align: "center" },
+                { t: "关联价格", f: "{price}", w: 50, align: "center" },
+                { t: "关联库存", f: "{stock}", w: 50, align: "center" },
+            ],
+            btns: [
+                { txt: "编辑", ico: "edit", link: "edit-${pid}-{id}.html", confirm: false },
+                { txt: "删除", ico: "remove", act: "del", confirm: "确认删除此属性？有此属性的商品相关的值将会被删除？" },
+            ]
+        };
+
+        cfg.cellclick = function (act, d) {
+            switch (act) {
+                case "del":
+                    dodel(d.id);
+                    break;
+                case "edit":
+                    show_edit(d.id);
+                    break;
+            }
+        };
+
+        var g = x.grid.init(cfg);
+
+        function dodel(id) {
+            x.doapi("mgr.field.del", { id: id, }, function () {
+                g.getlist();
+            });
+        }
+
+    </script>
+</body>
+</html>

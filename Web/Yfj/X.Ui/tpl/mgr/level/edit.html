@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>等级编辑 - $cfg.name</title>
+    <style type="text/css">
+        body { margin: 0; }
+    </style>
+</head>
+<body>
+    <x:form api="mgr.level.save">
+        <input type="hidden" name="id" value="$!item.id" x-check="" />
+        <x:text title="等级名称" name="name" size="3" def="$!item.name" />
+        <x:text title="享受折扣" name="off" size="3" def="$!item.f1" />
+        <x:text title="需要积分" name="nd" size="3" def="$!item.f2" />
+        <x:text title="排序" name="sort" size="3" def="#if($id>0)$!item.sort#else 99#end" />
+        <div class="btns">
+            <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>提交保存</button>
+        </div>
+    </x:form>
+    <br />
+    <br />
+    <script type="text/javascript">
+        $("form:eq(0)").xform({
+            callback: function (d) { x.closewin(); }
+        });
+    </script>
+</body>
+</html>

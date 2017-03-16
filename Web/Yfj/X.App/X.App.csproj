@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{133B22BE-39B8-47C5-9577-884A5F8F3EB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>X.App</RootNamespace>
+    <AssemblyName>X.App</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apis\com\uploadbd.cs" />
+    <Compile Include="Apis\mgr\city\del.cs" />
+    <Compile Include="Apis\mgr\city\list.cs" />
+    <Compile Include="Apis\mgr\city\save.cs" />
+    <Compile Include="Apis\mgr\sman\del.cs" />
+    <Compile Include="Apis\mgr\sman\list.cs" />
+    <Compile Include="Apis\mgr\sman\save.cs" />
+    <Compile Include="Apis\mgr\level\del.cs" />
+    <Compile Include="Apis\mgr\level\list.cs" />
+    <Compile Include="Apis\mgr\level\save.cs" />
+    <Compile Include="Apis\mgr\stand\del.cs" />
+    <Compile Include="Apis\mgr\stand\list.cs" />
+    <Compile Include="Apis\mgr\stand\save.cs" />
+    <Compile Include="Apis\mgr\brand\del.cs" />
+    <Compile Include="Apis\mgr\brand\list.cs" />
+    <Compile Include="Apis\mgr\brand\save.cs" />
+    <Compile Include="Apis\mgr\dict\list.cs" />
+    <Compile Include="Apis\mgr\dict\save.cs" />
+    <Compile Include="Apis\mgr\dict\del.cs" />
+    <Compile Include="Apis\mgr\goods\del.cs" />
+    <Compile Include="Apis\mgr\goods\list.cs" />
+    <Compile Include="Apis\mgr\goods\save.cs" />
+    <Compile Include="Apis\mgr\goods\status.cs" />
+    <Compile Include="Apis\mgr\din.cs" />
+    <Compile Include="Apis\mgr\sys\dict\del.cs" />
+    <Compile Include="Apis\mgr\sys\dict\save.cs" />
+    <Compile Include="Apis\mgr\user\del.cs" />
+    <Compile Include="Apis\mgr\user\list.cs" />
+    <Compile Include="Apis\mgr\user\setattr.cs" />
+    <Compile Include="Apis\mgr\user\setpwd.cs" />
+    <Compile Include="Apis\mgr\xmg.cs" />
+    <Compile Include="Apis\com\upload.cs" />
+    <Compile Include="Apis\mgr\login.cs" />
+    <Compile Include="Apis\mgr\logout.cs" />
+    <Compile Include="Apis\xapi.cs" />
+    <Compile Include="Com\Config.cs" />
+    <Compile Include="Com\Sms.cs" />
+    <Compile Include="Com\Wx.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Views\com\err.cs" />
+    <Compile Include="Views\com\code.cs" />
+    <Compile Include="Views\com\dict.cs" />
+    <Compile Include="Views\com\getpos.cs" />
+    <Compile Include="Views\index.cs" />
+    <Compile Include="Views\mgr\city\edit.cs" />
+    <Compile Include="Views\mgr\city\list.cs" />
+    <Compile Include="Views\mgr\sman\edit.cs" />
+    <Compile Include="Views\mgr\sman\list.cs" />
+    <Compile Include="Views\mgr\level\edit.cs" />
+    <Compile Include="Views\mgr\level\list.cs" />
+    <Compile Include="Views\mgr\stand\edit.cs" />
+    <Compile Include="Views\mgr\stand\list.cs" />
+    <Compile Include="Views\mgr\brand\edit.cs" />
+    <Compile Include="Views\mgr\brand\list.cs" />
+    <Compile Include="Views\mgr\field\edit.cs" />
+    <Compile Include="Views\mgr\field\list.cs" />
+    <Compile Include="Views\mgr\dict\select.cs" />
+    <Compile Include="Views\mgr\field\select.cs" />
+    <Compile Include="Views\mgr\goods\attr.cs" />
+    <Compile Include="Views\mgr\goods\edit.cs" />
+    <Compile Include="Views\mgr\goods\list.cs" />
+    <Compile Include="Views\mgr\mch\edit.cs" />
+    <Compile Include="Views\mgr\mch\list.cs" />
+    <Compile Include="Views\mgr\store\edit.cs" />
+    <Compile Include="Views\mgr\store\list.cs" />
+    <Compile Include="Views\mgr\sys\dict\edit.cs" />
+    <Compile Include="Views\mgr\sys\dict\list.cs" />
+    <Compile Include="Views\mgr\dict\edit.cs" />
+    <Compile Include="Views\mgr\dict\list.cs" />
+    <Compile Include="Views\mgr\user\attr.cs" />
+    <Compile Include="Views\mgr\user\list.cs" />
+    <Compile Include="Views\wx\addr\edit.cs" />
+    <Compile Include="Views\wx\addr\list.cs" />
+    <Compile Include="Views\wx\ticket.cs" />
+    <Compile Include="Views\wx\order.cs" />
+    <Compile Include="Views\wx\pay.cs" />
+    <Compile Include="Views\wx\detail.cs" />
+    <Compile Include="Views\wx\cart.cs" />
+    <Compile Include="Views\wx\login.cs" />
+    <Compile Include="Views\wx\index.cs" />
+    <Compile Include="Views\wx\list.cs" />
+    <Compile Include="Views\wx\_wx.cs" />
+    <Compile Include="Views\xview.cs" />
+    <Compile Include="Views\com\view.cs" />
+    <Compile Include="Views\mgr\index.cs" />
+    <Compile Include="Views\mgr\login.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\mgr\xmg.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Xc\Core\X.Core.csproj">
+      <Project>{9364f44b-c253-4a46-a86b-f9248325543d}</Project>
+      <Name>X.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xc\Data\X.Data.csproj">
+      <Project>{af748a76-bd19-4240-9974-10a8c61d3347}</Project>
+      <Name>X.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\X.Web\X.Web.csproj">
+      <Project>{6e4653a5-1350-4fb0-a52e-4fde25ae8ec9}</Project>
+      <Name>X.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

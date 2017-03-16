@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>我的资料 | 综合商城-通用行业</title>
+    #parse("user/com/_head.html")
+    <link href="/css/web/common.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/web/major_maincolor.css?major=3" rel="stylesheet" type="text/css" css_name="css_major" />
+    <link href="/css/web/account.css" rel="stylesheet" />
+</head>
+<body>
+    #parse("_top.html")
+    <div class="account-info_box">
+        <div class="contentbox">
+            <table width="100%" border="0">
+                <tr>
+                    <td style="width: 120px" valign="top" width="180px">
+                        #parse("/user/_left.html")
+                    </td>
+                    <td width="100%" valign="top">
+                        <div id="show_back_stage_up"></div>
+                        <div id="show_back_stage_down"></div>
+                        <div class="account-info_content">
+                            <div class="buy_way1"><a href="javascript:void(0)">会员中心</a>&gt;<a href="javascript:back_stage.show_account_basic()">账户信息</a>&gt;<a href="javascript:void(0)">我的资料</a></div>
+                            <div class="AccountInfo_Title">账户信息</div>
+                            <div class="account-info_content-info">
+                                <div class="AccountInfo_Hint">选择填写完善更多个人信息，有助于我们为您提供更加个性化的服务；商城将尊重并保护您的隐私。</div>
+                                <ul>
+                                    <li class="account_info_title">会员头像：</li>
+                                    <li class="account-info_clumn">
+                                        <div class="BoxStyleBox_InfoContent">
+                                            <div class="BasicSet_InfoContent_WebsiteIcon" id="set_buyer_head_photo"> <img class="buyer_avatar" id="head_photo" src="images/user.png"> </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="account_info_title">用户名：</li>
+                                    <li class="account-info_clumn"><em class="account-info_name">$!cu.uid</em></li>
+                                </ul>
+                                <ul>
+                                    <li class="account_info_title">昵称：</li>
+                                    <li class="account-info_clumn">
+                                        <input id="buyer_nickname" class="input_height" value="$!cu.nickname">
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="account_info_title">会员等级：</li>
+                                    <li class="account-info_clumn"><em class="account-info_name"></em></li>
+                                </ul>
+                                <ul>
+                                    <li class="account_info_title">会员积分：</li>
+                                    <li class="account-info_clumn"><em class="account-info_name">$!cu.exp</em></li>
+                                </ul>
+                                <ul>
+                                    <li class="account_info_title">真实姓名：</li>
+                                    <li class="account-info_clumn">
+                                        <input id="buyer_realname" class="input_height" value="$!cu.name">
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="account_info_title"><span id="info_sex_asterisk" style="color: rgb(255, 0, 0); display: none;">* </span>性别：</li>
+                                    <li class="account-info_clumn">
+                                        <input class="input-align" type="radio" value="2" name="user_sex" checked="checked">
+                                        保密
+                                        <input class="input-align" type="radio" value="1" name="user_sex">
+                                        男
+                                        <input class="input-align" type="radio" value="0" name="user_sex">
+                                        女
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="account_info_title">生日：</li>
+                                    <li class="account-info_clumn">
+                                        <input readonly id="buyer_birthday" class="input_height hasDatepicker" name="buyer_birthday" type="text" value="">
+                                        <button type="button" class="ui-datepicker-trigger">...</button>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="account_info_title"><span id="info_phone_asterisk" style="color: rgb(255, 0, 0); display: none;">* </span>手机号码：</li>
+                                    <li class="account-info_clumn">
+                                        <input id="buyer_phone" class="input_height" value="$!cu.tel">
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="account_info_title"><span id="info_email_asterisk" style="color: rgb(255, 0, 0); display: none;">* </span>电子邮件：</li>
+                                    <li class="account-info_clumn">
+                                        <input id="buyer_mail" class="input_height" value="$!cu.email">
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="account_info_title">所在地：</li>
+                                    <li class="account-info_clumn">
+                                        <div id="buyer_address">
+                                            <ul class="ul-float">
+                                                <li>
+                                                    <select class="select-width" id="prov" name="ProvId">
+                                                        <option value="0"> 请选择 </option>
+                                                        <option value="11"> 北京市 </option>
+                                                        <option value="12"> 天津市 </option>
+                                                        <option value="13"> 河北省 </option>
+                                                        <option value="14"> 山西省 </option>
+                                                        <option value="15"> 内蒙古自治区 </option>
+                                                        <option value="21"> 辽宁省 </option>
+                                                        <option value="22"> 吉林省 </option>
+                                                        <option value="23"> 黑龙江省 </option>
+                                                        <option value="31"> 上海市 </option>
+                                                        <option value="32"> 江苏省 </option>
+                                                        <option value="33"> 浙江省 </option>
+                                                        <option value="34"> 安徽省 </option>
+                                                        <option value="35"> 福建省 </option>
+                                                        <option value="36"> 江西省 </option>
+                                                        <option value="37"> 山东省 </option>
+                                                        <option value="41"> 河南省 </option>
+                                                        <option value="42"> 湖北省 </option>
+                                                        <option value="43"> 湖南省 </option>
+                                                        <option value="44"> 广东省 </option>
+                                                        <option value="45"> 广西壮族自治区 </option>
+                                                        <option value="46"> 海南省 </option>
+                                                        <option value="50"> 重庆市 </option>
+                                                        <option value="51"> 四川省 </option>
+                                                        <option value="52"> 贵州省 </option>
+                                                        <option value="53"> 云南省 </option>
+                                                        <option value="54"> 西藏自治区 </option>
+                                                        <option value="61"> 陕西省 </option>
+                                                        <option value="62"> 甘肃省 </option>
+                                                        <option value="63"> 青海省 </option>
+                                                        <option value="64"> 宁夏回族自治区 </option>
+                                                        <option value="65"> 新疆维吾尔自治区 </option>
+                                                        <option value="66"> 新疆生产建设兵团 </option>
+                                                        <option value="67"> 香港 </option>
+                                                        <option value="68"> 澳门 </option>
+                                                        <option value="69"> 台湾 </option>
+                                                        <option value="70"> 其他地区 </option>
+                                                        <option value="71"> 海外 </option>
+                                                    </select>
+                                                </li>
+                                                <li>
+                                                    <select class="select-width" id="city" name="CityId">
+                                                        <option value="0"> 请选择 </option>
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="account_info_title"><span id="info_register_referee_asterisk" style="color: rgb(255, 0, 0); display: none;">* </span>推荐员：</li>
+                                    <li class="account-info_clumn"><em class="account-info_name">-</em></li>
+                                </ul>
+                                <ul>
+                                    <li class="account-info_clumn">
+                                        <div class="input-style1" id="save_buyerinfo" style="float: left;margin-left:80px;">保存</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    #parse("_foot.html")
+</body>
+</html>

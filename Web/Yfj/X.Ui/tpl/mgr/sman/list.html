@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>业务员管理 - $cfg.name</title>
+    <style type="text/css">
+        .img { width: 30px; }
+        .table td { height: 30px; line-height: 30px; }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">业务员列表</span> - <span class="sub">业务员管理</span>
+    </div>
+    <div class="search">
+        <x:form>
+            <x:text name="key" tip="搜索名称" size="4" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+            <div class="btns">
+                <a class="btn btn-primary" id="btn_add" onclick="show_edit()"><i class="icon-plus"></i>新增业务员</a>
+            </div>
+        </x:form>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <script type="text/javascript">
+        $("form:eq(0)").xform({
+            callback: function (d) {
+                d.page = 1;
+                g.getlist(d);
+            }
+        })
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30 },
+            api: "mgr.sman.list",
+            fs: [
+                { t: "姓名", f: "<img src='{img}' class='img'/> {name}", w: 120, align: "left" },
+                { t: "电话", f: "{tel}", w: 80, align: "center" },
+                { t: "加入日期", f: "{date}", w: 120, align: "center" },
+            ],
+            btns: [
+                { txt: "编辑", ico: "edit", act: "edit", confirm: false },
+                { txt: "删除", ico: "remove", act: "del" },
+            ]
+        };
+
+        cfg.cellclick = function (act, d) {
+            switch (act) {
+                case "del":
+                    dodel(d.id);
+                    break;
+                case "edit":
+                    show_edit(d.id);
+                    break;
+            }
+        };
+
+        var g = x.grid.init(cfg);
+
+        function dodel(id) {
+            x.doapi("mgr.sman.del", { id: id, }, function () {
+                g.getlist();
+            });
+        }
+
+        function show_edit(id) {
+            x.openwin("edit-" + (id || "") + ".html", "编辑业务员", function () {
+                g.getlist();
+            }, { w: 400, h: 350 });
+        }
+    </script>
+</body>
+</html>

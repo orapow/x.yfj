@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("user/com/_head.html")
+    <title>编辑收货地址</title>
+</head>
+<body>
+    <x:form api="user.addr.save">
+        <input type="hidden" x-check="" name="id" value="$!item.address_id" />
+        <x:text title="收货人" name="name" size="3" def="$!item.name" />
+        <x:text title="联系电话" name="tel" size="3" def="$!item.tel" />
+        <x:row title="收货地区">
+            <x:pick src="dict:sys.city:1" to="shi" name="she" def="$!item.sheng" /> <x:pick src="dict:sys.city:1" name="shi" to="qu" def="$!item.shi"/> <x:pick src="dict:sys.city:1" name="qu" to="zh" def="$!item.qu" /> <x:pick src="dict:sys.city:1" name="zh" def="$!item.zhen" />
+        </x:row>
+        <x:text title="详细地址" name="addr" size="5" def="$!item.addr" />
+        <x:text title="配送时间" name="st" def="$!item.stime" />
+        #if($!id>0)
+        <x:pick title="设为默认" name="def" src="loc:是|否" mode="2" def="#if($item.def=="True"||$!id==0) 1 #else 2 #end" />
+        #end
+        <div class="btns">
+            <button type="submit" class="btn btn-primary"><i class="icon-ok"> 提交保存</i></button>
+        </div>
+    </x:form>
+    <script type="text/javascript">
+        $("form:eq(0)").xform({
+            callback: function () {
+                x.closewin();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="x.yfj" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.;Initial Catalog=x.yfj;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.x_address" Member="x_address">
+    <Type Name="x_address">
+      <Column Name="address_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="sheng" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="shi" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="qu" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="zhen" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="addr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="range" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="postcode" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="alias" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="lng" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" />
+      <Column Name="lat" Type="System.Decimal" DbType="Decimal(18,8)" CanBeNull="true" />
+      <Column Name="def" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="stime" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="x_user_x_address" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_article" Member="x_article">
+    <Type Name="x_article">
+      <Column Name="article_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="cate" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tourl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="hits" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="mtime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="seo_title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="seo_desc" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="seo_keys" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_car" Member="x_car">
+    <Type Name="x_car">
+      <Column Name="cart_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="goods_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="goods_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="mch_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="mch_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cover" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[desc]" Member="desc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="attr_id" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="attr" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="total_price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Association Name="x_user_x_car" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_integral_log" Member="x_integral_log">
+    <Type Name="x_integral_log">
+      <Column Name="integral_log_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="val" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Association Name="x_user_x_integral_log" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_order" Member="x_order">
+    <Type Name="x_order">
+      <Column Name="order_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="yf_amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="fav_amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="fav_remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="freight_amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="pay_amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="pay_way" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pay_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ret_integral" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rec_addr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="rec_man" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rec_tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="send_way" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="send_time" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ticket_no" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="user_remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="mch_remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="mch_js" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="mch_js_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="mch_confirm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="mch_confirm_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="x_order_x_order_detail" Member="x_order_detail" ThisKey="order_id" OtherKey="order_id" Type="x_order_detail" />
+      <Association Name="x_order_x_order_send" Member="x_order_send" ThisKey="order_id" OtherKey="order_id" Type="x_order_send" />
+      <Association Name="x_user_x_order" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_order_detail" Member="x_order_detail">
+    <Type Name="x_order_detail">
+      <Column Name="order_detail_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="order_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="goods_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cover" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="attr" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="total_price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="x_order_x_order_detail" Member="x_order" ThisKey="order_id" OtherKey="order_id" Type="x_order" IsForeignKey="true" />
+      <Association Name="x_goods_x_order_detail" Member="x_goods" ThisKey="goods_id" OtherKey="goods_id" Type="x_goods" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_order_send" Member="x_order_send">
+    <Type Name="x_order_send">
+      <Column Name="order_send_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="order_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="sender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="exp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="exp_log" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="utime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="signed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="signer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="x_order_x_order_send" Member="x_order" ThisKey="order_id" OtherKey="order_id" Type="x_order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_role" Member="x_role">
+    <Type Name="x_role">
+      <Column Name="role_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="power" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="x_role_x_mgr" Member="x_mgr" ThisKey="role_id" OtherKey="role_id" Type="x_mgr" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_dict" Member="x_dict">
+    <Type Name="x_dict">
+      <Column Name="dict_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="img" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="jp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="upval" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="f1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="f2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="f3" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="f4" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_user" Member="x_user">
+    <Type Name="x_user">
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nickname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="headimg" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="city" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="pwd" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="invter" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="exp" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="used_exp" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="[group]" Member="group" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="wx_opid" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="balance" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ukey" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="etime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="x_user_x_address" Member="x_address" ThisKey="user_id" OtherKey="user_id" Type="x_address" />
+      <Association Name="x_user_x_car" Member="x_car" ThisKey="user_id" OtherKey="user_id" Type="x_car" />
+      <Association Name="x_user_x_integral_log" Member="x_integral_log" ThisKey="user_id" OtherKey="user_id" Type="x_integral_log" />
+      <Association Name="x_user_x_order" Member="x_order" ThisKey="user_id" OtherKey="user_id" Type="x_order" />
+      <Association Name="x_user_x_charge" Member="x_charge" ThisKey="user_id" OtherKey="user_id" Type="x_charge" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_goods" Member="x_goods">
+    <Type Name="x_goods">
+      <Column Name="goods_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cate_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="city" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="class_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="no" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="alias" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="tags" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cover" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="imgs" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[desc]" Member="desc" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="limit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="old_price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="new_price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="return_exp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="refunded" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="sended" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="mtime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="x_goods_x_order_detail" Member="x_order_detail" ThisKey="goods_id" OtherKey="goods_id" Type="x_order_detail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_mgr" Member="x_mgr">
+    <Type Name="x_mgr">
+      <Column Name="mgr_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="role_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="city" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="uid" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="pwd" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="job" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ukey" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Association Name="x_role_x_mgr" Member="x_role" ThisKey="role_id" OtherKey="role_id" Type="x_role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_charge" Member="x_charge">
+    <Type Name="x_charge">
+      <Column Name="charge_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="amount" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="result" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="fail_reason" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="audit_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="audit_user" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="audit_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="x_user_x_charge" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.fnGetDistance" Method="fnGetDistance" IsComposable="true">
+    <Parameter Name="LngBegin" Parameter="lngBegin" Type="System.Single" DbType="Real" />
+    <Parameter Name="LatBegin" Parameter="latBegin" Type="System.Single" DbType="Real" />
+    <Parameter Name="LngEnd" Parameter="lngEnd" Type="System.Single" DbType="Real" />
+    <Parameter Name="LatEnd" Parameter="latEnd" Type="System.Single" DbType="Real" />
+    <Return Type="System.Double" />
+  </Function>
+</Database>

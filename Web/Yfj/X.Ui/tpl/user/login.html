@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>会员注册 | 综合商城-通用行业</title>
+    #parse("user/com/_head.html")
+    <link href="/css/web/common.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/web/major_maincolor.css?major=3" rel="stylesheet" type="text/css" css_name="css_major" />
+    <style type="text/css">
+        .x-form .lbe { height: 35px; line-height: 35px; font-size: 14px; }
+        .x-form input { height: 25px; line-height: 25px; }
+    </style>
+</head>
+<body>
+    #parse("_top.html")
+    <div class="login_content defined_logon_box login_img">
+        <div class="login_content">
+            <div class="lodin_login_bg" style="margin: 0px auto;">
+                <div class="login_login_content_titlebox">
+                    <ul class="login_login_content_title">
+                        <li class="checked"><a href="javascript:void(0)" id="to_logon">登录</a></li>
+                        <li><a href="/user/reg.html" id="to_register">注册</a></li>
+                    </ul>
+                </div>
+                <div class="login_login_content">
+                    <x:form api="user.login">
+                        <x:text name="uid" title="用户名" tip="用户名/邮箱/电话" size="4" chk="no" />
+                        <x:text name="pwd" title="密　码" tip="请输入登陆密码" tp="2" size="4" chk="no" />
+                        <x:row>
+                            <x:text name="code" size="1" title="验证码" tip="5位验证码" chk="no|len:5|t:num" /> <img onclick="changecode()" id="id_yzm" style="display:none;" />
+                        </x:row>
+                        <br />
+                        <br />
+                        <button class="btn btn-large" type="submit" style="border:none; width: 100%; background: #ec4245; color:white;">立即登陆</button>
+                    </x:form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $(".x-form").xform({
+                callback: function (d) {
+                    if (!d.issucc) return;
+                    x.cookie.set("ukey", d.ukey);
+                    document.location.href = "/user/index.html";
+                }
+            });
+
+            $("#id_code").click(function () {
+                changecode();
+            })
+
+        });
+
+        function changecode() {
+            if (!id_uid.value) return;
+            $("#id_yzm").attr("src", "/com/code-" + id_uid.value + "-" + new Date().getTime() + ".html").show();
+        }
+
+    </script>
+    #parse("_foot.html")
+</body>
+</html>

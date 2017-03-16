@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>收货地址 | 综合商城-通用行业</title>
+    #parse("user/com/_head.html")
+    <link href="/css/web/common.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/web/major_maincolor.css?major=3" rel="stylesheet" type="text/css" css_name="css_major" />
+    <link href="/css/web/account.css" rel="stylesheet" />
+</head>
+<body>
+    #parse("_top.html")
+    <div class="account-info_box">
+        <div class="contentbox">
+            <table width="100%" border="0">
+                <tr>
+                    <td style="width: 120px" valign="top" width="180px">
+                        <div id="show_back_stage_left">
+                            #parse("/user/_left.html")
+                        </div>
+                    </td>
+                    <td width="100%" valign="top">
+                        <div id="show_back_stage_up"></div>
+                        <div id="show_back_stage_down"></div>
+                        <div class="account-info_content">
+                            <div class="buy_way1"> <a href="/user/index.html">会员中心</a>&gt; <a href="/user/index.html">账户信息</a>&gt; <a href="javascript:void(0)">收货地址</a> </div>
+                            <div class="shop-add_box">
+                                #if($def.address_id>0)
+                                <div class="shop-add_a">
+                                    <div class="shop-add_a_title">
+                                        <em>默认收货地址：我的默认收货地址</em>
+                                        <ul class="shop-add_a_button">
+                                            <li class="input-style1" id="add_address_info" onclick="showedit()">添加</li>
+                                            <li class="input-style1 edit_address_info" onclick="showedit($def.address_id)">编辑</li>
+                                        </ul>
+                                    </div>
+                                    <ul class="shop-add_a_info">
+                                        <li><span class="shop-add_a_info_name">收货人：</span><span class="shop-add_a_info_add">$!def.name</span></li>
+                                        <li><span class="shop-add_a_info_name">详细地址：</span><span class="shop-add_a_info_add">$def.range</span></li>
+                                        <li><span class="shop-add_a_info_name">手机号码：</span><span class="shop-add_a_info_add">$!def.tel</span></li>
+                                        <li><span class="shop-add_a_info_name">配送时间：</span><span class="shop-add_a_info_add">$!def.stime</span></li>
+                                    </ul>
+                                </div>
+                                #else
+                                <div class="shop-add_a">
+                                    <div class="shop-add_a_title">
+                                        <em>添加收货地址</em>
+                                        <ul class="shop-add_a_button">
+                                            <li class="input-style1" id="add_address_info">添加</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                #end
+                                <div class="AddressSet_Table">
+                                    <table cellspacing="1" border="0">
+                                        <tbody>
+                                            <tr class="order_table_color">
+                                                <td width="50">收货人</td>
+                                                <td width="280">所在地区</td>
+                                                <td>详细地址</td>
+                                                <td width="80">手机号码</td>
+                                                <td width="180">操作</td>
+                                            </tr>
+                                            #foreach($a in $list)
+                                            <tr class="order_table">
+                                                <td>$a.name</td>
+                                                <td>$a.range</td>
+                                                <td>$a.addr</td>
+                                                <td>$a.tel</td>
+                                                <td><span class="input-style1" onclick="showedit($a.address_id)">编辑</span> <span class="input-style1" onclick="dodel($a.address_id)">删除</span></td>
+                                            </tr>
+                                            #end
+                                            #if($list.count()==0)
+                                            <tr>
+                                                <td colspan="5">暂无收货地址，请添加！</td>
+                                            </tr>
+                                            #end
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    #parse("_foot.html")
+    <script type="text/javascript">
+        function showedit(id) {
+            x.openwin("addr_edit-" + (id || "") + ".html", "编辑地址", function () {
+                document.location.reload();
+            }, { w: 600, h: 360 });
+        }
+        function dodel(id) {
+            x.confirm("确定要删除此地址？", function () {
+                x.doapi("user.addr.del", { id: id }, function (d) {
+                    if (!d.issucc) return;
+                    document.location.reload();
+                });
+            });
+        }
+    </script>
+</body>
+</html>

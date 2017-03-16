@@ -1,0 +1,402 @@
+
+时间：2017-03-08 09:30:51,169 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：2325 
+
+时间：2017-03-08 09:30:59,442 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：10598 
+
+时间：2017-03-08 10:17:07,896 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 商品类型","code":"0x0003"} 
+时间：1985434 
+
+时间：2017-03-08 10:17:52,037 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 商品类型","code":"0x0003"} 
+时间：411 
+
+时间：2017-03-08 11:28:17,274 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：62957 
+System.NotSupportedException: 成员“X.Data.x_dict.id”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMember(SqlMember m)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitBinaryOperator(SqlBinary bo)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitBinaryOperator(SqlBinary bo)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 X.App.Apis.mgr.brand.del.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\mgr\brand\del.cs:行号 18
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 13:24:49,217 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：164131 
+System.NotSupportedException: 成员“X.Data.x_dict.id”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMember(SqlMember m)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitBinaryOperator(SqlBinary bo)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitBinaryOperator(SqlBinary bo)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 X.App.Apis.mgr.stand.del.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\mgr\stand\del.cs:行号 19
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 14:42:38,070 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：109441 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInvocation(InvocationExpression invoke)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitExpression(Expression exp)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitBinary(BinaryExpression b)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitExpression(Expression exp)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitFirst(Expression sequence, LambdaExpression lambda, Boolean isFirst)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\wx\wx.cs:行号 49
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 14:45:32,722 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：309 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInvocation(InvocationExpression invoke)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitExpression(Expression exp)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitBinary(BinaryExpression b)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitExpression(Expression exp)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitFirst(Expression sequence, LambdaExpression lambda, Boolean isFirst)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\wx\wx.cs:行号 49
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 14:47:13,477 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：82838 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInvocation(InvocationExpression invoke)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitExpression(Expression exp)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitBinary(BinaryExpression b)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitExpression(Expression exp)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitFirst(Expression sequence, LambdaExpression lambda, Boolean isFirst)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitSequenceOperatorCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitMethodCall(MethodCallExpression mc)
+   在 System.Data.Linq.SqlClient.QueryConverter.VisitInner(Expression node)
+   在 System.Data.Linq.SqlClient.QueryConverter.ConvertOuter(Expression node)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\wx\wx.cs:行号 49
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 14:48:38,664 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1838 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource '_head.html'
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 14:48:59,730 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: IRN_IA0739ssz2 ]"} 
+时间：22904 
+
+时间：2017-03-08 14:50:04,587 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：87761 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource '_head.html'
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 14:50:21,404 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: MpLFnA0821ssz5 ]"} 
+时间：104578 
+
+时间：2017-03-08 14:50:51,346 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: sOT0sA0851ssz2 ]"} 
+时间：134520 
+
+时间：2017-03-08 14:51:05,066 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: tTluTa0865ssz1 ]"} 
+时间：148240 
+
+时间：2017-03-08 16:37:54,379 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3078 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'mgr/level/list.html'
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 16:46:09,939 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：676 
+System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 X.App.Apis.mgr.level.list.<>c.<Execute>b__12_0(x_dict d) 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\mgr\level\list.cs:行号 22
+   在 System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   在 System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   在 X.App.Apis.mgr.level.list.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\mgr\level\list.cs:行号 33
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 17:21:08,203 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：584 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Apis.mgr.user.list.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\mgr\user\list.cs:行号 45
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 17:22:40,232 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：602 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Apis.mgr.user.list.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\mgr\user\list.cs:行号 44
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 17:23:50,311 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：528 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Apis.mgr.user.list.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\mgr\user\list.cs:行号 44
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-08 17:25:00,841 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：579 
+System.NotSupportedException: 方法“System.String ToString(System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.SqlSelectionSkipper.VisitColumn(SqlColumn col)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitNew(SqlNew sox)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Apis.mgr.user.list.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\mgr\user\list.cs:行号 34
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31

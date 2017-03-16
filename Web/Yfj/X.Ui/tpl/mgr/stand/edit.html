@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>规格编辑 - $cfg.name</title>
+    <style type="text/css">
+        body { margin: 0; }
+    </style>
+</head>
+<body>
+    <x:form api="mgr.stand.save">
+        <input type="hidden" name="id" value="$!item.id" x-check="" />
+        <x:pick title="所属分类" src="url:/mgr/dict/select-goods.cate.html" name="cate" count="1" def="$!{cate}" />
+        <x:text title="名称" name="name" size="3" def="$!item.name" />
+        <x:text title="排序" name="sort" size="3" def="#if($id>0)$!item.sort#else 99#end" />
+        <div class="btns">
+            <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>提交保存</button>
+        </div>
+    </x:form>
+    <br />
+    <br />
+    <script type="text/javascript">
+        $("form:eq(0)").xform({
+            callback: function (d) { x.closewin(); }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿
+.x-form { margin: 15px 0 0 0; }
+.x-form .btn { }
+.x-form .btn i { margin-right: 5px; }
+.x-form input { margin: 0; display: inline-block; vertical-align: middle; }
+.x-form .row { margin-bottom: 15px; margin-left: 0; }
+.x-form .lbe { display: inline-block; vertical-align: middle; width: 80px; text-align: right; }
+.x-form .row .rt { display: inline-block; vertical-align: middle; }
+.x-form .row .li { display: inline-block; vertical-align: middle; }
+.x-form .lbe .star { color: red; }
+.x-form > .li { margin-bottom: 15px; }
+.x-form .btns { position: fixed; bottom: 8px; left: 8px; z-index: 1000; }
+.x-form > .li.err { border: 1px solid red; }
+
+.upload { }
+.upload .icon-remove { z-index: 99; cursor: pointer; position: absolute; right: -5px; top: -5px; border-radius: 50%; background: red; color: white; font-size: 12px; box-shadow: 0px 0px 15px 5px; width: 16px; height: 16px; text-align: center; line-height: 16px; }
+.upload .files { margin-left: 80px; margin-top: 10px; }
+.upload .files .file { display: inline-block; margin-bottom: 5px; margin-right: 5px; border: 1px solid #ccc; border-radius: 5px; padding: 5px 8px; position: relative; }
+.upload .files .file img { display: inline-block; max-width: 42px; max-height: 42px; vertical-align: middle; margin-right: 5px; }
+.upload .files .file .attr { display: inline-block; line-height: 20px; vertical-align: middle; margin: 0; }
+.upload .files .file .attr .n { display: block; max-width: 130px; overflow: hidden; height: 22px; }
+.upload .imgs { margin-top: 10px; margin-left: 80px; }
+.upload .imgs .img { position: relative; display: inline-block; margin-bottom: 5px; margin-right: 5px; }
+.upload .imgs img { max-height: 120px; max-width: 400px; }
+
+.x-pick { background-color: #f9f9f9; border: 1px solid #cccccc; display: none; position: absolute; max-width: 380px; _width: 300px; z-index: 1000; }
+.x-pick .h { border-bottom: 1px solid #ccc; font-weight: bold; line-height: 32px; text-indent: 1em; }
+.x-pick .c { margin: 5px; max-height: 160px; overflow-wrap: normal; overflow-y: auto; overflow-x: visible; min-width: 120px; }
+.x-pick .c .pick-item { display: block; text-align: left; font-size: 12px; white-space: nowrap; border: none; }
+.x-pick .dict-items .pick-item { display: inline-block; }
+.x-pick .c .pick-item:first-child { margin-left: 0; }
+.x-pick .b { border-top: 1px solid #cccccc; padding: 5px; text-align: right; margin-top: 5px; display: none; }
+.x-pick hr { margin: 5px 0; }
+.x-pick .letter { clear: left; float: left; font-weight: bold; line-height: 30px; width: 20px; }
+.x-pick .dict-items { margin-left: 20px; }
+.pick .btn i { margin: 0 0 0 5px; }

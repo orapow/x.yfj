@@ -1,0 +1,442 @@
+
+时间：2017-03-07 14:46:39,517 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(用户名或密码不正确)","code":"用户名或密码不正确"} 
+时间：125324 
+
+时间：2017-03-07 14:47:46,017 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：2460 
+
+时间：2017-03-07 14:48:11,157 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(用户名或密码不正确)","code":"用户名或密码不正确"} 
+时间：27600 
+
+时间：2017-03-07 14:48:16,421 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：32864 
+
+时间：2017-03-07 14:49:12,788 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：89231 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 14:49:16,159 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：92601 
+System.ArgumentNullException: 值不能为 null。
+参数名: source
+   在 System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   在 X.App.Views.mgr.dict.select.tree_LoadList(Object id) 位置 D:\Pro\x.yfj\src\Web\O2O\X.App\Views\mgr\dict\select.cs:行号 35
+   在 X.Data.XTree.getChild(TreeNode n, Int32 d) 位置 D:\Pro\x.yfj\src\Xc\Data\XTree.cs:行号 63
+   在 X.Data.XTree.InitTree(String title, Int32 deep) 位置 D:\Pro\x.yfj\src\Xc\Data\XTree.cs:行号 27
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.yfj\src\Xc\Data\XTree.cs:行号 19
+   在 X.App.Views.mgr.dict.select.InitDict() 位置 D:\Pro\x.yfj\src\Web\O2O\X.App\Views\mgr\dict\select.cs:行号 26
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 14:49:19,797 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：96240 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 14:49:24,570 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：101012 
+System.ArgumentNullException: 值不能为 null。
+参数名: source
+   在 System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   在 X.App.Views.mgr.dict.select.tree_LoadList(Object id) 位置 D:\Pro\x.yfj\src\Web\O2O\X.App\Views\mgr\dict\select.cs:行号 35
+   在 X.Data.XTree.getChild(TreeNode n, Int32 d) 位置 D:\Pro\x.yfj\src\Xc\Data\XTree.cs:行号 63
+   在 X.Data.XTree.InitTree(String title, Int32 deep) 位置 D:\Pro\x.yfj\src\Xc\Data\XTree.cs:行号 27
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.yfj\src\Xc\Data\XTree.cs:行号 19
+   在 X.App.Views.mgr.dict.select.InitDict() 位置 D:\Pro\x.yfj\src\Web\O2O\X.App\Views\mgr\dict\select.cs:行号 26
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 15:04:12,187 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：988630 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 15:04:19,761 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：996204 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 15:04:24,079 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1000521 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 15:22:11,750 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 logout","code":"0x0002"} 
+时间：32780 
+
+时间：2017-03-07 15:24:00,957 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：271 
+
+时间：2017-03-07 15:24:11,152 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：10466 
+
+时间：2017-03-07 15:25:46,763 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：350 
+
+时间：2017-03-07 15:42:52,043 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1025630 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 15:43:51,922 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：275 
+
+时间：2017-03-07 15:44:06,049 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0005"} 
+时间：14402 
+
+时间：2017-03-07 15:44:07,116 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0005"} 
+时间：15469 
+
+时间：2017-03-07 15:44:07,944 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0005"} 
+时间：16297 
+
+时间：2017-03-07 15:44:46,682 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0005"} 
+时间：55035 
+
+时间：2017-03-07 15:44:51,741 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：60094 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 15:44:52,768 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：61121 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 15:44:53,417 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：61770 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 15:45:31,930 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：100283 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 15:47:42,061 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：230414 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 15:49:47,604 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：355957 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 303
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 128
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.yfj\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 114
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 15:49:57,708 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：3826 
+
+时间：2017-03-07 15:50:00,025 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：6143 
+
+时间：2017-03-07 15:50:00,981 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：7099 
+
+时间：2017-03-07 15:50:01,764 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：7882 
+
+时间：2017-03-07 15:50:05,902 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：12020 
+
+时间：2017-03-07 15:50:33,917 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：40035 
+System.ArgumentNullException: 值不能为 null。
+参数名: source
+   在 System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   在 X.App.Views.mgr.dict.select.tree_LoadList(Object id) 位置 D:\Pro\x.yfj\src\Web\O2O\X.App\Views\mgr\dict\select.cs:行号 35
+   在 X.Data.XTree.getChild(TreeNode n, Int32 d) 位置 D:\Pro\x.yfj\src\Xc\Data\XTree.cs:行号 63
+   在 X.Data.XTree.InitTree(String title, Int32 deep) 位置 D:\Pro\x.yfj\src\Xc\Data\XTree.cs:行号 27
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.yfj\src\Xc\Data\XTree.cs:行号 19
+   在 X.App.Views.mgr.dict.select.InitDict() 位置 D:\Pro\x.yfj\src\Web\O2O\X.App\Views\mgr\dict\select.cs:行号 26
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-07 17:07:40,576 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：4666694 
+
+时间：2017-03-07 17:07:41,540 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：4667658 
+
+时间：2017-03-07 17:07:42,234 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：4668352 
+
+时间：2017-03-07 17:20:43,337 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：5449455 
+
+时间：2017-03-07 17:20:45,267 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：5451385 
+
+时间：2017-03-07 17:20:45,704 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：5451821 
+
+时间：2017-03-07 17:24:18,431 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":" ","code":"0x0006"} 
+时间：5664549 

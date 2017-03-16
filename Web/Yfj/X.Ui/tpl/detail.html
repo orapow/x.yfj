@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("com/_head.html")
+    <title>$g.name | $cfg.name</title>
+    <link href="/css/web/x.page.css" rel="stylesheet" type="text/css" />
+    <link href="/css/web/common.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/web/major_maincolor.css?major=3" rel="stylesheet" type="text/css" css_name="css_major" />
+    <link href="/css/web/major_plugincolor.css?major=7" rel="stylesheet" type="text/css" css_name="css_major_plugin" />
+    <link href="/css/web/goods.css" rel="stylesheet" />
+    <style type="text/css">
+        dl { margin: 0; }
+        dd { line-height: initial; }
+    </style>
+</head>
+<body>
+    #parse("_top.html")
+    <div id="show_goods" class="goodsdetails_goodsinfobg">
+        <div class="main_pathbg">
+            <div class="main_pathbox">
+                <div class="main_pathbox_first"><a href="javascript:void(0);">全部结果</a></div>
+                <div class="main_pathbox_arrow">></div>
+                <div class="main_pathbox_first"><a class="main_pathbox_first_search" href='/Home/Search?c1=6655'>男鞋</a></div>
+                <div class="main_pathbox_arrow">></div>
+                <div class="main_pathbox_first"><a class="main_pathbox_first_search" href='/Home/Search?c1=6655&amp;c2=6996'>男鞋</a></div>
+                <div class="main_pathbox_arrow">></div>
+                <div class="main_pathbox_first"><a class="main_pathbox_first_search" href='/Home/Search?c1=6655&amp;c2=6996&amp;c3=8528'>日常休闲鞋</a></div>
+            </div>
+        </div>
+        <div class="goodsdetails_goodsinfobox">
+            <div class="buy_content_imgbox">
+                <div class="productimgbox">
+                    <!--产品图片展示-->
+                    <div class="productbigimg_box">
+                        <div class="productbigimg">
+                            <img class="blockimg" src="http://img.zhuyun.cn/M00/01/A1/wKgJNFI2b-KAN-B7AAAaL9MMkiA657.jpg" /> <img src="/blank.png" /> <img src="/blank.png" /> <img src="/blank.png" /> <img src="/blank.png" /> <img src="/blank.png" /> <img src="/blank.png" /> <img src="/blank.png" /> <img src="/blank.png" /> <img src="/blank.png" />
+                            <div class="product_lens"></div>
+                            <div class="product_zoom"><img src="http://img.zhuyun.cn/M00/01/A1/wKgJNFI2b-KAN-B7AAAaL9MMkiA657.jpg" /></div>
+                            <div id="sales_icon"></div>
+                            <div class="goodsdetails_goodsinfobox_soldbox" id="goodssold">
+                                <div class="goodsdetails_goodsinfobox_sold goodssold">已售完</div>
+                            </div>
+                            <div class="goodsdetails_goodsinfobox_imgzoom_bigimg_iconbox">
+                                <div class="goodsdetails_goodsinfobox_imgzoom_bigimg_icon search_icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productsmallimg_box">
+                        <ul class="productsmallimg" id="user_message_box" style="left:0px;">
+                            <li class="libg"><img photo_index="0" src="http://img.zhuyun.cn/M00/01/A1/wKgJNFI2b-KAIZhrAAAG02GzSh4259.jpg" /></li>
+                        </ul>
+                        <span class="left_tr Arrow_right" style="width:18px;height:31px;"></span> <span class="right_tr Arrow_left" style="width:18px;height:31px;"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="goodsdetails_goodsinfobox_content">
+                <div class="goodsdetails_goodsinfobox_content_title">$g.name<span id="goodsname" style="font-size:16px;"></span></div>
+                <div class="goodsdetails_goodsinfobox_content_subtitle"></div>
+                <div class="goodsdetails_goodsinfobox_content_salebg">
+                    <div class="goodsdetails_goodsinfobox_content_pricebox">
+                        <dl class="goodsdetails_goodsinfobox_content_row goodsdetails_goodsinfobox_content_price">
+                            <dt>原价</dt>
+                            <dd>
+                                <em class="price_yen">¥</em>
+                                <span class="price_rmb">$g.old_price 元</span>
+                            </dd>
+                        </dl>
+                        <dl class="goodsdetails_goodsinfobox_content_row goodsdetails_goodsinfobox_content_price goodsdetails_goodsinfobox_content_saleprice">
+                            <dt class="j_sales_title_price">现价</dt>
+                            <dt class="j_sales_title_level_price" style="display:none;">会员价</dt>
+                            <dt class="j_sales_title_sales_price" style="display:none;">促销价</dt>
+                            <dd> <em class="price_yen">&yen;</em> <span class="price_rmb" id="sales_price">$g.new_price</span></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="goodsdetails_goodsinfobox_content_freightbox">
+                    <dl class="goodsdetails_goodsinfobox_content_row" id="goods_property_code" style="display: none">
+                        <dt>商品编码</dt>
+                        <dd id="goods_code"></dd>
+                    </dl>
+                    <dl class="goodsdetails_goodsinfobox_content_row">
+                        <dt>商品评价</dt>
+                        <dd id="goods_evaluate_total_show"> </dd>
+                    </dl>
+                </div>
+                <div class="goodsdetails_goodsinfobox_content_attrbox" id="goods_property_content">
+                    #foreach($f in $fs)
+                    <dl class="goodsdetails_goodsinfobox_content_row goods_prop">
+                        <dt class="row_text">$f.name</dt>
+                        <dd>
+                            <ul class="goodsdetails_goodsinfobox_content_textattr">
+                                #foreach($v in $T.getvals($f.goods_field_id))
+                                <li class="search_border prop_item" title="$v.val" item_id="$v.goods_val_id" item_name="$v.val">
+                                    <a href="javascript:void(0)"></a><div class="prop_select selected_icon"></div> $v.val
+                                </li>
+                                #end
+                            </ul>
+                        </dd>
+                    </dl>
+                    #end
+                    <dl class="goodsdetails_goodsinfobox_content_row" id="buy_goods_num_box">
+                        <dt class="row_number">数量</dt>
+                        <dd>
+                            <div class="number_box">
+                                <input id="goods_number_input" name="goods_number_input" value="1" />
+                                <div class="number_icon"><a id="goods_number_plus">+</a><a id="goods_number_minus">-</a></div>
+                            </div>
+                            <span class="number_unit">件 （库存<a class="reserve" id="goods_number" href="javascript:void(0)"></a>件）</span>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="goodsdetails_goodsinfobox_content_buttonbox buy_content_button">
+                    <button class="button_red" id="add_to_cart" onclick="to_cart()">加入购物车</button>
+                    <button class="button_brown" id="buy_now">立即购买</button>
+                </div>
+            </div>
+            <div class="goodsdetails_goodsinfobox_phone">
+                <div class="goodsdetails_goodsinfobox_phone_title">”扫一扫“手机浏览</div>
+                <div class="goodsdetails_goodsinfobox_phone_wx" id="goods_url"></div>
+                <div class="buy_content_arrow" style="margin-top: 5px;">
+                    <!-- JiaThis Button BEGIN -->
+                    <div class="jiathis_style"> <a class="jiathis_button_qzone"></a> <a class="jiathis_button_tsina"></a> <a class="jiathis_button_tqq"></a> <a class="jiathis_button_weixin"></a> <a class="jiathis_button_renren"></a> <a class="jiathis_button_cqq"></a> <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a> <a class="jiathis_counter_style"></a> </div>
+                    <!-- JiaThis Button END -->
+                </div>
+            </div>
+        </div>
+        <div id="pack_buy_goods_display"></div>
+        <div class="goodsdetails_content">
+            <div class="goodsdetails_content_leftbox">
+                <div class="goodsdetails_content_storebox" id="goods_recommend_display"></div>
+                <div class="goodsdetails_content_storebox" id="goods_history_display"></div>
+            </div>
+            <div class="goodsdetails_content_rightbox" name="tabbox" id="tabbox">
+                <div style="height:43px;display:none;" id="hidden_tabbox"></div>
+                <ul class="goodsdetails_content_tabbox" id="top_menu">
+                    <li class="checked"><a href="#tabbox">商品详情</a></li>
+                    <li><a href="#tabbox" id="show_advisory">商品咨询</a></li>
+                    <li id="show_evaluate_li"><a href="#tabbox" id="show_evaluate">评价晒单（<span id="show_evaluate_total"></span>）</a></li>
+                </ul>
+                <div class="goods_info buy_browsing_goods_content"><a href="http://www.camel.com.cn/xienan_rcxx/2322605.shtml" target="_blank" style="color:#7F2400;text-decoration:none;">Camel骆驼 清凉透气 日常休闲男</a></div>
+                <div class="goods_info" id="goods_advisory"></div>
+                <div class="goods_info" id="goods_evaluate"></div>
+            </div>
+        </div>
+    </div>
+    #parse("_foot.html")
+    <script type="text/javascript">
+        function to_cart() {
+            x.doapi("user.cart.push", { gid: "$id", count: 2, attrs: "68,71" }, function (d) { });
+        }
+    </script>
+</body>
+</html>

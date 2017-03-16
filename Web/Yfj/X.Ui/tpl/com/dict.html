@@ -1,0 +1,22 @@
+﻿$!err
+#if($bylet==1)
+#foreach($l in $list)
+    #set($dlist=$T.GetByLetter($l))
+    #if($dlist.Count>0)
+        #if($l!=$list.get_item(0))<hr />#end
+        <span class="letter">$l</span>
+        <div class="dict-items">
+            #foreach($c in $dlist)
+            <span class="btn pick-item" x-val="$c.value">$c.name</span>
+            #end
+        </div>
+    #end
+#end
+#else
+#foreach($c in $dict)
+<span class="btn pick-item" x-val="$!c.value" data-data='$!c.data'>$c.name</span>
+#end
+#end
+#if(!$dict||$dict.Count==0)
+#if($nodata.length>0)$!nodata#else没有字典，请先配置字典<br />代号：$code#end
+#end

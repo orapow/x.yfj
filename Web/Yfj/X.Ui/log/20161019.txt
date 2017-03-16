@@ -1,0 +1,444 @@
+
+时间：2016-10-19 09:40:13,688 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：148730 
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 指定的网络名不再可用。) ---> System.ComponentModel.Win32Exception (0x80004005): 指定的网络名不再可用。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Views\xview.cs:行号 29
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:25b05788-977f-40d0-8e00-2522e5e3de19
+Error Number:64,State:0,Class:20
+
+时间：2016-10-19 10:16:12,996 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：47060 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.mgr.cate.save.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\cate\save.cs:行号 35
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-19 10:18:13,502 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：167566 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.mgr.cate.save.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\cate\save.cs:行号 35
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-19 10:56:24,632 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：309879 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.mgr.cate.save.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\cate\save.cs:行号 35
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-19 10:57:22,455 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：367703 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.mgr.cate.save.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\cate\save.cs:行号 35
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-19 13:55:29,288 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T不能将分类调整到其子类下)","code":"T不能将分类调整到其子类下"} 
+时间：14717 
+
+时间：2016-10-19 13:55:39,220 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T不能将分类调整到其子类下)","code":"T不能将分类调整到其子类下"} 
+时间：24648 
+
+时间：2016-10-19 14:04:00,870 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：39473 
+System.ArgumentNullException: 值不能为 null。
+参数名: value
+   在 System.String.StartsWith(String value)
+   在 X.App.Apis.mgr.cate.save.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\cate\save.cs:行号 35
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-19 14:04:31,888 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：70490 
+System.ArgumentNullException: 值不能为 null。
+参数名: value
+   在 System.String.StartsWith(String value)
+   在 X.App.Apis.mgr.cate.save.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\cate\save.cs:行号 35
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-19 14:05:15,971 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：114574 
+System.ArgumentNullException: 值不能为 null。
+参数名: value
+   在 System.String.StartsWith(String value)
+   在 X.App.Apis.mgr.cate.save.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\cate\save.cs:行号 35
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-19 14:12:52,684 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 分类名称","code":"0x0003"} 
+时间：140538 
+
+时间：2016-10-19 15:14:59,740 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2543105 
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 指定的网络名不再可用。) ---> System.ComponentModel.Win32Exception (0x80004005): 指定的网络名不再可用。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Apis.mgr.cate.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\cate\list.cs:行号 36
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 52
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 16
+   在 X.App.Apis.mgr.cate.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\cate\list.cs:行号 17
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:5e97a9dc-45e4-40fe-93d0-7f9ed847b481
+Error Number:64,State:0,Class:20
+
+时间：2016-10-19 15:37:01,827 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：302581 
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 指定的网络名不再可用。) ---> System.ComponentModel.Win32Exception (0x80004005): 指定的网络名不再可用。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 X.App.Views.xview.InitView() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Views\xview.cs:行号 29
+   在 X.App.Views.user._u.InitView() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Views\user\_u.cs:行号 17
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:3dcd504e-2f6e-4ca5-8917-659a4eaa8386
+Error Number:64,State:0,Class:20
+
+时间：2016-10-19 15:48:15,188 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：384840 
+System.Data.SqlClient.SqlException (0x80131904): 列名 'province' 无效。
+列名 'city' 无效。
+列名 'town' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 X.App.Views.user.addr_edit.InitDict() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Views\user\addr_edit.cs:行号 25
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:9a681343-ed73-4503-8444-383f78bfa41e
+Error Number:207,State:1,Class:16
+
+时间：2016-10-19 16:01:56,563 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：204250 
+NVelocity.Exception.ParseErrorException: Encountered "True" at line 17, column 87.
+Was expecting one of:
+    "[" ...
+    "(" ...
+    <WHITESPACE> ...
+    <STRING_LITERAL> ...
+    "true" ...
+    "false" ...
+    <NUMBER_LITERAL> ...
+    <IDENTIFIER> ...
+    "{" ...
+    "!" ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "True" at line 17, column 87.
+Was expecting one of:
+    "[" ...
+    "(" ...
+    <WHITESPACE> ...
+    <STRING_LITERAL> ...
+    "true" ...
+    "false" ...
+    <NUMBER_LITERAL> ...
+    <IDENTIFIER> ...
+    "{" ...
+    "!" ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-19 16:14:09,549 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户未登陆或登陆超时)","code":"T用户未登陆或登陆超时"} 
+时间：149978 
+
+时间：2016-10-19 16:37:10,875 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 user.addr.del","code":"0x0002"} 
+时间：183964 
+
+时间：2016-10-19 16:38:05,442 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 user.addr.del","code":"0x0002"} 
+时间：238531 
+
+时间：2016-10-19 18:05:19,435 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：21794 
+System.NotSupportedException: 方法“System.String GetDictName(System.String, System.String)”不支持转换为 SQL。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitBinaryOperator(SqlBinary bo)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitBinaryOperator(SqlBinary bo)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSequence(SqlSelect sel)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExists(SqlSubSelect sqlExpr)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSubSelect(SqlSubSelect ss)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   在 System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   在 X.App.Apis.mgr.goods.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\goods\list.cs:行号 55
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-19 18:11:19,527 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：305 
+System.NotSupportedException: 对于方法 String.Contains，只支持可在客户端上求值的参数。
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.TranslateStringMethod(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitMethodCall(SqlMethodCall mc)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitBinaryOperator(SqlBinary bo)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitBinaryOperator(SqlBinary bo)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSequence(SqlSelect sel)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExists(SqlSubSelect sqlExpr)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSubSelect(SqlSubSelect ss)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitExpression(SqlExpression exp)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitAlias(SqlAlias a)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSource(SqlSource source)
+   在 System.Data.Linq.SqlClient.SqlVisitor.VisitSelectCore(SqlSelect select)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Visitor.VisitSelect(SqlSelect select)
+   在 System.Data.Linq.SqlClient.SqlVisitor.Visit(SqlNode node)
+   在 System.Data.Linq.SqlClient.PostBindDotNetConverter.Convert(SqlNode node, SqlFactory sql, ProviderMode providerMode)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(ResultShape resultShape, Type resultType, SqlNode node, ReadOnlyCollection`1 parentParameters, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.BuildQuery(Expression query, SqlNodeAnnotations annotations)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   在 System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   在 X.App.Apis.mgr.goods.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\goods\list.cs:行号 56
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-19 19:12:58,792 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：438 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'mgr/dict/list.html'
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-19 19:16:23,950 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 mgr.cate.list","code":"0x0002"} 
+时间：2457 
+
+时间：2016-10-19 19:23:29,037 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 mgr.cate.save","code":"0x0002"} 
+时间：157218 
+
+时间：2016-10-19 19:26:44,398 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 代号","code":"0x0003"} 
+时间：140475 
+
+时间：2016-10-19 19:27:18,255 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 代号","code":"0x0003"} 
+时间：174333 

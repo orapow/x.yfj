@@ -1,0 +1,1253 @@
+
+时间：2016-10-17 11:25:00,599 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：220527 
+
+时间：2016-10-17 11:38:51,294 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：3403 
+
+时间：2016-10-17 11:39:47,227 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：59335 
+
+时间：2016-10-17 11:43:04,627 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：6029 
+
+时间：2016-10-17 11:55:50,690 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：168400 
+
+时间：2016-10-17 11:59:02,635 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：3996 
+
+时间：2016-10-17 12:00:56,710 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：74374 
+
+时间：2016-10-17 12:03:45,652 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：40654 
+
+时间：2016-10-17 12:04:27,762 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：82764 
+
+时间：2016-10-17 12:07:38,561 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：273563 
+
+时间：2016-10-17 12:07:48,911 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：283913 
+
+时间：2016-10-17 12:10:59,617 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：474620 
+
+时间：2016-10-17 12:11:06,994 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：481996 
+
+时间：2016-10-17 12:14:49,216 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 undefined","code":"0x0002"} 
+时间：704218 
+
+时间：2016-10-17 15:05:17,982 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 ","code":"0x0003"} 
+时间：654964 
+
+时间：2016-10-17 15:05:19,625 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 ","code":"0x0003"} 
+时间：656607 
+
+时间：2016-10-17 15:05:20,929 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 ","code":"0x0003"} 
+时间：657911 
+
+时间：2016-10-17 15:05:27,792 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 应为5个字符","code":"0x0004"} 
+时间：664774 
+
+时间：2016-10-17 15:05:32,967 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：669949 
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 121
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\xapi.cs:行号 19
+   在 X.App.Apis.user._u.InitApi() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\user\_u.cs:行号 14
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 15:05:34,919 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：671901 
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 121
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\xapi.cs:行号 19
+   在 X.App.Apis.user._u.InitApi() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\user\_u.cs:行号 14
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 15:06:11,960 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：6428 
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 121
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\xapi.cs:行号 19
+   在 X.App.Apis.user._u.InitApi() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\user\_u.cs:行号 14
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 15:06:28,307 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：22775 
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 121
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\xapi.cs:行号 19
+   在 X.App.Apis.user._u.InitApi() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\user\_u.cs:行号 14
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 15:08:46,817 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：161285 
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v)
+   在 X.Web.XFace.SetParms(NameValueCollection parms)
+   在 X.Web.Apis.Api.InitApi()
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\xapi.cs:行号 19
+   在 X.App.Apis.user._u.InitApi() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\user\_u.cs:行号 14
+   在 X.Web.Apis.Api.GetResponse()
+   在 X.Web.XApp.ProcessRequest(HttpContext c)
+
+时间：2016-10-17 15:09:01,438 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户未登陆或登陆超时)","code":"T用户未登陆或登陆超时"} 
+时间：4477 
+
+时间：2016-10-17 15:10:16,559 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1469 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Core.Cache.WebCache.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\WebCache.cs:行号 33
+   在 X.Core.Cache.CacheHelper.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\CacheHelper.cs:行号 47
+   在 X.App.Apis.user.login.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\user\login.cs:行号 40
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 15:10:29,171 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：14081 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Core.Cache.WebCache.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\WebCache.cs:行号 33
+   在 X.Core.Cache.CacheHelper.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\CacheHelper.cs:行号 47
+   在 X.App.Apis.user.login.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\user\login.cs:行号 40
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 15:10:44,462 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：29371 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Core.Cache.WebCache.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\WebCache.cs:行号 33
+   在 X.Core.Cache.CacheHelper.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\CacheHelper.cs:行号 47
+   在 X.App.Apis.user.login.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\user\login.cs:行号 40
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 15:11:07,709 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：52619 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Core.Cache.WebCache.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\WebCache.cs:行号 33
+   在 X.Core.Cache.CacheHelper.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\CacheHelper.cs:行号 47
+   在 X.App.Apis.user.login.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\user\login.cs:行号 40
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 15:11:14,121 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：59031 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Core.Cache.WebCache.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\WebCache.cs:行号 33
+   在 X.Core.Cache.CacheHelper.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\CacheHelper.cs:行号 47
+   在 X.App.Apis.user.login.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\user\login.cs:行号 40
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 15:11:55,686 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：100595 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Core.Cache.WebCache.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\WebCache.cs:行号 33
+   在 X.Core.Cache.CacheHelper.Get[T](String key) 位置 D:\Pro\x.shop\src\Xc\Core\Cache\CacheHelper.cs:行号 47
+   在 X.App.Apis.user.login.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\user\login.cs:行号 40
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 15:13:43,121 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：19004 
+
+时间：2016-10-17 15:13:48,615 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：24499 
+
+时间：2016-10-17 15:13:50,494 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：26377 
+
+时间：2016-10-17 15:13:51,624 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：27508 
+
+时间：2016-10-17 15:13:52,697 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：28580 
+
+时间：2016-10-17 15:13:54,569 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆错误次数过多，请过会再登陆)","code":"T登陆错误次数过多，请过会再登陆"} 
+时间：30453 
+
+时间：2016-10-17 15:13:55,800 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆错误次数过多，请过会再登陆)","code":"T登陆错误次数过多，请过会再登陆"} 
+时间：31684 
+
+时间：2016-10-17 15:13:57,467 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆错误次数过多，请过会再登陆)","code":"T登陆错误次数过多，请过会再登陆"} 
+时间：33351 
+
+时间：2016-10-17 15:13:58,713 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆错误次数过多，请过会再登陆)","code":"T登陆错误次数过多，请过会再登陆"} 
+时间：34597 
+
+时间：2016-10-17 15:13:59,873 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆错误次数过多，请过会再登陆)","code":"T登陆错误次数过多，请过会再登陆"} 
+时间：35756 
+
+时间：2016-10-17 15:14:02,121 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：38005 
+
+时间：2016-10-17 15:14:04,250 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：40134 
+
+时间：2016-10-17 15:14:05,778 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：41662 
+
+时间：2016-10-17 15:14:06,870 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：42754 
+
+时间：2016-10-17 15:14:08,087 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：43971 
+
+时间：2016-10-17 15:14:09,689 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆错误次数过多，请过会再登陆)","code":"T登陆错误次数过多，请过会再登陆"} 
+时间：45572 
+
+时间：2016-10-17 15:14:13,661 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆错误次数过多，请过会再登陆)","code":"T登陆错误次数过多，请过会再登陆"} 
+时间：49544 
+
+时间：2016-10-17 15:20:27,009 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：422893 
+
+时间：2016-10-17 15:20:29,429 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：425313 
+
+时间：2016-10-17 15:20:33,071 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：428954 
+
+时间：2016-10-17 15:20:35,275 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：431158 
+
+时间：2016-10-17 15:20:36,419 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：432302 
+
+时间：2016-10-17 15:20:37,584 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：433467 
+
+时间：2016-10-17 15:20:38,899 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：434783 
+
+时间：2016-10-17 15:20:40,115 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆错误次数过多，请过会再登陆)","code":"T登陆错误次数过多，请过会再登陆"} 
+时间：435999 
+
+时间：2016-10-17 15:20:43,108 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T登陆错误次数过多，请过会再登陆)","code":"T登陆错误次数过多，请过会再登陆"} 
+时间：438991 
+
+时间：2016-10-17 15:20:44,907 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：440791 
+
+时间：2016-10-17 15:20:46,452 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：442335 
+
+时间：2016-10-17 15:25:46,850 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 ","code":"0x0003"} 
+时间：4842 
+
+时间：2016-10-17 15:25:48,594 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 ","code":"0x0003"} 
+时间：6586 
+
+时间：2016-10-17 15:25:53,230 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 ","code":"0x0003"} 
+时间：11222 
+
+时间：2016-10-17 15:25:55,030 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 应为5个字符","code":"0x0004"} 
+时间：13022 
+
+时间：2016-10-17 15:25:59,131 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：17123 
+
+时间：2016-10-17 15:26:01,354 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：19346 
+
+时间：2016-10-17 15:27:59,778 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：137770 
+
+时间：2016-10-17 15:28:02,887 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 应为5个字符","code":"0x0004"} 
+时间：140879 
+
+时间：2016-10-17 15:28:06,181 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 ","code":"0x0003"} 
+时间：144173 
+
+时间：2016-10-17 15:29:04,107 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 ","code":"0x0003"} 
+时间：37885 
+
+时间：2016-10-17 15:29:58,538 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：145 
+
+时间：2016-10-17 15:30:02,273 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户密码","code":"0x0003"} 
+时间：3880 
+
+时间：2016-10-17 15:30:04,466 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 图形验证码应为5个字符","code":"0x0004"} 
+时间：6073 
+
+时间：2016-10-17 15:30:08,700 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 图形验证码应为5个字符","code":"0x0004"} 
+时间：10307 
+
+时间：2016-10-17 15:30:10,898 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：12505 
+
+时间：2016-10-17 15:30:13,016 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：14623 
+
+时间：2016-10-17 15:30:14,561 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：16168 
+
+时间：2016-10-17 15:30:15,569 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：17176 
+
+时间：2016-10-17 15:30:16,635 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：18242 
+
+时间：2016-10-17 15:35:51,677 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：353284 
+
+时间：2016-10-17 15:35:54,272 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：355879 
+
+时间：2016-10-17 15:39:47,277 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：588884 
+
+时间：2016-10-17 15:39:49,758 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：591365 
+
+时间：2016-10-17 16:07:26,558 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2248165 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 288
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.row.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 147
+   在 X.Web.Com.XForm.form.<>c.<init>b__16_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 124
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 121
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 107
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 16:07:53,963 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2275570 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 288
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.row.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 147
+   在 X.Web.Com.XForm.form.<>c.<init>b__16_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 124
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 121
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 107
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 16:08:00,318 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2281925 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 288
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.row.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 147
+   在 X.Web.Com.XForm.form.<>c.<init>b__16_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 124
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 121
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 107
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 16:08:28,151 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2309758 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 288
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.row.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 147
+   在 X.Web.Com.XForm.form.<>c.<init>b__16_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 124
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 121
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 107
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 16:08:29,154 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2310761 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 288
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.row.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 147
+   在 X.Web.Com.XForm.form.<>c.<init>b__16_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 124
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 121
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 107
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 16:09:11,962 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：235 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 288
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.row.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 147
+   在 X.Web.Com.XForm.form.<>c.<init>b__16_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 124
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 121
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 107
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 16:09:22,042 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：10316 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 288
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.row.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 147
+   在 X.Web.Com.XForm.form.<>c.<init>b__16_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 124
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 121
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 107
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 16:09:33,959 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：22233 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Web.Com.XForm.pick.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 288
+   在 X.Web.Com.XForm.<>c.<loadcts>b__4_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 59
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.loadcts(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 56
+   在 X.Web.Com.XForm.row.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 147
+   在 X.Web.Com.XForm.form.<>c.<init>b__16_0(Match o) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 124
+   在 System.Text.RegularExpressions.RegexReplacement.Replace(MatchEvaluator evaluator, Regex regex, String input, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator, Int32 count, Int32 startat)
+   在 System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   在 X.Web.Com.XForm.form.init(String body) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 121
+   在 X.Web.Com.XForm.Parse(String html) 位置 D:\Pro\x.shop\src\Web\X.Web\Com\XForm.cs:行号 72
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 107
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 16:18:31,603 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 ","code":"0x0003"} 
+时间：459582 
+
+时间：2016-10-17 16:19:45,629 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户帐号","code":"0x0003"} 
+时间：1569 
+
+时间：2016-10-17 16:20:02,878 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：174 
+
+时间：2016-10-17 16:21:06,506 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：63801 
+
+时间：2016-10-17 16:21:24,829 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：82125 
+
+时间：2016-10-17 16:21:33,450 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：90746 
+
+时间：2016-10-17 16:21:42,478 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：99774 
+
+时间：2016-10-17 16:27:06,365 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：423661 
+
+时间：2016-10-17 16:32:04,033 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：721329 
+
+时间：2016-10-17 16:35:06,885 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 用户名至少8个字符","code":"0x0004"} 
+时间：904180 
+
+时间：2016-10-17 16:35:12,046 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 登陆密码","code":"0x0003"} 
+时间：909342 
+
+时间：2016-10-17 16:35:15,671 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 登陆密码","code":"0x0003"} 
+时间：912967 
+
+时间：2016-10-17 16:35:57,898 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 图片验证码","code":"0x0003"} 
+时间：148 
+
+时间：2016-10-17 16:36:02,007 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 图片验证码应为5个字符","code":"0x0004"} 
+时间：4256 
+
+时间：2016-10-17 16:36:04,416 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 图片验证码应为5个字符","code":"0x0004"} 
+时间：6666 
+
+时间：2016-10-17 16:36:07,392 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户未登陆或登陆超时)","code":"T用户未登陆或登陆超时"} 
+时间：9641 
+
+时间：2016-10-17 16:36:09,896 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户未登陆或登陆超时)","code":"T用户未登陆或登陆超时"} 
+时间：12145 
+
+时间：2016-10-17 16:37:23,946 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：50979 
+
+时间：2016-10-17 16:47:42,917 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：137209 
+
+时间：2016-10-17 16:47:47,792 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：142085 
+
+时间：2016-10-17 16:47:49,950 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：144242 
+
+时间：2016-10-17 16:47:51,246 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：145538 
+
+时间：2016-10-17 16:47:57,309 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：151601 
+
+时间：2016-10-17 16:49:45,875 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：260167 
+
+时间：2016-10-17 16:53:17,453 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名已经存在)","code":"T用户名已经存在"} 
+时间：471745 
+
+时间：2016-10-17 16:53:22,887 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 用户名至少8个字符","code":"0x0004"} 
+时间：477180 
+
+时间：2016-10-17 17:21:01,559 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：1604488 
+
+时间：2016-10-17 17:21:03,492 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：1606422 
+
+时间：2016-10-17 17:21:04,911 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：1607840 
+
+时间：2016-10-17 17:23:41,889 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：1764819 
+
+时间：2016-10-17 17:37:08,914 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 图形验证码应为5个字符","code":"0x0004"} 
+时间：2571844 
+
+时间：2016-10-17 17:38:18,536 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：2641465 
+
+时间：2016-10-17 17:38:59,690 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：2682620 
+
+时间：2016-10-17 17:40:43,705 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：2786635 
+
+时间：2016-10-17 17:41:05,852 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：2808782 
+
+时间：2016-10-17 18:28:46,007 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：5668936 
+
+时间：2016-10-17 18:28:51,292 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：5674221 
+
+时间：2016-10-17 18:30:12,661 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：5755591 
+
+时间：2016-10-17 18:30:19,251 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：5762181 
+
+时间：2016-10-17 18:34:39,752 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：7805 
+
+时间：2016-10-17 19:00:12,421 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 用户名至少8个字符","code":"0x0004"} 
+时间：1540474 
+
+时间：2016-10-17 19:00:36,880 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"参数不满足要求 用户名至少8个字符","code":"0x0004"} 
+时间：1564934 
+
+时间：2016-10-17 19:00:45,894 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 登陆密码","code":"0x0003"} 
+时间：1573948 
+
+时间：2016-10-17 19:00:53,768 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 图片验证码","code":"0x0003"} 
+时间：1581821 
+
+时间：2016-10-17 19:01:28,201 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：1616254 
+
+时间：2016-10-17 19:03:33,153 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 用户名","code":"0x0003"} 
+时间：1741207 
+
+时间：2016-10-17 19:03:40,182 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 登陆密码","code":"0x0003"} 
+时间：1748236 
+
+时间：2016-10-17 19:04:17,718 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 登陆密码","code":"0x0003"} 
+时间：1785772 
+
+时间：2016-10-17 19:04:20,143 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 登陆密码","code":"0x0003"} 
+时间：1788197 
+
+时间：2016-10-17 19:04:25,120 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 登陆密码","code":"0x0003"} 
+时间：1793174 
+
+时间：2016-10-17 19:32:38,163 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名已经存在)","code":"T用户名已经存在"} 
+时间：357545 
+
+时间：2016-10-17 19:33:46,525 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名已经存在)","code":"T用户名已经存在"} 
+时间：425908 
+
+时间：2016-10-17 19:35:18,353 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T验证码不正确)","code":"T验证码不正确"} 
+时间：517736 
+
+时间：2016-10-17 19:35:45,954 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户名或密码错误，请检查是否正确)","code":"T用户名或密码错误，请检查是否正确"} 
+时间：545337 
+
+时间：2016-10-17 19:37:16,560 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户未登陆或登陆超时)","code":"T用户未登陆或登陆超时"} 
+时间：255 
+
+时间：2016-10-17 19:37:29,611 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：13306 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'user/index.html'
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 103
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 19:42:44,612 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户未登陆或登陆超时)","code":"T用户未登陆或登陆超时"} 
+时间：247 
+
+时间：2016-10-17 20:02:35,022 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户未登陆或登陆超时)","code":"T用户未登陆或登陆超时"} 
+时间：311 
+
+时间：2016-10-17 20:02:47,210 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：12499 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource '_left.html'
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 103
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-17 20:04:00,030 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户未登陆或登陆超时)","code":"T用户未登陆或登陆超时"} 
+时间：85319 

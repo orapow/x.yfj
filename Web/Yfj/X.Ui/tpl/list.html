@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("com/_head.html")
+    <title>列表- 在线商城</title>
+    <meta name="Description" content="  " />
+    <meta name="Keywords" content="  " />
+    <link href="/css/web/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/web/common.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/web/SearchInfoWindow.css" rel="stylesheet" type="text/css" />
+    <link href="/css/web/jquery.Jcrop.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/web/major_maincolor.css?major=7" rel="stylesheet" type="text/css" css_name="css_major" />
+    <link href="/css/web/major_plugincolor.css?major=7" rel="stylesheet" type="text/css" css_name="css_major_plugin" />
+    <link href="/css/web/minor_color.css?colorHex=f9f5ea" rel="stylesheet" type="text/css" css_name="css_minor" />
+    <link href="/css/web/borderColor_2.css" rel="stylesheet" type="text/css" css_name="css_border" />
+</head>
+<body>
+    <div id="main">
+        #parse("_top.html")
+        <div id="show_comment_reset">
+            <div class="main_pathbg">
+                <div class="main_pathbox">
+                    <div class="main_pathbox_first">全部结果</div>
+                    <div class="main_pathbox_arrow">&gt;</div>
+                    <div class="main_pathbox_itembox j_main_pathbox_itembox1" f_c3="8268">
+                        <div class="main_pathbox_item">
+                            <div class="main_pathbox_itemname_no_hover j_main_pathbox_itemname"> 户外(2) </div>
+                        </div>
+                    </div>
+                    <div class="main_pathbox_arrow">&gt;</div>
+                    <div class="main_pathbox_itembox m_main_pathbox_itembox">
+                        <div class="main_pathbox_item">
+                            <div class="main_pathbox_itemname_no_hover k_main_pathbox_itemname"> 登山鞋(2) </div>
+                        </div>
+                    </div>
+                    <div class="main_pathbox_arrow">&gt;</div>
+                    <div class="main_pathbox_searchbox">
+                        <input id="keyNames" value="">
+                        <div class="main_pathbox_searchbox_iconbox" style="cursor: pointer" id="keyName">
+                            <div class="main_pathbox_searchbox_icon search_icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="searchgoods_bg">
+                <div class="searchgoods_navbox">
+                    <div class="searchgoods_nav_title" style="cursor: pointer">所有类目</div>
+                    <div class="searchgoods_nav_first" class1_id="6571">
+                        <div class="searchgoods_navicon arrow_icon01"></div>
+                        <a href="javascript:void(0)">户外(2)</a>
+                    </div>
+                    <ul class="searchgoods_nav_second">
+                        <li class3_id="8268" father_id="6571"><a href="javascript:void(0)">登山鞋(2)</a> </li>
+                    </ul>
+                </div>
+                <div class="searchgoods_content">
+                    <div class="searchgoods_contentbox">
+                        <div class="searchgoods_content_selectbox" types="yes">
+                            <div class="searchgoods_content_selectbox_listbg j_selectbox_listbg" types="yes" index="0">
+                                <div class="searchgoods_content_selectbox_listname">多选</div>
+                                <div class="searchgoods_content_selectbox_listbox j_selectbox_listbox">
+                                    <ul class="selectbox_list" id="selectbox_list2">
+                                        <li tagitemname="多选" tag_item_id="8142"> <a id="search_item_attr_0_0" dd="search_item_attr_0_0" href="javascript:void(0);" class="tag_item_search" index="0" style="" tag_item_id="8142" tag_class_name="多选">多选</a> </li>
+                                    </ul>
+                                    <div class="selectbox_more" id="show_more_tagitem_0" tag_class_index="0" style="display: none;top:10px;">
+                                        <span>更多</span>
+                                        <div class="selectbox_moreicon arrow_icon01"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="searchgoods_content_sortbg">
+                            <ul class="searchgoods_content_sortbox">
+                                <li id="order_default" class="sortbox_sales sortbox_sales_noicon checked"> 默认排序 </li>
+                                <li id="order_sales" class="sortbox_sales">
+                                    <div class="sortbox_salesicon arrow_icon03"></div>
+                                    销量
+                                </li>
+                                <li class="sortbox_sales " id="order_price_up" types="high">
+                                    <div class="sortbox_salesicon arrow_icon04" id="order_price_arrow"></div>
+                                    价格
+                                </li>
+                                <li class="sortbox_sales" id="order_commment_up">
+                                    <div class="sortbox_salesicon arrow_icon03"></div>
+                                    评论数
+                                </li>
+                                <li id="order_time" class="sortbox_sales sortbox_sales_noicon"> 新品 </li>
+                            </ul>
+                            <div class="searchgoods_content_pricebg">
+                                <ul class="searchgoods_content_pricebox">
+                                    <li>
+                                        <em>¥</em>
+                                        <input id="min_price" placeholder="最低价">
+                                    </li>
+                                    <li class="pricebox_line">-</li>
+                                    <li>
+                                        <em>¥</em>
+                                        <input id="maxs_pirce" placeholder="最高价">
+                                    </li>
+                                </ul>
+                                <div class="searchgoods_content_pricebox_popupbox">
+                                    <div class="popupbox_button"><a href="javascript:void(0)" id="price_no">消除</a><a class="popupbox_button_cancle" href="javascript:void(0)" id="price_ok">确定</a></div>
+                                    <ul class="popupbox_list">
+                                        <li id="price1"><a href="javascript:void(0)">0~99元</a></li>
+                                        <li id="price2"><a href="javascript:void(0)">100~199元</a></li>
+                                        <li id="price3"><a href="javascript:void(0)">200~399元</a></li>
+                                        <li id="price4"><a href="javascript:void(0)">400~599元</a></li>
+                                        <li id="price5"><a href="javascript:void(0)">1000元以上</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="searchgoods_content_page"> <span> 1 </span>/1 </div>
+                            <div class="searchgoods_content_goods">共<span>2</span>件商品</div>
+                        </div>
+                        <!--当商城没有开启入住商城时不显示此模块-->
+                        <div class="searchgoods_content_goodsbox j_searchgoods_content_goodsbox">
+                            <!--循环体-->
+                            #foreach($g in $glist)
+                            <div class="goodsbox_list j_goodsbox_list" goods_id="9003" myid="0" ruleid="0" discountprice="">
+                                <p class="goodsbox_img"> <a target="_blank" href="/detail-${g.goods_id}.html"> <img class="lazy" alt="" src="http://img.zhuyun.cn/M00/01/A0/wKgJNFI2bxaAen3sAAAg368bBCY076.jpg" data-original="http://img.zhuyun.cn/M00/01/A0/wKgJNFI2bxaAen3sAAAg368bBCY076.jpg" style="display: block;"></a> </p>
+                                <div id="sales_icon"></div>
+                                <p></p>
+                                <div class="goodsbox_soldbox j_no_number" style="height:0px;">
+                                    <div class="goodsbox_sold goodssold">已售完</div>
+                                </div>
+                                <p class="goodsbox_price"><em>¥</em><i id="sales_price">398.00</i></p>
+                                <p class="goodsbox_name goodsbox_name_2 "> <a target="_blank" href="/Home/Goods/9003" class="search_list_text" goods_id="9003">$g.name<em style="color: #db2929;"></em></a> </p>
+                                <p class="goodsbox_store"></p>
+                                <ul class="goodsbox_eva goodsbox_eva_3" style="width: 100%;">
+                                    <li style="width:50%;">
+                                        <p> 销量 <span>0</span> </p>
+                                    </li>
+                                    <li style="width:50%;">
+                                        <p> 评价 <span>0</span> </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            #end
+                            <!--循环体-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse("_foot.html")
+</body>
+</html>

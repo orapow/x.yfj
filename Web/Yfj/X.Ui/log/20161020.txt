@@ -1,0 +1,361 @@
+
+时间：2016-10-20 14:36:58,114 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：149839 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.mgr.din.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\din.cs:行号 25
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 17:53:50,445 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：11026254 
+System.Data.SqlClient.SqlException (0x80131904): SHUTDOWN 正在进行。
+用户 'o2o' 登录失败。
+当前命令发生了严重错误。应放弃任何可能产生的结果。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Apis.mgr.dict.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 55
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 52
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 16
+   在 X.App.Apis.mgr.dict.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 23
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:1e4f62a3-2834-46ef-9ccd-4acc288330bc
+Error Number:6005,State:1,Class:14
+
+时间：2016-10-20 17:53:50,445 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：11026254 
+System.Data.SqlClient.SqlException (0x80131904): SHUTDOWN 正在进行。
+用户 'o2o' 登录失败。
+当前命令发生了严重错误。应放弃任何可能产生的结果。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader()
+   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 X.App.Apis.mgr.dict.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 55
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 52
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 16
+   在 X.App.Apis.mgr.dict.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 23
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:fd2e5c6c-683b-43bd-91ed-ea9ea1484240
+Error Number:6005,State:1,Class:14
+
+时间：2016-10-20 18:05:57,466 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 代号","code":"0x0003"} 
+时间：540900 
+
+时间：2016-10-20 18:30:04,395 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：170157 
+NVelocity.Exception.MethodInvocationException: Invocation of method 'GetByLetter' in  X.App.Views.com.dict threw exception System.NullReferenceException : 未将对象引用设置到对象的实例。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.com.dict.<>c__DisplayClass15_0.<GetByLetter>b__0(x_dict d) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Views\com\dict.cs:行号 44
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.App.Views.com.dict.GetByLetter(Char l) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Views\com\dict.cs:行号 42
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 18:30:50,781 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：23630 
+NVelocity.Exception.MethodInvocationException: Invocation of method 'GetByLetter' in  X.App.Views.com.dict threw exception System.NullReferenceException : 未将对象引用设置到对象的实例。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.com.dict.<>c__DisplayClass15_0.<GetByLetter>b__0(x_dict d) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Views\com\dict.cs:行号 44
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.App.Views.com.dict.GetByLetter(Char l) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Views\com\dict.cs:行号 42
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 18:34:37,566 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：250415 
+NVelocity.Exception.MethodInvocationException: Invocation of method 'GetByLetter' in  X.App.Views.com.dict threw exception System.NullReferenceException : 未将对象引用设置到对象的实例。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Views.com.dict.<>c__DisplayClass15_0.<GetByLetter>b__0(x_dict d) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Views\com\dict.cs:行号 44
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.App.Views.com.dict.GetByLetter(Char l) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Views\com\dict.cs:行号 42
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 19:03:47,685 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：113366 
+NVelocity.Exception.ParseErrorException: Encountered "=" at line 18, column 97.
+Was expecting one of:
+    <RPAREN> ...
+    <WHITESPACE> ...
+    "-" ...
+    "+" ...
+    "*" ...
+    "/" ...
+    "%" ...
+    "&&" ...
+    "||" ...
+    "<" ...
+    "<=" ...
+    ">" ...
+    ">=" ...
+    "==" ...
+    "!=" ...
+    <DOT> ...
+     ---> NVelocity.Runtime.Parser.ParseException: Encountered "=" at line 18, column 97.
+Was expecting one of:
+    <RPAREN> ...
+    <WHITESPACE> ...
+    "-" ...
+    "+" ...
+    "*" ...
+    "/" ...
+    "%" ...
+    "&&" ...
+    "||" ...
+    "<" ...
+    "<=" ...
+    ">" ...
+    ">=" ...
+    "==" ...
+    "!=" ...
+    <DOT> ...
+    
+   在 NVelocity.Runtime.Parser.Parser.Parse(TextReader reader, String templateName)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName, Boolean dumpNamespace)
+   在 NVelocity.Runtime.RuntimeInstance.Parse(TextReader reader, String templateName)
+   在 NVelocity.Template.Process()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 19:06:58,541 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：304221 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass4_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.mgr.dict.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 45
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 52
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 16
+   在 X.App.Apis.mgr.dict.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 23
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 19:07:01,431 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：307112 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass4_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.mgr.dict.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 45
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 52
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 16
+   在 X.App.Apis.mgr.dict.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 23
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 19:08:05,230 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：755 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass4_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.mgr.dict.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 45
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 52
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 16
+   在 X.App.Apis.mgr.dict.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 23
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 19:08:28,163 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：23688 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass4_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.mgr.dict.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 45
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 52
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 16
+   在 X.App.Apis.mgr.dict.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 23
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 19:08:53,045 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：48571 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass4_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.mgr.dict.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 45
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 52
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 16
+   在 X.App.Apis.mgr.dict.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 23
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 19:09:38,375 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：93900 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass4_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.mgr.dict.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 45
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 52
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 16
+   在 X.App.Apis.mgr.dict.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 23
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 19:09:57,810 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：3142 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass4_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.mgr.dict.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 45
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 52
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 16
+   在 X.App.Apis.mgr.dict.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 23
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 19:10:55,898 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：61229 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass4_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.shop\src\Xc\Data\DataClasses.cs:行号 175
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.mgr.dict.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 45
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 52
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.getChild(TreeNode n) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 56
+   在 X.Data.XTree.InitTree(String title) 位置 D:\Pro\x.shop\src\Xc\Data\XTree.cs:行号 16
+   在 X.App.Apis.mgr.dict.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 23
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2016-10-20 19:13:27,066 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.shop\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：212398 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass4_1.<GetDictList>b__2(x_dict o)
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db)
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.shop\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.mgr.dict.list.tree_LoadList(Object id) 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 45
+   在 X.Data.XTree.getChild(TreeNode n)
+   在 X.Data.XTree.getChild(TreeNode n)
+   在 X.Data.XTree.getChild(TreeNode n)
+   在 X.Data.XTree.InitTree(String title)
+   在 X.App.Apis.mgr.dict.list.Execute() 位置 D:\Pro\x.shop\src\Web\O2O\X.App\Apis\mgr\dict\list.cs:行号 23
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.shop\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.shop\src\Web\X.Web\XApp.cs:行号 31

@@ -1,0 +1,41 @@
+﻿.grid input[type='checkbox'] { margin: 0; }
+.grid.body { overflow-x: hidden; overflow-y: auto; }
+.grid.body td a { font-size: 12px; text-decoration: none; }
+.grid.body tr[sel] td, .grid.body tr:hover td { background-color: #ccc; color: white; }
+.grid.body tr[sel] td a, .grid.body tr:hover td a { color: white; }
+.grid.body td.ops .btn { padding: 1px 6px; color: #333; margin-right: 4px; }
+.grid.body td.ops .btn:hover { color: #333; }
+.grid.body .chks { }
+.grid.body .chks .btn { padding: 3px 6px; text-align: center; margin-left: -1px; }
+.grid.body .chks .btn i { margin: 0; }
+
+.grid.pager { margin: 0; text-align: left; }
+.grid.pager li a.btn-primary { }
+.grid.pager li a:hover { color: white; }
+.grid.pager .pi { border: none; background-color: white; }
+.grid.pager li a { margin: 0; border-radius: 0; border: 1px solid #ccc; margin-left: 3px; font-size: 12px; padding: 3px 10px; }
+.grid.pager li a.btn-primary { }
+
+.grid.pages { }
+.grid.pages .btn { border-radius: 0; margin-left: 5px; border-width: 1px; }
+
+.gridpanel { margin-top: 10px; }
+.gridpanel hr { margin: 10px 0; border-color: #3086c8; }
+.gridpanel table { table-layout: fixed; margin-bottom: 0; }
+.gridpanel td, .gridpanel th { word-break: keep-all; /* 不换行 */ white-space: nowrap; /* 不换行 */ overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */ text-overflow: ellipsis; }
+.gridpanel th.sortable { background-color: #4682b4; color: white; cursor: pointer; }
+
+.table { margin: 0; }
+.table th { background: none repeat scroll 0 0 #e8e8e8; border-left: 1px solid #cecece; color: #666; padding: 5px 4px; text-align: center; }
+.table th:last-child { border-right: 1px solid #ccc; }
+.table td { border-bottom: 1px solid #dddddd; border-left: 1px solid #dddddd; border-top: 1px solid #dddddd; line-height: 24px; padding: 4px; text-align: center; vertical-align: top; font-family: "宋体"; }
+.table td:last-child { border-right: 1px solid #ddd; text-align: left; }
+.table tr:last-child td { border-top: none; }
+.table td.ops a i { margin-right: 2px; }
+.table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td { border-top: 1px solid #cecece; }
+
+.pagination { margin: 0; }
+.pagination ul > li:first-child > a { border-radius: 0; }
+.pagination ul > li > a:hover, .pagination ul > li > a:focus, .pagination ul > .active > a, .pagination ul > .active > span { background-color: #0044cc; }
+.pagination ul > li { width: auto; display: inline-block; vertical-align: top; }
+.pagination ul > li input { width: 30px; margin-left: 3px; height: 24px; border: 1px solid #ccc; text-align: center; _height: 18px; }

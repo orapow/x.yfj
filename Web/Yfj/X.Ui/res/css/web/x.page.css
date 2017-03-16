@@ -1,0 +1,26 @@
+﻿
+* { font-family: "微软雅黑"; }
+body { margin: 0px; padding: 0; font-size: 12px; }
+ul, li { margin: 0; padding: 0; }
+
+.btn { box-shadow: none; border: 1px solid #ccc; background-image: none; text-shadow: none; }
+.btn-primary { background-image: linear-gradient(to bottom, #3086c8, #3086c8); border-color: #3086c8; text-shadow: none; }
+.btn-info { background-image: linear-gradient(to bottom, #5bc0de, #5bc0de); border-color: #3086c8; text-shadow: none; }
+.btn-success { background-image: linear-gradient(to bottom, #62c462, #62c462); border-color: #62c462; text-shadow: none; }
+.btn-warning { background-image: linear-gradient(to bottom, #ff8a00, #ff8a00); border-color: #ff8a00; text-shadow: none; }
+.btn-danger { background-image: linear-gradient(to bottom, #ee5f5b, #ee5f5b); border-color: #ee5f5b; text-shadow: none; }
+.btn-inverse { background-image: linear-gradient(to bottom, #444, #444); border-color: #444; }
+.btn-link { border: none; text-shadow: none; background-color: transparent; }
+.btn-link:hover { background-color: transparent; color: #333; }
+.btn-link:active { background-color: transparent; }
+.btn-link:after { background-color: transparent; }
+.btn:hover, .btn:focus { transition: none; background-position: 0 30px; }
+.btn-large:hover, .btn-large:focus { background-position: 0 45px; }
+.btn-warning:hover, .btn-warning:focus { background-color: #f7941c; }
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input { margin: 0; vertical-align: top; font-size: 12px; }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { background-color: #1665a1; }
+.input-append, .input-prepend { margin: 0; }
+label { margin: 0; }
+form { margin: 0; }
+
+.loading { background: url("/img/loading.gif") no-repeat scroll 0 0 / contain rgba(0, 0, 0, 0); display: block; height: 20px; line-height: 20px; text-indent: 30px; }

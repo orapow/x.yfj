@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>用户信息 - $cfg.name</title>
+    <style type="text/css">
+        body { margin: 0; }
+    </style>
+</head>
+<body>
+    <x:form api="mgr.user.update">
+        <input type="hidden" name="id" value="$!id" x-check="" />
+        <x:pick title="等级" src="dict:user.level" name="level" count="1" def="$!item.group" />
+        <x:pick title="业务员" src="dict:user.sman" name="sman" count="1" def="$!item.invter" />
+        <x:text title="姓名" name="name" size="3" def="$!item.name" />
+        <x:text title="电话" name="tel" size="3" def="$!item.tel" />
+        <div class="btns">
+            <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>提交保存</button>
+        </div>
+    </x:form>
+    <br />
+    <br />
+    <script type="text/javascript">
+        $("form:eq(0)").xform({
+            callback: function (d) { x.closewin(); }
+        });
+    </script>
+</body>
+</html>
