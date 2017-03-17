@@ -34,7 +34,8 @@ namespace X.App.Views.wx
         }
         private void initUser()
         {
-            if (!isWx) if (Context.Request.RawUrl != "/wx/login.html") Context.Response.Redirect("/wx/login.html");
+            if (cu != null) return;
+            if (!isWx && nd_user) if (Context.Request.RawUrl != "/wx/login.html") Context.Response.Redirect("/wx/login.html");
 
             var code = GetReqParms("code");
             if (string.IsNullOrEmpty(code)) toWxUrl("snsapi_base");
@@ -107,14 +108,14 @@ namespace X.App.Views.wx
 
             initCity();
 
-            if (nd_user && cu == null) initUser();
+            if (cu == null || isWx) initUser();
 
             if (cu != null)
             {
                 cu.etime = DateTime.Now;
                 SubmitDBChanges();
             }
-
+            Context.Response.SetCookie(new HttpCookie("cu_key", cu.ukey));
         }
         protected override void InitDict()
         {

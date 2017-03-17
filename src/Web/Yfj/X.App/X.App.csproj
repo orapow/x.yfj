@@ -41,6 +41,9 @@
     <Compile Include="Apis\mgr\city\del.cs" />
     <Compile Include="Apis\mgr\city\list.cs" />
     <Compile Include="Apis\mgr\city\save.cs" />
+    <Compile Include="Apis\mgr\cate\del.cs" />
+    <Compile Include="Apis\mgr\cate\list.cs" />
+    <Compile Include="Apis\mgr\cate\save.cs" />
     <Compile Include="Apis\mgr\sman\del.cs" />
     <Compile Include="Apis\mgr\sman\list.cs" />
     <Compile Include="Apis\mgr\sman\save.cs" />
@@ -71,6 +74,9 @@
     <Compile Include="Apis\com\upload.cs" />
     <Compile Include="Apis\mgr\login.cs" />
     <Compile Include="Apis\mgr\logout.cs" />
+    <Compile Include="Apis\wx\outcart.cs" />
+    <Compile Include="Apis\wx\tocart.cs" />
+    <Compile Include="Apis\wx\_wx.cs" />
     <Compile Include="Apis\xapi.cs" />
     <Compile Include="Com\Config.cs" />
     <Compile Include="Com\Sms.cs" />
@@ -83,6 +89,9 @@
     <Compile Include="Views\index.cs" />
     <Compile Include="Views\mgr\city\edit.cs" />
     <Compile Include="Views\mgr\city\list.cs" />
+    <Compile Include="Views\mgr\cate\edit.cs" />
+    <Compile Include="Views\mgr\cate\list.cs" />
+    <Compile Include="Views\mgr\cate\select.cs" />
     <Compile Include="Views\mgr\sman\edit.cs" />
     <Compile Include="Views\mgr\sman\list.cs" />
     <Compile Include="Views\mgr\level\edit.cs" />

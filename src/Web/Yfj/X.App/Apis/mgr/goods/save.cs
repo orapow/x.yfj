@@ -17,7 +17,6 @@ namespace X.App.Apis.mgr.goods
         public int iscp { get; set; }
         public string cate { get; set; }//分类
         public int mch_id { get; set; }//商户
-        public int gclass { get; set; }//商品品类
         public string name { get; set; }//名称
         public string no { get; set; }//编号
         public string alias { get; set; }//别名
@@ -45,9 +44,12 @@ namespace X.App.Apis.mgr.goods
             }
             if (ent == null || iscp == 1) ent = new x_goods() { ctime = DateTime.Now };
 
+            var ct = DB.x_dict.FirstOrDefault(o => o.code == "goods.cate" && o.value == cate);
+            if (ct == null) throw new XExcep("T分类不存在");
+
             ent.cate_id = cate;
+            ent.unit = ct.f3;
             ent.city = mg.city;
-            ent.class_id = gclass;
             ent.name = name;
             ent.no = no;
             ent.alias = alias;

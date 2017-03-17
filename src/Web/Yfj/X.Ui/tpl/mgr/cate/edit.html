@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>分类编辑 - $cfg.name</title>
+    <style type="text/css">
+        body { margin: 0; }
+    </style>
+</head>
+<body>
+    <x:form api="mgr.cate.save">
+        <input type="hidden" name="id" value="$!item.dict_id" x-check="" />
+        <input type="hidden" name="code" value="$!code" x-check="" />
+        <x:pick title="上级字典" src="url:/mgr/dict/select-$!{code}.html" name="upv" count="1" def="$!up" />
+        <x:upload title="字典图片" name="img" count="1" tp="img" def="$!item.img" />
+        <x:text title="字典名称" name="name" size="3" def="$!item.name" />
+        <x:text title="单位" name="unit" size="3" def="$!item.f3" />
+        <x:text title="排序" name="sort" size="3" def="#if($cid>0)$!item.sort#else 99#end" />
+        <div class="btns">
+            <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>提交保存</button>
+        </div>
+    </x:form>
+    <br />
+    <br />
+    <script type="text/javascript">
+        $("form:eq(0)").xform({
+            callback: function (d, r) {
+                if ("$!pid") document.location.href = "edit-$!{code}--" + r.upv + ".html";
+                else x.closewin();
+            }
+        });
+        $(function () {
+            $("#id_name").focus();
+        })
+    </script>
+</body>
+</html>

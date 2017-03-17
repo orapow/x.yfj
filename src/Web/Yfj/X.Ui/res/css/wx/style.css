@@ -1,0 +1,352 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body { padding: 0px; margin: 0px; font-family: "微软雅黑"; font-size: 1.4em; color: #333; font-size: 62.5%; }
+input[type="button"], button { outline: none; cursor: pointer; font-family: "微软雅黑"; }
+input[type="text"], textarea, button { outline: none; border: none; background: none; font-family: "微软雅黑"; }
+select { outline: none; }
+input, button { -webkit-appearance: none; }
+p, ul li, ul, h4, input, div, img, h3, h2, tr th, tr td, header, button { padding: 0px; margin: 0px; list-style: none; font-weight: normal; }
+a { color: #333; text-decoration: none; cursor: pointer; }
+img, a { border: 0; padding: 0px; margin: 0px; }
+.clear { clear: both; }
+
+.top { height: 60px; width: 100%; line-height: 60px; background: #f57629; padding: 0px 15px; box-sizing: border-box; }
+.left { width: 22%; float: left; }
+.left a { display: block; padding-right: 25px; box-sizing: border-box; font-size: 18px; color: #FFF; line-height: 60px; background: url(/img/wx/sd.png) no-repeat right; background-size: 30px; }
+.right { width: 75%; float: right; border-radius: 50px; height: 40px; line-height: 40px; margin-top: 10px; background: #FFF; }
+.right01 { width: 100%; float: right; border-radius: 50px; height: 40px; line-height: 40px; margin-top: 10px; background: #FFF; }
+.right01 span { width: 20%; height: 50px; display: block; float: right; background: url(/img/wx/cv.png)10px 10px no-repeat; background-size: 25px; }
+.txt { height: 40px; line-height: 40px; border-radius: 50px; padding-left: 20px; width: 80%; box-sizing: border-box; float: left; font-size: 16px; }
+.right span { width: 20%; height: 50px; display: block; float: right; background: url(/img/wx/cv.png)10px 10px no-repeat; background-size: 25px; }
+
+/*弹出框*/
+#login_box09 { width: 80%; height: 120px; background: #ffffff; position: absolute; top: 50%; left: 50%; margin-top: -60px; margin-left: -40%; z-index: 10; display: none; border: 1px solid #999; text-align: center; box-sizing: border-box; border: none; }
+
+#login_box09 h3 { height: 45px; line-height: 45px; background: #e3e3e3; font-size: 16px; padding-left: 10px; text-align: left; color: #666; }
+.xuanz { width: 100%; height: 90px; }
+#qux04 { width: 40%; float: left; height: 30px; line-height: 30px; border: 1px solid #CCC; box-sizing: border-box; font-size: 16px; color: #333; margin: 20px 5% 0px; padding-right: 0px; background: none; }
+#mask { width: 100%; height: 100%; background: #000; position: absolute; top: 0; left: 0; filter: alpha(opacity=30); -moz-opacity: 0.3; opacity: 0.3; z-index: 9; display: none; }
+
+/*手机图片切换*/
+
+.focus { width: 100%; margin: auto; position: relative; overflow: hidden; }
+.focus .hd { width: 100%; height: 11px; position: absolute; z-index: 1; bottom: 20px; text-align: center; }
+.focus .hd ul { display: inline-block; height: 5px; padding: 3px 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; font-size: 0; vertical-align: top; }
+.focus .hd ul li { display: inline-block; width: 10px; height: 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background: #d4d4d4; margin: 0 6px; vertical-align: top; overflow: hidden; }
+.focus .hd ul .on { background: #f57629; }
+.focus .bd { position: relative; z-index: 0; background: #ffffff; }
+.focus .bd ul li img { width: 100%; }
+.focus .bd ul li a { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 取消链接高亮 */ }
+
+.lanmu { width: 100%; display: block; background: #FFF; }
+.lanmu ul { width: 100%; box-sizing: border-box; padding: 10px 5px 10px; }
+.lanmu ul li { width: 25%; float: left; padding: 10px 10px; box-sizing: border-box; text-align: center; }
+.lanmu ul li img { width: 80%; }
+.lanmu ul li span { display: block; line-height: 40px; font-size: 14px; color: #444; }
+
+.xians { width: 100%; background: #f3f3f3; margin: auto; }
+.xians h2 { height: 50px; line-height: 50px; font-size: 20px; border-bottom: 1px solid #CCC; border-top: 1px solid #CCC; color: #f2710c; padding-left: 40px; background: url(/img/wx/vc.png) #FFF 38% 10px no-repeat; background-size: 30px; text-align: center; }
+/*横向滚动*/
+.hnav { width: 100%; padding: 10px; box-sizing: border-box; height: 203px; }
+.hnav ul { width: 2000px; }
+.hnav ul li { display: block; margin-right: 10px; float: left; width: 166px; height: 173px; background: #fff; border: 1px #CCC solid; position: relative; }
+.tup { width: 25%; height: 71px; position: absolute; top: 0px; left: 0px; background: url(/img/wx/cb_03.png) no-repeat; background-size: 100%; }
+
+.hnav ul li img { width: 166px; height: 112px; }
+#ascrail2000-hr { display: none; }
+#ascrail2000 { display: none; }
+
+.jiag { width: 100%; padding: 0px 10px; box-sizing: border-box; height: 60px; border-top: 1px solid #CCC; box-sizing: border-box; }
+.jiag p { font-size: 14px; color: #444; height: 30px; line-height: 25px; width: 100%; overflow: hidden; }
+.jiag a { display: block; font-size: 18px; color: #ee4709; line-height: 25px; width: 100%; background: url(/img/wx/as.png) no-repeat right; background-size: 20px; }
+
+.chanp ul { width: 100%; padding: 2% 1%; box-sizing: border-box; }
+.chanp ul li { display: block; float: left; width: 48%; margin: 1%; height: 183px; background: #fff; border: 1px #CCC solid; position: relative; box-sizing: border-box; }
+.chanp ul li img { width: 100%; height: 122px; }
+
+.chanp { width: 100%; background: #f3f3f3; }
+.bit { width: 100%; padding: 0px 15px; box-sizing: border-box; height: 50px; line-height: 50px; font-size: 18px; color: #FFF; padding-left: 40px; background: url(/img/wx/ji.png) #ff811f 10px no-repeat; background-size: 30px; }
+.bit a { float: right; color: #FFF; font-size: 16px; }
+
+.bit01 { width: 100%; padding: 0px 15px; box-sizing: border-box; height: 50px; line-height: 50px; font-size: 18px; color: #FFF; padding-left: 40px; background: url(/img/wx/df.png) #12b36d 10px no-repeat; background-size: 25px; }
+.bit01 a { float: right; color: #FFF; font-size: 16px; }
+
+.bit02 { width: 100%; padding: 0px 15px; box-sizing: border-box; height: 50px; line-height: 50px; font-size: 18px; color: #FFF; padding-left: 40px; background: url(/img/wx/fs.png) #fe5851 10px no-repeat; background-size: 25px; }
+.bit02 a { float: right; color: #FFF; font-size: 16px; }
+
+.bit03 { width: 100%; padding: 0px 15px; box-sizing: border-box; height: 50px; line-height: 50px; font-size: 18px; color: #FFF; padding-left: 40px; background: url(/img/wx/sf.png) #48a8fb 10px no-repeat; background-size: 25px; }
+.bit03 a { float: right; color: #FFF; font-size: 16px; }
+
+.guang { width: 100%; height: auto; background: #f3f3f3; padding-bottom: 15px; }
+.guang img { width: 100%; }
+
+/*底部*/
+.fudong { width: 100%; height: 60px; position: fixed; z-index: 100px; bottom: 0px; background: #262423; }
+.fudong ul li { width: 25%; height: 60px; float: left; text-align: center; box-sizing: border-box; line-height: 90px; overflow: hidden; }
+.fudong ul li a { color: #ffffff; font-size: 14px; width: 100%; height: 100%; display: block; box-sizing: border-box; }
+.fudong ul li.no08 a { background: url(/img/wx/gu.png) no-repeat center 8px; background-size: 25px auto; }
+.fudong ul li.no09 a { background: url(/img/wx/tf.png) no-repeat center 8px; background-size: 25px auto; }
+.fudong ul li.no011 a { background: url(/img/wx/nk.png) no-repeat center 8px; background-size: 25px auto; }
+.fudong ul li.no012 a { background: url(/img/wx/hi.png) no-repeat center 8px; background-size: 25px auto; }
+
+/*注册*/
+.top01 { height: 50px; width: 100%; background: #f57629; position: relative; font-size: 18px; line-height: 50px; }
+.bnt { position: absolute; top: 10px; left: 10px; width: 30px; height: 30px; }
+.bnt img { width: 80%; margin-top: 4px; }
+.w80 { margin-left: 40px; color: #FFF; }
+
+/*------------------------------------------------用户注册---------------------------------------------------*/
+.zhil01 { width: 100%; padding: 0px 10px; box-sizing: border-box; background: #FFF; margin-top: 10px; }
+.zhil01 ul li { border-bottom: 1px solid #f4f4f4; box-sizing: border-box; height: 60px; box-sizing: border-box; }
+.zhil01 ul li p { width: 20%; font-size: 14px; color: #333; line-height: 60px; float: left; }
+.zhil01 ul li input { width: 80%; box-sizing: border-box; font-size: 14px; color: #333; float: right; line-height: 60px; }
+.zhil01 ul li .en20 { width: 40%; float: left; padding-left: 1px; border: none; }
+.zhil01 ul li .en04 { width: 25%; height: 30px; line-height: 30px; background: #cccccc; color: #999999; float: right; margin-top: 14px; font-size: 14px; border-radius: 5px; border: none; }
+.en05 { margin-top: 10px; }
+.qr { margin: 20px 10px; height: 40px; line-height: 40px; text-align: center; background: #f57629; border-radius: 5px; }
+.btn { background: #f57629; font-size: 14px; color: #FFF; line-height: 40px; border: none; }
+.tis { text-align: center; font-size: 14px; color: #444; margin-top: 20px; padding-left: 40px; display: block; background: url(/img/wx/zd_03.png) 33% 0px no-repeat; background-size: 20px; }
+
+/*登录选项卡*/
+.denlu { width: 100%; text-align: center; }
+.denlu .hd01 { height: 50px; line-height: 50px; background: #ffffff; position: relative; }
+.denlu .hd01 ul { width: 100%; float: left; position: absolute; top: 0px; height: 50px; }
+.denlu .hd01 ul li { float: left; width: 50%; cursor: pointer; font-size: 14px; }
+.denlu .hd01 ul li.on { height: 50px; background: #fff; border-bottom: 1px solid #f57629; }
+.le01 { font-size: 14px; color: #444; line-height: 30px; float: left; margin-left: 10px; }
+.rig01 { font-size: 14px; color: #444; line-height: 30px; float: right; margin-right: 10px; }
+
+/*分类选项卡*/
+.fenl { width: 100%; text-align: center; }
+.fenl .hd02 { height: 50px; line-height: 50px; background: #ffffff; position: relative; border-bottom: 1px solid #CCC; }
+.fenl .hd02 ul { width: 100%; float: left; position: absolute; top: 0px; height: 50px; }
+.fenl .hd02 ul li { float: left; width: 20%; cursor: pointer; font-size: 14px; }
+.fenl .hd02 ul li.on { height: 50px; background: #fff; border-bottom: 1px solid #f57629; color: #f57629; }
+
+.fenl01 { width: 100%; text-align: center; }
+.fenl01 .hd03 { height: auto; width: 20%; position: relative; }
+.fenl01 .hd03 ul { width: 100%; float: left; position: absolute; top: 0px; background: #f5f5f5; border-right: 1px solid #CCC; }
+.fenl01 .hd03 ul li { width: 100%; cursor: pointer; font-size: 14px; height: 50px; line-height: 50px; text-align: center; border-bottom: 1px solid #CCC; }
+.fenl01 .hd03 ul li.on1 { height: 50px; background: #fff; color: #f57629; }
+.fenl01 .bd03 { height: auto; width: 80%; position: relative; float: right; }
+
+
+.xuanze { width: 100%; }
+.xuanze ul { border-bottom: 1px solid #CCC; }
+.xuanze ul li { width: 50%; float: left; box-sizing: border-box; padding-right: 10%; background: url(/img/wx/gd.png) 70% 15px no-repeat; font-size: 14px; color: #666; height: 50px; line-height: 50px; background-size: 20px; position: relative; }
+.xuanze ul li span { float: left; }
+
+
+.tanc { width: 100%; position: absolute; top: 51px; left: 0px; background: #FFF; border-left: 1px solid #CCC; display: none; z-index: 99; }
+.tanc ul { width: 100%; padding: 2% 0px 0px 2%; box-sizing: border-box; }
+.tanc ul li { width: 23%; float: left; margin-right: 2%; margin-bottom: 2%; border: 1px solid #CCC; border-radius: 5px; height: 30px; line-height: 30px; background: none; padding: 0px; box-sizing: border-box; }
+.tanc ul li a { font-size: 14px; color: #444; }
+.tanc ul li.hh { border: 1px solid #f57629; }
+.tanc ul li.hh a { color: #f57629; }
+.tanc01 ul li.hh { border: 1px solid #f57629; }
+.tanc01 ul li.hh a { color: #f57629; }
+.tanc01 { width: 100%; position: absolute; top: 51px; left: 0px; background: #FFF; border-left: 1px solid #CCC; display: none; z-index: 99; }
+.tanc01 ul { width: 100%; padding: 2% 0px 0px 2%; box-sizing: border-box; }
+.tanc01 ul li { width: 23%; float: left; margin-right: 2%; margin-bottom: 2%; border: 1px solid #CCC; border-radius: 5px; height: 30px; line-height: 30px; background: none; padding: 0px; box-sizing: border-box; }
+.tanc01 ul li a { font-size: 14px; color: #444; }
+
+.chanpin { width: 100%; }
+.chanpin ul { border-bottom: none; }
+.chanpin ul li { border-left: 1px solid #CCC; border-bottom: 1px solid #CCC; float: none; height: auto; line-height: normal; width: 100%; padding: 1%; box-sizing: border-box; background: none; position: relative; }
+.chanpin ul li img { width: 30%; float: left; margin-right: 2%; }
+.chanpin ul li h3 { font-size: 14px; color: #444px; line-height: 30px; text-align: left; }
+.chanpin ul li h4 { font-size: 12px; color: #444px; line-height: 20px; text-align: left; }
+.jiaq { color: #dc2728; font-size: 14px; float: left; position: absolute; bottom: 5px; left: 32%; }
+.tianj { display: inline-block; float: right; width: 30px; height: 30px; background: url(/img/wx/ds_06.png) no-repeat; background-size: 25px; position: absolute; bottom: 2px; left: 85%; }
+
+/*商品详情*/
+.jiar { width: 100%; background: #FFF; padding: 15px 15px 30px; box-sizing: border-box; border-bottom: 1px solid #CCC; border-top: 1px solid #CCC; position: relative; }
+.jiar h3 { width: 60%; float: left; font-size: 14px; color: #444; height: 40px; overflow: hidden; }
+.jiar span { float: left; font-size: 16px; line-height: 40px; color: #f57629; font-weight: bold; position: absolute; left: 15px; bottom: 0px; }
+.jiar a { display: inline-block; width: 30%; float: right; height: 30px; line-height: 30px; background: #f57629; color: #FFF; border-radius: 5px; margin-top: 15px; text-align: center; }
+
+.jiar01 { width: 100%; background: #FFF; padding: 10px; box-sizing: border-box; border-bottom: 1px solid #CCC; border-top: 1px solid #CCC; position: relative; margin-top: 20px; margin-bottom: 60px; }
+
+.jiar01 p { font-size: 14px; color: #444; height: 35px; line-height: 35px; overflow: hidden; padding-left: 30px; background: url(/img/wx/ds.png) 5px no-repeat; background-size: 20px; }
+
+
+.fudong01 { width: 100%; height: 60px; position: fixed; z-index: 100px; bottom: 0px; background: #262423; }
+.fudong01 ul { width: 50%; }
+.fudong01 ul li { width: 50%; height: 60px; float: left; text-align: center; box-sizing: border-box; line-height: 90px; overflow: hidden; position: relative; }
+.fudong01 ul li a { color: #ffffff; font-size: 14px; width: 100%; height: 100%; display: block; box-sizing: border-box; }
+.fudong01 ul li.no013 a { background: url(/img/wx/uih.png) no-repeat center 8px; background-size: 30px auto; }
+.fudong01 ul li.no014 a { background: url(/img/wx/uig.png) no-repeat center 8px; background-size: 30px auto; }
+
+.tis01 { width: 50%; float: right; height: 60px; line-height: 60px; font-size: 16px; color: #FFF; padding-right: 10px; box-sizing: border-box; text-align: right; }
+.tis02 { width: 30%; float: right; height: 60px; line-height: 60px; font-size: 16px; color: #FFF; box-sizing: border-box; text-align: right; background: #f57629; text-align: center; }
+
+/*添加购物车*/
+.shaop { width: 100%; padding: 10px; box-sizing: border-box; background: #FFF; border-bottom: 1px solid #CCC; }
+.shaop01 { border-bottom: 1px solid #CCC; height: 30px; line-height: 30px; font-size: 14px; color: #666666; }
+.shaop01 span { text-align: left; }
+.shaop01 a { display: inline-block; float: right; color: #666666; }
+
+.shaop02 { width: 100%; position: relative; background: #FFF; padding: 20px 0px; box-sizing: border-box; }
+.shaop02 img { width: 20%; float: left; margin-right: 2%; margin-left: 10%; }
+.txt05 { position: absolute; top: 50px; left: -5px; }
+.shaop02 h2 { font-size: 14px; width: 100%; color: #444px; line-height: 20px; text-align: left; height: 20px; }
+
+.shaop02 p { font-size: 14px; width: 100%; color: #666; line-height: 20px; text-align: left; height: 20px; }
+.shaop02 span { color: #dc2728; font-size: 16px; float: left; position: absolute; bottom: 5px; left: 32%; font-weight: bold; }
+.txt01 { width: 20px; height: 33px; border: none; margin: 0px 15px; }
+
+.jiaj { position: absolute; right: 10px; bottom: 5px; width: 75px; }
+.jiaj .txt01 { height: 25px; text-align: center; width: 35px; }
+span.jia { display: block; width: 25px; height: 25px; background: url(/img/wx/hg.png) no-repeat; background-size: 25px; position: absolute; left: 50px; bottom: 0px; }
+span.jian { display: block; width: 25px; height: 25px; background: url(/img/wx/ugh.png) no-repeat; background-size: 25px; position: absolute; left: 0px; bottom: 0px; }
+
+.zhif { width: 100%; margin: 20px 0px; line-height: 50px; padding: 0px 10px; color: #666; font-size: 14px; border-bottom: 1px solid #CCC; border-top: 1px solid #CCC; background: #FFF; text-align: right; box-sizing: border-box; position: relative; }
+.zhif p .tis01 { font-size: 24px; float: right; line-height: 50px; font-family: "新宋体"; color: #666; width: 20px; height: 50px; padding: 0px; }
+.zhif h2 { color: #666; font-size: 14px; text-align: left; float: left; }
+.zhif h2 img { width: 25px; margin-top: 13px; line-height: 50px; }
+.zhif p { float: right; }
+.txt02 { width: 20px; height: 20px; background: url(/img/wx/zas.png) no-repeat; background-size: 20px; margin: -5px 10px; /*position:absolute; bottom:10px;*/ }
+.nn { width: 20px; height: 20px; background: url(/img/wx/jni.png) no-repeat; background-size: 20px; }
+
+.diz { width: 100%; padding: 10px; box-sizing: border-box; border-bottom: 1px solid #CCC; border-top: 1px solid #CCC; background: url(/img/wx/line.png) bottom repeat-x #FFF; margin-bottom: 20px; }
+.diz h2 { font-size: 14px; color: #666; padding-bottom: 10px; line-height: 20px; border-bottom: 1px solid #CCC; }
+.diz a { display: block; height: 80px; line-height: 25px; font-size: 14px; color: #666; }
+.diz a span { font-size: 24px; float: right; line-height: 80px; font-family: "新宋体"; color: #666; }
+.fangs { width: 100%; padding: 20px; box-sizing: border-box; text-align: left; }
+.fangs01 { width: 100%; padding: 20px; box-sizing: border-box; text-align: left; }
+.select02 { width: 46%; height: 30px; line-height: 30px; border: 1px solid #CCC; border-radius: 5px; font-size: 14px; color: #999; float: left; margin: 0px 2%; }
+.select03 { width: 60%; height: 30px; line-height: 30px; border: 1px solid #CCC; border-radius: 5px; font-size: 14px; color: #999; float: left; margin: 10px 2%; }
+
+
+.xiaox { width: 100%; padding: 10px; box-sizing: border-box; border-top: 1px solid #CCC; margin-top: 20px; background: #FFF; margin-bottom: 60px; }
+.xiaox p { text-align: left; font-size: 14px; color: #666; line-height: 30px; }
+.xiaox p span { text-align: right; color: #c9121e; float: right; }
+
+.xiaox01 { width: 100%; padding: 10px; box-sizing: border-box; margin-top: 10px; background: #FFF; margin-bottom: 60px; }
+.xiaox01 p { text-align: left; font-size: 14px; color: #666; line-height: 30px; }
+.xiaox01 p span { text-align: right; color: #c9121e; float: right; }
+.fuchen { width: 100%; background: #f4f4f4; height: 60px; line-height: 60px; border-top: 1px solid #CCC; position: fixed; bottom: 0px; }
+.fuchen h2 { font-size: 14px; color: #cc0000; text-align: right; float: left; width: 55%; }
+
+.but { float: right; width: 40%; background: #f57629; line-height: 60px; color: #FFF; font-size: 14px; border: none; }
+
+.fuchen01 { width: 100%; background: #f4f4f4; height: 60px; line-height: 60px; border-top: 1px solid #CCC; position: fixed; bottom: 0px; }
+.fuchen01 h2 { font-size: 14px; color: #cc0000; text-align: left; float: left; width: 55%; }
+
+.but01 { float: right; width: 30%; margin: 10px 5%; line-height: 40px; margin-top: 10px; background: none; border: 1px solid #cc0000; border-radius: 5px; color: #cc0000; font-size: 14px; }
+
+.fenlei1_1 { display: none; }
+
+/*订单提交成功*/
+.cheng { width: 100%; background: #FFF; text-align: center; padding: 10px; box-sizing: border-box; }
+.cheng img { width: 20%; margin: 20px auto; }
+.cheng span { font-size: 18px; color: #cc0000; line-height: 40px; display: block; margin-bottom: 20px; }
+.cheng p { text-align: left; font-size: 14px; line-height: 25px; color: #666; }
+
+.ann { width: 100%; margin: 20px auto; }
+.ann ul li { float: left; width: 46%; margin: 0px 2%; border: 1px solid #CCC; text-align: center; height: 40px; line-height: 40px; border-radius: 5px; font-size: 14px; box-sizing: border-box; }
+.ann ul li.chak a { color: #FFF; }
+.ann ul li a { color: #444; }
+.chak { background: #ca121e; }
+
+/*订单生成*/
+.min { width: 100%; padding: 0px 10px; box-sizing: border-box; }
+.lchen { width: 100%; background: #FFF; padding: 10px 10px 20px; box-sizing: border-box; }
+.lchen h2 { width: 100%; border-bottom: 1px solid #CCC; height: 40px; line-height: 40px; font-size: 14px; color: #666; }
+.lchen h2 span { text-align: right; float: right; font-size: 14px; }
+
+.lc { width: 91%; margin: 0px 2%; box-sizing: border-box; height: 90px; background: url(/img/wx/dff_12.png) repeat-x center; position: relative; }
+.lc span { display: block; font-size: 14px; color: #444; margin-top: 20px; line-height: 40px; }
+.lc01 { width: 27%; box-sizing: border-box; height: 90px; background: url(/img/wx/dff_09.png) repeat-x center; position: absolute; top: 0px; left: 0px; }
+.lc02 { width: 30px; background: url(/img/wx/fgf_03.png) no-repeat; background-size: 30px; position: absolute; top: 30px; left: 0px; }
+.lc02 span { color: #cc0000; margin-top: 25px; }
+.lc03 { width: 30px; background: url(/img/wx/fgf_06.png) top center no-repeat; background-size: 18px; position: absolute; top: 35px; left: 25%; }
+.lc04 { width: 30px; background: url(/img/wx/fgf_06.png) top center no-repeat; background-size: 18px; position: absolute; top: 35px; left: 50%; }
+.lc05 { width: 30px; background: url(/img/wx/fgf_06.png) top center no-repeat; background-size: 18px; position: absolute; top: 35px; left: 75%; }
+.lc06 { width: 30px; background: url(/img/wx/fgf_06.png) top center no-repeat; background-size: 18px; position: absolute; top: 35px; left: 99%; }
+.xiangx { width: 100%; background: #FFF; padding: 10px; box-sizing: border-box; margin-top: 10px; }
+.xiangx p { text-align: left; font-size: 14px; line-height: 30px; color: #666; }
+.xiangx span { display: inline-block; font-size: 14px; margin-right: 20px; float: left; width: 70px; line-height: 30px; color: #666; }
+
+.goods_info { background-color: #fff; border-bottom: 1px solid #ededed; border-top: 1px solid #ededed; padding-left: 5px; margin: 10px 0; padding: 10px; }
+.goods_info .hd { display: -webkit-box; display: -webkit-flex; display: flex; height: 30px; line-height: 30px; border-bottom: 1px solid #ededed; }
+.goods_info .hd span { display: block; text-align: center; }
+.goods_info .hd span:first-child { width: 50%; float: left; text-align: left; }
+.goods_info .hd span:nth-child(2) { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; }
+.goods_info .hd span:last-child { width: 20%; float: right; }
+
+.goods_info li { padding: 10px 0; display: -webkit-box; display: -webkit-flex; display: flex; border-bottom: 1px solid #ededed; }
+.goods_info li:last-child { border-bottom: none; }
+.goods_info li div { text-align: center; }
+.goods_info li div:first-child { width: 50%; float: left; text-align: left; }
+.goods_info li div:nth-child(2) { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; }
+.goods_info li div:last-child { width: 20%; float: right; }
+.goods_info li div:first-child span { float: left; width: 30%; height: 60px; border: 1px solid #ccc; border-radius: 5px; overflow: hidden; margin-right: 10px; }
+.goods_info li div:first-child span img { width: 100%; display: block; }
+
+/*个人中心*/
+.ger { width: 100%; padding: 30px 10px 30px 20px; box-sizing: border-box; background: #f57629; position: relative; }
+.ger img { width: 25%; border-radius: 10%; margin-right: 10px; float: left; }
+.ger h2 { font-size: 14px; color: #FFF; line-height: 30px; }
+.ger a { display: flex; position: absolute; top: 40%; right: 10px; color: #ffffff; line-height: 29px; height: 30px; font-size: 14px; }
+.ger a span { font-size: 20px; font-family: "新宋体"; display: inline-block; margin-left: 4px; height: 30px; line-height: 30px; }
+
+.fudong02 { width: 100%; padding: 5px 0px 10px; height: 70px; background: #ffffff; border-bottom: 1px solid #eeeeee; margin-bottom: 5px; }
+.fudong02 ul li { width: 25%; height: 100px; float: left; text-align: center; box-sizing: border-box; line-height: 120px; overflow: hidden; }
+.fudong02 ul li a { color: #444; font-size: 14px; width: 100%; height: 100%; display: block; box-sizing:; }
+.fudong02 ul li.no015 a { background: url(/img/wx/fgh.png) no-repeat center 8px; background-size: 40px auto; }
+.fudong02 ul li.no016 a { background: url(/img/wx/ghj.png) no-repeat center 8px; background-size: 40px auto; }
+.fudong02 ul li.no017 a { background: url(/img/wx/fg.png) no-repeat center 8px; background-size: 40px auto; }
+.fudong02 ul li.no018 a { background: url(/img/wx/fgb.png) no-repeat center 8px; background-size: 40px auto; }
+
+.liebiao01 { margin-bottom: 20px; }
+.liebiao01 ul li { padding: 0 10px; border-top: 1px #eeeeee solid; background: #FFF; height: 40px; line-height: 40px; }
+.liebiao01 ul li.dizhi03 { border-bottom: 1px #eeeeee solid; }
+.liebiao01 ul li.dizhi05 { border-bottom: 1px #eeeeee solid; }
+.liebiao01 ul li p { color: #333; font-size: 16px; line-height: 40px; float: left; padding-left: 30px; }
+.liebiao01 ul li a img { float: right; line-height: 50px; margin-top: 8px; width: 12px; }
+.liebiao01 ul li a span { float: right; font-size: 14px; }
+.dizhi01 p { background: url(/img/wx/ghk.png) no-repeat left; background-size: 24px; }
+.dizhi02 p { background: url(/img/wx/kgt.png) no-repeat left; background-size: 25px; }
+.dizhi03 p { background: url(/img/wx/fj.png) no-repeat left; background-size: 22px; }
+.dizhi04 p { background: url(/img/wx/gij.png) no-repeat left; background-size: 22px; }
+.dizhi05 p { background: url(/img/wx/uigi.png) no-repeat left; background-size: 22px; }
+
+/*账户管理*/
+.guanli { width: 100%; }
+.guanli ul li { background: #FFF; border-bottom: 1px solid #eeeeee; border-top: 1px solid #eeeeee; line-height: 40px; margin-top: 10px; font-size: 14px; width: 100%; padding: 0px 10px; box-sizing: border-box; }
+.guanli ul li a { color: #444; }
+
+.shang { width: 100%; padding: 10px 0px; }
+.shang img { width: 20%; margin-right: 15px; float: left; }
+.txt06 { width: 100px; height: 30px; line-height: 30px; color: #666; border: 1px solid #CCC; margin-top: 15px; background: #FFF; border-radius: 5px; }
+
+/*修改地址*/
+.xiug { width: 96%; margin: 2%; background: #FFF; border: 1px solid #eeeeee; box-sizing: border-box; padding: 0px 2%; box-sizing: border-box; }
+.xiug a { display: inline-block; float: right; margin-left: 20px; font-size: 14px; height: 30px; line-height: 30px; margin-top: 20px; }
+.xiug01 { border-bottom: 1px solid #eeeeee; box-sizing: border-box; }
+.xiug01 p { font-size: 14px; line-height: 30px; height: 30px; }
+
+.xiug01 span { width: 24%; float: left; line-height: 50px; }
+.txt07 { border: none; height: 50px; line-height: 50px; width: 76%; float: left; float: 14px; color: #444; }
+.txt08 { border: none; height: 80px; line-height: 25px; width: 74%; float: left; float: 14px; color: #444; resize: none; margin-top: 10px; }
+
+.zaic { width: 100%; border-bottom: 1px solid #eeeeee; border-top: 1px solid #eeeeee; background: #FFF; padding-bottom: 20px; }
+.zaic h3 { height: 30px; line-height: 30px; border-bottom: 1px solid #eeeeee; color: #444; padding-left: 10px; }
+.zaic span { float: right; font-size: 16px; color: #cc0000; margin-top: 25px; }
+.zaic a { display: inline-block; background: #f57629; width: 100px; height: 30px; line-height: 30px; color: #FFF; margin-top: 20px; float: right; text-align: center; border-radius: 5px; margin-left: 10px; margin-right: 10px; }
+
+/*秒杀商品*/
+.miaos { width: 100%; height: 50px; background: #ff3f72; position: relative; }
+.left02 { width: 70%; float: left; }
+.left02 h3 { height: 50; line-height: 50px; font-weight: bold; color: #FFF; font-size: 16px; float: left; margin-right: 10px; }
+.left02 s { font-size: 14px; float: left; color: #FFF; line-height: 20px; }
+.shij { font-size: 14px; color: #FFF; position: absolute; bottom: 5px; left: 80px; }
+.shij a { display: inline-block; width: 18px; border-radius: 2px; height: 20px; background: #FFF; color: #333; text-align: center; line-height: 20px; margin: 0px 1px; font-size: 14px; }
+.right02 { width: 30%; float: right; height: 50px; line-height: 50px; text-align: center; background: #f57629; color: #FFF; }
+.right02 a { color: #FFF; }
+
+.meiy { width: 100%; text-align: center; }
+.meiy img { width: 20%; margin: 40px auto; }
+.meiy p { font-size: 16px; color: #444; }
+.meiy a { display: block; width: 120px; background: #f57629; height: 30px; line-height: 30px; color: #FFF; margin: 30px auto; border-radius: 2px; }

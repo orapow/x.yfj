@@ -1,4 +1,12 @@
-﻿<div id="loadingToast" class="weui_loading_toast" style="display: none;">
+﻿<div class="fudong">
+    <ul>
+        <li class="no08"><a href="#">首页</a></li>
+        <li class="no09"><a href="#">分类</a></li>
+        <li class="no011"><a href="#">购物车</a></li>
+        <li class="no012"><a href="#">我的</a></li>
+    </ul>
+</div>
+<div id="loadingToast" class="weui_loading_toast" style="display: none;">
     <div class="weui_mask_transparent"></div>
     <div class="weui_toast">
         <div class="weui_loading">
@@ -18,7 +26,7 @@
         <p class="weui_toast_content">数据加载中</p>
     </div>
 </div>
-#if($isWx)
+#if($iswx)
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript">
     wx.config({
@@ -58,9 +66,9 @@
     });
 
     function doapi(api, ps, callback) {
-        $("#loadingToast").show();
+        //$("#loadingToast").show();
         jQuery.post("/api/" + api, ps, function (d) {
-            $("#loadingToast").hide();
+            //$("#loadingToast").hide();
             if (!d.issucc) {
                 alert(d.msg);
             } else if (callback) {
@@ -73,5 +81,23 @@
             }
         }, "json");
     }
+
+    function tocart(gid) {
+        doapi("wx.tocart", { gid: gid }, function (d) {
+            if (!d.issucc) return;
+            try {
+                cartchange(d.ct, d.gc, gid);
+            } catch (e) { }
+        });
+    }
+    function outcart(gid) {
+        doapi("wx.outcart", { gid: gid }, function (d) {
+            if (!d.issucc) return;
+            try {
+                cartchange(d.ct, d.gc, gid);
+            } catch (e) { }
+        });
+    }
+
 </script>
 #end

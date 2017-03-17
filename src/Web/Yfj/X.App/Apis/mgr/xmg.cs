@@ -26,10 +26,10 @@ namespace X.App.Apis.mgr
         {
             base.InitApi();
 
-            //var id = GetReqParms("ad");
-            //if (string.IsNullOrEmpty(id)) throw new XExcep("0x0006");
+            //var key = GetReqParms("mg_keys");
+            //if (string.IsNullOrEmpty(key)) throw new XExcep("0x0006");
 
-            mg = DB.x_mgr.FirstOrDefault(o => o.mgr_id == 1);// CacheHelper.Get<x_mgr>("mgr." + id);
+            mg = DB.x_mgr.FirstOrDefault(o => o.mgr_id == 1);// CacheHelper.Get<x_mgr>("mgr." + key);
             if (mg == null) throw new XExcep("0x0006");
 
             //CacheHelper.Save("mgr." + id, mg, 60 * 60);

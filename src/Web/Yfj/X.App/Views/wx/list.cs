@@ -9,7 +9,7 @@
                 return false;
             }
         }
-        public string cate { get; set; }
+
         protected override string GetParmNames
         {
             get
@@ -17,5 +17,6 @@
                 return "cate";
             }
         }
+
     }
 }

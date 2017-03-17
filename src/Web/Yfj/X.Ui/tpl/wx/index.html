@@ -1,14 +1,256 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-    <meta charset="utf-8" />
+    #parse("wx/_head.html")
+    <title>首页</title>
 </head>
 <body style="text-align:center;">
-    #parse("wx/_head.html")
-    <img src="$cu.headimg" width="120" /><br />
-    $cu.nickname
+    <div class="top">
+        <div class="left">
+            <a href="#" id="mima01">长沙</a>
+            <div id="login_box09">
+                <h3 style="">点击选择配送城市</h3>
+                <div class="xuanz">
+                    <a href="#" id="qux04">长沙</a>
+                    <a href="#" id="qux04">长沙</a>
+                </div>
+            </div>
+            <div id="mask"></div>
+        </div>
+        <div class="right">
+            <input type="text" class="txt" placeholder="搜商品、找品牌" />
+            <span></span>
+        </div>
+    </div>
+    <!--手机版的banner图片-->
+    <div id="content">
+        <div id="focus" class="focus">
+            <div class="hd">
+                <ul></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li><a href="#"><img src="/img/wx/fg_02.png" /></a></li>
+                    <li><a href="#"><img src="/img/wx/fg_02.png" /></a></li>
+                    <li><a href="#"><img src="/img/wx/fg_02.png" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--手机版的banner图片-->
+    <div class="lanmu">
+        <ul>
+            <li><a href="#"><img src="/img/wx/fg_05.png" /><span>正品低价</span></a></li>
+            <li><a href="#"><img src="/img/wx/fg_07.png" /><span>免费送货</span></a></li>
+            <li><a href="#"><img src="/img/wx/fg_09.png" /><span>4小时达</span></a></li>
+            <li><a href="#"><img src="/img/wx/fg_11.png" /><span>售后保障</span></a></li>
+            <li class="clear"></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="xians">
+        <h2>限时抢购</h2>
+        <div class="hnav" id="hnav">
+            <ul>
+                <li>
+                    <a href="#"><img src="/img/wx/xc_06.jpg" /></a>
+                    <div class="jiag">
+                        <p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                    <div class="tup"></div>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/wx/xc_06.jpg" /></a>
+                    <div class="jiag">
+                        <p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                    <div class="tup"></div>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/wx/xc_06.jpg" /></a>
+                    <div class="jiag">
+                        <p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                    <div class="tup"></div>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/wx/xc_06.jpg" /></a>
+                    <div class="jiag">
+                        <p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                    <div class="tup"></div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    #set($gs=$T.get_goods("2",4))
+    #if($gs.count()>0)
+    <div class="chanp">
+        <h2 class="bit">水工材料<a href="/wx/list-2.html">更多 ···</a></h2>
+        <ul>
+            #foreach($g in $gs)
+            <li>
+                <a href="/wx/detail-${g.id}.html"><img src="$g.cover" /></a>
+                <div class="jiag">
+                    <p>$g.title</p>
+                    <a href="#">￥$g.price</a>
+                </div>
+                <div class="tup"></div>
+            </li>
+            #end
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    #end
+
+    #set($gs=$T.get_goods("3",4))
+    #if($gs.count()>0)
+    <div class="chanp">
+        <h2 class="bit">电工材料<a href="/wx/list-3.html">更多 ···</a></h2>
+        <ul>
+            #foreach($g in $gs)
+            <li>
+                <a href="#"><img src="$g.cover" /></a>
+                <div class="jiag">
+                    <p>$g.title</p>
+                    <a href="#">￥$g.price</a>
+                </div>
+                <div class="tup"></div>
+            </li>
+            #end
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    #end
+
+    <div class="guang" style="margin:10px 0;">
+        <img src="/img/wx/yf_04.png" />
+    </div>
+
+    #set($gs=$T.get_goods("4",4))
+    #if($gs.count()>0)
+    <div class="chanp">
+        <h2 class="bit">木工材料<a href="/wx/list-4.html">更多 ···</a></h2>
+        <ul>
+            #foreach($g in $gs)
+            <li>
+                <a href="#"><img src="$g.cover" /></a>
+                <div class="jiag">
+                    <p>$g.title</p>
+                    <a href="#">￥$g.price</a>
+                </div>
+                <div class="tup"></div>
+            </li>
+            #end
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    #end
+
+    #set($gs=$T.get_goods("5",4))
+    #if($gs.count()>0)
+    <div class="chanp">
+        <h2 class="bit">瓦工材料<a href="/wx/list-5.html">更多 ···</a></h2>
+        <ul>
+            #foreach($g in $gs)
+            <li>
+                <a href="#"><img src="$g.cover" /></a>
+                <div class="jiag">
+                    <p>$g.title</p>
+                    <a href="#">￥$g.price</a>
+                </div>
+                <div class="tup"></div>
+            </li>
+            #end
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    #end
+
+    <div class="guang" style="margin:10px 0;">
+        <img src="/img/wx/yf_04.png" />
+    </div>
+
+    #set($gs=$T.get_goods("6",4))
+    #if($gs.count()>0)
+    <div class="chanp">
+        <h2 class="bit">油漆材料<a href="/wx/list-6.html">更多 ···</a></h2>
+        <ul>
+            #foreach($g in $gs)
+            <li>
+                <a href="#"><img src="$g.cover" /></a>
+                <div class="jiag">
+                    <p>$g.title</p>
+                    <a href="#">￥$g.price</a>
+                </div>
+                <div class="tup"></div>
+            </li>
+            #end
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    #end
+
+    #set($gs=$T.get_goods("7",4))
+    #if($gs.count()>0)
+    <div class="chanp">
+        <h2 class="bit">工具材料<a href="/wx/list-7.html">更多 ···</a></h2>
+        <ul>
+            #foreach($g in $gs)
+            <li>
+                <a href="#"><img src="$g.cover" /></a>
+                <div class="jiag">
+                    <p>$g.title</p>
+                    <a href="#">￥$g.price</a>
+                </div>
+                <div class="tup"></div>
+            </li>
+            #end
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    #end
     #parse("wx/_foot.html")
+    <script type="text/javascript" src="/js/wx/jquery.SuperSlide.2.1.js"></script>
+    <script type="text/javascript">
+        $(function (e) {
+            $('#mima01').click(function () {//单击ID为#login的A标签
+                $('#login_box09').fadeIn();//名为#login_box的DIV显示,时间为1000毫秒=1秒
+                $('#mask').fadeIn();//名为#mask的DIV显示
+            })
+            $('#qux04').click(function () {
+                $('#login_box09').fadeOut();//名为#login_box的DIV隐藏
+                $('#mask').fadeOut();//名为#mask的DIV隐藏
+            });
+
+
+            /* 控制左右按钮显示 */
+            //jQuery(".focus").hover(function () { jQuery(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5) }, function () { jQuery(this).find(".prev,.next").fadeOut() });
+
+            /* 调用SuperSlide */
+            $(".focus").slide({
+                titCell: ".hd ul", mainCell: ".bd ul", effect: "fold", autoPlay: true, autoPage: true, trigger: "click",
+                startFun: function (i) {
+                    var curLi = jQuery(".focus .bd li").eq(i); /* 当前大图的li */
+                    if (!!curLi.attr("_src")) {
+                        curLi.css("background-image", curLi.attr("_src")).removeAttr("_src") /* 将_src地址赋予li背景，然后删除_src */
+                    }
+                }
+            });
+
+        });
+    </script>
 </body>
 </html>

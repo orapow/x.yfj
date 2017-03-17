@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>首页</title>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+<link rel="stylesheet" type="text/css" href="css/my.css"/>
+<script>
+$(document).ready(function(e) {
+$('#mima01').click(function(){//单击ID为#login的A标签
+		$('#login_box09').fadeIn();//名为#login_box的DIV显示,时间为1000毫秒=1秒
+		$('#mask').fadeIn();//名为#mask的DIV显示
+		})
+		$('#qux04').click(function(){
+		$('#login_box09').fadeOut();//名为#login_box的DIV隐藏
+		$('#mask').fadeOut();//名为#mask的DIV隐藏
+		})
+		})
+</script>
+<script>
+$(function(){
+$("#hnav").niceScroll({
+cursorcolor:"#78909C",
+cursoropacitymax:1,
+cursoropacitymin:0,
+touchbehavior:true,
+cursorwidth:"10px",
+cursorborder:"0",
+zindex:-100,
+cursorborderradius:"5px"
+});
+})
+</script>
+</head>
+
+<body >
+<div class="top">
+<div class="left">
+	<a href="#"  id="mima01" >长沙</a>
+    <div id="login_box09">
+                	<h3 style="">点击选择配送城市</h3>
+                    <div class="xuanz">
+                	<a href="#" id="qux04">长沙</a>
+                    <a href="#" id="qux04">长沙</a>
+                 </div>
+                </div>
+                    <div id="mask"></div>
+                </div>
+<div class="right">
+<input type="text" class="txt" placeholder="搜商品、找品牌" />
+<span></span>
+</div>
+</div>
+<!--手机版的banner图片-->
+<div id="content">
+  <div id="focus" class="focus">
+    <div class="hd">
+      <ul>
+      </ul>
+    </div>
+    <div class="bd">
+      <ul>
+        <li><a href="#"><img src="images/fg_02.png"></a></li>
+     <li><a href="#"><img src="images/fg_02.png"></a></li>
+<li><a href="#"><img src="images/fg_02.png"></a></li>
+      </ul>
+    </div>
+   
+  </div>
+  <script type="text/javascript">
+				
+		
+		/* 控制左右按钮显示 */
+		jQuery(".focus").hover(function(){ jQuery(this).find(".prev,.next").stop(true,true).fadeTo("show",0.5) },function(){ jQuery(this).find(".prev,.next").fadeOut() });
+
+		/* 调用SuperSlide */
+		jQuery(".focus").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click",
+			startFun:function(i){
+				var curLi = jQuery(".focus .bd li").eq(i); /* 当前大图的li */
+				if( !!curLi.attr("_src") ){
+					curLi.css("background-image",curLi.attr("_src")).removeAttr("_src") /* 将_src地址赋予li背景，然后删除_src */
+				}
+			}
+		});
+	
+			</script> 
+</div>
+<!--手机版的banner图片-->
+<div class="lanmu">
+	<ul>
+    	<li><a href="#"><img src="images/fg_05.png" /><span>正品低价</span></a></li>
+    	<li><a href="#"><img src="images/fg_07.png" /><span>免费送货</span></a></li>
+        <li><a href="#"><img src="images/fg_09.png" /><span>4小时达</span></a></li>
+        <li><a href="#"><img src="images/fg_11.png" /><span>售后保障</span></a></li>
+          <div class="clear"></div>
+    </ul>
+  </div>
+<div class="clear"></div>
+<div class="xians">
+	<h2>限时抢购</h2>
+	<div class="hnav" id="hnav">
+              <ul>
+                <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                    <div class="tup"></div>
+                </li>
+               <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+               <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+               <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+              </ul>
+                  <div class="clear"></div> 
+            </div>
+</div>
+
+<div class="chanp">
+	<h2 class="bit">水工材料<a href="#">更多 ···</a></h2>
+	<ul>
+    	 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                <div class="clear"></div>      
+    </ul>
+     <div class="clear"></div> 
+</div>
+
+<div class="chanp">
+	<h2 class="bit01">油漆材料<a href="#">更多 ···</a></h2>
+	<ul>
+    	 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                   <div class="clear"></div> 
+    </ul>
+  
+</div>
+<div class="guang">
+	<img src="images/bc_02.jpg" />
+</div>
+<div class="chanp">
+	<h2 class="bit02">电工材料<a href="#">更多 ···</a></h2>
+	<ul>
+    	 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                   <div class="clear"></div> 
+    </ul>
+  
+</div>
+<div class="chanp">
+	<h2 class="bit03">木工材料<a href="#">更多 ···</a></h2>
+	<ul>
+    	 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                 <li><a href="#"><img src="images/xc_06.jpg" /></a>
+                	<div class="jiag">
+                    	<p> PPR双活接钢芯球阀20 25 32 4分 ……</p>
+                        <a href="#">￥88.00</a>
+                    </div>
+                      <div class="tup"></div>
+                </li>
+                   <div class="clear"></div> 
+    </ul>
+  
+</div>
+<div class="guang" style=" margin-bottom:60px">
+	<img src="images/yf_04.png" />
+</div>
+<div class="fudong">
+	<ul>
+    	<li class="no08"><a href="#">首页</a></li>
+        <li class="no09"><a href="#">分类</a></li>
+        <li class="no011"><a href="#">购物车</a></li>
+           <li class="no012"><a href="#">我的</a></li>
+    </ul>
+</div>
+</body>
+</html>

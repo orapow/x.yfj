@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>购物车</title>
+    <style type="text/css">
+        .txt01 { margin-left: 20px; }
+    </style>
+</head>
+<body style="background:#f4f4f4;">
+    <div class="top01">
+        <div class="w80">
+            <a class="bnt">
+                <img src="/img/wx/dd_03.png" />
+            </a>
+            优辅家建材
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="shaop">
+        <div class="shaop01">
+            <span>商品清单</span>
+            <a href="#" class="yichu">移除商品</a>
+        </div>
+        #foreach($g in $gs)
+        <div class="shaop02" data-id="$g.goods_id">
+            <input type="radio" class="txt02 txt05 nn" />
+            <img src="$g.cover" />
+            <h2>$g.goods_name</h2>
+            <p>$!g.desc</p>
+            <span>￥$g.price<span style="font-size:12px;">/$g.unit</span></span>
+            <div class="jiaj"><span class="jian" onclick="outcart($g.goods_id)"></span><input type="number" value="$g.count" class="txt01" /><span class="jia" onclick="tocart($g.goods_id)"></span></div><div class="clear"></div>
+        </div>
+        #end
+    </div>
+    <div class="zhif">
+        <h2>支付方式</h2>
+        <p>
+            <input type="radio" name="pay" class="txt02 nn" /><span>在线支付</span>
+            <input type="radio" name="pay" class="txt02" /><span>货到付款</span>
+        </p><p>
+            <div class="clear"></div>
+        </p>
+    </div>
+
+    <div class="diz">
+        <h2>收货地址</h2>
+        <a href="#">点击选择收货地址<span>></span></a>
+    </div>
+
+    <div class="zhif">
+        <h2 class="ben"><p>是否需要搬运上楼</p><img src="/img/wx/iu.png" /></h2>
+        <p>
+            <input type="radio" class="txt02 txt03 nn" /><span>是</span>
+            <input type="radio" class="txt02 txt04" /><span>否</span>
+        </p><p>
+            <div class="clear"></div>
+            <div class="fangs">
+
+                <select name="type" class="select02">
+                    <option selected="selected">选择上楼方式</option>
+                    <option value="1">电梯上楼</option>
+                    <option value="2">楼梯上楼</option>
+                </select>
+                <div class="clear"></div>
+            </div>
+        </p>
+    </div>
+    <div class="zhif">
+        <h2 class="ben"><p>配送时间</p></h2>
+        <div class="clear"></div>
+        <div class="fangs01">
+            <select name="type" class="select02">
+                <option selected="selected">2017-03-25</option>
+                <option value="1">2017-03-25</option>
+                <option value="2">2017-03-25</option>
+            </select>
+            <select name="type" class="select02">
+                <option selected="selected">2017-03-25</option>
+                <option value="1">2017-03-25</option>
+                <option value="2">2017-03-25</option>
+            </select>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="zhif">
+        <a href="#">
+            <h2>支付方式</h2>
+            <p>（选填）可输入特殊需要<span class="tis01">></span></p><p>
+                <div class="clear"></div>
+            </p>
+        </a>
+    </div>
+
+    <div class="xiaox">
+        <p>累计货款：<span>￥51</span></p>
+        <p>搬运费：<span>+￥0</span></p>
+        <p>运费：<span>+￥0</span></p>
+        <p>优惠金额：<span>-￥0</span></p>
+    </div>
+
+    <div class="fuchen01">
+        <h2> <input type="radio" class="txt02" />全选</h2>
+        <input type="button" value="删除" class="but01" />
+    </div>
+    <div class="fuchen">
+        <h2>金额：95元</h2>
+        <input type="button" value="提交订单" class="but" />
+    </div>
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+        $(function () {
+            //$(".txt02").click(function () {
+            //    $(this).toggleClass("nn").siblings().removeClass("nn");
+            //});
+            $(".txt03").click(function () {
+                $(".fangs").show();
+            });
+            $(".txt04").click(function () {
+                $(".fangs").hide();
+            });
+            $(".yichu").click(function () {
+                $(".fuchen").toggleClass("fenlei1_1");
+            });
+        });
+
+        function cartchange(ct, gc, gid) {
+            $("[data-id='" + gid + "'] input").val(ct);
+        }
+
+    </script>
+
+</body>
+</html>
