@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>地址管理</title>
+    <style type="text/css">
+        .xiug01 p { height: auto; }
+        .xiug a { margin-top: 0; }
+        .xiug01 { position: relative; }
+        .rd { position: absolute; right: 1px; top: 10px; margin: 0; }
+    </style>
+</head>
+<body style="background:#f4f4f4;">
+    <!--<div class="top01">
+        <div class="w80">
+            <a class="bnt">
+                <img src="/img/wx/dd_03.png" />
+            </a>
+            优辅家建材
+        </div>
+    </div>
+    <div class="clear"></div>-->
+    <!--内容-->
+    <div class="xiug">
+        #foreach($ad in $ads)
+        <div class="xiug01">
+            <p>联系人：$ad.name</p>
+            <p>电话：$ad.tel</p>
+            <p>$ad.shi $ad.qu $ad.zhen $ad.addr</p>
+            #if($sel==1)<input type="radio" class="txt02 rd" value="$ad.address_id" onclick="doselect(this)" />#end
+        </div>
+        #if($sel!=1)
+        <a href="edit-${ad.address_id}.html">修改地址</a>
+        <a href="#" onclick="dodel($ad.address_id)">删除</a>
+        #end
+        <div class="clear"></div>
+        #end
+    </div>
+    <div class="qr"><a href="edit--$!{sel}.html" class="btn">添加新地址</a></div>
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+        function dodel(id) {
+            doapi("wx.addr.del", { id: id }, function (d) {
+                if (!d.issucc) return;
+                document.location.reload();
+            })
+        }
+        function doselect(b) {
+            $(".rd").removeClass("nn");
+            $(b).addClass("nn");
+            document.location.href = "/wx/cart-" + $(b).val() + ".html";
+        }
+    </script>
+</body>
+</html>

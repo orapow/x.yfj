@@ -24,8 +24,11 @@
     <script type="text/javascript">
         $("form:eq(0)").xform({
             callback: function (d, r) {
-                if ("$!pid") document.location.href = "edit-$!{code}--" + r.upv + ".html";
-                else x.closewin();
+                x.confirm("保存成功，是否继续添加？", function () {
+                    document.location.href = "edit--" + r.upv + ".html";
+                }, function () {
+                    parent.x.closewin();
+                });
             }
         });
         $(function () {

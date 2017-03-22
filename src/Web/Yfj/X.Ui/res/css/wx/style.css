@@ -19,6 +19,11 @@ img, a { border: 0; padding: 0px; margin: 0px; }
 .txt { height: 40px; line-height: 40px; border-radius: 50px; padding-left: 20px; width: 80%; box-sizing: border-box; float: left; font-size: 16px; }
 .right span { width: 20%; height: 50px; display: block; float: right; background: url(/img/wx/cv.png)10px 10px no-repeat; background-size: 25px; }
 
+.ptc { position: absolute; background: #f57629; color: white; width: 25px; border-radius: 50%; top: 5px; bottom: initial; right: 5px; line-height: 25px; height: 25px; }
+.ptc.p0, .ptc.p { display: none; }
+
+.loading { display: none; position: fixed; top: 50%; margin-top: -98px; background: url(/img/loading.gif) no-repeat center 30px; height: 60px; border-radius: 5px; border: 1px solid #ccc; background-color: white; line-height: 35px; padding-right: 5px; box-shadow: 0 0 10px 3px #ccc; left: 50%; width: 150px; margin-left: -75px; text-align: center; padding-top: 64px; font-size: 16px; }
+
 /*弹出框*/
 #login_box09 { width: 80%; height: 120px; background: #ffffff; position: absolute; top: 50%; left: 50%; margin-top: -60px; margin-left: -40%; z-index: 10; display: none; border: 1px solid #999; text-align: center; box-sizing: border-box; border: none; }
 

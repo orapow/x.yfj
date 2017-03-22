@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("wx/_head.html")
-    <title>$g.name</title>
+    <title>商品详情</title>
     <style type="text/css">
         .fudong { display: none; }
         .txt01 { margin-left: 20px; }
@@ -12,14 +12,14 @@
     </style>
 </head>
 <body style="background:#f4f4f4;">
-    <div class="top01">
+    <!--<div class="top01">
         <div class="w80">
-            <a class="bnt" href="index.html">
+            <a class="bnt" href="/wx/list.html">
                 <img src="/img/wx/dd_03.png" />
             </a>
             优辅家建材
         </div>
-    </div>
+    </div>-->
     <div id="content">
         <div id="focus" class="focus">
             <div class="hd">
@@ -42,10 +42,10 @@
         <span>￥95/桶</span>
         #if($gc>0)
         <a href="javascript:;" onclick="tocart('$id')" id="toc" style="display:none;">加入购物车</a>
-        <div class="jiaj"><span class="jian" onclick="outcart('$id')"></span><input type="tel" value="$!gc" class="txt01" /><span class="jia" onclick="tocart('$id')"></span></div>
+        <div class="jiaj"><span class="jian" onclick="outcart('$id',$(this).next().val())"></span><input type="tel" name="count" value="$!gc" class="txt01" /><span class="jia" onclick="tocart('$id')"></span></div>
         #else
         <a href="javascript:;" onclick="tocart('$id')" id="toc">加入购物车</a>
-        <div class="jiaj" style="display:none;"><span class="jian" onclick="outcart('$id')"></span><input type="tel" value="$!gc" class="txt01" /><span class="jia" onclick="tocart('$id')"></span></div>
+        <div class="jiaj" style="display:none;"><span class="jian"  onclick="outcart('$id',$(this).next().val())"></span><input type="tel" name="count" value="$!gc" class="txt01" /><span class="jia" onclick="    tocart('$id')"></span></div>
         #end
         <div class="clear"></div>
     </div>

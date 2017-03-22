@@ -5,7 +5,7 @@ using System.Text;
 
 namespace X.App.Views.wx
 {
-    public class order : _wx
+    public class center : _wx
     {
     }
 }

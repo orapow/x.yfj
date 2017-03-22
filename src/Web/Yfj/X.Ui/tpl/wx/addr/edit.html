@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>地址编辑</title>
+</head>
+
+<body style="background:#f4f4f4;">
+    <!--<div class="top01">
+        <div class="w80">
+            <a class="bnt">
+                <img src="/img/wx/dd_03.png" />
+            </a>
+            优辅家建材
+        </div>
+    </div>
+    <div class="clear"></div>-->
+    <!--内容-->
+    <div class="xiug">
+        <div class="xiug01">
+            <span>联系人：</span><input type="text" class="txt07" name="name" value="$!ent.name" />
+            <div class="clear"></div>
+        </div>
+        <div class="xiug01">
+            <span>联系方式：</span><input type="tel" class="txt07" name="tel" value="$!ent.tel" />
+            <div class="clear"></div>
+        </div>
+        <div class="xiug01">
+            <span>所在地区：</span><select name="ct1" class="select03" onchange="loadcity(this.value)">
+                <option value="0">选择区域</option>
+                #foreach($c in $cs)
+                #if($c.name==$ent.qu)
+                <option value="$c.value" selected="selected">$c.name</option>
+                #else
+                <option value="$c.value">$c.name</option>
+                #end
+                #end
+            </select>
+            <div class="clear"></div>
+        </div>
+        <div class="xiug01">
+            <span>范围：</span>
+            <select name="ct2" class="select03 street"></select>
+            <div class="clear"></div>
+        </div>
+        <div class="xiug01">
+            <span>详细地址：</span><textarea class="txt08" name="addr">$!ent.addr</textarea>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="qr" onclick="dosave()"><input type="button" value="保存地址" class="btn" /></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+        function loadcity(up) {
+            doapi("wx.addr.loadct", { up: up }, function (d) {
+                if (!d.issucc) return;
+                $(".street").html("");
+                for (var i in d.items) {
+                    var ct = d.items[i];
+                    $(".street").append('<option value="' + ct.value + '" ' + (ct.name == "$ent.zhen" ? "selected='selected'" : "") + '>' + ct.name + '</option>');
+                }
+            });
+        }
+        function dosave() {
+            var d = {
+                c1: $("[name='ct1']").val(),
+                c2: $("[name='ct2']").val(),
+                name: $("[name='name']").val(),
+                id: "$!id",
+                tel: $("[name='tel']").val(),
+                addr: $("[name='addr']").val()
+            }
+            if (!d.c1 || !d.c2) { alert("请选择地区和范围"); return; }
+            if (!d.name) { alert("请填写联系人"); return; }
+            if (!d.tel) { alert("请填写联系方式"); return; }
+            if (!d.addr) { alert("请填写详细地址"); return; }
+            doapi("wx.addr.save", d, function (d) {
+                if ("$!sel") document.location.href = "/wx/cart-" + d.msg + ".html";
+                else document.location.href = "/wx/addr/list.html";
+            });
+        }
+        if ("$!ent.zhen") loadcity($("[name='ct1']").val());
+    </script>
+</body>
+</html>

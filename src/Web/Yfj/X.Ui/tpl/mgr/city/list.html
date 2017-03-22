@@ -36,8 +36,8 @@
 
         var cfg = {
             el: ".gridpanel",
-            searchcon: { page: 1, limit: 30 },
-            api: "mgr.level.list",
+            searchcon: { page: 1, limit: 30, code: "sys.city" },
+            api: "mgr.city.list",
             fs: [
                 { t: "名称", f: "{name}", w: 160, align: "left" },
                 { t: "代号", f: "{off}", w: 80, align: "center" },
@@ -46,6 +46,7 @@
             btns: [
                 { txt: "编辑", ico: "edit", act: "edit", confirm: false },
                 { txt: "删除", ico: "remove", act: "del" },
+                { txt: "", ico: "plus", act: "sub", confirm: false }
             ]
         };
 
@@ -55,7 +56,10 @@
                     dodel(d.id);
                     break;
                 case "edit":
-                    show_edit(d.id);
+                    show_edit(d.cid);
+                    break;
+                case "sub":
+                    show_edit("", d.cid);
                     break;
             }
         };
@@ -68,8 +72,8 @@
             });
         }
 
-        function show_edit(id) {
-            x.openwin("edit-" + (id || "") + ".html", "编辑等级", function () {
+        function show_edit(id, pid) {
+            x.openwin("edit-" + (id || "") + "-" + (pid || "") + ".html", "编辑城市", function () {
                 g.getlist();
             }, { w: 400, h: 300 });
         }

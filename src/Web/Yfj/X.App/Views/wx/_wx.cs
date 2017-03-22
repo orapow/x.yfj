@@ -121,7 +121,11 @@ namespace X.App.Views.wx
         {
             base.InitDict();
             dict.Add("iswx", isWx);
-            dict.Add("cu", cu);
+            if (cu != null)
+            {
+                dict.Add("cu", cu);
+                dict.Add("ptc", cu.x_cart.Where(o => o.sel == true).Sum(o => o.count));
+            }
             dict.Add("cityid", city_id);
             dict.Add("city_name", city_name);
             if (isWx) initWx();

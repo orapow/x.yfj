@@ -5,9 +5,9 @@ using System.Text;
 using X.Web;
 using X.Web.Com;
 
-namespace X.App.Apis.wx
+namespace X.App.Apis.wx.cart
 {
-    public class tocart : _wx
+    public class pin : _wx
     {
         public int gid { get; set; }
         protected override XResp Execute()
@@ -30,20 +30,23 @@ namespace X.App.Apis.wx
                     goods_name = gd.name,
                     price = gd.new_price,
                     total_price = gd.new_price,
-                    user_id = cu.id
+                    user_id = cu.id,
+                    sel = true
                 };
                 cu.x_cart.Add(g);
             }
             else
             {
+                g.sel = true;
                 g.count++;
             }
             SubmitDBChanges();
             return new back()
             {
-                gs = cu.x_cart.Count(),
-                gc = cu.x_cart.Sum(o => o.count.Value),
-                ct = g.count.Value
+                gs = cu.x_cart.Where(o => o.sel == true).Count(),
+                gc = cu.x_cart.Where(o => o.sel == true).Sum(o => o.count.Value),
+                ct = g.count.Value,
+                ps = cu.x_cart.Where(o => o.sel == true).Sum(o => o.price * o.count).Value
             };
         }
 
@@ -52,6 +55,7 @@ namespace X.App.Apis.wx
             public int gs { get; set; }
             public int gc { get; set; }
             public int ct { get; set; }
+            public decimal ps { get; set; }
         }
     }
 }

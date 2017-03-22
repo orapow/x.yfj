@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>全部订单</title>
+    <style type="text/css">
+        .hnav { overflow-x: auto; height: auto; padding: 10px; background-color: #f4f4f4; }
+        .hnav ul li { height: auto; width: auto; }
+        .hnav ul li:last-child { margin-right: 10px; }
+        .hnav ul li img { max-width: 120px; max-height: 80px; display: block; margin: 0 auto; width: auto; height: auto; }
+        .zaic { border-bottom-color: #ccc; }
+    </style>
+</head>
+
+<body style="background:white;">
+    #foreach($o in $ods)
+    <div class="hnav" id="hnav" onclick="tourl($o.id)">
+        <ul>
+            #foreach($g in $o.gs)
+            <li><a href="#"><img src="$g.cover" /></a></li>
+            #end
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="zaic" onclick="tourl($o.id)">
+        <h3>收货地址：$o.rec_addr</h3>
+        <a href="#">再次购买</a>
+        <span>全额：$o.yf_amount元</span>
+        <div class="clear"></div>
+    </div>
+    #end
+    <br />
+    <br />
+    <br />
+    <br />
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+        function tourl(id) {
+            document.location.href = "/wx/order/detail-" + id + ".html";
+        }
+    </script>
+</body>
+</html>

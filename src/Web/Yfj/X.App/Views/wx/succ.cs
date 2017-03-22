@@ -2,24 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using X.Core.Utility;
 
-namespace X.App.Views.wx.addr
+namespace X.App.Views.wx
 {
-    public class list : _wx
+    public class succ : _wx
     {
-        public string sel { get; set; }
+        public int id { get; set; }
         protected override string GetParmNames
         {
             get
             {
-                return "sel";
+                return "id";
             }
         }
         protected override void InitDict()
         {
             base.InitDict();
-            dict.Add("ads", cu.x_address.OrderByDescending(o => o.ctime));
+            dict.Add("od", cu.x_order.FirstOrDefault(o => o.order_id == id));
         }
     }
 }

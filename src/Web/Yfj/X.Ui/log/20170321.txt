@@ -1,0 +1,539 @@
+
+时间：2017-03-21 09:48:40,639 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 代号","code":"0x0003"} 
+时间：51335 
+
+时间：2017-03-21 09:49:10,839 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 代号","code":"0x0003"} 
+时间：81535 
+
+时间：2017-03-21 09:57:10,564 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：5067 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.mgr.city.save.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\mgr\city\save.cs:行号 37
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 09:58:11,301 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：65804 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.mgr.city.save.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\mgr\city\save.cs:行号 37
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 09:58:42,662 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T不能将 望城区 调整到其下级里面)","code":"T不能将 望城区 调整到其下级里面"} 
+时间：253 
+
+时间：2017-03-21 09:58:59,444 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T不能将 望城区 调整到其下级里面)","code":"T不能将 望城区 调整到其下级里面"} 
+时间：17035 
+
+时间：2017-03-21 10:28:34,444 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 wx.addr.loadct","code":"0x0002"} 
+时间：57330 
+
+时间：2017-03-21 11:24:58,107 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1232169 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass3_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.yfj\src\Xc\Data\DataClasses.cs:行号 181
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.yfj\src\Xc\Data\DataClasses.cs:行号 181
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.wx.addr.loadct.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\addr\loadct.cs:行号 15
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 11:25:23,774 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1631 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass3_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.yfj\src\Xc\Data\DataClasses.cs:行号 181
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.yfj\src\Xc\Data\DataClasses.cs:行号 181
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.wx.addr.loadct.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\addr\loadct.cs:行号 15
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 11:29:30,626 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：248484 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass3_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.yfj\src\Xc\Data\DataClasses.cs:行号 181
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.yfj\src\Xc\Data\DataClasses.cs:行号 181
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.wx.addr.loadct.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\addr\loadct.cs:行号 15
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 11:34:07,401 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：525259 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.Data.x_dict.<>c__DisplayClass3_1.<GetDictList>b__2(x_dict o) 位置 D:\Pro\x.yfj\src\Xc\Data\DataClasses.cs:行号 181
+   在 System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   在 X.Data.x_dict.GetDictList(String code, String upval, DataClassesDataContext db) 位置 D:\Pro\x.yfj\src\Xc\Data\DataClasses.cs:行号 181
+   在 X.Web.XFace.GetDictList(String code, String upval) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 183
+   在 X.App.Apis.wx.addr.loadct.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\addr\loadct.cs:行号 15
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 12:04:06,935 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户登陆超时)","code":"T用户登陆超时"} 
+时间：2324793 
+
+时间：2017-03-21 12:04:16,371 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户登陆超时)","code":"T用户登陆超时"} 
+时间：2334228 
+
+时间：2017-03-21 12:04:21,090 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: BxkCbA0061rsz9 ]"} 
+时间：2338947 
+
+时间：2017-03-21 13:08:04,802 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: PDDXna0885sz11 ]"} 
+时间：6162660 
+
+时间：2017-03-21 13:08:16,258 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户登陆超时)","code":"T用户登陆超时"} 
+时间：6174116 
+
+时间：2017-03-21 13:15:45,949 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户登陆超时)","code":"T用户登陆超时"} 
+时间：6623807 
+
+时间：2017-03-21 13:55:54,484 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: UMlNZa0755rsz9 ]"} 
+时间：264488 
+
+时间：2017-03-21 13:56:37,035 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: 67XD7a0797sz10 ]"} 
+时间：307040 
+
+时间：2017-03-21 13:57:23,655 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: V5j0GA0844sz10 ]"} 
+时间：353660 
+
+时间：2017-03-21 14:04:34,316 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: 8NhQWa0275ssz2 ]"} 
+时间：166292 
+
+时间：2017-03-21 14:12:52,898 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：846 
+System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 X.Core.Utility.Secret.FormBase64(String code) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Secret.cs:行号 159
+   在 X.App.Views.wx.addr.list.InitDict() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\wx\addr\list.cs:行号 23
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 14:18:29,470 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：239667 
+System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 X.Core.Utility.Secret.FormBase64(String code) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Secret.cs:行号 159
+   在 X.App.Views.wx.addr.list.InitDict() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\wx\addr\list.cs:行号 23
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 95
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 14:27:04,210 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 wx.addr.del","code":"0x0002"} 
+时间：36320 
+
+时间：2017-03-21 14:27:06,068 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"接口不存在 wx.addr.del","code":"0x0002"} 
+时间：38178 
+
+时间：2017-03-21 14:28:56,689 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T地址不存在)","code":"T地址不存在"} 
+时间：213 
+
+时间：2017-03-21 14:29:07,785 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T地址不存在)","code":"T地址不存在"} 
+时间：11309 
+
+时间：2017-03-21 14:29:33,279 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T地址不存在)","code":"T地址不存在"} 
+时间：36803 
+
+时间：2017-03-21 15:04:23,183 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：146416 
+System.InvalidCastException: 无法将类型为“System.Int32”的对象强制转换为类型“System.String”。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 110
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\xapi.cs:行号 18
+   在 X.App.Apis.wx._wx.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\_wx.cs:行号 18
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 15:04:43,565 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：166797 
+System.InvalidCastException: 无法将类型为“System.Int32”的对象强制转换为类型“System.String”。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 110
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\xapi.cs:行号 18
+   在 X.App.Apis.wx._wx.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\_wx.cs:行号 18
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 15:05:06,693 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：189926 
+System.InvalidCastException: 无法将类型为“System.Int32”的对象强制转换为类型“System.String”。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 110
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\xapi.cs:行号 18
+   在 X.App.Apis.wx._wx.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\_wx.cs:行号 18
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 15:05:45,698 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：228931 
+System.InvalidCastException: 无法将类型为“System.Int32”的对象强制转换为类型“System.String”。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 110
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\xapi.cs:行号 18
+   在 X.App.Apis.wx._wx.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\_wx.cs:行号 18
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 15:06:16,910 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：260143 
+System.InvalidCastException: 无法将类型为“System.Int32”的对象强制转换为类型“System.String”。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 110
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\xapi.cs:行号 18
+   在 X.App.Apis.wx._wx.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\_wx.cs:行号 18
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 15:07:27,520 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: Ebc8CA0048ssz1 ]"} 
+时间：330753 
+
+时间：2017-03-21 15:28:28,289 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1591522 
+System.InvalidCastException: 无法将类型为“System.Int32”的对象强制转换为类型“System.String”。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 110
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\xapi.cs:行号 18
+   在 X.App.Apis.wx._wx.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\_wx.cs:行号 18
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 15:29:39,987 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：627 
+System.InvalidCastException: 无法将类型为“System.Int32”的对象强制转换为类型“System.String”。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 110
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\xapi.cs:行号 18
+   在 X.App.Apis.wx._wx.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\_wx.cs:行号 18
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 15:29:58,614 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：19254 
+System.InvalidCastException: 无法将类型为“System.Int32”的对象强制转换为类型“System.String”。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 110
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\xapi.cs:行号 18
+   在 X.App.Apis.wx._wx.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\_wx.cs:行号 18
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 15:31:03,213 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：83852 
+System.InvalidCastException: 无法将类型为“System.Int32”的对象强制转换为类型“System.String”。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 110
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\xapi.cs:行号 18
+   在 X.App.Apis.wx._wx.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\_wx.cs:行号 18
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 15:32:16,643 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：157282 
+System.InvalidCastException: 无法将类型为“System.Int32”的对象强制转换为类型“System.String”。
+   在 X.Web.XFace.Checker.check(ParmsAttr pa, String v) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 110
+   在 X.Web.XFace.SetParms(NameValueCollection parms) 位置 D:\Pro\x.yfj\src\Web\X.Web\XFace.cs:行号 71
+   在 X.Web.Apis.Api.InitApi() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 23
+   在 X.App.Apis.xapi.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\xapi.cs:行号 18
+   在 X.App.Apis.wx._wx.InitApi() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\wx\_wx.cs:行号 18
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 28
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-21 15:33:04,144 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(商户号mch_id与appid不匹配)","code":"商户号mch_id与appid不匹配"} 
+时间：15586 
+
+时间：2017-03-21 16:45:00,846 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(商户号mch_id与appid不匹配)","code":"商户号mch_id与appid不匹配"} 
+时间：33643 
+
+时间：2017-03-21 16:48:51,265 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T购物车内没有商品)","code":"T购物车内没有商品"} 
+时间：389 
+
+时间：2017-03-21 16:54:40,956 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T购物车内没有商品)","code":"T购物车内没有商品"} 
+时间：13420 
+
+时间：2017-03-21 16:54:44,373 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T购物车内没有商品)","code":"T购物车内没有商品"} 
+时间：16837 
+
+时间：2017-03-21 16:55:10,543 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T购物车内没有商品)","code":"T购物车内没有商品"} 
+时间：43006 
+
+时间：2017-03-21 16:55:30,276 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T购物车内没有商品)","code":"T购物车内没有商品"} 
+时间：62739 
+
+时间：2017-03-21 17:09:38,670 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户登陆超时)","code":"T用户登陆超时"} 
+时间：911134 
+
+时间：2017-03-21 17:30:06,386 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T用户登陆超时)","code":"T用户登陆超时"} 
+时间：65093 
+
+时间：2017-03-21 17:30:46,572 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: owV2qa0647ssz2 ]"} 
+时间：105278 
+
+时间：2017-03-21 17:33:36,005 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：274711 
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Linq.SqlClient.SqlConnectionManager.UseConnection(IConnectionUser user)
+   在 System.Data.Linq.SqlClient.SqlProvider.get_IsSqlCe()
+   在 System.Data.Linq.SqlClient.SqlProvider.InitializeProviderMode()
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\wx\_wx.cs:行号 105
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+时间：2017-03-21 17:33:36,005 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：274711 
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Linq.SqlClient.SqlConnectionManager.UseConnection(IConnectionUser user)
+   在 System.Data.Linq.SqlClient.SqlProvider.get_IsSqlCe()
+   在 System.Data.Linq.SqlClient.SqlProvider.InitializeProviderMode()
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\wx\_wx.cs:行号 105
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20

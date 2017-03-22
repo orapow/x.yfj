@@ -5,10 +5,16 @@
     <title>购物车</title>
     <style type="text/css">
         .txt01 { margin-left: 20px; }
+        .shaop02 span { font-size: 18px; }
+        .shaop02 span.ut { left: auto; white-space: nowrap; }
+        .fudong { display: none; }
+        .diz { position: relative; }
+        .diz a span { line-height: normal; float: none; position: absolute; display: block; top: 60px; right: 10px; }
+        .fangs01 { padding: 0px 0 20px; }
     </style>
 </head>
 <body style="background:#f4f4f4;">
-    <div class="top01">
+    <!--<div class="top01">
         <div class="w80">
             <a class="bnt">
                 <img src="/img/wx/dd_03.png" />
@@ -16,7 +22,7 @@
             优辅家建材
         </div>
     </div>
-    <div class="clear"></div>
+    <div class="clear"></div>-->
 
     <div class="shaop">
         <div class="shaop01">
@@ -25,31 +31,35 @@
         </div>
         #foreach($g in $gs)
         <div class="shaop02" data-id="$g.goods_id">
-            <input type="radio" class="txt02 txt05 nn" />
+            <input type="checkbox" class="sel txt02 txt05 #if($g.sel)nn#end" onclick="dosel($g.goods_id)" />
             <img src="$g.cover" />
             <h2>$g.goods_name</h2>
             <p>$!g.desc</p>
-            <span>￥$g.price<span style="font-size:12px;">/$g.unit</span></span>
-            <div class="jiaj"><span class="jian" onclick="outcart($g.goods_id)"></span><input type="number" value="$g.count" class="txt01" /><span class="jia" onclick="tocart($g.goods_id)"></span></div><div class="clear"></div>
+            <span>￥$g.price<span style="font-size:12px;" class="ut">/$g.unit</span></span>
+            <div class="jiaj"><span class="jian" onclick="outcart($g.goods_id,$(this).next().val())"></span><input type="number" value="$g.count" name="count" class="txt01" /><span class="jia" onclick="tocart($g.goods_id)"></span></div><div class="clear"></div>
         </div>
         #end
     </div>
+
+    <div class="diz" style="margin-top:20px;">
+        <h2 style="margin-bottom:10px;">收货地址</h2>
+        <a href="/wx/addr/list-1.html">
+            #if($ad)$ad.name $ad.tel<br />$ad.shi $ad.qu $ad.zhen $ad.addr#else点击选择收货地址#end<span>></span>
+        </a>
+    </div>
+
     <div class="zhif">
         <h2>支付方式</h2>
         <p>
-            <input type="radio" name="pay" class="txt02 nn" /><span>在线支付</span>
-            <input type="radio" name="pay" class="txt02" /><span>货到付款</span>
-        </p><p>
+            <input type="radio" name="pay" value="1" class="txt02 nn pay" onclick="selectpay(this)" /><span>在线支付</span>
+            <input type="radio" name="pay" value="2" class="txt02 pay" onclick="selectpay(this)" /><span>货到付款</span>
+        </p>
+        <p>
             <div class="clear"></div>
         </p>
     </div>
 
-    <div class="diz">
-        <h2>收货地址</h2>
-        <a href="#">点击选择收货地址<span>></span></a>
-    </div>
-
-    <div class="zhif">
+    <!--<div class="zhif">
         <h2 class="ben"><p>是否需要搬运上楼</p><img src="/img/wx/iu.png" /></h2>
         <p>
             <input type="radio" class="txt02 txt03 nn" /><span>是</span>
@@ -66,55 +76,55 @@
                 <div class="clear"></div>
             </div>
         </p>
-    </div>
+    </div>-->
+
     <div class="zhif">
         <h2 class="ben"><p>配送时间</p></h2>
         <div class="clear"></div>
         <div class="fangs01">
-            <select name="type" class="select02">
-                <option selected="selected">2017-03-25</option>
-                <option value="1">2017-03-25</option>
-                <option value="2">2017-03-25</option>
+            <select name="dt" class="select02">
+                <option selected="selected" value="">请选择送货日期</option>
+                #foreach($d in $ds)
+                <option value="$d">$d</option>
+                #end
             </select>
-            <select name="type" class="select02">
-                <option selected="selected">2017-03-25</option>
-                <option value="1">2017-03-25</option>
-                <option value="2">2017-03-25</option>
+            <select name="tm" class="select02">
+                <option selected="selected" value="">请选择送货时间</option>
+                <option value="12点以前">12点以前</option>
+                <option value="12点到15点">12点到15点</option>
+                <option value="15点到18点">15点到18点</option>
+                <option value="18点到21点">18点到21点</option>
             </select>
             <div class="clear"></div>
         </div>
     </div>
 
     <div class="zhif">
-        <a href="#">
-            <h2>支付方式</h2>
-            <p>（选填）可输入特殊需要<span class="tis01">></span></p><p>
-                <div class="clear"></div>
-            </p>
-        </a>
+        <h2>订单备注</h2>
+        <div class="clear"></div>
+        <textarea name="rm" rows="3" style="width:100%; margin-bottom:20px;" placeholder="此处填写订单备注的内容"></textarea>
     </div>
 
     <div class="xiaox">
-        <p>累计货款：<span>￥51</span></p>
-        <p>搬运费：<span>+￥0</span></p>
+        <p>累计货款：<span class="am">￥$ps(共$gc件)</span></p>
+        <!--<p>搬运费：<span>+￥0</span></p>-->
         <p>运费：<span>+￥0</span></p>
         <p>优惠金额：<span>-￥0</span></p>
     </div>
 
     <div class="fuchen01">
-        <h2> <input type="radio" class="txt02" />全选</h2>
-        <input type="button" value="删除" class="but01" />
+        <h2> <input type="radio" class="txt02 sall" onclick="selectall(this)" />全选</h2>
+        <input type="button" value="删除" class="but01" onclick="delall()" />
     </div>
+
     <div class="fuchen">
-        <h2>金额：95元</h2>
-        <input type="button" value="提交订单" class="but" />
+        <h2>金额：<span class="am">$ps元(共$gc件)</span></h2>
+        <input type="button" value="提交订单" class="but" onclick="mdorder()" />
     </div>
+
     #parse("wx/_foot.html")
     <script type="text/javascript">
         $(function () {
-            //$(".txt02").click(function () {
-            //    $(this).toggleClass("nn").siblings().removeClass("nn");
-            //});
             $(".txt03").click(function () {
                 $(".fangs").show();
             });
@@ -123,13 +133,95 @@
             });
             $(".yichu").click(function () {
                 $(".fuchen").toggleClass("fenlei1_1");
+                if ($(".fuchen").hasClass("fenlei1_1")) $(this).text("取消");
+                else $(this).text("移除商品");
             });
         });
 
-        function cartchange(ct, gc, gid) {
-            $("[data-id='" + gid + "'] input").val(ct);
+        function selectpay(b) {
+            $(".pay").removeClass("nn");
+            $(b).addClass("nn");
         }
 
+        function delall() {
+            $(".sel.nn").each(function () {
+                var s = $(this);
+                outcart(s.parent().attr("data-id"), 0);
+            });
+        }
+
+        function dosel(id) {
+            if ($(".fuchen").hasClass("fenlei1_1")) {
+                $("[data-id='" + id + "'] .sel").toggleClass("nn");
+                if (!$("[data-id='" + id + "'] .sel").hasClass("nn")) $(".sall").removeClass("on");
+            }
+            else {
+                doapi("wx.cart.psel", { gid: id }, function (d) {
+                    if (!d.issucc) return;
+                    try {
+                        cartchange(d.ct, d.gc, d.ps, id, d.sel);
+                    } catch (e) { }
+                });
+            }
+        }
+
+        function cartchange(ct, gc, ps, gid, sel) {
+            if (ct == 0) $("[data-id='" + gid + "']").remove();
+            $("[data-id='" + gid + "'] input").val(ct);
+            $("span.am").text(ps + "元(共" + gc + "件)");
+            if (sel != 2) $("[data-id='" + gid + "'] .sel").addClass("nn");
+            else $("[data-id='" + gid + "'] .sel").removeClass("nn");
+        }
+
+        function selectall(c) {
+            $(c).toggleClass("nn");
+            if ($(c).hasClass("nn")) $(".sel").addClass("nn");
+            else $(".sel").removeClass("nn");
+        }
+
+        function mdorder() {
+            var dt = {
+                way: $(".pay.nn").val(),
+                ad: "$!aid",
+                date: $("[name='dt']").val(),
+                time: $("[name='tm']").val(),
+                remark: $("[name='rm']").val()
+            };
+
+            if (!dt.way) { alert("请选择支付方式"); return; }
+            if (!dt.ad) { alert("请选择收货地址"); return; }
+            if (!dt.date) { alert("请选择送货日期"); return; }
+            if (!dt.time) { alert("请选择送货时间"); return; }
+
+            doapi("wx.order.md", dt, function (d) {
+                if (!d.issucc) return;
+                if (dt.way == 2) { document.location.href = "/wx/succ-" + d.id + ".html"; return; }
+                showloading("下单成功，应付金额为：￥" + d.amount + "。\n正在拉起支付");
+                WeixinJSBridge.invoke(
+                     'getBrandWCPayRequest',
+                     {
+                         "appId": "$cfg.wx_appid",//公众号名称，由商户传入
+                         "timeStamp": d.ts,//时间戳，自1970年以来的秒数
+                         "nonceStr": d.ns, //随机串
+                         "package": d.pkg,
+                         "signType": "MD5",//微信签名方式：
+                         "paySign": d.sign //微信签名
+                     },
+                    function (res) {
+                        hideloading();
+                        if (res.err_msg == "get_brand_wcpay_request：ok") {
+                            // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
+                            //if ("$!burl") document.location.href = "$!burl";
+                            //else history.back();
+                            document.location.href = "/wx/succ-" + d.id + ".html";
+                        } else {
+                            //$("#img_code").attr("src", "data:image/jpeg;base64," + d.msg).parent().show();
+                            alert("支付失败，请重试！！！");
+                        }
+                    }
+                 );
+            });
+        }
     </script>
 
 </body>
