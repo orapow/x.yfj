@@ -37,10 +37,16 @@
                 <x:text title="商品标题" def="$!item.name" name="name" size="5" chk="no" />
                 <x:text title="商品规格" def="$!item.alias" name="alias" size="4" chk="no" />
                 <x:row>
+                    <x:pick title="分类" src="url:/mgr/dict/select-goods.cate.html:::brand" name="cate" count="1" def="$!{cate}" />
+                    <x:pick title="品牌" src="dict:goods.brand" name="brand" count="1" def="$!item.brand" />
+                </x:row>
+                <x:row>
                     <x:text title="价格" def="$!item.new_price" name="np" size="2" chk="no" />
                     <x:text title="库存" def="$!item.stock" name="stock" size="2" chk="no" />
                 </x:row>
-                <x:pick title="分类" src="url:/mgr/dict/select-goods.cate.html" name="cate" count="1" def="$!{cate}" />
+                <x:row>
+                    <x:text title="数量单位" def="$!item.unit" name="unit" size="1" />
+                </x:row>
                 <x:upload name="imgs" title="图片" count="1" tp="img" def="$!item.imgs" />
                 <x:text tp="3" title="商品描述" name="desc" size="6" def="$!item.desc" />
             </div>

@@ -1,0 +1,885 @@
+
+时间：2017-03-31 09:58:13,755 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: Vegpqa0496sz11 ]"} 
+时间：660312 
+
+时间：2017-03-31 10:02:25,318 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: CpoMda0747rsz9 ]"} 
+时间：911876 
+
+时间：2017-03-31 10:02:47,717 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: ZXH2Ca0770rsz8 ]"} 
+时间：934274 
+
+时间：2017-03-31 10:06:06,969 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1133527 
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.Collections.ArrayList.get_Item(Int32 index)
+   在 System.Web.HttpFileCollection.Get(Int32 index)
+   在 System.Web.HttpFileCollection.get_Item(Int32 index)
+   在 X.App.Apis.com.upload.GetResponse() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\com\upload.cs:行号 42
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-31 10:06:15,952 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1142510 
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.Collections.ArrayList.get_Item(Int32 index)
+   在 System.Web.HttpFileCollection.Get(Int32 index)
+   在 System.Web.HttpFileCollection.get_Item(Int32 index)
+   在 X.App.Apis.com.upload.GetResponse() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\com\upload.cs:行号 42
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-31 10:11:36,713 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: 96P0va0299z106 ]"} 
+时间：1463271 
+
+时间：2017-03-31 11:30:30,615 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：11552 
+
+时间：2017-03-31 11:31:05,186 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：46123 
+
+时间：2017-03-31 11:32:06,972 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：107909 
+
+时间：2017-03-31 11:32:59,174 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：160111 
+
+时间：2017-03-31 11:40:27,407 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：10109 
+
+时间：2017-03-31 11:40:52,752 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：35453 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 11:42:16,168 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：118869 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 377
+   在 X.Core.Utility.Tools.GetHttpData(String url) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 386
+   在 X.App.Com.Sms.SendCode(String to, String code, String sign, String tpid) 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Com\Sms.cs:行号 33
+   在 X.App.Apis.com.sendcode.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\com\sendcode.cs:行号 26
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-31 11:45:15,951 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：298652 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 11:45:15,962 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：298663 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 377
+   在 X.Core.Utility.Tools.GetHttpData(String url) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 386
+   在 X.App.Com.Sms.SendCode(String to, String code, String sign, String tpid) 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Com\Sms.cs:行号 33
+   在 X.App.Apis.com.sendcode.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\com\sendcode.cs:行号 26
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-31 11:45:44,449 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：327151 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 11:46:43,467 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：386168 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 377
+   在 X.Core.Utility.Tools.GetHttpData(String url) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 386
+   在 X.App.Com.Sms.SendCode(String to, String code, String sign, String tpid) 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Com\Sms.cs:行号 33
+   在 X.App.Apis.com.sendcode.Execute() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Apis\com\sendcode.cs:行号 26
+   在 X.Web.Apis.Api.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-31 11:48:04,797 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：7272 
+
+时间：2017-03-31 11:48:17,809 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：20283 
+
+时间：2017-03-31 11:48:42,632 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：45107 
+
+时间：2017-03-31 11:49:02,845 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：65320 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 11:49:11,172 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：73647 
+
+时间：2017-03-31 11:49:31,111 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：93586 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 12:08:09,648 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：1212123 
+
+时间：2017-03-31 12:08:47,320 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：1249795 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 12:08:47,339 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：1249814 
+
+时间：2017-03-31 12:13:41,510 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：140780 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 12:13:41,613 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：140883 
+
+时间：2017-03-31 12:14:39,034 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：198304 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 12:14:39,035 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：198305 
+
+时间：2017-03-31 12:16:20,847 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：92990 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 12:16:20,944 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：93088 
+
+时间：2017-03-31 13:33:39,535 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：4731679 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 13:50:28,931 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：852584 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 13:50:29,124 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：852778 
+
+时间：2017-03-31 13:58:57,153 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：51710 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 13:58:57,236 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：51792 
+
+时间：2017-03-31 13:59:01,517 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：56073 
+
+时间：2017-03-31 14:00:15,908 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：130465 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:00:15,909 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：130466 
+
+时间：2017-03-31 14:03:36,223 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：104036 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:03:36,295 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：104108 
+
+时间：2017-03-31 14:09:09,337 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：311080 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:09:09,465 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：311207 
+
+时间：2017-03-31 14:09:43,280 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：24752 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:09:43,363 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：24835 
+
+时间：2017-03-31 14:10:05,363 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：46835 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:10:05,381 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：46852 
+
+时间：2017-03-31 14:16:37,043 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：438515 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:16:37,046 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：438517 
+
+时间：2017-03-31 14:18:15,114 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：88900 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:18:15,182 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：88968 
+
+时间：2017-03-31 14:19:14,060 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：41858 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:19:14,137 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：41935 
+
+时间：2017-03-31 14:29:29,463 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：605804 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:29:29,542 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：605883 
+
+时间：2017-03-31 14:37:34,778 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：1091118 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:37:34,782 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：1091122 
+
+时间：2017-03-31 14:39:01,789 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：54215 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:39:01,889 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：54315 
+
+时间：2017-03-31 14:40:00,636 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：25425 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 14:40:00,727 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：25516 
+
+时间：2017-03-31 14:46:24,840 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：17990 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 14:46:29,864 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：23015 
+
+时间：2017-03-31 14:46:46,582 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：39732 
+
+时间：2017-03-31 14:47:05,097 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：58248 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 14:47:05,124 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：58274 
+
+时间：2017-03-31 14:48:40,420 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：153570 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 14:48:40,421 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：153571 
+
+时间：2017-03-31 14:57:00,435 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：47149 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 14:57:00,551 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：47265 
+
+时间：2017-03-31 15:04:16,939 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：483653 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 15:04:16,942 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：483656 
+
+时间：2017-03-31 15:10:00,050 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：338182 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 15:10:00,144 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：338275 
+
+时间：2017-03-31 15:16:29,188 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：68721 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 15:16:29,270 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：68803 
+
+时间：2017-03-31 15:17:46,186 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：145718 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 15:17:46,188 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：145721 
+
+时间：2017-03-31 15:27:08,116 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：23010 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 15:27:08,201 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：23095 
+
+时间：2017-03-31 15:37:34,667 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：649560 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 15:37:34,670 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：649563 
+
+时间：2017-03-31 15:46:12,012 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：303033 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 15:46:12,101 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：303122 
+
+时间：2017-03-31 15:46:40,290 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：331310 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 X.Core.Utility.Tools.PostHttpData(String url, String data, String mothod, String cert, String pwd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 221
+
+时间：2017-03-31 15:46:40,307 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：331328 
+
+时间：2017-03-31 15:48:23,308 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：30407 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-03-31 15:48:23,398 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：30497 
+
+时间：2017-03-31 15:50:53,743 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：180842 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-31 15:52:06,939 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：254039 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-31 15:53:59,751 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：366850 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-31 15:54:00,664 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：367764 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-31 15:54:01,169 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：368268 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-31 15:54:01,470 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：368570 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-31 16:37:12,032 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(商户号mch_id与appid不匹配)","code":"商户号mch_id与appid不匹配"} 
+时间：2483430 

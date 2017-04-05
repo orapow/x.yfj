@@ -23,19 +23,17 @@ namespace X.App.Apis.mgr.city
 
             var tree = new XTree();
             tree.LoadList += tree_LoadList;
-            var dt = DateTime.Now;
             tree.InitTree("", 5);
-            Debug.WriteLine("tree.init:" + (DateTime.Now - dt).TotalMilliseconds);
-            dt = DateTime.Now;
-            r.items = tree.OutTree();
-            Debug.WriteLine("tree.out:" + (DateTime.Now - dt).TotalMilliseconds);
+
+            var data = tree.OutTree();
+            if (!string.IsNullOrEmpty(key)) r.items = data.Where(o => o.name.Contains(key)).ToList();
+            else r.items = data;
 
             return r;
         }
 
         List<TreeNode> tree_LoadList(object id)
         {
-            var dt = DateTime.Now;
             if (code == "sys.city" && id + "" == "0") id = up;
             var list = GetDictList(code, id + "");
             if (list == null) return null;

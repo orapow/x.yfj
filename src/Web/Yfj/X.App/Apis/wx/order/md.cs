@@ -42,6 +42,8 @@ namespace X.App.Apis.wx.order
             od.ctime = DateTime.Now;
             od.status = 1;
 
+            od.city = cu.city;
+
             foreach (var g in gds)
             {
                 od.x_order_detail.Add(new x_order_detail()
@@ -51,6 +53,7 @@ namespace X.App.Apis.wx.order
                     goods_id = g.goods_id,
                     name = g.goods_name,
                     price = g.price,
+                    unit = g.unit,
                     stand = g.desc,
                     total_price = g.count * g.price
                 });
@@ -70,6 +73,7 @@ namespace X.App.Apis.wx.order
             od.rec_man = adr.name;
             od.rec_tel = adr.tel;
             od.ret_integral = 0;
+            od.pay_amount = 0;
             //od.uptype = upst;
             od.up_amount = 0;//上楼费用
             od.user_remark = remark;
@@ -83,44 +87,8 @@ namespace X.App.Apis.wx.order
 
             CacheHelper.Remove("pay." + cu.id);
 
-            if (od.pay_way == 2) return new od() { amount = od.yf_amount.Value.ToString("F2"), id = od.order_id };
+            return new XResp() { msg = od.order_id + "" };
 
-            var co = Wx.Pay.MdOrder(od.no, od.order_id + "", ((int)(od.yf_amount * 100)).ToString(), "http://" + cfg.domain + "/wx/notify-" + od.no + ".html", cu.wx_opid, cfg.wx_appid, cfg.wx_mch_id, cfg.wx_paykey, false);
-
-            if (co.return_code == "FAIL") throw new XExcep(co.return_msg);
-            if (co.result_code == "FAIL") throw new XExcep(co.err_code + "," + co.err_code_des);
-            if (string.IsNullOrEmpty(co.prepay_id)) throw new XExcep("T预付款号为空");
-
-            od.wx_no = co.prepay_id;
-
-            var ps = new Dictionary<string, string>();
-            ps.Add("appId", cfg.wx_appid);
-            ps.Add("timeStamp", Tools.GetGreenTime(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
-            ps.Add("nonceStr", Tools.GetRandRom(24, 3));
-            ps.Add("package", "prepay_id=" + od.wx_no);
-            ps.Add("signType", "MD5");
-
-            var r = new od()
-            {
-                id = od.order_id,
-                amount = od.yf_amount.Value.ToString("F2"),
-                ns = ps["nonceStr"],
-                ts = ps["timeStamp"],
-                pkg = ps["package"],
-                sign = Wx.ToSign(ps, false, cfg.wx_paykey)
-            };
-
-            return r;
-
-        }
-        public class od : XResp
-        {
-            public long id { get; set; }
-            public string amount { get; set; }
-            public string ts { get; set; }
-            public string ns { get; set; }
-            public string pkg { get; set; }
-            public string sign { get; set; }
         }
     }
 }

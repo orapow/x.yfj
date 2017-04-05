@@ -30,11 +30,14 @@ namespace X.App.Views.wx
                     orderby g.ctime descending
                     select new
                     {
+                        g.city,
                         title = g.name,
                         price = g.new_price,
                         id = g.goods_id,
                         g.cover,
                     };
+
+            if (cu != null) q = q.Where(o => o.city == cu.city);
 
             return q.Take(top).ToList<object>();
         }

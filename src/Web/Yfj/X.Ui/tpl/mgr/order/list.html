@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>订单管理 - $cfg.name</title>
+    <style type="text/css">
+        td.ops { white-space: normal; }
+        .gd { width: 40px; border: 1px solid #ff6a00; float: left; margin: 0 2px 2px 0; }
+        .table td.c_gs { overflow: auto; white-space: normal; }
+        .table td.c_rec_man { white-space: normal; }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">全部订单</span> - <span class="sub">订单管理</span>
+    </div>
+    <div class="search">
+        <x:form>
+            <x:text name="key" tip="商品名称、订单号、用户" size="4" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+        </x:form>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <script type="text/javascript">
+
+        $(function () {
+            $("form:eq(0)").xform({
+                callback: function (d) {
+                    d.page = 1;
+                    g.getlist(d);
+                }
+            });
+        });
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30, st: "$!st" },
+            api: "mgr.order.list",
+            fs: [
+                { t: "用户", f: "<img src='{up}' style='height:45px;'/> {un}", w: 120, align: "left" },
+                { t: "订单", f: "编号：{no}<br/>日期：{ctime}<br/>状态：{st_name}", w: 160, align: "left" },
+                { t: "商品", f: "{gs}", w: 220, align: "left" },
+                { t: "收货", f: "{rec_man} {rec_tel} <br/>{rec_addr}<br/>备注：{remark}", w: 200, align: "left" },
+                { t: "配送", f: "{send_date} <br/>{send_time}<br/>{send}", w: 120, align: "left" },
+                { t: "付款", f: "{way}<br/>应付：<b>￥{yf_amount}</b><br/>已付：<b style='color:red'>￥{pay_amount}</b>", w: 100, align: "left" }
+            ],
+            btns: [
+                { txt: "删除", ico: "remove", act: "del" },
+                { txt: "详细", ico: "reorder", act: "detail", confirm: false }
+            ]
+        };
+
+        cfg.getbtns = function (o) {
+            var btns = [];
+            if (o.way == "货到付款" && o.status > 2 && !o.pay_amount) btns.push({ txt: "收款", ico: "money", act: "cash", confirm: false });
+            if (o.status == 2) btns.push({ txt: "确认", ico: "ok", act: "ok" });
+            if (o.status == 3) btns.push({ txt: "发货", ico: "shopping-cart", act: "send", confirm: false });
+            if (o.status == 4 && o.pay_amount > 0) btns.push({ txt: "签收", ico: "pencil", act: "acpt" });
+            return btns;
+        }
+
+        cfg.cellclick = function (act, d) {
+            switch (act) {
+                case "del":
+                    dodel(d.id);
+                    break;
+                case "ok":
+                    dook(d.id);
+                    break;
+                case "acpt":
+                    doacpt(d.id);
+                    break;
+                case "cash":
+                    show_cash(d.id);
+                    break;
+                case "send":
+                    show_send(d.id);
+                    break;
+                case "detail":
+                    show_detail(d.id);
+                    break;
+            }
+        };
+
+        var g = x.grid.init(cfg);
+
+        function dodel(id) {
+            x.doapi("mgr.order.del", { id: id }, function (d) {
+                if (!d.issucc) return;
+                g.getlist();
+            });
+        }
+        function doacpt(id) {
+            x.doapi("mgr.order.del", { id: id }, function (d) {
+                if (!d.issucc) return;
+                g.getlist();
+            });
+        }
+        function dook(id) {
+            x.doapi("mgr.order.ok", { id: id }, function (d) {
+                if (!d.issucc) return;
+                g.getlist();
+            });
+        }
+
+        function show_cash(id) {
+            x.openwin("cash-" + id + ".html", "订单收款", function () { g.getlist() }, { w: 300, h: 200 });
+        }
+
+        function show_detail(id) {
+            x.openwin("detail-" + id + ".html", "订单详情", function () { g.getlist() }, { w: 600, h: 400 });
+        }
+
+        function show_send(id) {
+            x.openwin("send-" + id + ".html", "订单发货", function () { g.getlist() }, { w: 300, h: 200 });
+        }
+
+    </script>
+</body>
+</html>

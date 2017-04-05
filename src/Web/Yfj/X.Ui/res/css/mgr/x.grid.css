@@ -3,7 +3,7 @@
 .grid.body td a { font-size: 12px; text-decoration: none; }
 .grid.body tr[sel] td, .grid.body tr:hover td { background-color: #ccc; color: white; }
 .grid.body tr[sel] td a, .grid.body tr:hover td a { color: white; }
-.grid.body td.ops .btn { padding: 1px 6px; color: #333; margin-right: 4px; }
+.grid.body td.ops .btn { padding: 1px 6px; color: #333; margin-right: 4px; margin-bottom: 4px; }
 .grid.body td.ops .btn:hover { color: #333; }
 .grid.body .chks { }
 .grid.body .chks .btn { padding: 3px 6px; text-align: center; margin-left: -1px; }

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>广告管理 - $cfg.name</title>
+</head>
+<body>
+    <div class="title">
+        <span class="main">全部广告</span> - <span class="sub">广告管理</span>
+    </div>
+    <div class="search">
+        <x:form>
+            <x:pick title="分类" src="dict:ads.pos" name="pos" count="1" /><x:text name="key" tip="搜索标题" size="4" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+            <div class="btns">
+                <a class="btn btn-primary" id="btn_add" href="edit.html"><i class="icon-plus"></i>添加广告</a>
+            </div>
+        </x:form>
+    </div>
+    <div class="gridpanel">
+    </div>
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("form:eq(0)").xform({
+                callback: function (d) {
+                    d.page = 1;
+                    g.getlist(d);
+                }
+            })
+        });
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30, tp: "$tp", st: "$!st" },
+            api: "mgr.ads.list",
+            fs: [
+                { t: "名称", f: "{name}", w: 200, align: "left" },
+                { t: "位置", f: "{pos}", w: 80, align: "center" },
+                { t: "图片", f: "{pic}", w: 180, align: "left" },
+                { t: "链接", f: "{url}", w: 100, align: "center" },
+                { t: "说明", f: "{remark}", w: 100, align: "center" },
+                { t: "时间", f: "{ctime}", w: 100, align: "center" }
+            ],
+            btns: [
+                { txt: "编辑", ico: "edit", link: "edit-{id}.html" },
+                { txt: "删除", ico: "remove", act: "del" }
+            ]
+        };
+
+        //(初始:1,通过:2,不通过:3)
+        cfg.cellclick = function (act, d) {
+            switch (act) {
+                case "del":
+                    dodel(d.id);
+                    break;
+            }
+        };
+
+        var g = x.grid.init(cfg);
+
+        function dodel(id) {
+            x.doapi("mgr.ads.del", { id: id }, function () {
+                g.getlist();
+            });
+        }
+
+    </script>
+</body>
+</html>

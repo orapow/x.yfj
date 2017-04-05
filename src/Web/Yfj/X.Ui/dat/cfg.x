@@ -1,6 +1,6 @@
 {
-  "domain": "yfj.tunnel.qydev.com",
-  "name": "优辅家",
+  "domain": "yfj.ngrok.80xc.com",
+  "name": "优铺家",
   "bdkey": "dlkf7DmjykwrgTuuqGYYRTid",
   "cache": 2,
   "sms_cfg": "1,http://222.73.117.158/msg/HttpBatchSendSM?account=zhoafang&pswd=09lfRoEPi22xhkog&mobile={tel}&msg={txt}&needstatus=true,\\d+\\,0",

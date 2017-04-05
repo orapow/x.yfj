@@ -2,18 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("wx/_head.html")
-    <title>全部订单</title>
+    <title>#if($st==1)待支付订单#elseif($st==3)待发货订单#elseif($st==4)待收货订单#else全部订单#end</title>
     <style type="text/css">
-        .hnav { overflow-x: auto; height: auto; padding: 10px; background-color: #f4f4f4; }
+        .hnav { overflow-x: auto; height: auto; padding: 5px; background-color: #f4f4f4; }
         .hnav ul li { height: auto; width: auto; }
         .hnav ul li:last-child { margin-right: 10px; }
-        .hnav ul li img { max-width: 120px; max-height: 80px; display: block; margin: 0 auto; width: auto; height: auto; }
-        .zaic { border-bottom-color: #ccc; }
+        .hnav ul li img { max-width: 80px; max-height: 60px; display: block; margin: 0 auto; width: auto; height: auto; }
+        .zaic { border-bottom-color: #eee; margin-bottom: 10px; }
     </style>
 </head>
-
-<body style="background:white;">
+<body style="background:#f4f4f4;">
     #foreach($o in $ods)
+    <h3 style="height: 30px;line-height: 30px;text-indent: 1em; background-color:white;    border-top: 1px solid #eee;">
+        订单号：$o.no
+    </h3>
     <div class="hnav" id="hnav" onclick="tourl($o.id)">
         <ul>
             #foreach($g in $o.gs)
@@ -24,7 +26,7 @@
     </div>
     <div class="zaic" onclick="tourl($o.id)">
         <h3>收货地址：$o.rec_addr</h3>
-        <a href="#">再次购买</a>
+        <a href="/wx/order/detail-${o.id}.html">#if($o.status==1)立即支付#else详情#end</a>
         <span>全额：$o.yf_amount元</span>
         <div class="clear"></div>
     </div>

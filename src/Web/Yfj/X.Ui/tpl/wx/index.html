@@ -3,6 +3,10 @@
 <head>
     #parse("wx/_head.html")
     <title>首页</title>
+    <style type="text/css">
+        .hnav ul { width: 712px; }
+        .guang { padding-bottom: 10px; }
+    </style>
 </head>
 <body style="text-align:center;">
     <div class="top">
@@ -11,7 +15,6 @@
             <div id="login_box09">
                 <h3 style="">点击选择配送城市</h3>
                 <div class="xuanz">
-                    <a href="#" id="qux04">长沙</a>
                     <a href="#" id="qux04">长沙</a>
                 </div>
             </div>
@@ -23,6 +26,8 @@
         </div>
     </div>
     <!--手机版的banner图片-->
+    #set($a1=$T.GetAds(1))
+    #if($a1.count>0)
     <div id="content">
         <div id="focus" class="focus">
             <div class="hd">
@@ -30,13 +35,14 @@
             </div>
             <div class="bd">
                 <ul>
-                    <li><a href="#"><img src="/img/wx/fg_02.png" /></a></li>
-                    <li><a href="#"><img src="/img/wx/fg_02.png" /></a></li>
-                    <li><a href="#"><img src="/img/wx/fg_02.png" /></a></li>
+                    #foreach($a in $a1)
+                    <li><a href="$a.url"><img src="$a.pic" height="147" title="$a.name" /></a></li>
+                    #end
                 </ul>
             </div>
         </div>
     </div>
+    #end
     <!--手机版的banner图片-->
     <div class="lanmu">
         <ul>
@@ -44,14 +50,14 @@
             <li><a href="#"><img src="/img/wx/fg_07.png" /><span>免费送货</span></a></li>
             <li><a href="#"><img src="/img/wx/fg_09.png" /><span>4小时达</span></a></li>
             <li><a href="#"><img src="/img/wx/fg_11.png" /><span>售后保障</span></a></li>
-            <li class="clear"></li>
+            <div class="clear"></div>
         </ul>
     </div>
     <div class="clear"></div>
     <div class="xians">
         <h2>限时抢购</h2>
-        <div class="hnav" id="hnav">
-            <ul>
+        <div class="hnav" id="hnav" style="overflow-x:auto;">
+            <ul style="margin-right:10px;">
                 <li>
                     <a href="#"><img src="/img/wx/xc_06.jpg" /></a>
                     <div class="jiag">
@@ -84,6 +90,7 @@
                     </div>
                     <div class="tup"></div>
                 </li>
+                <div class="clear"></div>
             </ul>
             <div class="clear"></div>
         </div>
@@ -92,14 +99,14 @@
     #set($gs=$T.get_goods("2",4))
     #if($gs.count()>0)
     <div class="chanp">
-        <h2 class="bit">水工材料<a href="/wx/list-2.html">更多 ···</a></h2>
+        <h2 class="bit">水工材料<a href="/wx/goods/list-2.html">更多 ···</a></h2>
         <ul>
             #foreach($g in $gs)
             <li>
-                <a href="/wx/detail-${g.id}.html"><img src="$g.cover" /></a>
+                <a href="/wx/goods/detail-${g.id}.html"><img src="$g.cover" /></a>
                 <div class="jiag">
                     <p>$g.title</p>
-                    <a href="#">￥$g.price</a>
+                    <a>￥$g.price</a>
                 </div>
                 <div class="tup"></div>
             </li>
@@ -113,11 +120,11 @@
     #set($gs=$T.get_goods("3",4))
     #if($gs.count()>0)
     <div class="chanp">
-        <h2 class="bit">电工材料<a href="/wx/list-3.html">更多 ···</a></h2>
+        <h2 class="bit">电工材料<a href="/wx/goods/list-3.html">更多 ···</a></h2>
         <ul>
             #foreach($g in $gs)
             <li>
-                <a href="#"><img src="$g.cover" /></a>
+                <a href="/wx/goods/detail-${g.id}.html"><img src="$g.cover" /></a>
                 <div class="jiag">
                     <p>$g.title</p>
                     <a href="#">￥$g.price</a>
@@ -131,18 +138,21 @@
     </div>
     #end
 
-    <div class="guang" style="margin:10px 0;">
-        <img src="/img/wx/yf_04.png" />
+    #set($a2=$T.GetAds(2))
+    #if($a2.count>0)
+    <div class="guang">
+        <a href="$a2.get_item(0).url"><img src="$a2.get_item(0).pic" /></a>
     </div>
+    #end
 
     #set($gs=$T.get_goods("4",4))
     #if($gs.count()>0)
     <div class="chanp">
-        <h2 class="bit">木工材料<a href="/wx/list-4.html">更多 ···</a></h2>
+        <h2 class="bit">木工材料<a href="/wx/goods/list-4.html">更多 ···</a></h2>
         <ul>
             #foreach($g in $gs)
             <li>
-                <a href="#"><img src="$g.cover" /></a>
+                <a href="/wx/goods/detail-${g.id}.html"><img src="$g.cover" /></a>
                 <div class="jiag">
                     <p>$g.title</p>
                     <a href="#">￥$g.price</a>
@@ -159,11 +169,11 @@
     #set($gs=$T.get_goods("5",4))
     #if($gs.count()>0)
     <div class="chanp">
-        <h2 class="bit">瓦工材料<a href="/wx/list-5.html">更多 ···</a></h2>
+        <h2 class="bit">瓦工材料<a href="/wx/goods/list-5.html">更多 ···</a></h2>
         <ul>
             #foreach($g in $gs)
             <li>
-                <a href="#"><img src="$g.cover" /></a>
+                <a href="/wx/goods/detail-${g.id}.html"><img src="$g.cover" /></a>
                 <div class="jiag">
                     <p>$g.title</p>
                     <a href="#">￥$g.price</a>
@@ -177,18 +187,21 @@
     </div>
     #end
 
-    <div class="guang" style="margin:10px 0;">
-        <img src="/img/wx/yf_04.png" />
+    #set($a3=$T.GetAds(3))
+    #if($a3.count>0)
+    <div class="guang">
+        <a href="$a3.get_item(0).url"><img src="$a3.get_item(0).pic" /></a>
     </div>
+    #end
 
     #set($gs=$T.get_goods("6",4))
     #if($gs.count()>0)
     <div class="chanp">
-        <h2 class="bit">油漆材料<a href="/wx/list-6.html">更多 ···</a></h2>
+        <h2 class="bit">油漆材料<a href="/wx/goods/list-6.html">更多 ···</a></h2>
         <ul>
             #foreach($g in $gs)
             <li>
-                <a href="#"><img src="$g.cover" /></a>
+                <a href="/wx/goods/detail-${g.id}.html"><img src="$g.cover" /></a>
                 <div class="jiag">
                     <p>$g.title</p>
                     <a href="#">￥$g.price</a>
@@ -205,11 +218,11 @@
     #set($gs=$T.get_goods("7",4))
     #if($gs.count()>0)
     <div class="chanp">
-        <h2 class="bit">工具材料<a href="/wx/list-7.html">更多 ···</a></h2>
+        <h2 class="bit">工具材料<a href="/wx/goods/list-7.html">更多 ···</a></h2>
         <ul>
             #foreach($g in $gs)
             <li>
-                <a href="#"><img src="$g.cover" /></a>
+                <a href="/wx/goods/detail-${g.id}.html"><img src="$g.cover" /></a>
                 <div class="jiag">
                     <p>$g.title</p>
                     <a href="#">￥$g.price</a>
@@ -222,19 +235,24 @@
         <div class="clear"></div>
     </div>
     #end
+    <br />
+    <br />
+    <br />
+    <br />
     #parse("wx/_foot.html")
     <script type="text/javascript" src="/js/wx/jquery.SuperSlide.2.1.js"></script>
     <script type="text/javascript">
         $(function (e) {
+
             $('#mima01').click(function () {//单击ID为#login的A标签
                 $('#login_box09').fadeIn();//名为#login_box的DIV显示,时间为1000毫秒=1秒
                 $('#mask').fadeIn();//名为#mask的DIV显示
-            })
+            });
+
             $('#qux04').click(function () {
                 $('#login_box09').fadeOut();//名为#login_box的DIV隐藏
                 $('#mask').fadeOut();//名为#mask的DIV隐藏
             });
-
 
             /* 控制左右按钮显示 */
             //jQuery(".focus").hover(function () { jQuery(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5) }, function () { jQuery(this).find(".prev,.next").fadeOut() });

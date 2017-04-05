@@ -49,7 +49,7 @@
         </div>
         <div class="clear"></div>
     </div>
-    <div class="qr" onclick="dosave()"><input type="button" value="保存地址" class="btn" /></div>
+    <div class="qr" onclick="dosave()"><a href="javascript:;" style="color:white;">保存地址</a></div>
     <br />
     <br />
     <br />
@@ -80,7 +80,7 @@
             if (!d.tel) { alert("请填写联系方式"); return; }
             if (!d.addr) { alert("请填写详细地址"); return; }
             doapi("wx.addr.save", d, function (d) {
-                if ("$!sel") document.location.href = "/wx/cart-" + d.msg + ".html";
+                if ("$!sel") document.location.href = "/wx/user/cart-" + d.msg + ".html";
                 else document.location.href = "/wx/addr/list.html";
             });
         }

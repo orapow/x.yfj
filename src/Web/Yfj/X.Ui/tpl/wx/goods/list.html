@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>商品分类</title>
+    <style type="text/css">
+        .chanpin { overflow-y: auto; }
+        .chanpin ul li h3 { font-size: 15px; line-height: 24px; }
+        .chanpin ul li h4 { line-height: 14px; }
+        .chanpin ul li h4 a { color:#999; }
+        #ul_list li.d0 .jian { display: none; }
+        #ul_list li.d0 .txt01 { display: none; }
+        .fenl01 .hd03 ul li { overflow: hidden; }
+        .hd03 ul { overflow-y: auto; }
+        .chanpin ul li img { width: 70px; height: 70px; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="right01">
+            <input type="text" class="txt" placeholder="搜商品、找品牌" />
+            <span></span>
+        </div>
+    </div>
+    <div class="indexqiehuan1 fenl">
+        <div class="hd hd02">
+            <ul>
+                #foreach($c in $cts)
+                <li class="" data-id="$c.value">$c.name</li>
+                #end
+            </ul>
+        </div>
+        <div class="big27 fenl01">
+            <div class="hd03">
+                <ul></ul>
+                <div class="clear"></div>
+            </div>
+            <div class="bd03">
+                <div class="xuanze">
+                    <!--<ul>
+                        <li class="gge">
+                            规格
+                        </li>
+                        <div class="tanc">
+                            <ul>
+                                <li class="hh"><a href="#">全部</a></li>
+                                <li><a href="#">20</a></li>
+                                <li><a href="#">30</a></li>
+                                <li><a href="#">40</a></li>
+                                <li><a href="#">50</a></li>
+                                <li><a href="#">60</a></li>
+                                <li><a href="#">70</a></li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                        <li class="pingp">
+                            品牌
+                            <span>|</span>
+                        </li>
+                        <div class="tanc01">
+                            <ul>
+                                <li class="hh"><a href="#">全部</a></li>
+                                <li><a href="#">伟星</a></li>
+                                <li><a href="#">伟星</a></li>
+                                <li><a href="#">伟星</a></li>
+                                <li><a href="#">伟星</a></li>
+                                <li><a href="#">伟星</a></li>
+                                <li><a href="#">伟星</a></li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>-->
+                    <div class="chanpin">
+                        <ul id="ul_list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    #parse("wx/_foot.html")
+    <script src="/js/swp.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var h = $(document).height() - 134;
+            $(".hd03 ul").height(h);
+            $(".chanpin").height(h);
+
+            $(".hd02 li").click(function () {
+                $(".hd02 li").removeClass("on");
+                $(this).addClass("on");
+                loadsub($(this).attr("data-id"));
+            });
+            if ("$!cid") $(".hd02 li[data-id='$cid']").click();
+            else $(".hd02 li:eq(0)").click();
+            $(".hd03").delegate("li", "click", function () {
+                $(".hd03 li").removeClass("on1");
+                $(this).addClass("on1");
+                loaddata($(this).attr("data-id"));
+            });
+        });
+
+        function loadsub(id) {
+            doapi("wx.goods.cate", { pid: id }, function (d) {
+                if (!d.issucc) return;
+                var ul = $(".hd03 ul");
+                ul.empty();
+                for (var i in d.items) {
+                    var s = d.items[i];
+                    ul.append('<li class="" data-id="' + s.value + '">' + s.name + '</li>');
+                }
+                $(".hd03 li:eq(0)").click();
+            })
+        }
+
+        function loaddata(cid) {
+            doapi("wx.goods.list", { page: 1, limit: 10, cate: cid }, function (d) {
+                if (!d.issucc) return;
+                var list = $("#ul_list");
+                list.empty();
+                for (var i in d.items) {
+                    var it = d.items[i];
+                    list.append(
+                        '<li data-id="' + it.id + '" class="d' + it.count + '">' +
+                            '<a href="/wx/goods/detail-' + it.id + '.html"><img src="' + it.cover + '" /></a>' +
+                            '<h3><a href="/wx/goods/detail-' + it.id + '.html">' + it.name + '</a></h3>' +
+                            '<h4><a href="/wx/goods/detail-' + it.id + '.html">' + it.alias + '</a></h4>' +
+                            '<span class="jiaq" style="font-size:18px;">¥' + it.price + '<span style="float:none;font-size:12px;">/' + it.unit + '</span></span><div class="jiaj"><span class="jian" onclick="outcart(' + it.id + ',$(this).next().val())"></span><input type="tel" value="' + it.count + '" class="txt01" /><span class="jia" onclick="tocart(' + it.id + ')"></span></div>' +
+                            '<div class="clear"></div>' +
+                        '</li>'
+                    );
+                }
+            }, false);
+        }
+
+        function cartchange(ct, gc, ps, gid, sel) {
+            var li = $("[data-id='" + gid + "']");
+            li.attr("class", "d" + ct);
+            li.find(".txt01").val(ct);
+            $(".ptc").text(gc).attr("class", "ptc p" + gc);
+        }
+
+    </script>
+</body>
+</html>

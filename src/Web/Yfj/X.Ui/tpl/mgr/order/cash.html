@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>订单收款 - $cfg.name</title>
+    <style type="text/css">
+        body { margin: 0; }
+    </style>
+</head>
+<body>
+    <x:form api="mgr.order.cash">
+        <input type="hidden" name="id" value="$!id" x-check="" />
+        <div class="li"><label class="lbe">应收金额：</label><span style="font-size:16px;color:red;">￥$amount</span></div>
+        <x:text title="实收金额" name="am" size="3" def="$amount" />
+        <div class="btns">
+            <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>提交保存</button>
+        </div>
+    </x:form>
+    <br />
+    <br />
+    <script type="text/javascript">
+        $("form:eq(0)").xform({
+            callback: function (d) { x.closewin(); }
+        });
+    </script>
+</body>
+</html>

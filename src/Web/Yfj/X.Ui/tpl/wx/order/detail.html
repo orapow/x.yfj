@@ -10,14 +10,19 @@
         .st.on { background-image: url(/img/wx/fgf_03.png); top: 30px; left: 0; background-size: 30px; }
         .st.on span { margin-top: 25px; }
         .lc01 { width: 0px; }
-        .lc01.s2 { width: 25%; }
-        .lc01.s3 { width: 50%; }
-        .lc01.s4 { width: 75%; }
-        .lc01.s5 { width: 100%; }
+        .lc01.s12 { width: 25%; }
+        .lc01.s13 { width: 50%; }
+        .lc01.s14 { width: 75%; }
+        .lc01.s15 { width: 100%; }
+        .lc01.s23 { width: 33.33%; }
+        .lc01.s24 { width: 66.67%; }
+        .lc01.s25 { width: 100%; }
         .goods_info .hd span:first-child { width: 63%; }
         .goods_info li div:first-child { width: 63%; }
         .goods_info li div:nth-child(2) { line-height: 50px; }
         .goods_info li div:last-child { line-height: 50px; }
+        .fudong { display: none; }
+        .xiangx span { margin-right: 0; }
     </style>
 </head>
 <body style="background:#f4f4f4;">
@@ -29,12 +34,19 @@
         <div class="lchen">
             <h2>订单号：$od.no<!--<span>$od.ctime.tostring("yyyy-MM-dd HH:mm:ss")</span>--></h2>
             <div class="lc">
-                <div class="lc01 s$od.status"></div>
+                <div class="lc01 s${od.pay_way}$od.status"></div>
+                #if($od.pay_way==1)
                 <div class="st #if($od.status>=1)on#end"> <span>下单</span> </div>
-                <div class="st #if($od.status>=2)on#end" style="left:25%"> <span>确认</span> </div>
-                <div class="st #if($od.status>=3)on#end" style="left:50%"> <span>拣货</span> </div>
+                <div class="st #if($od.status>=2)on#end" style="left:25%"><span>支付</span></div>
+                <div class="st #if($od.status>=3)on#end" style="left:50%"> <span>确认</span> </div>
                 <div class="st #if($od.status>=4)on#end" style="left:75%"> <span>出库</span> </div>
                 <div class="st #if($od.status>=5)on#end" style="left:100%"> <span>完成</span> </div>
+                #else
+                <div class="st #if($od.status>=1)on#end"> <span>下单</span> </div>
+                <div class="st #if($od.status>=3)on#end" style="left:33.33%"> <span>确认</span> </div>
+                <div class="st #if($od.status>=4)on#end" style="left:66.67%"> <span>出库</span> </div>
+                <div class="st #if($od.status>=5)on#end" style="left:100%"> <span>完成</span> </div>
+                #end
             </div>
         </div>
         <div class="xiangx">
@@ -43,7 +55,8 @@
             <p><span>联系电话：</span>$od.rec_tel</p>
             <p><span>收货时间：</span>$od.send_date.tostring("yyyy-MM-dd ") $od.send_time</p>
             <p><span>支付方式：</span>#if($od.pay_way==1)在线支付#else货到付款#end</p>
-            <p><span>是否付款：</span>#if($od.pay_amount>0)已付款 $od.pay_time.tostring("yyyy-MM-dd HH:mm:ss") #else未付款#end</p>
+            <p><span>是否付款：</span>#if($od.pay_amount>0)已付款 $!od.pay_time.tostring("yyyy-MM-dd HH:mm:ss") #else未付款#end</p>
+            #if($od.send_man.length>0)<p><span>配送人：</span>$od.send_man</p>#end
             <p><span>订单备注：</span>$od.user_remark</p>
             <div class="clear"></div>
         </div>
@@ -55,7 +68,7 @@
                 <li id="product_10836">
                     <div>
                         <span class="pic"><img src="$g.cover" /></span>
-                        <p>$g.name $g.stand</p>
+                        <p style="margin-left:70px;">$g.name <span style="font-size:12px;color:#999; border:none;width:auto;float: none;display: block;">$g.stand</span></p>
                     </div>
                     <div>$g.count</div>
                     <div>￥$g.total_price</div>
@@ -73,8 +86,52 @@
     #if($od.pay_way==1&&!($od.pay_amount>0))
     <div class="fuchen">
         <h2>金额：$od.yf_amount元</h2>
-        <input type="button" value="确认付款" class="but" />
+        <input type="button" value="确认付款" class="but" onclick="dopay()" />
     </div>
+    <script type="text/javascript">
+        function dopay() {
+            doapi("wx.order.pay", { id: "$od.order_id" }, function (d) {
+                if (!d.issucc) return;
+                WeixinJSBridge.invoke(
+                    'getBrandWCPayRequest',
+                    {
+                        "appId": "$cfg.wx_appid",//公众号名称，由商户传入
+                        "timeStamp": d.ts,//时间戳，自1970年以来的秒数
+                        "nonceStr": d.ns, //随机串
+                        "package": d.pkg,
+                        "signType": "MD5",//微信签名方式：
+                        "paySign": d.sign //微信签名
+                    },
+                    function (res) {
+                        hideloading();
+                        if (res.err_msg == "get_brand_wcpay_request：ok") {
+                            // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
+                            //if ("$!burl") document.location.href = "$!burl";
+                            //else history.back();
+                            document.location.href = "/wx/order/succ-" + d.id + ".html";
+                        } else {
+                            //$("#img_code").attr("src", "data:image/jpeg;base64," + d.msg).parent().show();
+                            alert("支付失败，请重试！！！");
+                        }
+                    }
+                    );
+            });
+            //showloading("下单成功，应付金额为：￥" + d.amount + "。\n正在拉起支付");
+        }
+    </script>
+    #elseif($od.pay_way==1)
+    <div class="fuchen">
+        <h2>金额：$od.yf_amount元</h2>
+        <input type="button" value="确认收货" class="but" onclick="doacpt()" />
+    </div>
+    <script type="text/javascript">
+        function doacpt() {
+            doapi("wx.order.acpt", { id: "$od.order_id" }, function (d) {
+                if (!d.issucc) return;
+            });
+        }
+    </script>
     #end
+    #parse("wx/_foot.html");
 </body>
 </html>

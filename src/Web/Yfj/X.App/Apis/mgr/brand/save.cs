@@ -12,7 +12,6 @@ namespace X.App.Apis.mgr.brand
     public class save : xmg
     {
         public int id { get; set; }
-        [ParmsAttr(req = true, name = "分类名称")]
         public string cate { get; set; }
         public string name { get; set; }
         public int sort { get; set; }

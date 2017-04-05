@@ -1,0 +1,80 @@
+
+时间：2017-03-28 10:28:04,220 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：1535 
+System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\wx\_wx.cs:行号 117
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-28 10:28:15,785 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: z4J0ga0096uth6 ]"} 
+时间：13100 
+
+时间：2017-03-28 10:28:16,545 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：13860 
+System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\wx\_wx.cs:行号 117
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-28 10:29:04,943 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: Umgf_a0145uth6 ]"} 
+时间：7449 
+
+时间：2017-03-28 10:29:47,564 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：50070 
+System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\wx\_wx.cs:行号 117
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-28 10:29:52,251 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: Ab7ktA0192th15 ]"} 
+时间：54757 
+
+时间：2017-03-28 10:31:39,598 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：162104 
+System.InvalidOperationException: 可为空的对象必须具有一个值。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Nullable`1.get_Value()
+   在 X.App.Views.wx._wx.InitView() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\wx\_wx.cs:行号 117
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 94
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-03-28 10:31:46,752 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: eJrtAa0307th22 ]"} 
+时间：558 

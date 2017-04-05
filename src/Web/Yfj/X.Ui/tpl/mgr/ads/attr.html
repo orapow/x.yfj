@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>属性编辑 - $cfg.name</title>
+    <style type="text/css">
+        body, form { margin: 0; padding: 0; }
+        .x-form { margin: 0; }
+    </style>
+</head>
+<body>
+    <x:form api="mgr.goods.attr.save">
+        <input type="hidden" name="id" value="$!id" x-check="" />
+        <input type="hidden" name="fid" value="$!fid" x-check="" />
+        <div class="li text">
+            <label class="lbe" for="id_val">字段名称：</label><input type="text" disabled class="input-small" value="$fd.name">
+        </div>
+        <hr style="margin: 10px 0;" />
+        #if($fd.type==1&&$fd.muti_val==1)
+        <x:text title="字段值" name="val" size="3" def="$!item.val" />
+        #elseif($fd.type==1&&$fd.muti_val==2)
+        <x:text title="字段值" name="val" size="4" def="$!item.val" />
+        #elseif($fd.type==2)
+        <x:text title="字段值" name="val" size="4" def="$!item.val" tp="2" />
+        #end
+        #if($fd.upimg==1)
+        <x:upload title="图片" name="img" count="1" tp="img" def="$!item.img" />
+        #end
+        <div class="btns">
+            <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>保存</button>
+            #if($id>0)<a class="btn" onclick="do_del()"><i class="icon-remove"></i>删除此值</a>#end
+            <a class="btn" onclick="x.closewin();"><i class="icon-reply"></i>关闭</a>
+        </div>
+    </x:form>
+    <br />
+    <br />
+    <script type="text/javascript">
+
+        $("form:eq(0)").xform({
+            callback: function (d, v) {
+                if (!d.issucc) return;
+                var win = parent.x.dialog.getCurrent();
+                win.returnValue = { id: d.msg, fn: "$fd.name", val: v.val, img: v.img };
+                x.closewin();
+            }
+        });
+
+        function do_del() {
+            x.doapi("mgr.goods.attr.del", { ids: "$id" }, function (d) {
+                if (!d.issucc) return;
+                var win = parent.x.dialog.getCurrent();
+                win.returnValue = -1;
+                x.closewin();
+            })
+        }
+
+    </script>
+</body>
+</html>

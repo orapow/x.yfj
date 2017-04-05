@@ -8,6 +8,13 @@ namespace X.App.Apis.wx.goods
 {
     public class list : _wx
     {
+        protected override bool nd_user
+        {
+            get
+            {
+                return false;
+            }
+        }
         public int page { get; set; }
         public int limit { get; set; }
         public string key { get; set; }
@@ -26,6 +33,8 @@ namespace X.App.Apis.wx.goods
                 var cids = DB.x_dict.Where(o => o.code == "goods.cate" && o.upval.Contains(cate) || o.value == cate).Select(o => o.value);
                 q = q.Where(o => cids.Contains(o.cate_id));
             }
+
+            if (cu != null) q = q.Where(o => o.city == cu.city);
 
             var r = new Resp_List();
             r.page = page;

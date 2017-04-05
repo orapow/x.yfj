@@ -35,7 +35,10 @@ namespace X.App.Views.wx
         private void initUser()
         {
             if (cu != null) return;
-            if (!isWx && nd_user) if (Context.Request.RawUrl != "/wx/login.html") Context.Response.Redirect("/wx/login.html");
+
+            if (!isWx && !nd_user) return;
+
+            if (!isWx && nd_user) if (Context.Request.RawUrl != "/wx/login.html") Context.Response.Redirect("/wx/login.html"); else return;
 
             var code = GetReqParms("code");
             if (string.IsNullOrEmpty(code)) toWxUrl("snsapi_base");
@@ -106,16 +109,22 @@ namespace X.App.Views.wx
 
             isWx = Context.Request.UserAgent.Contains("MicroMessenger");
 
-            initCity();
-
             if (cu == null || isWx) initUser();
+
+            if (cu != null && !string.IsNullOrEmpty(cu.city + ""))
+            {
+                city_name = GetDictName("sys.city", cu.city);
+                city_id = cu.city.Value;
+            }
+            if (string.IsNullOrEmpty(city_name) || city_id == 0) initCity();
 
             if (cu != null)
             {
                 cu.etime = DateTime.Now;
+                if (cu.city == null) cu.city = city_id;
                 SubmitDBChanges();
+                Context.Response.SetCookie(new HttpCookie("cu_key", cu.ukey));
             }
-            Context.Response.SetCookie(new HttpCookie("cu_key", cu.ukey));
         }
         protected override void InitDict()
         {
@@ -129,6 +138,11 @@ namespace X.App.Views.wx
             dict.Add("cityid", city_id);
             dict.Add("city_name", city_name);
             if (isWx) initWx();
+        }
+
+        public List<x_ad> GetAds(int pos)
+        {
+            return DB.x_ad.Where(o => o.pos == pos).OrderByDescending(o => o.sort).ToList();
         }
     }
 }

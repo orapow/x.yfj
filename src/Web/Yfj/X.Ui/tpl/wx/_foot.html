@@ -1,9 +1,9 @@
 ﻿<div class="fudong">
     <ul>
         <li class="no08"><a href="/wx/index.html">首页</a></li>
-        <li class="no09"><a href="/wx/list.html">分类</a></li>
-        <li class="no011" style="position:relative;"><a href="/wx/cart.html">购物车</a><span class="ptc p$!ptc">$!ptc</span></li>
-        <li class="no012"><a href="/wx/center.html">我的</a></li>
+        <li class="no09"><a href="/wx/goods/list.html">分类</a></li>
+        <li class="no011" style="position:relative;"><a href="/wx/user/cart.html">购物车</a><span class="ptc p$!ptc">$!ptc</span></li>
+        <li class="no012"><a href="/wx/user/index.html">我的</a></li>
     </ul>
 </div>
 <div class="loading">正在加载中...</div>
@@ -46,15 +46,16 @@
         alert(JSON.stringify(res));
     });
 
+</script>
+#end
+<script type="text/javascript">
     function showloading(txt) {
         $(".loading").text(txt || "正在加载中...");
         $(".loading").show();
     }
-
     function hideloading() {
         $(".loading").hide();
     }
-
     function doapi(api, ps, callback, showtip) {
         if (showtip != false) showloading();
         jQuery.post("/api/" + api, ps, function (d) {
@@ -71,7 +72,6 @@
             }
         }, "json");
     }
-
     function tocart(gid) {
         doapi("wx.cart.pin", { gid: gid }, function (d) {
             if (!d.issucc) return;
@@ -80,7 +80,6 @@
             } catch (e) { }
         });
     }
-
     function outcart(gid, val) {
         if (val == 1 && !confirm("是否要将此商品移出购物车？")) return;
         doapi("wx.cart.pout", { gid: gid, del: val == 0 ? 1 : 0 }, function (d) {
@@ -90,6 +89,4 @@
             } catch (e) { }
         });
     }
-
 </script>
-#end

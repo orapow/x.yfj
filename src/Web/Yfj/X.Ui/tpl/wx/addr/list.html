@@ -4,11 +4,17 @@
     #parse("wx/_head.html")
     <title>地址管理</title>
     <style type="text/css">
+        .xiug { border-radius: 5px; padding: 2% 12px; }
         .xiug01 p { height: auto; }
         .xiug a { margin-top: 0; }
-        .xiug01 { position: relative; }
+        .xiug01 { position: relative; border: none; }
         .rd { position: absolute; right: 1px; top: 10px; margin: 0; }
     </style>
+    #if($sel==1)
+    <style type="text/css">
+        .fudong { display: none; }
+    </style>
+    #end
 </head>
 <body style="background:#f4f4f4;">
     <!--<div class="top01">
@@ -21,8 +27,8 @@
     </div>
     <div class="clear"></div>-->
     <!--内容-->
+    #foreach($ad in $ads)
     <div class="xiug">
-        #foreach($ad in $ads)
         <div class="xiug01">
             <p>联系人：$ad.name</p>
             <p>电话：$ad.tel</p>
@@ -34,8 +40,8 @@
         <a href="#" onclick="dodel($ad.address_id)">删除</a>
         #end
         <div class="clear"></div>
-        #end
     </div>
+    #end
     <div class="qr"><a href="edit--$!{sel}.html" class="btn">添加新地址</a></div>
     #parse("wx/_foot.html")
     <script type="text/javascript">
@@ -48,7 +54,7 @@
         function doselect(b) {
             $(".rd").removeClass("nn");
             $(b).addClass("nn");
-            document.location.href = "/wx/cart-" + $(b).val() + ".html";
+            document.location.href = "/wx/user/cart-" + $(b).val() + ".html";
         }
     </script>
 </body>

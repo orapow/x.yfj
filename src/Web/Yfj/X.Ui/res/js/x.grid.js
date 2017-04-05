@@ -157,7 +157,7 @@
                 val = val.replace(/{([\w_-\d]+)}/g, function (all, w) { return row[w] || ""; });
 
                 var td = $("<td></td>");
-                td.attr("title", val || "").attr("width", fe.w || "100");
+                td.attr("class", "c_" + fe.f.replace("{", "").replace("}", "")).attr("title", (val || "").replace(/<br\/>/g, "\n").replace(/<[^>]+>/g, "")).attr("width", fe.w || "100");
 
                 td.css({ "text-align": fe.align || "left" });
 

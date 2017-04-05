@@ -64,7 +64,7 @@ namespace X.App.Views.wx
                 return Encoding.UTF8.GetBytes(okxml);
             }
 
-            if (order.status != 1)
+            if (order.status != 1 || order.pay_way != 1)
             {
                 Loger.Info("订单确认失败，订单号：" + no);
                 return Encoding.UTF8.GetBytes(okxml);

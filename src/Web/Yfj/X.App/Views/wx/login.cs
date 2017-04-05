@@ -7,12 +7,5 @@ namespace X.App.Views.wx
 {
     public class login : _wx
     {
-        protected override bool nd_user
-        {
-            get
-            {
-                return false;
-            }
-        }
     }
 }

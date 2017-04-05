@@ -19,6 +19,7 @@ namespace X.App.Apis.mgr.goods
         public int mch_id { get; set; }//商户
         public string name { get; set; }//名称
         public string no { get; set; }//编号
+        public int brand { get; set; }
         public string alias { get; set; }//别名
         public string remark { get; set; }//简介
         public string tags { get; set; }//标签
@@ -28,6 +29,7 @@ namespace X.App.Apis.mgr.goods
         public string desc { get; set; }//描述
         public int stock { get; set; }//库存
         public int limit { get; set; }//限购
+        public string unit { get; set; }
         public decimal op { get; set; }//原价
         public decimal np { get; set; }//现价
         public int re_it { get; set; }//返积分
@@ -48,25 +50,26 @@ namespace X.App.Apis.mgr.goods
             if (ct == null) throw new XExcep("T分类不存在");
 
             ent.cate_id = cate;
-            ent.unit = ct.f3;
+            ent.unit = ct.f3 ?? unit;
             ent.city = mg.city;
             ent.name = name;
             ent.no = no;
             ent.alias = alias;
             ent.remark = remark;
             ent.tags = tags;
+            ent.brand = brand;
             ent.cover = (string.IsNullOrEmpty(cover) && !string.IsNullOrEmpty(imgs)) ? imgs.Split(',')[0] : cover;
             ent.imgs = imgs;
             ent.sort = sort;
             ent.desc = desc;
             ent.stock = stock;
             ent.limit = limit;
-            ent.status = 1;
             ent.old_price = op;
             ent.new_price = np;
             ent.return_exp = re_it;
             ent.refunded = red == 1;
             ent.sended = rnd == 1;
+            if (ent.goods_id == 0) ent.status = 2;
 
             if (ent.goods_id == 0)
             {
