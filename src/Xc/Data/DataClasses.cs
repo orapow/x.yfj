@@ -86,6 +86,9 @@ namespace X.Data
     {
     }
 
+    partial class x_sales {
+    }
+
     partial class x_favorite
     {
     }

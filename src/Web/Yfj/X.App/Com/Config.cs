@@ -44,7 +44,7 @@ namespace X.App.Com
         public string wx_certpath { get; set; }
         public string wx_paykey { get; set; }
 
-        private static string file = HttpContext.Current.Server.MapPath("/dat/cfg.x");
+        private static string file = HttpContext.Current.Server.MapPath("/dat/cfg.x");//来自服务器的文件
         private static Config cfg = null;
         /// <summary>
         /// 获取配置

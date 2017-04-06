@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    #parse("mgr/com/_head.html")
+    <title>商品资料 - $cfg.name</title>
+    <link href="/plug/um/themes/default/css/umeditor.min.css" rel="stylesheet" />
+    <script src="/plug/um/umeditor.config.js"></script>
+    <script src="/plug/um/umeditor.min.js"></script>
+    <style type="text/css">
+        .edui-container { display: inline-block; vertical-align: top; }
+        #id_desc { width: 600px; height: 300px; }
+        .imgs .img { padding: 2px; border: 1px solid #ccc; cursor: pointer; }
+        .imgs .img.on { border-color: red; }
+        .navs { border-bottom: 1px solid #ccc; width: 50%; }
+        .navs .btn { margin-right: -1px; margin-bottom: -1px; }
+        .tab { display: none; padding-top: 15px; }
+        .tab > .li { margin-bottom: 15px; }
+        .attr_list .btn { margin-right: 5px; }
+        .attr_list .li { margin-bottom: 10px; }
+        .stock_list .row { position: relative; }
+        .stock_list .st { margin-bottom: 5px; margin-right: 5px; }
+        .stock_list .st input { margin-right: -1px; }
+        .stock_list .panel { margin-left: 80px; }
+        .stock_list .row .lbe { position: absolute; top: 0; left: 0; }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">#if($action)复制商品#else商品编辑#end</span> - <span class="sub">加入抢购</span>
+    </div>
+    <div class="form">
+        <x:form api="mgr.sale.save">
+            <input type="hidden" name="id" value="$!item.goods_id" x-check="" />
+            <input type="hidden" name="city_id" value="$!item.city" x-check="" />
+            <div class="tab" style="display:block">
+
+                <x:row>
+                    <!--<x:text title="开始时间" def="$!item.ctime" name="ctime" size="2" chk="no" />-->
+                    <x:text id="ctime" title="开始时间" def="$!item.ctime" name="ctime" size="2" chk="no" />
+                    <x:text id="etime" title="结束时间" def="$!item.etime" name="etime" size="2" chk="no" />
+                </x:row>
+                <x:row>
+                    <x:text title="抢购价格" def="$!item.price" name="price" size="2" chk="no" />
+                    <x:text title="总数量" def="$!item.count" name="count" size="2" chk="no" />
+                    <x:text title="每人购买数" def="$!item.limit" name="limit" size="2" chk="no" />
+                </x:row>
+            </div>
+            <div class="btns">
+                <button type="submit" class="btn btn-primary">
+                    <i class="icon-ok"></i>提交保存
+                </button>
+                <a class="btn" onclick="history.go(-1)">
+                    <i class="icon-reply"></i>返回上一页
+                </a>
+            </div>
+        </x:form>
+    </div>
+    <br />
+    <br />
+
+    <script src="/plug/dp/v2.1.js"></script>
+    <link href="/plug/dp/v2.1.css" rel="stylesheet" />
+    <script src="jquery.datetimepicker.js"></script>
+    <script type="text/javascript">
+       
+        
+
+
+        $(function () {
+            $("#id_ctime").datetimepicker();
+            $("#id_etime").datetimepicker();
+            $(".imgs").delegate(".img", "click", function (evt) {
+                $(".img.on").removeClass("on");
+                $(this).addClass("on");
+                $("[name='cover']").val($(this).attr("x-val"));
+                return false;
+            });
+            if ("$!item.cover") $(".img[x-val='$!item.cover']").addClass("on");
+
+            $("form:eq(0)").xform({
+                callback: function (d) { document.location.href = '/mgr/sale/list.html'; }//这里到时候跳转回到抢购商品列表里
+            });
+
+        });
+
+        var um = UM.getEditor("id_desc");
+
+    </script>
+</body>
+</html>

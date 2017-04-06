@@ -69,6 +69,9 @@ namespace X.Data
     partial void Insertx_ad(x_ad instance);
     partial void Updatex_ad(x_ad instance);
     partial void Deletex_ad(x_ad instance);
+    partial void Insertx_sale(x_sale instance);
+    partial void Updatex_sale(x_sale instance);
+    partial void Deletex_sale(x_sale instance);
     #endregion
 		
 		public DataClassesDataContext() : 
@@ -202,6 +205,14 @@ namespace X.Data
 			get
 			{
 				return this.GetTable<x_ad>();
+			}
+		}
+		
+		public System.Data.Linq.Table<x_sale> x_sale
+		{
+			get
+			{
+				return this.GetTable<x_sale>();
 			}
 		}
 		
@@ -3431,6 +3442,8 @@ namespace X.Data
 		
 		private EntitySet<x_order_detail> _x_order_detail;
 		
+		private EntitySet<x_sale> _x_sale;
+		
     #region 可扩展性方法定义
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3488,6 +3501,7 @@ namespace X.Data
 		public x_goods()
 		{
 			this._x_order_detail = new EntitySet<x_order_detail>(new Action<x_order_detail>(this.attach_x_order_detail), new Action<x_order_detail>(this.detach_x_order_detail));
+			this._x_sale = new EntitySet<x_sale>(new Action<x_sale>(this.attach_x_sale), new Action<x_sale>(this.detach_x_sale));
 			OnCreated();
 		}
 		
@@ -3984,6 +3998,19 @@ namespace X.Data
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_goods_x_sale", Storage="_x_sale", ThisKey="goods_id,city", OtherKey="goods_id,city_id")]
+		public EntitySet<x_sale> x_sale
+		{
+			get
+			{
+				return this._x_sale;
+			}
+			set
+			{
+				this._x_sale.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -4011,6 +4038,18 @@ namespace X.Data
 		}
 		
 		private void detach_x_order_detail(x_order_detail entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_goods = null;
+		}
+		
+		private void attach_x_sale(x_sale entity)
+		{
+			this.SendPropertyChanging();
+			entity.x_goods = this;
+		}
+		
+		private void detach_x_sale(x_sale entity)
 		{
 			this.SendPropertyChanging();
 			entity.x_goods = null;
@@ -5361,6 +5400,283 @@ namespace X.Data
 					this._remark = value;
 					this.SendPropertyChanged("remark");
 					this.OnremarkChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.x_sale")]
+	public partial class x_sale : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _sale_id;
+		
+		private System.Nullable<long> _goods_id;
+		
+		private System.Nullable<long> _city_id;
+		
+		private System.Nullable<int> _limit;
+		
+		private System.Nullable<int> _count;
+		
+		private System.Nullable<decimal> _price;
+		
+		private System.Nullable<System.DateTime> _ctime;
+		
+		private System.Nullable<System.DateTime> _etime;
+		
+		private EntityRef<x_goods> _x_goods;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onsale_idChanging(long value);
+    partial void Onsale_idChanged();
+    partial void Ongoods_idChanging(System.Nullable<long> value);
+    partial void Ongoods_idChanged();
+    partial void Oncity_idChanging(System.Nullable<long> value);
+    partial void Oncity_idChanged();
+    partial void OnlimitChanging(System.Nullable<int> value);
+    partial void OnlimitChanged();
+    partial void OncountChanging(System.Nullable<int> value);
+    partial void OncountChanged();
+    partial void OnpriceChanging(System.Nullable<decimal> value);
+    partial void OnpriceChanged();
+    partial void OnctimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnctimeChanged();
+    partial void OnetimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnetimeChanged();
+    #endregion
+		
+		public x_sale()
+		{
+			this._x_goods = default(EntityRef<x_goods>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sale_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long sale_id
+		{
+			get
+			{
+				return this._sale_id;
+			}
+			set
+			{
+				if ((this._sale_id != value))
+				{
+					this.Onsale_idChanging(value);
+					this.SendPropertyChanging();
+					this._sale_id = value;
+					this.SendPropertyChanged("sale_id");
+					this.Onsale_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_goods_id", DbType="BigInt")]
+		public System.Nullable<long> goods_id
+		{
+			get
+			{
+				return this._goods_id;
+			}
+			set
+			{
+				if ((this._goods_id != value))
+				{
+					if (this._x_goods.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Ongoods_idChanging(value);
+					this.SendPropertyChanging();
+					this._goods_id = value;
+					this.SendPropertyChanged("goods_id");
+					this.Ongoods_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_city_id", DbType="Int")]
+		public System.Nullable<long> city_id
+		{
+			get
+			{
+				return this._city_id;
+			}
+			set
+			{
+				if ((this._city_id != value))
+				{
+					if (this._x_goods.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Oncity_idChanging(value);
+					this.SendPropertyChanging();
+					this._city_id = value;
+					this.SendPropertyChanged("city_id");
+					this.Oncity_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_limit", DbType="Int")]
+		public System.Nullable<int> limit
+		{
+			get
+			{
+				return this._limit;
+			}
+			set
+			{
+				if ((this._limit != value))
+				{
+					this.OnlimitChanging(value);
+					this.SendPropertyChanging();
+					this._limit = value;
+					this.SendPropertyChanged("limit");
+					this.OnlimitChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Int")]
+		public System.Nullable<int> count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this.OncountChanging(value);
+					this.SendPropertyChanging();
+					this._count = value;
+					this.SendPropertyChanged("count");
+					this.OncountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> price
+		{
+			get
+			{
+				return this._price;
+			}
+			set
+			{
+				if ((this._price != value))
+				{
+					this.OnpriceChanging(value);
+					this.SendPropertyChanging();
+					this._price = value;
+					this.SendPropertyChanged("price");
+					this.OnpriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ctime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ctime
+		{
+			get
+			{
+				return this._ctime;
+			}
+			set
+			{
+				if ((this._ctime != value))
+				{
+					this.OnctimeChanging(value);
+					this.SendPropertyChanging();
+					this._ctime = value;
+					this.SendPropertyChanged("ctime");
+					this.OnctimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_etime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> etime
+		{
+			get
+			{
+				return this._etime;
+			}
+			set
+			{
+				if ((this._etime != value))
+				{
+					this.OnetimeChanging(value);
+					this.SendPropertyChanging();
+					this._etime = value;
+					this.SendPropertyChanged("etime");
+					this.OnetimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_goods_x_sale", Storage="_x_goods", ThisKey="goods_id,city_id", OtherKey="goods_id,city", IsForeignKey=true)]
+		public x_goods x_goods
+		{
+			get
+			{
+				return this._x_goods.Entity;
+			}
+			set
+			{
+				x_goods previousValue = this._x_goods.Entity;
+				if (((previousValue != value) 
+							|| (this._x_goods.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._x_goods.Entity = null;
+						previousValue.x_sale.Remove(this);
+					}
+					this._x_goods.Entity = value;
+					if ((value != null))
+					{
+						value.x_sale.Add(this);
+						this._goods_id = value.goods_id;
+						this._city_id = value.city;
+					}
+					else
+					{
+						this._goods_id = default(Nullable<long>);
+						this._city_id = default(Nullable<long>);
+					}
+					this.SendPropertyChanged("x_goods");
 				}
 			}
 		}

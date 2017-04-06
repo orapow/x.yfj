@@ -233,6 +233,8 @@
     <Content Include="tpl\mgr\order\send.html" />
     <Content Include="tpl\mgr\order\cash.html" />
     <Content Include="tpl\mgr\order\list.html" />
+    <Content Include="tpl\mgr\sale\edit.html" />
+    <Content Include="tpl\mgr\sale\list.html" />
     <Content Include="tpl\mgr\sman\edit.html" />
     <Content Include="tpl\mgr\sman\list.html" />
     <Content Include="tpl\mgr\level\edit.html" />

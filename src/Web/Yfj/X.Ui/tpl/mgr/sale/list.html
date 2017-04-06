@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<!--this html file from sale-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>商品管理 - $cfg.name</title>
+    <style type="text/css">
+        .grid-item {
+            margin: 0 0 0 -15px;
+            padding: 0;
+        }
+
+            .grid-item .item {
+                width: 20%;
+                display: inline-block;
+                border: 1px solid #eee;
+                position: relative;
+                box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.1);
+                background: white;
+                float: left;
+                margin-left: 15px;
+                margin-bottom: 15px;
+            }
+
+        .item .check {
+            position: absolute;
+            padding: 2px 5px;
+            right: 0;
+            background: #FFF;
+            border-left: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            z-index: 1;
+        }
+
+            .item .check input {
+                margin: 0;
+            }
+
+        .item .title {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+            .item .title .pic {
+                width: 100%;
+                height: 157px;
+                overflow: hidden;
+            }
+
+            .item .title h1 {
+                font-size: 14px;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                z-index: 2;
+                margin: 0;
+                padding: 0;
+                border: none;
+                line-height: 25px;
+                height: 60px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+                .item .title h1 span {
+                    margin: 5px;
+                    display: block;
+                }
+
+                .item .title h1 a {
+                    color: white;
+                }
+
+            .item .title .ti_mark {
+                position: absolute;
+                height: 60px;
+                bottom: 0;
+                background: #000;
+                z-index: 1;
+                width: 100%;
+                opacity: 0.2;
+            }
+
+        .item .remark {
+            text-overflow: ellipsis;
+            margin: 10px;
+            margin-bottom: 0px;
+            line-height: 20px;
+            overflow: hidden;
+        }
+
+        .item .tools {
+            padding: 0;
+            clear: both;
+            position: absolute;
+            top: 170px;
+            right: 10px;
+        }
+
+            .item .tools .bt0, .item .tools .bt1 {
+                margin-left: -1px;
+                padding: 2px 6px;
+            }
+
+            .item .tools .bt1 {
+                background-image: linear-gradient(to bottom, #3086c8, #3086c8);
+                border-color: #3086c8;
+                text-shadow: none;
+                color: white;
+            }
+
+            .item .tools i {
+                margin: 0;
+            }
+
+            .item .tools input {
+                width: 24px;
+                padding: 2px;
+                text-align: center;
+            }
+
+            .item .tools.st4 .nn {
+                display: none;
+            }
+
+            .item .tools.st3 .st3, .item .tools.st1 .st3 {
+                display: none;
+            }
+
+            .item .tools.st2 .st2 {
+                display: none;
+            }
+
+        .item .foot {
+            clear: both;
+            padding: 10px;
+            height: 20px;
+        }
+
+            .item .foot .time {
+            }
+
+            .item .foot .links {
+                float: right;
+            }
+
+                .item .foot .links a {
+                    font-size: 12px;
+                    float: left;
+                    width: 20px;
+                    text-align: center;
+                    color: #333;
+                    margin-left: 3px;
+                }
+
+                    .item .foot .links a:hover {
+                        text-decoration: none;
+                    }
+
+                .item .foot .links .rep {
+                    display: none;
+                }
+
+                .item .foot .links.st4 .edit {
+                    display: none;
+                }
+
+                .item .foot .links.st4 .copy {
+                    display: none;
+                }
+
+                .item .foot .links.st4 .rep {
+                    display: inherit;
+                }
+
+        .item .title img {
+            max-width: 100%;
+        }
+
+        .item.noimg .title .pic, .item.noimg .title .ti_mark {
+            display: none;
+        }
+
+        .item.noimg .title h1 {
+            border-bottom: 1px solid #eee;
+            color: blue;
+            height: 80px;
+            line-height: 22px;
+            position: static;
+        }
+
+            .item.noimg .title h1 span {
+                margin: 10px 20px;
+            }
+
+                .item.noimg .title h1 span a {
+                    color: #2A72C5;
+                }
+
+        .item.noimg .remark {
+            height: 136px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">商品管理</span> - <span class="sub">促销商品管理</span>
+    </div>
+    <div class="search">
+        <x:form>
+            <!--<x:pick title="所属分类" src="url:/mgr/dict/select-goods.cate.html" name="cate" count="1" />-->
+            <x:text name="key" tip="搜索名称" size="4" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+            <div class="btns">
+                <a class="btn btn-primary" id="btn_add" onclick="show_edit()"><i class="icon-plus"></i>新增促销商品</a>
+            </div>
+        </x:form>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <div class="tpl" style="display:none;">
+        <div class="item">
+            <img src="{img}" />
+            <span class="txt">{name}</span>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var ct = "$!ct";
+        $("form:eq(0)").xform({
+            callback: function (d) {
+                d.page = 1;
+                ct = d.cate;
+                g.getlist(d);
+            }
+        })
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30, cate: ct },
+            api: "mgr.sale.list",
+            fs: [
+                { t: "商品名称", f: "{name}", w: 180, align: "left" },//???
+                { t: "城市", f: "{city_id}", w: 60, align: "center" },
+                { t: "促销量", f: "{count}", w: 60, align: "center" },
+                { t: "用户限购量", f: "{limit}", w: 60, align: "center" },
+                { t: "促销价格", f: "{price}", w: 60, align: "center" },
+                { t: "开始时间", f: "{ctime}", w: 120, align: "center" },
+                { t: "结束时间", f: "{etime}", w: 120, align: "center" },
+            ],
+            btns: [
+                //{ txt: "编辑", ico: "edit", act: "edit", confirm: false },
+                { txt: "删除", ico: "remove", act: "del" },
+            ]
+        };
+
+        cfg.cellclick = function (act, d) {
+            switch (act) {
+                case "del":
+                    dodel(d.id);
+                    break;
+                case "edit":
+                    show_edit(d.id);
+                    break;
+            }
+        };
+
+        var g = x.grid.init(cfg);
+
+        function dodel(id) {
+            x.doapi("mgr.sale.del", { id: id, }, function () {
+                g.getlist();
+            });
+        }
+
+        function show_edit(id) {
+            x.alert("请从商品列表中添加",function () {
+                document.location.href = "/mgr/goods/list.html";
+            });
+        }
+    </script>
+</body>
+</html>

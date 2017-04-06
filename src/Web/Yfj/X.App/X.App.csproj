@@ -51,6 +51,10 @@
     <Compile Include="Apis\mgr\article\del.cs" />
     <Compile Include="Apis\mgr\article\list.cs" />
     <Compile Include="Apis\mgr\article\save.cs" />
+    <Compile Include="Apis\mgr\sale\del.cs" />
+    <Compile Include="Apis\mgr\sale\list.cs" />
+    <Compile Include="Apis\mgr\sale\save.cs" />
+    <Compile Include="Apis\mgr\sale\status.cs" />
     <Compile Include="Apis\mgr\order\acpt.cs" />
     <Compile Include="Apis\mgr\order\send.cs" />
     <Compile Include="Apis\mgr\order\ok.cs" />
@@ -118,6 +122,9 @@
     <Compile Include="Views\mgr\config.cs" />
     <Compile Include="Views\mgr\article\edit.cs" />
     <Compile Include="Views\mgr\article\list.cs" />
+    <Compile Include="Views\mgr\sale\attr.cs" />
+    <Compile Include="Views\mgr\sale\edit.cs" />
+    <Compile Include="Views\mgr\sale\list.cs" />
     <Compile Include="Views\mgr\order\print.cs" />
     <Compile Include="Views\mgr\order\detail.cs" />
     <Compile Include="Views\mgr\order\send.cs" />
@@ -188,7 +195,9 @@
       <Name>X.Web</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Apis\mgr\jcDate.css" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
