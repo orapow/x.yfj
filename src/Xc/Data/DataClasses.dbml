@@ -149,36 +149,6 @@
       <Association Name="x_user_x_cart" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.x_goods" Member="x_goods">
-    <Type Name="x_goods">
-      <Column Name="goods_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="cate_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="city" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="no" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
-      <Column Name="alias" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
-      <Column Name="unit" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
-      <Column Name="tags" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="cover" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="imgs" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="brand" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="[desc]" Member="desc" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="limit" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="old_price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Column Name="new_price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Column Name="return_exp" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="refunded" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="sended" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="mtime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="x_goods_x_order_detail" Member="x_order_detail" ThisKey="goods_id" OtherKey="goods_id" Type="x_order_detail" />
-      <Association Name="x_goods_x_sale" Member="x_sale" ThisKey="goods_id,city" OtherKey="goods_id,city_id" Type="x_sale" />
-    </Type>
-  </Table>
   <Table Name="dbo.x_order" Member="x_order">
     <Type Name="x_order">
       <Column Name="order_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -225,8 +195,8 @@
       <Column Name="stand" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Column Name="total_price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Association Name="x_goods_x_order_detail" Member="x_goods" ThisKey="goods_id" OtherKey="goods_id" Type="x_goods" IsForeignKey="true" />
       <Association Name="x_order_x_order_detail" Member="x_order" ThisKey="order_id" OtherKey="order_id" Type="x_order" IsForeignKey="true" />
+      <Association Name="x_goods_x_order_detail" Member="x_goods" ThisKey="goods_id" OtherKey="goods_id" Type="x_goods" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.x_ad" Member="x_ad">
@@ -251,7 +221,38 @@
       <Column Name="price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="etime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="x_goods_x_sale" Member="x_goods" ThisKey="goods_id,city_id" OtherKey="goods_id,city" Type="x_goods" IsForeignKey="true" />
+      <Association Name="x_goods_x_sale" Member="x_goods" ThisKey="goods_id" OtherKey="goods_id" Type="x_goods" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_goods" Member="x_goods">
+    <Type Name="x_goods">
+      <Column Name="goods_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cate_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="city" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="no" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="alias" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="unit" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="tags" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="hot" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cover" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="imgs" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="brand" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[desc]" Member="desc" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="limit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="old_price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="new_price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="return_exp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="refunded" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="sended" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="mtime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="x_goods_x_order_detail" Member="x_order_detail" ThisKey="goods_id" OtherKey="goods_id" Type="x_order_detail" />
+      <Association Name="x_goods_x_sale" Member="x_sale" ThisKey="goods_id" OtherKey="goods_id" Type="x_sale" />
     </Type>
   </Table>
   <Function Name="dbo.fnGetDistance" Method="fnGetDistance" IsComposable="true">

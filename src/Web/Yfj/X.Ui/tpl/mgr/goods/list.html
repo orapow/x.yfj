@@ -66,7 +66,7 @@
                 <h1><span><a href="edit-{id}.html">{name}</a></span></h1>
             </div>
             <div class="remark">
-                价格：<span style="font-weight: bold;color:red;font-size:16px;margin-right:5px;">￥{new_price}</span><br />库存：{stock}
+                价格：<span style="font-weight: bold;color:red;font-size:16px;margin-right:5px;" title="{endTime}">￥{new_price}  {isSale}</span><br />库存：{stock}
             </div>
             <div class="tools st{status}" data-id="{id}">
                 <span class="btn bt0 st2 nn" onclick="dosetattr({id},3)" title="上架"><i class="icon-upload-alt"></i></span>

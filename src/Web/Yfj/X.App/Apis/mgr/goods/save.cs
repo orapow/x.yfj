@@ -36,6 +36,7 @@ namespace X.App.Apis.mgr.goods
         public int red { get; set; }//支持退款
         public int rnd { get; set; }//是否配送
 
+        public int hot { get; set;}//是否热销
         protected override XResp Execute()
         {
             x_goods ent = null;
@@ -69,6 +70,7 @@ namespace X.App.Apis.mgr.goods
             ent.return_exp = re_it;
             ent.refunded = red == 1;
             ent.sended = rnd == 1;
+            ent.hot = hot;
             if (ent.goods_id == 0) ent.status = 2;
 
             if (ent.goods_id == 0)

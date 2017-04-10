@@ -8,10 +8,8 @@ using X.Core.Cache;
 using X.Data;
 using X.Web.Cache;
 
-namespace X.Web
-{
-    public abstract class XFace
-    {
+namespace X.Web {
+    public abstract class XFace {
         /// <summary>
         /// 当前网站标识
         /// </summary>
@@ -39,8 +37,7 @@ namespace X.Web
         /// <summary>
         /// 初始化
         /// </summary>
-        public void Init(HttpContext c)
-        {
+        public void Init(HttpContext c) {
             DB = new DataClassesDataContext() { DeferredLoadingEnabled = true };
             Session = new SessionCache();
             XCache = new ContextCache();
@@ -54,18 +51,15 @@ namespace X.Web
         /// 设置属性
         /// </summary>
         /// <param name="parms"></param>
-        protected void SetParms(NameValueCollection parms)
-        {
+        protected void SetParms(NameValueCollection parms) {
             var postes = parms;
             var type = GetType();
-            foreach (string k in postes.Keys)
-            {
+            foreach (string k in postes.Keys) {
                 var p = type.GetProperty(k);
                 if (p == null) continue;
                 var attr = p.GetCustomAttributes(false);
                 object v = null;
-                switch (p.PropertyType.Name.ToLower())
-                {
+                switch (p.PropertyType.Name.ToLower()) {
                     case "string":
                         v = Context.Server.HtmlEncode(postes[k]);
                         if (attr.Length > 0) Checker.check(attr[0] as ParmsAttr, v.ToString());
@@ -101,10 +95,8 @@ namespace X.Web
         /// <summary>
         /// 参数检查器
         /// </summary>
-        class Checker
-        {
-            public static void check(ParmsAttr pa, string v)
-            {
+        class Checker {
+            public static void check(ParmsAttr pa, string v) {
                 if (pa.req && string.IsNullOrEmpty(v)) throw new XExcep("0x0003", pa.name);
 
                 string min = (string)pa.min;
@@ -115,14 +107,12 @@ namespace X.Web
                 if (string.IsNullOrEmpty(pa.len)) return;
                 var ls = pa.len.Split(',');
                 if (ls.Length == 1 && v.Length != int.Parse(ls[0])) throw new XExcep("0x0004", String.Format("{0}应为{1}个字符", pa.name, ls[0]));
-                else if (ls.Length > 1)
-                {
+                else if (ls.Length > 1) {
                     if (!string.IsNullOrEmpty(ls[0]) && v.Length < int.Parse(ls[0])) throw new XExcep("0x0004", String.Format("{0}至少{1}个字符", pa.name, ls[0]));
                     if (!string.IsNullOrEmpty(ls[1]) && v.Length > int.Parse(ls[1])) throw new XExcep("0x0004", String.Format("{0}最多{1}个字符", pa.name, ls[1]));
                 }
             }
-            public static void check(ParmsAttr pa, int v)
-            {
+            public static void check(ParmsAttr pa, int v) {
                 if (pa.req && v == 0) throw new XExcep("0x0003", pa.name);
 
                 int? min = null, max = null;
@@ -132,8 +122,7 @@ namespace X.Web
                 if (min != null && v < min) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
                 if (max != null && v > max) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, min));
             }
-            public static void check(ParmsAttr pa, decimal v)
-            {
+            public static void check(ParmsAttr pa, decimal v) {
                 if (pa.req && v == 0) throw new XExcep("0x0003", pa.name);
 
                 if (pa.min == null && pa.max == null) return;
@@ -142,8 +131,7 @@ namespace X.Web
                 if (v < min) throw new XExcep("0x0004", String.Format("{0}的值要大于{1}", pa.name, min));
                 if (v > max) throw new XExcep("0x0004", String.Format("{0}的值要小于{1}", pa.name, min));
             }
-            public static void check(ParmsAttr pa, DateTime v)
-            {
+            public static void check(ParmsAttr pa, DateTime v) {
                 if (pa.req && v == null) throw new XExcep("0x0003", pa.name);
 
                 if (pa.min == null && pa.max == null) return;
@@ -157,17 +145,12 @@ namespace X.Web
         /// <summary>
         /// 提交数据库更改
         /// </summary>
-        protected void SubmitDBChanges()
-        {
-            try
-            {
+        protected void SubmitDBChanges() {
+            try {
                 DB.SubmitChanges(ConflictMode.ContinueOnConflict);
                 DB.SubmitChanges(ConflictMode.FailOnFirstConflict);
-            }
-            catch (ChangeConflictException)
-            {
-                foreach (ObjectChangeConflict occ in DB.ChangeConflicts)
-                {
+            } catch (ChangeConflictException) {
+                foreach (ObjectChangeConflict occ in DB.ChangeConflicts) {
                     occ.Resolve(RefreshMode.KeepChanges);
                 }
             }
@@ -178,8 +161,7 @@ namespace X.Web
         /// <param name="code"></param>
         /// <param name="upval"></param>
         /// <returns></returns>
-        public List<x_dict> GetDictList(string code, string upval)
-        {
+        public List<x_dict> GetDictList(string code, string upval) {
             return x_dict.GetDictList(code, upval, DB);
         }
         /// <summary>
@@ -190,12 +172,10 @@ namespace X.Web
         /// 多个值用 , 隔开
         /// </param>
         /// <returns></returns>
-        public string GetDictName(string code, object value, string split)
-        {
+        public string GetDictName(string code, object value, string split) {
             return x_dict.GetDictName(code, value, split, DB);
         }
-        public string GetDictName(string code, object val)
-        {
+        public string GetDictName(string code, object val) {
             return GetDictName(code, val + "", "、");
         }
         /// <summary>
@@ -204,11 +184,13 @@ namespace X.Web
         /// <param name="dt"></param>
         /// <param name="format"></param>
         /// <returns></returns>
-        protected string GetDateString(DateTime? dt, string format)
-        {
+        protected string GetDateString(DateTime? dt, string format) {
             if (dt == null) return "";
             else return dt.Value.ToString(format);
         }
+
+
+
 
         /// <summary>
         /// 获取响应
@@ -221,18 +203,14 @@ namespace X.Web
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        protected string GetReqParms(string key)
-        {
-            try
-            {
+        protected string GetReqParms(string key) {
+            try {
                 return Context.Request.Params.Get(key);
-            }
-            catch { return ""; }
+            } catch { return ""; }
         }
 
         [AttributeUsage(AttributeTargets.Property)]
-        protected class ParmsAttr : Attribute
-        {
+        protected class ParmsAttr : Attribute {
             public string name { get; set; }
             /// <summary>
             /// 字符串不许空
