@@ -98,6 +98,7 @@
     <Compile Include="Apis\wx\cart\psel.cs" />
     <Compile Include="Apis\wx\goods\cate.cs" />
     <Compile Include="Apis\wx\goods\list.cs" />
+    <Compile Include="Apis\wx\order\cancel.cs" />
     <Compile Include="Apis\wx\order\acpt.cs" />
     <Compile Include="Apis\wx\order\pay.cs" />
     <Compile Include="Apis\wx\order\md.cs" />
@@ -194,9 +195,6 @@
       <Project>{6e4653a5-1350-4fb0-a52e-4fde25ae8ec9}</Project>
       <Name>X.Web</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Apis\mgr\jcDate.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
