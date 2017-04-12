@@ -7,6 +7,6 @@
   "wx_appid": "wx613e5b2af6b69d74",
   "wx_scr": "04221a7a17ba8da8c50a3040d9b5317f",
   "wx_mch_id": "1455997202",
-  "wx_certpath": "",
+  "wx_certpath": "C:\\Users\\李 鑫悦\\Source\\Repos\\x.yfj2\\doc\\cert\\",
   "wx_paykey": "1vdE9538gZPJ99HOkOCLH0yam6n216oH"
 }

@@ -21,6 +21,7 @@ namespace X.App.Views.wx.order {
                 id = o.order_id,
                 gs = o.x_order_detail.Select(d => new { d.name, d.cover }),
                 o.rec_man,
+                itemRefund=o.x_refund.OrderByDescending(i=>i.ctime).FirstOrDefault(),
                 o.status,
                 o.rec_tel,
                 o.no,
@@ -31,9 +32,9 @@ namespace X.App.Views.wx.order {
 
             if (st > 0)
                 if (st == 3)
-                    ods = ods.Where(o => (o.status == st || o.status == st - 1));//st==3时为未发货订单，显示未发货(在线支付)和未确认(货到付款)订单
+                    ods = ods.Where(o => (o.itemRefund == null && (o.status == st || o.status == st - 1)));//st==3时为未发货订单，显示未发货(在线支付)和未确认(货到付款)订单
                 else
-                    ods = ods.Where(o => (o.status == st));
+                    ods = ods.Where(o => (o.itemRefund == null && o.status == st));
 
             c = ods.Count();
             if (ods.Count() > 0) dict.Add("ods", ods.OrderByDescending(o => o.ctime));

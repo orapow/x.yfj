@@ -104,7 +104,8 @@
                     },
                     function (res) {
                         hideloading();
-                        if (res.err_msg == "get_brand_wcpay_request：ok") {
+                        alert(JSON.stringify(res));
+                        if (res.err_msg == "get_brand_wcpay_request:ok") {
                             // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
                             //if ("$!burl") document.location.href = "$!burl";
                             //else history.back();
@@ -122,7 +123,11 @@
     #elseif($od.pay_way==1)
     <div class="fuchen">
         <h2>金额：$od.yf_amount元</h2>
+        #if($od.statue==4)
         <input type="button" value="确认收货" class="but" onclick="doacpt()" />
+        #else
+        <input type="button" value="等待处理" class="but" style="background:#999" disabled="disabled" onclick="doacpt()" />
+        #end
     </div>
     <script type="text/javascript">
         function doacpt() {

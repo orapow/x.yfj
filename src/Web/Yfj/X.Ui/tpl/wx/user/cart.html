@@ -197,8 +197,8 @@
 
             doapi("wx.order.md", dt, function (d) {
                 if (!d.issucc) return;
-                if (dt.way == 2) { document.location.href = "/wx/order/succ-" + d.id + ".html"; return; }
-                else document.location.href = "/wx/order/detail-" + d.id + ".html";
+                if (dt.way == 2) { document.location.href = "/wx/order/succ-" + d.msg + ".html"; return; }
+                else document.location.href = "/wx/order/detail-" + d.msg + ".html";
             });
         }
     </script>

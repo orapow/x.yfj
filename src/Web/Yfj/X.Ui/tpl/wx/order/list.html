@@ -86,10 +86,7 @@
         }
 
         function requestRefund(id) {
-            if (!confirm("T是否申请退款?"))
-                return;
-            ///API操作
-            console.log("request deliver");
+            document.location.href = "/wx/order/refund-" + id + ".html";
             event.stopPropagation();
         }
     </script>

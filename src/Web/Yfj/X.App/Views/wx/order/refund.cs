@@ -5,9 +5,10 @@ using System.Text;
 
 namespace X.App.Views.wx.order
 {
-    public class succ : _wx
+    public class refund : _wx
     {
         public int id { get; set; }
+        public String reason { get; set; }
         protected override string GetParmNames
         {
             get
@@ -18,7 +19,7 @@ namespace X.App.Views.wx.order
         protected override void InitDict()
         {
             base.InitDict();
-            dict.Add("od", cu.x_order.FirstOrDefault(o => o.order_id == id));
+            
         }
     }
 }

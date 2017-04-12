@@ -28,7 +28,7 @@ namespace X.App.Apis.wx.order
 
             if (od.pay_way == 2) return new od() { amount = od.yf_amount.Value.ToString("F2"), id = od.order_id };
 
-            var co = Wx.Pay.MdOrder(od.no, od.order_id + "", ((int)(od.yf_amount * 100)).ToString(), "http://" + cfg.domain + "/wx/notify-" + od.no + ".html", cu.wx_opid, cfg.wx_appid, cfg.wx_mch_id, cfg.wx_paykey, false);
+            var co = Wx.Pay.MdOrder(od.no, od.no + "", ((int)(od.yf_amount * 100)).ToString(), "http://" + cfg.domain + "/wx/notify-" + od.no + ".html", cu.wx_opid, cfg.wx_appid, cfg.wx_mch_id, cfg.wx_paykey, false);
 
             CacheHelper.Remove("pay." + cu.id);
 

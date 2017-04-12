@@ -71,6 +71,7 @@ namespace X.App.Views.wx
             }
             else
             {
+                order.wx_no = nt.transaction_id;
                 order.pay_time = DateTime.Now;
                 order.pay_amount = order.yf_amount;
                 order.status = 2;
