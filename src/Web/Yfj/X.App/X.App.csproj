@@ -51,6 +51,9 @@
     <Compile Include="Apis\mgr\article\del.cs" />
     <Compile Include="Apis\mgr\article\list.cs" />
     <Compile Include="Apis\mgr\article\save.cs" />
+    <Compile Include="Apis\mgr\refund\accept.cs" />
+    <Compile Include="Apis\mgr\refund\list.cs" />
+    <Compile Include="Apis\mgr\refund\refuse.cs" />
     <Compile Include="Apis\mgr\sale\del.cs" />
     <Compile Include="Apis\mgr\sale\list.cs" />
     <Compile Include="Apis\mgr\sale\save.cs" />
@@ -123,6 +126,8 @@
     <Compile Include="Views\mgr\config.cs" />
     <Compile Include="Views\mgr\article\edit.cs" />
     <Compile Include="Views\mgr\article\list.cs" />
+    <Compile Include="Views\mgr\refund\detail.cs" />
+    <Compile Include="Views\mgr\refund\list.cs" />
     <Compile Include="Views\mgr\sale\attr.cs" />
     <Compile Include="Views\mgr\sale\edit.cs" />
     <Compile Include="Views\mgr\sale\list.cs" />
@@ -196,6 +201,7 @@
       <Name>X.Web</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

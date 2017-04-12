@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>订单管理 - $cfg.name</title>
+    <style type="text/css">
+        td.ops {
+            white-space: normal;
+        }
+
+        .gd {
+            width: 40px;
+            border: 1px solid #ff6a00;
+            float: left;
+            margin: 0 2px 2px 0;
+        }
+
+        .table td.c_gs {
+            overflow: auto;
+            white-space: normal;
+        }
+
+        .table td.c_rec_man {
+            white-space: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">全部订单</span> - <span class="sub">退款管理</span>
+    </div>
+    <div class="search">
+        <x:form>
+            <x:text name="key" tip="商品名称、订单号、用户" size="4" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+        </x:form>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <script type="text/javascript">
+
+        $(function () {
+            $("form:eq(0)").xform({
+                callback: function (d) {
+                    d.page = 1;
+                    g.getlist(d);
+                }
+            });
+        });
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30, st: "$!st" },
+            api: "mgr.refund.list",
+            fs: [
+                { t: "用户", f: "<img src='{up}' style='height:45px;'/> {un}", w: 120, align: "left" },
+                { t: "订单", f: "编号：{no}<br/>日期：{ctime}<br/>状态：{st_name}", w: 160, align: "left" },
+                { t: "商品", f: "{gs}", w: 220, align: "left" },
+                { t: "收货", f: "{rec_man} {rec_tel} <br/>{rec_addr}<br/>备注：{remark}", w: 200, align: "left" },
+                { t: "配送", f: "{send_date} <br/>{send_time}<br/>{send}", w: 120, align: "left" },
+                { t: "付款", f: "{way}<br/>应付：<b>￥{yf_amount}</b><br/>已付：<b style='color:red'>￥{pay_amount}</b>", w: 100, align: "left" }
+            ],
+            btns: [
+                //{ txt: "详细", ico: "reorder", act: "detail", confirm: false }
+            ]
+        };
+
+        cfg.getbtns = function (o) {
+            var btns = [];
+            //refund.staus 1=待处理 2=同意 3=不同意
+            if (o.status == 1) {
+                btns.push({ txt: "同意", ico: "ok", act: "accept" });
+                btns.push({ txt: "拒绝", ico: "remove", act: "refuse" });
+            } else if (o.status == 2)
+                btns.push({ txt: "已同意", ico: "ok", act: "" });
+            else if (o.status == 3)
+                btns.push({ txt: "已拒绝", ico: "remove", act: "" });
+            return btns;
+        }
+
+        cfg.cellclick = function (act, d) {
+            switch (act) {
+                case "accept":
+                    doAccept(d.id);
+                    break;
+                case "refuse":
+                    doRefuse(d.id);
+                    break;
+                case "detail":
+                    show_detail(d.id);
+                    break;
+            }
+        };
+
+        var g = x.grid.init(cfg);
+
+        function doRefuse(id) {
+            x.input("请输入拒绝原因", function (r) {
+                x.doapi("mgr.refund.refuse", { id: id,reason:r }, function (d) {
+                    if (!d.issucc) return;
+                    g.getlist();
+                })
+            }, 2, true);
+            
+            
+        }
+        function doAccept(id) {
+            x.doapi("mgr.refund.accept", { id: id }, function (d) {
+                if (!d.issucc) return;
+                g.getlist();
+            });
+        }
+
+
+        function show_detail(id) {
+            x.openwin("detail-" + id + ".html", "订单详情", function () { g.getlist() }, { w: 600, h: 400 });
+        }
+
+        function show_send(id) {
+            x.openwin("send-" + id + ".html", "订单发货", function () { g.getlist() }, { w: 300, h: 200 });
+        }
+
+    </script>
+</body>
+</html>
