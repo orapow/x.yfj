@@ -4,11 +4,42 @@
     #parse("mgr/com/_head.html")
     <title>订单详情 - $cfg.name</title>
     <style type="text/css">
-        .pl { border: 1px solid #ccc; border-radius: 5px; position: relative; padding-top: 20px; padding-bottom: 10px; margin-top: 20px; margin-bottom: 30px; }
-        body { margin: 0; padding: 0; }
-        h3 { font-size: 14px; top: -28px; left: 20px; background: white; position: absolute; padding: 10px; border: 1px solid #ccc; line-height: 12px; border-radius: 5px; }
-        .pl p { padding: 0 10px; margin-bottom: 0; }
-        html, body { height: 400px; overflow: auto; }
+        .pl {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            font-size: 14px;
+            top: -28px;
+            left: 20px;
+            background: white;
+            position: absolute;
+            padding: 10px;
+            border: 1px solid #ccc;
+            line-height: 12px;
+            border-radius: 5px;
+        }
+
+        .pl p {
+            padding: 0 10px;
+            margin-bottom: 0;
+        }
+
+        html, body {
+            height: 400px;
+            overflow: auto;
+        }
     </style>
 </head>
 <body>
@@ -69,5 +100,23 @@
             </table>
         </div>
     </div>
+    #if($itemRefund)
+    <div class="pl">
+        <h3>退款信息</h3>
+        <p>申请退款金额：$itemRefund.amount</p>
+        <p>退款原因：$itemRefund.reason</p>
+        <p>申请时间：$itemRefund.ctime</p>
+        <p>申请状态:#if($itemRefund.status==2)已接受#elseif($itemRefund.status==3) 已拒绝#else待处理#end</p>
+        #if($itemRefund.status!=1)
+            <p>已退金额：$!itemRefund.ramount</p><!--如果引擎引用的是个空值，$!会输出空，$会输出引用字符串-->
+            <p>审核时间：$itemRefund.atime</p>
+            #if($itemRefund.status==3)
+                <p>拒绝理由：$!itemRefund.remark</p>
+            #end
+        #end
+
+    </div>
+    #end
+
 </body>
 </html>

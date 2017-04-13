@@ -50,10 +50,28 @@
     </div>
     <div class="zaic" onclick="tourl($o.id)">
         <h3>收货地址：$o.rec_addr</h3>
+        <h3>
+            订单状态：
+            #if($o.itemRefund) 
+                #if($o.itemRefund.status==1)
+                    退款请求中
+                #elseif($o.itemRefund.status==2)
+                    退款已成功
+                #elseif($o.itemRefund.status==3)
+                    退款被拒绝
+                #end
+            #elseif($o.status==1) 待付款
+            #elseif($o.status==2) 待确认
+            #elseif($o.status==3) 待发货
+            #elseif($o.status==4) 待收货
+            #elseif($o.status==5) 待评价
+            #elseif($o.status==6) 已取消
+            #end
+        </h3>
         #if($o.status==1)
         <a onclick="cancelOrder('$!o.id');">取消订单 </a>
         #end
-        #if($o.status==2 ||$o.status==3)
+        #if(!$o.itemRefund &&($o.status==2 ||$o.status==3))
         <a onclick="requestRefund('$!o.id');">退款 </a>
         #end
         <a href="/wx/order/detail-${o.id}.html">#if($o.status==1)立即支付#else详情#end</a>

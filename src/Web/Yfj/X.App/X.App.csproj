@@ -101,6 +101,7 @@
     <Compile Include="Apis\wx\cart\psel.cs" />
     <Compile Include="Apis\wx\goods\cate.cs" />
     <Compile Include="Apis\wx\goods\list.cs" />
+    <Compile Include="Apis\wx\login.cs" />
     <Compile Include="Apis\wx\order\refund.cs" />
     <Compile Include="Apis\wx\order\cancel.cs" />
     <Compile Include="Apis\wx\order\acpt.cs" />
@@ -127,7 +128,7 @@
     <Compile Include="Views\mgr\config.cs" />
     <Compile Include="Views\mgr\article\edit.cs" />
     <Compile Include="Views\mgr\article\list.cs" />
-    <Compile Include="Views\mgr\refund\detail.cs" />
+    <Compile Include="Views\mgr\refund\edit.cs" />
     <Compile Include="Views\mgr\refund\list.cs" />
     <Compile Include="Views\mgr\sale\attr.cs" />
     <Compile Include="Views\mgr\sale\edit.cs" />
@@ -173,6 +174,7 @@
     <Compile Include="Views\wx\order\list.cs" />
     <Compile Include="Views\wx\order\succ.cs" />
     <Compile Include="Views\wx\bind.cs" />
+    <Compile Include="Views\wx\user\mpwd.cs" />
     <Compile Include="Views\wx\user\update.cs" />
     <Compile Include="Views\wx\user\index.cs" />
     <Compile Include="Views\wx\notify.cs" />

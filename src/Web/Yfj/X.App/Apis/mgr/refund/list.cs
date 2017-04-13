@@ -33,6 +33,7 @@ namespace X.App.Apis.mgr.refund
             r.items = q.OrderByDescending(o => o.ctime).ToList().Select(o => new
             {
                 id = o.refund_id,//退款操作传参均用refund_id
+                order_id=o.order_id,
                 uid = o.x_order.user_id,
                 un = o.x_order.x_user.nickname,
                 up = o.x_order.x_user.headimg,

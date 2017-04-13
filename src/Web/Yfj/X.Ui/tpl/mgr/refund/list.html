@@ -62,7 +62,7 @@
                 { t: "付款", f: "{way}<br/>应付：<b>￥{yf_amount}</b><br/>已付：<b style='color:red'>￥{pay_amount}</b>", w: 100, align: "left" }
             ],
             btns: [
-                //{ txt: "详细", ico: "reorder", act: "detail", confirm: false }
+                { txt: "详细", ico: "reorder", act: "detail", confirm: false }
             ]
         };
 
@@ -70,8 +70,9 @@
             var btns = [];
             //refund.staus 1=待处理 2=同意 3=不同意
             if (o.status == 1) {
-                btns.push({ txt: "同意", ico: "ok", act: "accept" });
+                btns.push({ txt: "同意", ico: "ok", act: "accept",confirm:false });
                 btns.push({ txt: "拒绝", ico: "remove", act: "refuse" });
+                //btns.push({txt:"编辑",ico:"edit",act:"edit"});
             } else if (o.status == 2)
                 btns.push({ txt: "已同意", ico: "ok", act: "" });
             else if (o.status == 3)
@@ -88,7 +89,10 @@
                     doRefuse(d.id);
                     break;
                 case "detail":
-                    show_detail(d.id);
+                    show_detail(d.order_id);
+                    break;
+                case "edit":
+                    show_edit(d.id);
                     break;
             }
         };
@@ -102,19 +106,29 @@
                     g.getlist();
                 })
             }, 2, true);
-            
-            
         }
         function doAccept(id) {
-            x.doapi("mgr.refund.accept", { id: id }, function (d) {
-                if (!d.issucc) return;
-                g.getlist();
-            });
+            //x.doapi("mgr.refund.accept", { id: id }, function (d) {
+            //    if (!d.issucc) return;
+            //    g.getlist();
+            //});
+
+            //x.input("最后编辑并确认退款信息",
+            //    function (r) {
+            //        x.doapi("mgr.refund.accept", { id: id,remark:r,ramount:ramount }, function (d) {
+            //            if (!d.issucc) return;
+            //            g.getlist();
+            //        })
+            //}, 2, true);
+            show_edit(id);
         }
 
+        function show_edit(id) {
+            x.openwin("edit-" + id + ".html", "编辑退款请求", function () { g.getlist() }, { w: 400, h: 320 });
+        }
 
         function show_detail(id) {
-            x.openwin("detail-" + id + ".html", "订单详情", function () { g.getlist() }, { w: 600, h: 400 });
+            x.openwin("../order/detail-" + id + ".html", "订单详情", function () { g.getlist() }, { w: 600, h: 400 });
         }
 
         function show_send(id) {

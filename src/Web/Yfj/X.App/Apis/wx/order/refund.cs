@@ -15,6 +15,8 @@ namespace X.App.Apis.wx.order {
         public int id { get; set; }
         public String reason { get; set; }
 
+        //public Decimal amount { get; set; }
+
         protected override XResp Execute() {
             var od = cu.x_order.FirstOrDefault(o => o.order_id == id);
             //if (od.status == 1 || od.status == 2)
@@ -26,6 +28,7 @@ namespace X.App.Apis.wx.order {
 
             var refundItem = new x_refund();
 
+            refundItem.amount = cu.x_order.FirstOrDefault(o=>o.order_id==id).pay_amount;//默认用户全款申请
             refundItem.ctime = DateTime.Now;
             refundItem.reason = reason;
             refundItem.x_order = od;

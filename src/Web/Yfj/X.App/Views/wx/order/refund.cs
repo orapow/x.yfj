@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using X.Web;
 
 namespace X.App.Views.wx.order
 {
@@ -19,7 +20,10 @@ namespace X.App.Views.wx.order
         protected override void InitDict()
         {
             base.InitDict();
-            
+            var order = DB.x_order.FirstOrDefault(o => o.order_id == id);
+            if (order == null)
+                throw new XExcep("T订单不存在"); ;
+            dict.Add("order", order);
         }
     }
 }

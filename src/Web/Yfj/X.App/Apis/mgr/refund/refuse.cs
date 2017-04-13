@@ -24,7 +24,7 @@ namespace X.App.Apis.mgr.refund
             od.status = 3;
             od.aname = mg.name;
             od.atime = DateTime.Now;//????服务器时间
-            od.reason = reason;
+            od.remark = reason;
 
             SubmitDBChanges();
 

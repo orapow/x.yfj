@@ -1,28 +1,94 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("wx/_head.html")
     <title>订单详情</title>
     <style type="text/css">
-        .goods_info li div:first-child span { height: auto; }
-        .lc { margin: 0 auto; width: 90%; }
-        .st { width: 30px; background: url(/img/wx/fgf_06.png) top center no-repeat; background-size: 18px; position: absolute; top: 35px; left: 0; margin-left: -15px; }
-        .st.on { background-image: url(/img/wx/fgf_03.png); top: 30px; left: 0; background-size: 30px; }
-        .st.on span { margin-top: 25px; }
-        .lc01 { width: 0px; }
-        .lc01.s12 { width: 25%; }
-        .lc01.s13 { width: 50%; }
-        .lc01.s14 { width: 75%; }
-        .lc01.s15 { width: 100%; }
-        .lc01.s23 { width: 33.33%; }
-        .lc01.s24 { width: 66.67%; }
-        .lc01.s25 { width: 100%; }
-        .goods_info .hd span:first-child { width: 63%; }
-        .goods_info li div:first-child { width: 63%; }
-        .goods_info li div:nth-child(2) { line-height: 50px; }
-        .goods_info li div:last-child { line-height: 50px; }
-        .fudong { display: none; }
-        .xiangx span { margin-right: 0; }
+        .goods_info li div:first-child span {
+            height: auto;
+        }
+
+        .lc {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        .st {
+            width: 30px;
+            background: url(/img/wx/fgf_06.png) top center no-repeat;
+            background-size: 18px;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            margin-left: -15px;
+        }
+
+            .st.on {
+                background-image: url(/img/wx/fgf_03.png);
+                top: 30px;
+                left: 0;
+                background-size: 30px;
+            }
+
+                .st.on span {
+                    margin-top: 25px;
+                }
+
+        .lc01 {
+            width: 0px;
+        }
+
+            .lc01.s12 {
+                width: 25%;
+            }
+
+            .lc01.s13 {
+                width: 50%;
+            }
+
+            .lc01.s14 {
+                width: 75%;
+            }
+
+            .lc01.s15 {
+                width: 100%;
+            }
+
+            .lc01.s23 {
+                width: 33.33%;
+            }
+
+            .lc01.s24 {
+                width: 66.67%;
+            }
+
+            .lc01.s25 {
+                width: 100%;
+            }
+
+        .goods_info .hd span:first-child {
+            width: 63%;
+        }
+
+        .goods_info li div:first-child {
+            width: 63%;
+        }
+
+        .goods_info li div:nth-child(2) {
+            line-height: 50px;
+        }
+
+        .goods_info li div:last-child {
+            line-height: 50px;
+        }
+
+        .fudong {
+            display: none;
+        }
+
+        .xiangx span {
+            margin-right: 0;
+        }
     </style>
 </head>
 <body style="background:#f4f4f4;">
@@ -60,7 +126,6 @@
             <p><span>订单备注：</span>$od.user_remark</p>
             <div class="clear"></div>
         </div>
-
         <div class="goods_info">
             <div class="hd"><span>商品信息</span><span>数量</span><span>金额</span></div>
             <ul>
@@ -83,7 +148,7 @@
             <p>优惠金额：<span>-￥$od.fav_amount</span></p>
         </div>
     </div>
-    #if($od.pay_way==1&&!($od.pay_amount>0))
+    #if($od.status!=6&&$od.pay_way==1&&!($od.pay_amount>0))
     <div class="fuchen">
         <h2>金额：$od.yf_amount元</h2>
         <input type="button" value="确认付款" class="but" onclick="dopay()" />
@@ -123,10 +188,22 @@
     #elseif($od.pay_way==1)
     <div class="fuchen">
         <h2>金额：$od.yf_amount元</h2>
-        #if($od.statue==4)
-        <input type="button" value="确认收货" class="but" onclick="doacpt()" />
+        #if($itemRefund)
+            #if($itemRefund.status==1)
+                <input type="button" value="退款请求中" class="but" style="background:#999" disabled="disabled" />
+            #elseif($itemRefund.status==2)
+                <input type="button" value="退款已成功" class="but" style="background:#999" disabled="disabled" />
+            #elseif($itemRefund.status==3)
+                <input type="button" value="退款被拒绝" class="but" style="background:#999" disabled="disabled" />
+            #end
+        #elseif($od.status==4)
+            <input type="button" value="确认收货" class="but" onclick="doacpt()" />
+        #elseif($od.status==5)
+            <input type="button" value="订单已完成" class="but" style="background:#999" disabled="disabled" />
+        #elseif($od.status==6)
+            <input type="button" value="订单已取消" class="but" style="background:#999" disabled="disabled" />
         #else
-        <input type="button" value="等待处理" class="but" style="background:#999" disabled="disabled" onclick="doacpt()" />
+            <input type="button" value="等待处理" class="but" style="background:#999" disabled="disabled"  />
         #end
     </div>
     <script type="text/javascript">
@@ -134,6 +211,10 @@
             doapi("wx.order.acpt", { id: "$od.order_id" }, function (d) {
                 if (!d.issucc) return;
             });
+        }
+
+        function showAlert(content) {
+            alert(content);
         }
     </script>
     #end
