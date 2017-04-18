@@ -22,7 +22,7 @@ namespace X.App.Apis.wx.order
             if (od.status == 5) throw new XExcep("T当前订单已经确认收货");
             if (od.status != 4) throw new XExcep("T当前订单状态不正确");
 
-            //od.=DateTime.Now;
+            od.sign_time=DateTime.Now;
             od.status = 5;
             SubmitDBChanges();
 

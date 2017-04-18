@@ -25,6 +25,8 @@ namespace X.App.Apis.wx.order {
             //    throw new XExcep("T当前订单状态无法取消");
             if (od == null)
                 throw new XExcep("订单不存在");
+            if (od.status != 3 && od.status != 4&&!(od.status==2&&od.pay_way==2))
+                throw new XExcep("T当前订单状态不可退款");
 
             var refundItem = new x_refund();
 
