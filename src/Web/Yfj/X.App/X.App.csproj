@@ -101,12 +101,15 @@
     <Compile Include="Apis\wx\cart\psel.cs" />
     <Compile Include="Apis\wx\goods\cate.cs" />
     <Compile Include="Apis\wx\goods\list.cs" />
+    <Compile Include="Apis\wx\logout.cs" />
     <Compile Include="Apis\wx\login.cs" />
     <Compile Include="Apis\wx\order\refund.cs" />
     <Compile Include="Apis\wx\order\cancel.cs" />
     <Compile Include="Apis\wx\order\acpt.cs" />
     <Compile Include="Apis\wx\order\pay.cs" />
     <Compile Include="Apis\wx\order\md.cs" />
+    <Compile Include="Apis\wx\reg.cs" />
+    <Compile Include="Apis\wx\user\savepswd.cs" />
     <Compile Include="Apis\wx\user\save.cs" />
     <Compile Include="Apis\wx\_wx.cs" />
     <Compile Include="Apis\xapi.cs" />

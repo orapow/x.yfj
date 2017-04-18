@@ -1,17 +1,48 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("wx/_head.html")
     <title>账户管理</title>
 </head>
-
 <body style="background:#f4f4f4;">
     <div class="guanli">
         <ul>
             <li><a href="/wx/user/update.html" style="display:block">修改用户信息</a></li>
-            <li><a href="/wx/fpwd.html" style="display:block">修改登录密码</a></li>
+            <li><a href="/wx/user/mpwd.html" style="display:block">修改登录密码</a></li>
         </ul>
-        #if(!$iswx)<div class="qr"><a href="javascript:;" style="color:white;display:block;height:100%;display:block">退出账号</a></div>#end
+        #if(!$iswx)
+        <div class="qr"><a href="javascript:;" style="color:white;display:block;height:100%;display:block" onclick="signOut()">退出账号</a>
+        </div>#end
     </div>
+    <script>
+        function signOut() {
+            if (!confirm("是否确定退出当前账号?"))
+                return;
+            doapi("wx.logout", {},function(d){
+                if(!d.issucc) return;
+                document.location.href="/wx/index.html";
+            });
+        }
+        function deleteCookie(name) {
+            var exp = new Date();
+            exp.setTime(exp.getTime() - 1);
+            var cval = getCookie(name);
+            if (cval != null)
+                document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+        }
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg))
+                return unescape(arr[2]);
+            else {
+                alert("no cookie get");
+                return null;
+            }
+        }
+
+
+    </script>
+    #parse("wx/_foot.html")
 </body>
+
 </html>

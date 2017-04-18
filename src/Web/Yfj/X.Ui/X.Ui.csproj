@@ -268,12 +268,12 @@
     <Content Include="tpl\wx\index - 复制%282%29.html" />
     <Content Include="tpl\wx\index - 复制.html" />
     <Content Include="tpl\wx\index.html" />
+    <Content Include="tpl\wx\user\mpwd.html" />
     <Content Include="tpl\wx\user\index.html" />
     <Content Include="tpl\wx\order\list.html" />
     <Content Include="tpl\wx\order\detail.html" />
     <Content Include="tpl\wx\user\setting.html" />
     <Content Include="tpl\wx\user\update.html" />
-    <Content Include="tpl\wx\user\mpwd.html" />
     <Content Include="tpl\wx\_foot.html" />
     <Content Include="tpl\wx\_head.html" />
     <Content Include="tpl\wx\goods\detail.html" />

@@ -13,24 +13,60 @@
         <ul>
             <li class="en03">
                 <p>手机号码</p>
-                <input type="text" class="en20" placeholder="请输入您的号码" />
-                <input type="button" class="en04" value="获取验证码" />
+                <input type="text" class="en20" placeholder="请输入您的号码" value="$!cu.tel" required="required" id="id_tel" />
+                <input type="button" class="en04" value="获取验证码" onclick="getCheckCode()" />
+            </li>
+            <li class="en03">
+                <p>图片验证码</p>
+                <input type="text" class="en20" placeholder="请输入图片验证码" required="required" id="id_picCode" />
+                <img src="/com/code-${key}.html" style="margin-top:15px;" />
             </li>
             <li class="en03">
                 <p>验证码</p>
-                <input type="text" placeholder="请输入验证码" />
+                <input type="text" placeholder="请输入验证码" required="required" id="id_inputCode" />
             </li>
             <li class="en03">
-                <p>登录密码</p>
-                <input type="text" placeholder="请输入6~18位字母与数字作为密码" />
+                <p>新密码</p>
+                <input type="text" placeholder="请输入6~18位字母与数字作为密码" required="required" id="id_1stPswd" />
             </li>
             <li class="en03">
                 <p>重复密码</p>
-                <input type="text" placeholder="请再次输入您的登录密码" />
+                <input type="text" placeholder="请再次输入您的登录密码" required="required" id="id_2ndPswd" />
             </li>
         </ul>
     </div>
-    <div class="qr"><a href="javascript:;" style="color:white;display:block;height:100%;">立即注册</a></div>
+    <div class="qr"><a href="javascript:;" style="color:white;display:block;height:100%;" onclick="register()">立即注册</a></div>
     <a href="#" class="tis">登录即代表您同意服务协议</a>
+    #parse("wx/_foot.html")
+
+    <script>
+        var tel = "";
+        function getCheckCode() {
+            tel = $("#id_tel").val();
+            if (!tel) { alert("手机号码不能为空"); return; }
+            var pcode = $("#id_picCode").val();
+            if (!pcode) { alert("图片验证码不能为空"); return; }
+            doapi("com.sendcode", { tel: tel, code: pcode }, function (d) {
+                if (!d.issucc) document.location.reload();
+                $("#id_inputCode").val() = d.msg;
+
+            })
+        }
+
+        function register() {
+            if ($("#id_1stPswd").val() != $("#id_2ndPswd").val()) {
+                alert("两次输入的密码不一致");
+                return;
+            }
+            doapi("wx.reg", { tel: $("#id_tel").val(), newPswd: $("#id_2ndPswd").val(), checkCode: $("#id_inputCode").val() }, function (d) {
+                if (!d.issucc) document.location.reload();;
+                document.location.href = "/wx/user/index.html";
+            })
+        }
+
+    </script>
+
+
 </body>
+
 </html>

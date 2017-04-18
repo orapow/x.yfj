@@ -17,14 +17,13 @@ namespace X.App.Apis.com {
         protected override XResp Execute() {
             var key = GetReqParms("code.send");
             var sc = CacheHelper.Get<string>("code." + key);
-            CacheHelper.Remove("code." + key);
             if (sc != code) throw new XExcep("T图片验证码不正确");
-
+            CacheHelper.Remove("code." + key);
             var t = true;
             var smscode = Tools.GetRandRom(4, 1);
             try {
-                CacheHelper.Save("sms.code." + tel, smscode);
-                //t = Sms.SendCode(tel, Tools.GetRandRom(4, 1), "签名", "SMS_58210145");
+                //CacheHelper.Save("sms.code." + tel, smscode);
+                t = Sms.SendCode(tel, Tools.GetRandRom(4, 1), "f5iuwkI1lId3ThcfDS2HyfbKbiAsJ9", "sign","SMS_58210145");
             } catch {
                 t = false;
             }
