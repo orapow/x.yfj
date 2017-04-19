@@ -14,17 +14,26 @@
     </div>
     <div class="search">
         <x:form>
-            <x:text name="key" tip="搜索名称" size="4" />
+            <!--<x:text name="key" tip="搜索名称" size="4" />-->
+            <x:text id="ctime" title="开始时间" name="ctime" size="2" chk="no" />
+            <x:text id="etime" title="结束时间" name="etime" size="2" chk="no" />
             <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
             <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
-            <!--<div class="btns">
+            <div class="btns">
                 <a class="btn btn-primary" id="btn_add" onclick="show_edit()"><i class="icon-plus"></i>新增业务员</a>
-            </div>-->
+            </div>
         </x:form>
     </div>
     <div class="gridpanel">
     </div>
+
+    <script src="/plug/dp/v2.1.js"></script>
+    <link href="/plug/dp/v2.1.css" rel="stylesheet" />
     <script type="text/javascript">
+        $(function () {
+            $("#id_ctime").datetimepicker({timepicker:false });
+            $("#id_etime").datetimepicker();
+        });
         $("form:eq(0)").xform({
             callback: function (d) {
                 d.page = 1;
