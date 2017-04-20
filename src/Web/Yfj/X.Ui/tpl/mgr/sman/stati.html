@@ -1,53 +1,87 @@
 ﻿<!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("mgr/com/_head.html")
-    <title>业绩统计 - $cfg.name</title>
+    <title>业务员管理 - $cfg.name</title>
+    <style type="text/css">
+        .img { width: 30px; }
+        .table td { height: 30px; line-height: 30px; }
+    </style>
 </head>
 <body>
     <div class="title">
-        <span class="main">业绩统计</span> - <span class="sub">业务员管理</span>
+        <span class="main">业务员列表</span> - <span class="sub">业绩统计</span>
     </div>
     <div class="search">
         <x:form>
-            <x:text name="key" tip="业务员姓名" size="2" />
-            <x:text name="st" tip="开始时间" size="3" /> - <x:text name="et" tip="结束时间" size="3" />
+            <!--<x:text name="key" tip="搜索名称" size="4" />-->
+            <x:text id="ctime" title="开始时间" name="ctime" size="2" chk="no" />
+            <x:text id="etime" title="结束时间" name="etime" size="2" chk="no" />
             <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
             <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+            <div class="btns">
+                <a class="btn btn-primary" id="btn_add" onclick="show_edit()"><i class="icon-plus"></i>新增业务员</a>
+            </div>
         </x:form>
-        <div class="btns">
-            <a class="btn btn-primary" onclick="do_export()"><i class="icon-plus"></i> 结果导出</a>
-        </div>
     </div>
     <div class="gridpanel">
     </div>
-    <script type="text/javascript">
 
-        var g = null;
+    <script src="/plug/dp/v2.1.js"></script>
+    <link href="/plug/dp/v2.1.css" rel="stylesheet" />
+    <script type="text/javascript">
         $(function () {
-            $("form:eq(0)").xform({
-                callback: function (d) {
-                    d.page = 1;
-                    g.getlist(d);
-                }
-            });
+            $("#id_ctime").datetimepicker({timepicker:false });
+            $("#id_etime").datetimepicker();
         });
+        $("form:eq(0)").xform({
+            callback: function (d) {
+                d.page = 1;
+                g.getlist(d);
+            }
+        })
 
         var cfg = {
             el: ".gridpanel",
-            searchcon: { page: 1, limit: 30, st: "$!st" },
-            api: "mgr.order.list",
+            searchcon: { page: 1, limit: 30 },
+            api: "mgr.sman.stati",
             fs: [
-                { t: "业务员", f: "<img src='{up}' style='height:45px;'/> {un}", w: 120, align: "left" },
-                { t: "客户数", f: "编号：{no}<br/>日期：{ctime}<br/>状态：{st_name}", w: 160, align: "left" },
-                { t: "订单数", f: "{gs}", w: 220, align: "left" },
-                { t: "成交数", f: "{gs}", w: 220, align: "left" },
-                { t: "成交总额", f: "{rec_man} {rec_tel} <br/>{rec_addr}<br/>备注：{remark}", w: 200, align: "left" }
+                { t: "业务员姓名", f: "<img src='{img}' class='img'/> {name}", w: 120, align: "left" },
+                { t: "会员数", f: "{member_count}", w: 80, align: "center" },
+                { t: "订单数", f: "{order_total}", w: 80, align: "center" },
+                { t: "订单金额", f: "{order_amount}", w: 80, align: "center" },
+                { t: "已完成金额", f: "{finish_amount}", w: 120, align: "center" },
             ],
-            btns: []
+            btns: [
+                { txt: "编辑", ico: "edit", act: "edit", confirm: false },
+                { txt: "删除", ico: "remove", act: "del" },
+            ]
         };
-        g = x.grid.init(cfg);
 
+        cfg.cellclick = function (act, d) {
+            switch (act) {
+                case "del":
+                    dodel(d.id);
+                    break;
+                case "edit":
+                    show_edit(d.id);
+                    break;
+            }
+        };
+
+        var g = x.grid.init(cfg);
+
+        function dodel(id) {
+            x.doapi("mgr.sman.del", { id: id, }, function () {
+                g.getlist();
+            });
+        }
+
+        function show_edit(id) {
+            x.openwin("edit-" + (id || "") + ".html", "编辑业务员", function () {
+                g.getlist();
+            }, { w: 400, h: 350 });
+        }
     </script>
 </body>
 </html>

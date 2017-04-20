@@ -68,10 +68,10 @@
             #elseif($o.status==6) 已取消
             #end
         </h3>
-        #if($o.status==1)
+        #if($o.status==1||($o.status==2&&$o.pay_way==2))
         <a onclick="cancelOrder('$!o.id');">取消订单 </a>
         #end
-        #if(!$o.itemRefund &&($o.status==2 ||$o.status==3))
+        #if(!$o.itemRefund &&(($o.status==2&&$o.pay_way==1) ||$o.status==3))
         <a onclick="requestRefund('$!o.id');">退款 </a>
         #end
         <a href="/wx/order/detail-${o.id}.html">#if($o.status==1)立即支付#else详情#end</a>

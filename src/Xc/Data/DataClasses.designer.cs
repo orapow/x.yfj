@@ -5325,6 +5325,8 @@ namespace X.Data
 		
 		private System.Nullable<System.DateTime> _out_time;
 		
+		private System.Nullable<System.DateTime> _sign_time;
+		
 		private string _ticket_no;
 		
 		private string _user_remark;
@@ -5393,6 +5395,8 @@ namespace X.Data
     partial void Onsend_manChanged();
     partial void Onout_timeChanging(System.Nullable<System.DateTime> value);
     partial void Onout_timeChanged();
+    partial void Onsign_timeChanging(System.Nullable<System.DateTime> value);
+    partial void Onsign_timeChanged();
     partial void Onticket_noChanging(string value);
     partial void Onticket_noChanged();
     partial void Onuser_remarkChanging(string value);
@@ -5893,6 +5897,26 @@ namespace X.Data
 					this._out_time = value;
 					this.SendPropertyChanged("out_time");
 					this.Onout_timeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sign_time", DbType="DateTime")]
+		public System.Nullable<System.DateTime> sign_time
+		{
+			get
+			{
+				return this._sign_time;
+			}
+			set
+			{
+				if ((this._sign_time != value))
+				{
+					this.Onsign_timeChanging(value);
+					this.SendPropertyChanging();
+					this._sign_time = value;
+					this.SendPropertyChanged("sign_time");
+					this.Onsign_timeChanged();
 				}
 			}
 		}

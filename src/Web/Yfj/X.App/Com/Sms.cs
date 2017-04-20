@@ -11,7 +11,7 @@ namespace X.App.Com
 {
     public class Sms
     {
-        public static bool SendCode(string to, string code, string sign, string tpid)
+        public static bool SendCode(string to, string code,String key, String sign,string tpid)
         {
             var dc = new Dictionary<string, string>();
             dc.Add("Format", "JSON");
@@ -19,9 +19,13 @@ namespace X.App.Com
             dc.Add("SignatureMethod", "HMAC-SHA1");
             dc.Add("SignatureNonce", Tools.GetRandRom(16, 3));
             dc.Add("SignatureVersion", "1.0");
-            dc.Add("AccessKeyId", "LTAI2UoL4CNU5myd");
-            dc.Add("Timestamp", DateTime.Now.AddHours(-8).ToString("yyyy-MM-ddTHH:mm:ssZ"));
 
+            //dc.Add("AccessKeyId", "LTAI2UoL4CNU5myd");
+            dc.Add("Signature", sign);
+
+            dc.Add("Timestamp", DateTime.Now.AddHours(-8).ToString("yyyy-MM-ddTHH:mm:ssZ"));
+            //新增AccessKeyId
+            dc.Add("AccessKeyId", key);
             dc.Add("Action", "SingleSendSms");
             dc.Add("SignName", "fwerwerw");
             dc.Add("TemplateCode", tpid);

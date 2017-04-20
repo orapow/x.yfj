@@ -262,6 +262,7 @@
       <Column Name="send_time" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
       <Column Name="send_man" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="out_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="sign_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="ticket_no" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
       <Column Name="user_remark" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
       <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
