@@ -51,16 +51,6 @@ namespace X.App.Apis.mgr.sman {
             return r;
         }
 
-        private Boolean searchCondition(x_order o) {
-            if (ctime == null && etime == null)//00
-                return o.city == mg.city;
-            //else !00=01/10/11
-            else if (ctime == null)
-                return o.city == mg.city && o.ctime > ctime;
-            else if (etime == null)
-                return o.city == mg.city && o.ctime < etime;
-            else
-                return o.city == mg.city && o.ctime > ctime && o.ctime < etime;
-        }
+       
     }
 }

@@ -177,6 +177,7 @@
     <Content Include="res\img\wx\通知送货36.png" />
     <Content Include="res\img\wx\限时购.png" />
     <Content Include="res\img\wx\首页-首页.png" />
+    <Content Include="res\js\highcharts.js" />
     <Content Include="res\js\jq_2.1.4.js" />
     <Content Include="res\js\v.js" />
     <Content Include="res\js\wx\jquery.SuperSlide.2.1.js" />
@@ -225,6 +226,7 @@
     <Content Include="tpl\mgr\city\list.html" />
     <Content Include="tpl\mgr\cate\edit.html" />
     <Content Include="tpl\mgr\cate\list.html" />
+    <Content Include="tpl\mgr\main.html" />
     <Content Include="tpl\mgr\refund\edit.html" />
     <Content Include="tpl\mgr\sman\stati.html" />
     <Content Include="tpl\wx\order\refund.html" />
