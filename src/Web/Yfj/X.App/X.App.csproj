@@ -138,6 +138,7 @@
     <Compile Include="Views\mgr\order\send.cs" />
     <Compile Include="Views\mgr\order\cash.cs" />
     <Compile Include="Views\mgr\order\list.cs" />
+    <Compile Include="Views\mgr\sman\stati.cs" />
     <Compile Include="Views\mgr\sman\edit.cs" />
     <Compile Include="Views\mgr\sman\list.cs" />
     <Compile Include="Views\mgr\level\edit.cs" />

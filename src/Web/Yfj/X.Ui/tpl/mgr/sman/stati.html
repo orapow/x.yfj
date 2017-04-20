@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("mgr/com/_head.html")
+    <title>业绩统计 - $cfg.name</title>
+</head>
+<body>
+    <div class="title">
+        <span class="main">业绩统计</span> - <span class="sub">业务员管理</span>
+    </div>
+    <div class="search">
+        <x:form>
+            <x:text name="key" tip="业务员姓名" size="2" />
+            <x:text name="st" tip="开始时间" size="3" /> - <x:text name="et" tip="结束时间" size="3" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+        </x:form>
+        <div class="btns">
+            <a class="btn btn-primary" onclick="do_export()"><i class="icon-plus"></i> 结果导出</a>
+        </div>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <script type="text/javascript">
+
+        var g = null;
+        $(function () {
+            $("form:eq(0)").xform({
+                callback: function (d) {
+                    d.page = 1;
+                    g.getlist(d);
+                }
+            });
+        });
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30, st: "$!st" },
+            api: "mgr.order.list",
+            fs: [
+                { t: "业务员", f: "<img src='{up}' style='height:45px;'/> {un}", w: 120, align: "left" },
+                { t: "客户数", f: "编号：{no}<br/>日期：{ctime}<br/>状态：{st_name}", w: 160, align: "left" },
+                { t: "订单数", f: "{gs}", w: 220, align: "left" },
+                { t: "成交数", f: "{gs}", w: 220, align: "left" },
+                { t: "成交总额", f: "{rec_man} {rec_tel} <br/>{rec_addr}<br/>备注：{remark}", w: 200, align: "left" }
+            ],
+            btns: []
+        };
+        g = x.grid.init(cfg);
+
+    </script>
+</body>
+</html>

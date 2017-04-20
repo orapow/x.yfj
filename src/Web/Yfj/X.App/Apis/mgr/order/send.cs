@@ -25,6 +25,7 @@ namespace X.App.Apis.mgr.order
 
             od.status = 4;
             od.send_man = name + " " + tel;
+            od.out_time = DateTime.Now;
 
             SubmitDBChanges();
 
