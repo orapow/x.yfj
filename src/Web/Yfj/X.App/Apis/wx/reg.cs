@@ -19,7 +19,7 @@ namespace X.App.Apis.wx{
                 return false;
             }
         }
-        protected override XResp Execute() {
+        protected override XResp Execute() { 
             if (String.IsNullOrWhiteSpace(tel) || String.IsNullOrWhiteSpace(newPswd)
                 || String.IsNullOrWhiteSpace(checkCode))
                 throw new XExcep("T输入不正确");
