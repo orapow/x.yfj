@@ -19,20 +19,20 @@ namespace X.App.Views.mgr
         /// #是默认码
         /// 为空说明不需要验证
         /// </summary>
-        protected virtual string powercode
+        protected virtual int powercode
         {
             get
             {
-                return this.GetType().FullName.ToLower();
+                return 3;
             }
         }
 
         /// <summary>
         /// 是否有权限
         /// </summary>
-        public bool HasPower(string code)
+        public bool HasPower()
         {
-            return true;
+            return mg.role_id<3?mg.role_id==powercode:true;
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace X.App.Views.mgr
         /// </summary>
         private void ValidPower()
         {
-            if (!HasPower(powercode))
+            if (!HasPower())
             {
                 throw new XExcep("T当前用户没有此权限");
             }
