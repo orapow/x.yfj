@@ -4,42 +4,11 @@
     #parse("mgr/com/_head.html")
     <title>订单详情 - $cfg.name</title>
     <style type="text/css">
-        .pl {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            position: relative;
-            padding-top: 20px;
-            padding-bottom: 10px;
-            margin-top: 20px;
-            margin-bottom: 30px;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        h3 {
-            font-size: 14px;
-            top: -28px;
-            left: 20px;
-            background: white;
-            position: absolute;
-            padding: 10px;
-            border: 1px solid #ccc;
-            line-height: 12px;
-            border-radius: 5px;
-        }
-
-        .pl p {
-            padding: 0 10px;
-            margin-bottom: 0;
-        }
-
-        html, body {
-            height: 400px;
-            overflow: auto;
-        }
+        .pl { border: 1px solid #ccc; border-radius: 5px; position: relative; padding-top: 20px; padding-bottom: 10px; margin-top: 20px; margin-bottom: 30px; }
+        body { margin: 0; padding: 0; }
+        h3 { font-size: 14px; top: -28px; left: 20px; background: white; position: absolute; padding: 10px; border: 1px solid #ccc; line-height: 12px; border-radius: 5px; }
+        .pl p { padding: 0 10px; margin-bottom: 0; }
+        html, body { height: 400px; overflow: auto; }
     </style>
 </head>
 <body>
@@ -65,10 +34,12 @@
         <p>收货人：$od.rec_man</p>
         <p>收货地址：$od.rec_addr</p>
         <p>联系电话：$od.rec_tel</p>
+        <p>收货日期：$!od.send_date.tostring("yyyy-MM-dd")</p>
+        <p>收货时间：$!od.send_time</p>
     </div>
     <div class="pl">
         <h3>送货信息</h3>
-        <p>发货时间：$od.send_time</p>
+        <p>发货时间：$!od.out_time.tostring("yyyy-MM-dd HH:mm")</p>
         <p>配送人：$!od.send_man</p>
     </div>
     <div class="pl goods">
@@ -108,11 +79,11 @@
         <p>申请时间：$itemRefund.ctime</p>
         <p>申请状态:#if($itemRefund.status==2)已接受#elseif($itemRefund.status==3) 已拒绝#else待处理#end</p>
         #if($itemRefund.status!=1)
-            <p>已退金额：$!itemRefund.ramount</p><!--如果引擎引用的是个空值，$!会输出空，$会输出引用字符串-->
-            <p>审核时间：$itemRefund.atime</p>
-            #if($itemRefund.status==3)
-                <p>拒绝理由：$!itemRefund.remark</p>
-            #end
+        <p>已退金额：$!itemRefund.ramount</p><!--如果引擎引用的是个空值，$!会输出空，$会输出引用字符串-->
+        <p>审核时间：$itemRefund.atime</p>
+        #if($itemRefund.status==3)
+        <p>拒绝理由：$!itemRefund.remark</p>
+        #end
         #end
 
     </div>

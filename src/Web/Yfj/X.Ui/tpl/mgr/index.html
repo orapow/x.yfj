@@ -5,108 +5,25 @@
     <title>商城管理 - $cfg.name</title>
     <base target="mainifrm" />
     <style type="text/css">
-        iframe {
-            margin: 0;
-            padding: 0;
-            border: 0;
-        }
-
-        body {
-            padding: 0;
-            line-height: normal;
-            overflow: hidden;
-            margin: 0;
-        }
-
-        .menu {
-            background: none repeat scroll 0 0 #e8e8e8;
-            color: #303030;
-            text-align: right;
-            border-bottom: 1px solid #3086c8;
-        }
-
-            .menu .btn {
-                color: #303030;
-                padding: 10px 12px;
-                font-size: 14px;
-            }
-
-                .menu .btn i {
-                    margin-right: 5px;
-                }
-
-            .menu .btn-link:hover, .btn-link:focus {
-                background-color: none;
-                text-decoration: none;
-            }
-
-            .menu .btn-primary {
-                color: white;
-            }
-
-        .leftpan {
-            float: left;
-            border-right: 1px solid #3086c8;
-            position: relative;
-        }
-
-            .leftpan i {
-                margin-right: 5px;
-                text-indent: 0;
-            }
-
-            .leftpan > ul {
-                margin-left: 0;
-                display: none;
-            }
-
-            .leftpan ul li {
-                display: block;
-            }
-
-                .leftpan ul li .btn {
-                    border-top: 0;
-                    font-size: 12px;
-                }
-
-            .leftpan > ul > li .btn {
-                line-height: 20px;
-                text-align: left;
-                width: 100px;
-                font-weight: bold;
-            }
-
-            .leftpan > ul > li ul {
-                margin-left: 0;
-            }
-
-                .leftpan > ul > li ul li .btn {
-                    text-indent: 5px;
-                    font-weight: normal;
-                }
-
-        .leftpan {
-            width: 120px;
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-
-            .leftpan ul li ul {
-                display: none;
-            }
-
-            .leftpan .arrow {
-                position: absolute;
-                height: 90px;
-                width: 10px;
-                top: 50%;
-                right: -10px;
-                background-color: red;
-            }
-
-        .rightpan {
-            margin-left: 121px;
-        }
+        iframe { margin: 0; padding: 0; border: 0; }
+        body { padding: 0; line-height: normal; overflow: hidden; margin: 0; }
+        .menu { background: none repeat scroll 0 0 #e8e8e8; color: #303030; text-align: right; border-bottom: 1px solid #3086c8; }
+        .menu .btn { color: #303030; padding: 10px 12px; font-size: 14px; }
+        .menu .btn i { margin-right: 5px; }
+        .menu .btn-link:hover, .btn-link:focus { background-color: none; text-decoration: none; }
+        .menu .btn-primary { color: white; }
+        .leftpan { float: left; border-right: 1px solid #3086c8; position: relative; }
+        .leftpan i { margin-right: 5px; text-indent: 0; }
+        .leftpan > ul { margin-left: 0; display: none; }
+        .leftpan ul li { display: block; }
+        .leftpan ul li .btn { border-top: 0; font-size: 12px; }
+        .leftpan > ul > li .btn { line-height: 20px; text-align: left; width: 100px; font-weight: bold; }
+        .leftpan > ul > li ul { margin-left: 0; }
+        .leftpan > ul > li ul li .btn { text-indent: 5px; font-weight: normal; }
+        .leftpan { width: 120px; overflow-y: auto; overflow-x: hidden; }
+        .leftpan ul li ul { display: none; }
+        .leftpan .arrow { position: absolute; height: 90px; width: 10px; top: 50%; right: -10px; background-color: red; }
+        .rightpan { margin-left: 121px; }
     </style>
 </head>
 <body>
@@ -130,67 +47,6 @@
     </div>
     <div class="leftpan">
         <ul class="smenu"></ul>
-        <!--<ul class="smenu">
-            <li>
-                <a class="btn m">
-                    <i class="icon-bolt"></i>待处理
-                </a>
-                <ul>
-                    <li>
-                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
-                            <i class="icon-angle-right"></i>商户入驻
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
-                            <i class="icon-angle-right"></i>门店审核
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
-                            <i class="icon-angle-right"></i>商户提现
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
-                            <i class="icon-angle-right"></i>邀请返利
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
-                            <i class="icon-angle-right"></i>用户提现
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a class="btn m">
-                    <i class="icon-bar-chart"></i>数据统计
-                </a>
-                <ul>
-                    <li>
-                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
-                            <i class="icon-angle-right"></i>今日统计
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
-                            <i class="icon-angle-right"></i>今日明细
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
-                            <i class="icon-angle-right"></i>数据报表
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/site/article/arti_list-${m.id}.html" class="btn">
-                            <i class="icon-angle-right"></i>营收报表
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>-->
         <ul class="smenu">
             <li>
                 <a class="btn m">
@@ -363,7 +219,7 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="/system/dict/list-car_brand.html" class="btn">
+                        <a href="/mgr/user/stati.html" class="btn">
                             <i class="icon-angle-right"></i>会员分析
                         </a>
                     </li>
@@ -386,9 +242,14 @@
                             <i class="icon-angle-right"></i>会员列表
                         </a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="/mgr/user/list.html" class="btn">
                             <i class="icon-angle-right"></i>禁闭室
+                        </a>
+                    </li>-->
+                    <li>
+                        <a href="/mgr/user/stati.html" class="btn">
+                            <i class="icon-angle-right"></i>会员统计
                         </a>
                     </li>
                 </ul>
@@ -421,7 +282,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/user/config.html" class="btn">
+                        <a href="/mgr/config-1.html" class="btn">
                             <i class="icon-angle-right"></i>会员设置
                         </a>
                     </li>

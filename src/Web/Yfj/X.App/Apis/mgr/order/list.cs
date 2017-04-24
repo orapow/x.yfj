@@ -30,8 +30,9 @@ namespace X.App.Apis.mgr.order
             if (!string.IsNullOrEmpty(key)) q = q.Where(o => o.no == key || o.user_remark.Contains(key) || o.rec_man.Contains(key) || o.rec_tel.Contains(key));
 
             r.count = q.Count();
-            var sts = "|待付款|待确认|待发货|待签收|已完成".Split('|');
-            r.items = q.OrderByDescending(o => o.ctime).ToList().Select(o => new
+
+            var sts = "|待付款|待确认|待发货|待签收|已完成|已取消".Split('|');
+            r.items = q.OrderByDescending(o => o.ctime).Skip((page - 1) * limit).Take(limit).ToList().Select(o => new
             {
                 id = o.order_id,
                 uid = o.user_id,
@@ -43,7 +44,7 @@ namespace X.App.Apis.mgr.order
                 o.rec_man,
                 o.rec_tel,
                 o.status,
-                st_name = o.status > 0 && o.status < 6 ? sts[o.status.Value] : "未知：" + o.status,
+                st_name = o.status > 0 && o.status < 7 ? sts[o.status.Value] : "未知：" + o.status,
                 o.rec_addr,
                 o.yf_amount,
                 o.pay_amount,
