@@ -18,8 +18,12 @@
             <x:text id="ctime" title="开始时间" name="ctime" size="2" chk="no" />
             <x:text id="etime" title="结束时间" name="etime" size="2" chk="no" />
             <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="submit" class="btn btn-primary" onclick="doSearch('7天')">7天</button>
+            <button type="submit" class="btn btn-primary" onclick="doSearch('本月')">本月</button>
+            <button type="submit" class="btn btn-primary" onclick="doSearch('上月')">上月</button>
             <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
             <div class="btns">
+                
                 <a class="btn btn-primary" id="btn_add" onclick="show_edit()"><i class="icon-plus"></i>新增业务员</a>
             </div>
         </x:form>
@@ -32,7 +36,7 @@
     <script type="text/javascript">
         $(function () {
             $("#id_ctime").datetimepicker({timepicker:false });
-            $("#id_etime").datetimepicker();
+            $("#id_etime").datetimepicker({timepicker: false });
         });
         $("form:eq(0)").xform({
             callback: function (d) {
@@ -40,6 +44,38 @@
                 g.getlist(d);
             }
         })
+
+        function formateDate(date) {  
+             var y = date.getFullYear();  
+           var m = date.getMonth() + 1;  
+         m = m < 10 ? '0' + m : m;  
+        var d = date.getDate();  
+   d = d < 10 ? ('0' + d) : d;  
+       return y + '-' + m + '-' + d;  
+      }
+
+
+        function doSearch(condition) {
+            //x.doapi("mgr.sman.stati", {  key: condition }, function (d) {
+            //    //d.page = 1;
+            //    g.getlist(d);
+            //});
+            var now=new Date();
+            if (condition == "7天") {
+                $("#id_etime").val(formateDate(now));//.value = now;
+                $("#id_ctime").val(formateDate(new Date(now.setDate(now.getDate() - 7))));//.value = now.setDate(now.getDate() - 7);
+ 
+                
+            } else if (condition == "本月") {
+                $("#id_etime").val(formateDate(now));//.value = now;
+                $("#id_ctime").val(formateDate(new Date(now.setDate(1))));//.value = now.setDate(1);
+         
+            } else if (condition == "上月") {
+                $("#id_etime").val(formateDate(new Date(now.setDate(1))));//.value = now.setDate(1);
+                $("#id_ctime").val(formateDate(new Date(now.setMonth(now.getMonth() - 1))));//.value = now.setMonth(now.getMonth-1);
+            }
+
+        }
 
         var cfg = {
             el: ".gridpanel",
