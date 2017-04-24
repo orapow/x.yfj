@@ -5,22 +5,25 @@ using System.Text;
 using X.Data;
 using X.Web.Com;
 
-namespace X.App.Apis.mgr.sman {
-    public class stati : xmg {
+namespace X.App.Apis.mgr.sman
+{
+    public class stati : xmg
+    {
         public int page { get; set; }
         public int limit { get; set; }
         public DateTime ctime { get; set; }
         public DateTime etime { get; set; }
         public string key { get; set; }
 
-        protected override XResp Execute() {
+        protected override XResp Execute()
+        {
             var r = new Resp_List();
             r.page = page;
             DateTime flag = new DateTime(1970, 1, 1);
-            if(ctime<flag)
-                ctime=flag;
-            if(etime<flag||etime<ctime||etime>DateTime.Now)
-                etime=DateTime.Now;
+            if (ctime < flag)
+                ctime = flag;
+            if (etime < flag || etime < ctime || etime > DateTime.Now)
+                etime = DateTime.Now;
             var q = from d in GetDictList("user.sman", "0")
                     select d.value;
 
@@ -29,7 +32,8 @@ namespace X.App.Apis.mgr.sman {
                       select d;
             //var us = DB.x_user.Where(u => q.Contains(u.invter + "")).Select(u => (long?)u.user_id);
 
-            var list = ods.Where(o => o.city == mg.city && o.ctime > (ctime) && o.ctime < etime).GroupBy(o => o.x_user.invter).Select(g => new {
+            var list = ods.Where(o => o.city == mg.city && o.ctime > (ctime) && o.ctime < etime).GroupBy(o => o.x_user.invter).Select(g => new
+            {
                 name = GetDictName("user.sman", g.Key),
                 member_count = DB.x_user.Where(u => u.invter == g.Key).Count(),
                 order_total = g.Count(),
@@ -51,6 +55,6 @@ namespace X.App.Apis.mgr.sman {
             return r;
         }
 
-       
+
     }
 }
