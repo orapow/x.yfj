@@ -15,12 +15,29 @@ namespace X.App.Apis.mgr.sman {
 
         protected override XResp Execute() {
             var r = new Resp_List();
-            r.page = page;
             DateTime flag = new DateTime(1970, 1, 1);
-            if(ctime<flag)
-                ctime=flag;
-            if(etime<flag||etime<ctime||etime>DateTime.Now)
-                etime=DateTime.Now;
+            r.page = page;
+            if (!String.IsNullOrWhiteSpace(key)) {
+                if (key.Equals("7天")) {
+                    etime = DateTime.Now;
+                    ctime = etime.AddDays(-7);
+                } else if (key.Equals("本月")) {
+                    etime = DateTime.Now;
+                    ctime = new DateTime(etime.Year, etime.Month, 1);
+                } else if (key.Equals("上月")) {
+                    etime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+                    ctime = etime;
+                    ctime.AddMonths(-1);
+                }
+            }else{
+                if (ctime < flag)
+                    ctime = flag;
+                if (etime < flag || etime < ctime || etime > DateTime.Now)
+                    etime = DateTime.Now;
+            }
+
+
+
             var q = from d in GetDictList("user.sman", "0")
                     select d.value;
 
@@ -51,6 +68,6 @@ namespace X.App.Apis.mgr.sman {
             return r;
         }
 
-       
+
     }
 }
