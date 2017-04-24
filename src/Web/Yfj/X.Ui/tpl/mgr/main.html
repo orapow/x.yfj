@@ -4,235 +4,83 @@
     #parse("mgr/com/_head.html")
     <title>商品管理 - $cfg.name</title>
     <style type="text/css">
-        .pl {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            position: relative;
-            padding-top: 20px;
-            padding-left:15px;
-            padding-bottom: 10px;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            margin-left: 40px;
-            margin-right: 40px;
-        }
-
-            .pl .btn {
-                border-radius: 5px;
-                display: inline-block;
-                margin: 5px;
-                position: relative;
-                width: 60px;
-            }
-
-            .pl i {
-                display: block;
-                font-size: 26px;
-            }
-
-            .pl .label {
-                background-color: red;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                border-radius: 15px;
-                color: white;
-                display: block;
-                height: 15px;
-                line-height: 15px;
-                overflow: hidden;
-                padding: 3px;
-                position: absolute;
-                right: 15px;
-                top: 5px;
-                width: 15px;
-            }
-
-
-
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        h3 {
-            font-size: 14px;
-            top: -28px;
-            left: 20px;
-            background: white;
-            position: absolute;
-            padding: 10px;
-            border: 1px solid #ccc;
-            line-height: 12px;
-            border-radius: 5px;
-        }
-
-        .pl p {
-            padding: 0 10px;
-            margin-bottom: 0;
-        }
-
-
-
-
-        .grid-item {
-            margin: 0 0 0 -15px;
-            padding: 0;
-        }
-
-            .grid-item .item {
-                width: 20%;
-                display: inline-block;
-                border: 1px solid #eee;
-                position: relative;
-                box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.1);
-                background: white;
-                float: left;
-                margin-left: 15px;
-                margin-bottom: 15px;
-            }
+        h3 { font-size: 14px; top: -28px; left: 20px; background: white; position: absolute; padding: 10px; border: 1px solid #ccc; line-height: 12px; border-radius: 5px; }
+        .pl { border: 1px solid #ccc; border-radius: 5px; position: relative; margin-top: 30px; padding: 30px 16px; }
+        .pl .btn { border-radius: 5px; display: inline-block; margin: 5px; position: relative; width: 60px; }
+        .pl i { display: block; font-size: 26px; }
+        .pl .label { background-color: red; text-overflow: ellipsis; white-space: nowrap; border-radius: 15px; color: white; display: block; height: 15px; line-height: 15px; overflow: hidden; padding: 3px; position: absolute; right: 15px; top: 5px; width: 15px; }
+        .pl p { padding: 0 10px; margin-bottom: 0; }
     </style>
-
-
-
 </head>
 <body>
     <div class="title">
         <span class="main">优辅家管理</span> - <span class="sub">首页</span>
-        <div class="pl">
-            <a href="/mgr/goods/edit.html" class="btn"><i class="icon-plus"></i>发布商品</a>
-            <a href="/mgr/sale/list.html" class="btn"><i class="icon-ambulance"></i>促销管理</a>
-            <a href="/mgr/refund/list.html" class="btn">
-                <i class="icon-legal"></i>
-                #if($refundCount!=0)<span class="label">$!refundCount</span>#end
-                退款审核
-            </a>
-            <!--<a href="/mgr/order/list-1.html" class="btn">
-                <i class="icon-money"></i>
-                #if($payCount!=0)<span class="label">$!payCount</span>#end
-                待付款
-            </a>-->
-            <a href="/mgr/order/list-2.html" class="btn">
-                <i class="icon-check"></i>
-                #if($confirmCount!=0)<span class="label">$!confirmCount</span>#end
-                待确认
-            </a>
-            <a href="/mgr/order/list-3.html" class="btn">
-                <i class="icon-shopping-cart"></i>
-                #if($sendCount!=0)<span class="label">$!sendCount</span>#end
-                待发货
-            </a>
-            <a href="/mgr/order/list-4.html" class="btn">
-                <i class="icon-money"></i>
-                #if($receiveCount!=0)<span class="label">$!receiveCount</span>#end
-                待收款
-            </a>
-            <a href="/mgr/sman/stati.html" class="btn"><i class="icon-user"></i>业务员统计</a>
-
-        </div>
-        <div class="pl">
-            <h3>统计图表</h3>
-            <table>
-                <tr>
-                    <td style="width: 50%;">
-                        <div id="id_orderTable">
-                        </div>
-                    </td>
-                    <td style="width: 50%;">
-                        <div id="id_memberTable">
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <!--<div class="pl">
-            <table>
-                <tr>
-                    <td style="width: 50%; vertical-align: top; text-align: center;">
-                        <h4>待发货</h4>
-                    </td>
-                    <td style="width: 50%; vertical-align: top; text-align: center;">
-                        <h4>待付款</h4>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 50%; vertical-align:top;">
-                        <div class="gridpanel_send">
-                        </div>
-                    </td>
-                    <td style="width: 50%;vertical-align:top;">
-                        <div class="gridpanel_pay">
-                        </div>
-                    </td>
-                </tr>
-
-            </table>
-        </div>-->
     </div>
-    <!--今日图表-->
-    <!--<div id="id_visitTable" style="width: 350px; height: 400px">
-    </div>-->
-
-
-
-
-
-
+    <div class="pl">
+        <h3>快捷方式</h3>
+        <a href="/mgr/goods/edit.html" class="btn"><i class="icon-plus"></i>发布商品</a>
+        <a href="/mgr/sale/list.html" class="btn"><i class="icon-ambulance"></i>促销管理</a>
+        <a href="/mgr/refund/list.html" class="btn">
+            <i class="icon-legal"></i>
+            #if($refundCount!=0)<span class="label">$!refundCount</span>#end
+            退款审核
+        </a>
+        <a href="/mgr/order/list-2.html" class="btn">
+            <i class="icon-check"></i>
+            #if($confirmCount!=0)<span class="label">$!confirmCount</span>#end
+            待确认
+        </a>
+        <a href="/mgr/order/list-3.html" class="btn">
+            <i class="icon-shopping-cart"></i>
+            #if($sendCount!=0)<span class="label">$!sendCount</span>#end
+            待发货
+        </a>
+        <a href="/mgr/order/list-4.html" class="btn">
+            <i class="icon-money"></i>
+            #if($receiveCount!=0)<span class="label">$!receiveCount</span>#end
+            待收款
+        </a>
+        <a href="/mgr/sman/stati.html" class="btn"><i class="icon-user"></i>业务员统计</a>
+    </div>
+    <table>
+        <tr>
+            <td style="width: 50%;">
+                <div class="pl" style="margin-right:10px;">
+                    <h3>今日订单</h3>
+                    <div id="id_orderTable">
+                    </div>
+                </div>
+            </td>
+            <td style="width: 50%;">
+                <div class="pl" style="margin-left:10px;">
+                    <h3>新增会员</h3>
+                    <div id="id_memberTable">
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
     <script src="/js/highcharts.js"></script>
-
     <script type="text/javascript">
-
-        //var cfg_send = {
-        //    el: ".gridpanel_send",
-        //    searchcon: { page: 1, limit: 30, st: "3" },
-        //    api: "mgr.order.list",
-        //    fs: [{ t: "订单", f: "编号：{no}<br/>日期：{ctime}<br/>状态：{st_name}", w: 160, align: "left" },
-        //        { t: "用户", f: "<img src='{up}' style='height:45px;'/> {un}", w: 120, align: "left" },
-        //        { t: "付款", f: "{way}<br/>应付：<b>￥{yf_amount}</b><br/>已付：<b style='color:red'>￥{pay_amount}</b>", w: 100, align: "left" },
-        //        { t: "商品", f: "{gs}", w: 220, align: "left" },
-        //    ],
-        //};
-        //var cfg_pay = {
-        //    el: ".gridpanel_pay",
-        //    searchcon: { page: 1, limit: 30, st: "4" },
-        //    api: "mgr.order.list",
-        //    fs: [{ t: "订单", f: "编号：{no}<br/>日期：{ctime}<br/>状态：{st_name}", w: 160, align: "left" },
-        //        { t: "用户", f: "<img src='{up}' style='height:45px;'/> {un}", w: 120, align: "left" },
-        //        { t: "配送", f: "{send_date} <br/>{send_time}<br/>{send}", w: 120, align: "left" },
-
-        //    ],
-        //};
-        //var g_send = x.grid.init(cfg_send);
-        //var g_pay = x.grid.init(cfg_pay);
-
         $(function () {
             x.doapi("mgr.index", { require: "order" }, function (d) {
                 if (!d.issucc) return;
                 var result = JSON.parse(d.msg);
-                //for(var t in d.msg)
-                createTable("#id_orderTable", "今日订单", result[0], "新增订单量");
-                createTable("#id_memberTable", "新会员", result[1], "新增会员数");
+                createTable("#id_orderTable", "", result[0], "新增订单量");
+                createTable("#id_memberTable", "", result[1], "新增会员数");
                 //createTable("#id_visitTable", "来访量", result[2], "来访量");
             });
-
-
         });
 
-
-
-
-
         function createTable(id, title, data, lineTitle) {
-
             $(id).highcharts({
-                //data: data,
                 series: [{
                     name: lineTitle,
                     data: data
                 }],
                 title: { text: title },
                 xAxis: {
-                    categories: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"]
+                    categories: ['0H', '1H', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', '10H', '11H', "12H", "13H", "14H", "15H", "16H", "17H", "18H", "19H", "20H", "21H", "22H", "23H"]
                 },
                 yAxis: [{ // 第一个 Y 轴，放置在左边（默认在坐标）
                     title: {
@@ -295,12 +143,7 @@
                     }
                 }
             });
-
         }
-
-
-
     </script>
-
 </body>
 </html>
