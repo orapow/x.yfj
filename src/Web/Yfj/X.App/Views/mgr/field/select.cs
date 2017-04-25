@@ -4,23 +4,24 @@ using System.Linq;
 using System.Text;
 using X.Data;
 
-namespace X.App.Views.mgr.field
-{
-    public class select : xmg
-    {
+namespace X.App.Views.mgr.field {
+    public class select : xmg {
         [ParmsAttr(name = "商品品类", min = 1)]
         public int pid { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
-        protected override string GetParmNames
-        {
-            get
-            {
+
+        protected override string GetParmNames {
+            get {
                 return "pid";
             }
         }
 
-        protected override void InitDict()
-        {
+        protected override void InitDict() {
             //var q = from f in DB.x_goods_field.Where(o => o.cate_id == pid)
             //        select new
             //        {
@@ -33,8 +34,7 @@ namespace X.App.Views.mgr.field
             //if (q.Count() == 0) dict["nodata"] = "此品类还没配置字段";
         }
 
-        public override string GetTplFile()
-        {
+        public override string GetTplFile() {
             return "com/dict";
         }
     }

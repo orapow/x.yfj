@@ -44,8 +44,12 @@ namespace X.App.Apis.wx.order
 
             od.city = cu.city;
 
+            decimal shipamount = 0;
+
             foreach (var g in gds)
             {
+                if (g.calcfreight==1)
+                shipamount += g.price.Value;
                 od.x_order_detail.Add(new x_order_detail()
                 {
                     count = g.count,
@@ -56,12 +60,19 @@ namespace X.App.Apis.wx.order
                     unit = g.unit,
                     stand = g.desc,
                     total_price = g.count * g.price
+                    
                 });
             }
 
             od.fav_amount = 0;//优惠金额
             od.fav_remark = "";//优惠说明
-            od.freight_amount = 0;//云费
+
+            //对运费处理 超过包邮限额可包邮
+            if (shipamount >= cfg.free_ship)
+                od.freight_amount = 0;//云费
+            else
+                od.freight_amount = cfg.shipfee;
+
             //od.onfloor = fl;
             od.amount = od.x_order_detail.Sum(o => o.count * o.price);
             od.pay_way = way;

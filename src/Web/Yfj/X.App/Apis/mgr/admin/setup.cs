@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using X.Core.Utility;
+using X.App;
+using X.App.Com;
+using X.Web.Com;
+using X.Web;
 
-namespace X.App.Com
-{
+namespace X.App.Apis.mgr.admin {
     /// <summary>
     /// 常规配置
     /// </summary>
-    public class Config
-    {
+    public class setup : xmg {
         /// <summary>
         /// 域名
         /// </summary>
@@ -43,7 +45,15 @@ namespace X.App.Com
         /// </summary>
         public int pay_cod { get; set; }//
 
+        public int credit { get; set; }//会员设置积分价值
+        public int max_deposit { get; set; }//最大充值金额
+        
+        public int min_deposit{get; set;}//最少充值金额
+        public decimal shipfee { get; set; }//每单邮费
+        public decimal free_ship { get; set; }//包邮
+
         public string sms_cfg { get; set; }
+        
 
         public string wx_appid { get; set; }//
         public string wx_scr { get; set; }//
@@ -53,40 +63,31 @@ namespace X.App.Com
         /// </summary>
         public string wx_certpath { get; set; }//
         public string wx_paykey { get; set; }//
+   
 
-        private static string file = HttpContext.Current.Server.MapPath("/dat/cfg.x");//来自服务器的文件
-        private static Config cfg = null;
-        /// <summary>
-        /// 获取配置
-        /// </summary>
-        /// <returns></returns>
-        public static Config LoadConfig()
-        {
-            if (cfg == null)
-            {
-                var json = Tools.ReadFile(file);
-                if (string.IsNullOrEmpty(json)) return new Config();
-                cfg = Serialize.FromJson<Config>(json);
-            }
-            return cfg;
+        protected override Web.Com.XResp Execute() {
+            if (max_deposit < min_deposit)
+                throw new XExcep("T输入错误，最大充值金额不能小于最小充值金额");
+            cfg = Config.LoadConfig();
+            cfg.domain = domain;
+            cfg.name = name;
+
+            cfg.pay_cod = pay_cod;
+            cfg.credit = credit;
+            cfg.min_deposit = min_deposit;
+            cfg.max_deposit = max_deposit;
+
+
+            cfg.wx_appid = wx_appid;
+            cfg.wx_certpath = wx_certpath;
+            cfg.wx_mch_id = wx_mch_id;
+            cfg.wx_paykey = wx_paykey;
+            cfg.wx_scr = wx_scr;
+
+            cfg.shipfee = shipfee;
+            cfg.free_ship = free_ship;
+            Config.SaveConfig(cfg);
+            return new XResp();
         }
-        /// <summary>
-        /// 保存配置
-        /// </summary>
-        /// <param name="cfg"></param>
-        public static void SaveConfig(Config cfg)
-        {
-            Tools.SaveFile(HttpContext.Current.Server.MapPath("/dat/cfg.x"), Serialize.ToJson(cfg));
-        }
-
-        public int max_deposit { get; set; }
-
-        public int min_deposit { get; set; }
-
-        public int credit { get; set; }
-
-        public decimal free_ship { get; set; }
-
-        public decimal shipfee { get; set; }
     }
 }

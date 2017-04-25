@@ -13,6 +13,11 @@ namespace X.App.Apis.mgr.order
     {
         public int id { get; set; }
         public decimal am { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {

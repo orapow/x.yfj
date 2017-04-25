@@ -10,6 +10,11 @@ namespace X.App.Views.mgr.cate
     {
         private List<item> data = new List<item>();
         string code = "goods.cate";
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override void InitDict()
         {
             var tree = new XTree();

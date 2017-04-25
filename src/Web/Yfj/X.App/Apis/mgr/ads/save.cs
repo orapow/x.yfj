@@ -18,6 +18,11 @@ namespace X.App.Apis.mgr.ads
         public string desc { get; set; }
         public int sort { get; set; }
 
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override XResp Execute()
         {
             x_ad ent = null;

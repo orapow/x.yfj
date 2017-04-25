@@ -6,6 +6,11 @@ namespace X.App.Views.mgr.sman
     public class edit : xmg
     {
         public int id { get; set; }
+        protected override int powercode {
+            get {
+                return 2;
+            }
+        }
         protected override string GetParmNames
         {
             get

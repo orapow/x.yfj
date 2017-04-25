@@ -4,20 +4,21 @@ using System.Linq;
 using System.Text;
 using X.Web;
 
-namespace X.App.Views.mgr.mch
-{
-    public class edit : xmg
-    {
+namespace X.App.Views.mgr.mch {
+    public class edit : xmg {
         public int mch_id { get; set; }
-        protected override string GetParmNames
-        {
-            get
-            {
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
+
+        protected override string GetParmNames {
+            get {
                 return "mch_id";
             }
         }
-        protected override void InitDict()
-        {
+        protected override void InitDict() {
             base.InitDict();
             //if (mch_id > 0)
             //{

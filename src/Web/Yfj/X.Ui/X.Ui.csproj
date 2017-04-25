@@ -222,6 +222,8 @@
     <Content Include="res\plug\um\umeditor.min - 复制.js" />
     <Content Include="res\plug\um\umeditor.min.js" />
     <Content Include="tpl\com\err.html" />
+    <Content Include="tpl\mgr\admin\edit.html" />
+    <Content Include="tpl\mgr\admin\list.html" />
     <Content Include="tpl\mgr\city\edit.html" />
     <Content Include="tpl\mgr\city\list.html" />
     <Content Include="tpl\mgr\cate\edit.html" />
@@ -231,7 +233,7 @@
     <Content Include="tpl\mgr\sman\stati.html" />
     <Content Include="tpl\wx\order\refund.html" />
     <Content Include="tpl\mgr\refund\list.html" />
-    <Content Include="tpl\mgr\config.html" />
+    <Content Include="tpl\mgr\setup.html" />
     <Content Include="tpl\mgr\ads\edit.html" />
     <Content Include="tpl\mgr\ads\list.html" />
     <Content Include="tpl\mgr\order\detail.html" />

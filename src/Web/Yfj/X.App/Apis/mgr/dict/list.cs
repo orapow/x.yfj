@@ -16,6 +16,11 @@ namespace X.App.Apis.mgr.dict
         public string code { get; set; }
         public int hasc { get; set; }
         public string key { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override XResp Execute()
         {
             var r = new Resp_List();

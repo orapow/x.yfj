@@ -11,6 +11,11 @@ namespace X.App.Views.mgr.sale {
         [ParmsAttr(name = "字段ID")]
         public int fid { get; set; }
 
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override string GetParmNames {
             //传参数
             get {

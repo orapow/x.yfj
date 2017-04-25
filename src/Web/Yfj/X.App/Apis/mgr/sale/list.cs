@@ -10,6 +10,11 @@ namespace X.App.Apis.mgr.sale {
         public int limit { get; set; }
         public string key { get; set; }
         public string cate { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override Web.Com.XResp Execute() {
             var r = new Resp_List();

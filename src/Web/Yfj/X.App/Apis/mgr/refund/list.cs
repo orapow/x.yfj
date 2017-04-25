@@ -12,12 +12,17 @@ namespace X.App.Apis.mgr.refund
         public int limit { get; set; }
         public int st { get; set; }
         public string key { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override XResp Execute()
         {
             var r = new Resp_List();
             var q = from o in DB.x_refund select o;
 
-            if (mg.x_role.power != "###") q = q.Where(o => o.x_order.city == mg.city);
+            //if (mg.x_role.power != "###") q = q.Where(o => o.x_order.city == mg.city);
 
             if (st > 0)
             {

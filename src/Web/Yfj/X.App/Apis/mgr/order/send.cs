@@ -14,6 +14,11 @@ namespace X.App.Apis.mgr.order
         public int id { get; set; }
         public string name { get; set; }
         public string tel { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {

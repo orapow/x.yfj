@@ -7,6 +7,13 @@ namespace X.App.Views.mgr.city
     {
         public int id { get; set; }
         public int pid { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
+
+
         protected override string GetParmNames
         {
             get

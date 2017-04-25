@@ -14,6 +14,12 @@ namespace X.App.Apis.mgr.user
     public class del : xmg
     {
         public int id { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
+        
 
         protected override XResp Execute()
         {

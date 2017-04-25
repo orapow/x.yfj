@@ -12,6 +12,11 @@ namespace X.App.Apis.mgr.sman {
         public DateTime ctime { get; set; }
         public DateTime etime { get; set; }
         public string key { get; set; }
+        protected override int powercode {
+            get {
+                return 2;
+            }
+        }
 
         protected override XResp Execute() {
             var r = new Resp_List();

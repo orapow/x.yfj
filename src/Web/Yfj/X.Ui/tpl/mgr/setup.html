@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>设置面板 - $cfg.name</title>
+    <link href="/plug/um/themes/default/css/umeditor.min.css" rel="stylesheet" />
+    <script src="/plug/um/umeditor.config.js"></script>
+    <script src="/plug/um/umeditor.min.js"></script>
+
+    <style type="text/css">
+        .tab { border-bottom: 1px solid #3086c8; width: 450px; }
+        .tab span.t { width: 90px; display: inline-block; line-height: 32px; text-align: center; margin-right: -1px; cursor: pointer; }
+        span.t.on { background-color: #3086c8; color: white; border-color: #3086c8; }
+        .tb { display: none; margin-top: 10px; }
+        .li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">设置面板</span> - <span class="sub">系统配置</span>
+    </div>
+    <div class="form">
+        <x:form api="mgr.admin.setup">
+            <div class="tab">
+                <span class="t">基本设置</span><span class="t">会员设置</span><span class="t">微信设置</span><span class="t">运费设置</span>
+            </div>
+            <div class="tb">
+                <x:text title="网站名" name="name" def="$!cfg.name" size="2" />
+                <x:text title="域名" name="domain" def="$!cfg.domain" size="3" />
+            </div>
+            <div class="tb">
+                <x:pick title="货到付款" name="pay_cod" src="loc:开启|关闭" def="$!cfg.pay_cod" mode="2" />
+                <x:text title="积分价值" name="credit" def="$!cfg.credit" size="4" />
+                <x:text title="最低充值" name="min_deposit" def="$!cfg.min_deposit" size="4" />
+                <x:text title="最高充值" name="max_deposit" def="$!cfg.max_deposit" size="4" />
+            </div>
+            <div class="tb">
+                <x:text title="appid" name="wx_appid" def="$!cfg.wx_appid" size="2" />
+                <x:text title="appsecret" name="wx_scr" def="$!cfg.wx_scr" size="3" />
+                <x:text title="商户号" name="wx_mch_id" def="$!cfg.wx_mch_id" size="2" />
+                <x:text title="支付密钥" name="wx_paykey" def="$!cfg.wx_paykey" size="4" />
+                <x:text title="证书路径" name="wx_certpath" def="$!cfg.wx_certpath" size=" 5" />
+            </div>
+            <div class="tb">
+                <x:text title="包邮金额" name="free_ship" def="$!cfg.free_ship" size="3" />
+                <x:text title="每单邮费" name="shipfee" def="$!cfg.shipfee" size="3" />
+            </div>
+            <div class="btns">
+                <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>提交保存</button>
+            </div>
+        </x:form>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $("form:eq(0)").xform({
+                callback: function () { x.alert("修改成功"); }
+            });
+            $("span.t").click(function () {
+                $(".tb").hide();
+                $(".tb:eq(" + $(this).index() + ")").show();
+                $("span.t").removeClass("on");
+                $(this).addClass("on");
+            });
+            $("span.t:eq(0)").click();
+        });
+
+    </script>
+</body>
+</html>

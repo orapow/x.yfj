@@ -8,6 +8,11 @@ namespace X.App.Views.mgr.sys.dict
     public class edit : xmg
     {
         public int id { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override string GetParmNames
         {
             get

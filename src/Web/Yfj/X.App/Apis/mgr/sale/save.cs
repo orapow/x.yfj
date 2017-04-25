@@ -22,7 +22,11 @@ namespace X.App.Apis.mgr.sale {
         public DateTime etime { get; set; }//ok 结束时间
 
 
-
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute() {
             if (limit > count)
