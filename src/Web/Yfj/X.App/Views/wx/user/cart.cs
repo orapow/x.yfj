@@ -19,7 +19,7 @@ namespace X.App.Views.wx.user
         }
         protected override void InitDict()
         {
-            base.InitDict();
+            base.InitDict();  
 
             if (cu.x_cart.Count() == 0)
             {
