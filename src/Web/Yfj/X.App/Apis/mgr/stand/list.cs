@@ -17,7 +17,7 @@ namespace X.App.Apis.mgr.stand
             get {
                 return 1;
             }
-        
+        }
 
         protected override Web.Com.XResp Execute()
         {

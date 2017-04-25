@@ -78,5 +78,15 @@ namespace X.App.Com
         {
             Tools.SaveFile(HttpContext.Current.Server.MapPath("/dat/cfg.x"), Serialize.ToJson(cfg));
         }
+
+        public int max_deposit { get; set; }
+
+        public int min_deposit { get; set; }
+
+        public int credit { get; set; }
+
+        public decimal free_ship { get; set; }
+
+        public decimal shipfee { get; set; }
     }
 }

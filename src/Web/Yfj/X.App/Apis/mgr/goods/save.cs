@@ -37,6 +37,8 @@ namespace X.App.Apis.mgr.goods
         public int rnd { get; set; }//是否配送
 
         public int hot { get; set;}//是否热销
+
+        public int calcfreight { get; set; }//是否计算邮费
         protected override int powercode {
             get {
                 return 1;
@@ -76,6 +78,7 @@ namespace X.App.Apis.mgr.goods
             ent.refunded = red == 1;
             ent.sended = rnd == 1;
             ent.hot = hot;
+            ent.calcfreight = calcfreight;
             if (ent.goods_id == 0) ent.status = 2;
 
             if (ent.goods_id == 0)

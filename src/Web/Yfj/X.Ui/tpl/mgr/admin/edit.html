@@ -36,7 +36,7 @@
                 <input type="hidden" name="cover" value="$!item.cover" x-check="" />
                 <x:text title="账号" name="uid" def="$!item.uid" size="4" chk="no" />
                 <x:text title="昵称" name="name" def="$!item.name"  size="4" chk="no" />
-                <x:pick src="loc:客服|财务" mode="2" name="role" count="1" title="角色"  chk="no"/>
+                <x:pick src="loc:客服|财务" mode="2" name="role" count="1" title="角色"  chk="no" def="$!item.role_id"/>
                 <x:row>
                    
                     <!--<x:pick title="城市" src="dict:goods.brand" name="brand" count="1" def="$!item.brand" />-->
