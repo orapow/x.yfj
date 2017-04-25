@@ -10,6 +10,11 @@ namespace X.App.Views.mgr.refund
 
         public decimal ramount { get; set; }
         public string remark { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override string GetParmNames  
         {
             get

@@ -16,6 +16,11 @@ namespace X.App.Apis.mgr.cate
         public string key { get; set; }
 
         string code = "goods.cate";
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override XResp Execute()
         {
             var r = new Resp_List();

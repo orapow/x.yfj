@@ -17,6 +17,11 @@ namespace X.App.Apis.mgr.article
         public string remark { get; set; }
         public string desc { get; set; }
         public int sort { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {

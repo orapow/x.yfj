@@ -8,10 +8,8 @@ using X.Web;
 using X.Web.Com;
 using X.Web.Views;
 
-namespace X.App.Views.mgr
-{
-    public class xmg : xview
-    {
+namespace X.App.Views.mgr {
+    public class xmg : xview {
         protected x_mgr mg = null;
 
         /// <summary>
@@ -19,10 +17,8 @@ namespace X.App.Views.mgr
         /// #是默认码
         /// 为空说明不需要验证
         /// </summary>
-        protected virtual int powercode
-        {
-            get
-            {
+        protected virtual int powercode {
+            get {
                 return 3;
             }
         }
@@ -30,24 +26,20 @@ namespace X.App.Views.mgr
         /// <summary>
         /// 是否有权限
         /// </summary>
-        public bool HasPower()
-        {
-            return mg.role_id<3?mg.role_id==powercode:true;
+        public bool HasPower() {
+            return mg.role_id < 3 ? mg.role_id == powercode : true;
         }
 
         /// <summary>
         /// 验证权限
         /// </summary>
-        private void ValidPower()
-        {
-            if (!HasPower())
-            {
+        private void ValidPower() {
+            if (!HasPower()) {
                 throw new XExcep("T当前用户没有此权限");
             }
         }
 
-        protected override void InitDict()
-        {
+        protected override void InitDict() {
             base.InitDict();
 
             var id = GetReqParms("mgr_ad");// Context.Request.Cookies["ad"];

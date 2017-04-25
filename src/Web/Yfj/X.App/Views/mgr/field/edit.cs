@@ -1,22 +1,23 @@
 ﻿using System.Linq;
 using X.Web;
 
-namespace X.App.Views.mgr.field
-{
-    public class edit : xmg
-    {
+namespace X.App.Views.mgr.field {
+    public class edit : xmg {
         [ParmsAttr(name = "商品品类", min = 1)]
         public int pid { get; set; }
         public int id { get; set; }
-        protected override string GetParmNames
-        {
-            get
-            {
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
+
+        protected override string GetParmNames {
+            get {
                 return "pid-id";
             }
         }
-        protected override void InitDict()
-        {
+        protected override void InitDict() {
             base.InitDict();
             //if (id > 0)
             //{

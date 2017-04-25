@@ -13,6 +13,11 @@ namespace X.App.Views.mgr.sale {
         /// 4、已删除
         /// </summary>
         public String st { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override string GetParmNames {
             get {
                 return "st";

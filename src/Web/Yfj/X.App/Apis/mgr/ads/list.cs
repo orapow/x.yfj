@@ -13,6 +13,11 @@ namespace X.App.Apis.mgr.ads
         public int limit { get; set; }
         public int pos { get; set; }
         public string key { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {

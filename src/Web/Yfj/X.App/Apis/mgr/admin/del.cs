@@ -12,18 +12,13 @@ namespace X.App.Apis.mgr.admin
     {
         public int id { get; set; }
 
-        protected override void Validate()
-        {
-            base.Validate();
-            Validator.CheckRange("id", id, 0, null);
-        }
-
+       
         protected override Web.Com.XResp Execute()
         {
-            var ag = DB.x_admin.SingleOrDefault(o => o.admin_id == id);
+            var ag = DB.x_mgr.SingleOrDefault(o => o.mgr_id == id);
             if (ag == null) throw new XExcep("x0005");
 
-            DB.x_admin.DeleteOnSubmit(ag);
+            DB.x_mgr.DeleteOnSubmit(ag);
 
             SubmitDBChanges();
 

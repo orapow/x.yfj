@@ -12,6 +12,11 @@ namespace X.App.Apis.mgr.sman
         public int page { get; set; }
         public int limit { get; set; }
         public string key { get; set; }
+        protected override int powercode {
+            get {
+                return 2;
+            }
+        }
 
         protected override XResp Execute()
         {

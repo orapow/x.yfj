@@ -17,6 +17,11 @@ namespace X.App.Apis.mgr.stand
         public string name { get; set; }
         public int sort { get; set; }
         public string img { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        
 
         protected override XResp Execute()
         {

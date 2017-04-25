@@ -11,6 +11,11 @@ namespace X.App.Apis.mgr.ads
     {
         [ParmsAttr(min = 1)]
         public int id { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {

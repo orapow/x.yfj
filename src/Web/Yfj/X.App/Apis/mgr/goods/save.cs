@@ -37,6 +37,11 @@ namespace X.App.Apis.mgr.goods
         public int rnd { get; set; }//是否配送
 
         public int hot { get; set;}//是否热销
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override XResp Execute()
         {
             x_goods ent = null;

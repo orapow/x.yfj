@@ -39,6 +39,10 @@
   <ItemGroup>
     <Compile Include="Apis\com\sendcode.cs" />
     <Compile Include="Apis\com\uploadbd.cs" />
+    <Compile Include="Apis\mgr\admin\setup.cs" />
+    <Compile Include="Apis\mgr\admin\del.cs" />
+    <Compile Include="Apis\mgr\admin\list.cs" />
+    <Compile Include="Apis\mgr\admin\save.cs" />
     <Compile Include="Apis\mgr\ads\del.cs" />
     <Compile Include="Apis\mgr\ads\list.cs" />
     <Compile Include="Apis\mgr\ads\save.cs" />
@@ -124,6 +128,8 @@
     <Compile Include="Views\com\code.cs" />
     <Compile Include="Views\com\dict.cs" />
     <Compile Include="Views\com\getpos.cs" />
+    <Compile Include="Views\mgr\admin\edit.cs" />
+    <Compile Include="Views\mgr\admin\list.cs" />
     <Compile Include="Views\mgr\ads\edit.cs" />
     <Compile Include="Views\mgr\ads\list.cs" />
     <Compile Include="Views\mgr\city\edit.cs" />
@@ -131,7 +137,7 @@
     <Compile Include="Views\mgr\cate\edit.cs" />
     <Compile Include="Views\mgr\cate\list.cs" />
     <Compile Include="Views\mgr\cate\select.cs" />
-    <Compile Include="Views\mgr\config.cs" />
+    <Compile Include="Views\mgr\setup.cs" />
     <Compile Include="Views\mgr\article\edit.cs" />
     <Compile Include="Views\mgr\article\list.cs" />
     <Compile Include="Views\mgr\main.cs" />

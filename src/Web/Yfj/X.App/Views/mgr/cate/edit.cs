@@ -9,6 +9,11 @@ namespace X.App.Views.mgr.cate
         public int pid { get; set; }
 
         string code = "goods.cate";
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override string GetParmNames
         {
             get
