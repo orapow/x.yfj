@@ -77,24 +77,10 @@
       <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="etime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="x_user_x_address" Member="x_address" ThisKey="user_id" OtherKey="user_id" Type="x_address" />
-      <Association Name="x_user_x_charge" Member="x_charge" ThisKey="user_id" OtherKey="user_id" Type="x_charge" />
       <Association Name="x_user_x_order" Member="x_order" ThisKey="user_id" OtherKey="user_id" Type="x_order" />
       <Association Name="x_user_x_integral_log" Member="x_integral_log" ThisKey="user_id" OtherKey="user_id" Type="x_integral_log" />
       <Association Name="x_user_x_cart" Member="x_cart" ThisKey="user_id" OtherKey="user_id" Type="x_cart" />
-    </Type>
-  </Table>
-  <Table Name="dbo.x_charge" Member="x_charge">
-    <Type Name="x_charge">
-      <Column Name="charge_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="amount" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="result" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="fail_reason" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
-      <Column Name="audit_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="audit_user" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="audit_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="x_user_x_charge" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+      <Association Name="x_user_x_charge" Member="x_charge" ThisKey="user_id" OtherKey="user_id" Type="x_charge" />
     </Type>
   </Table>
   <Table Name="dbo.x_order_detail" Member="x_order_detail">
@@ -266,6 +252,20 @@
       <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="sel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="x_user_x_cart" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.x_charge" Member="x_charge">
+    <Type Name="x_charge">
+      <Column Name="charge_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="result" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="fail_reason" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="audit_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="audit_user" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="audit_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="x_user_x_charge" Member="x_user" ThisKey="user_id" OtherKey="user_id" Type="x_user" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.fnGetDistance" Method="fnGetDistance" IsComposable="true">

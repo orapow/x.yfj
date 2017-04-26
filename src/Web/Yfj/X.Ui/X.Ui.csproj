@@ -228,6 +228,7 @@
     <Content Include="tpl\mgr\city\list.html" />
     <Content Include="tpl\mgr\cate\edit.html" />
     <Content Include="tpl\mgr\cate\list.html" />
+    <Content Include="tpl\mgr\deposit\list.html" />
     <Content Include="tpl\mgr\main.html" />
     <Content Include="tpl\mgr\refund\edit.html" />
     <Content Include="tpl\mgr\sman\stati.html" />
