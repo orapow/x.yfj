@@ -1,0 +1,614 @@
+
+时间：2017-04-26 14:08:51,180 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(invalid total_fee)","code":"invalid total_fee"} 
+时间：775234 
+
+时间：2017-04-26 14:13:00,916 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：36280 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 38
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:13:35,425 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2063 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 38
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:15:04,518 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：91156 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 38
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:17:17,291 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：223929 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 38
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:18:52,828 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：319466 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 38
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:19:14,136 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T当前订单正在处理中，请稍后...)","code":"T当前订单正在处理中，请稍后..."} 
+时间：340774 
+
+时间：2017-04-26 14:19:14,331 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：340969 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 38
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:23:44,051 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：17044 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:23:46,539 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：19533 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:24:11,041 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T当前订单正在处理中，请稍后...)","code":"T当前订单正在处理中，请稍后..."} 
+时间：14579 
+
+时间：2017-04-26 14:24:11,607 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：15145 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:24:19,874 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：23413 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:24:53,354 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：13458 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:26:54,542 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：101299 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:27:00,201 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：106958 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:27:23,724 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：130481 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:27:57,487 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：164244 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:28:00,793 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：167550 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:29:19,494 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：6157 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:29:30,203 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：16866 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 14:30:01,532 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T当前订单正在处理中，请稍后...)","code":"T当前订单正在处理中，请稍后..."} 
+时间：48195 
+
+时间：2017-04-26 14:35:01,118 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：24142 
+
+时间：2017-04-26 14:36:59,691 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：142715 
+
+时间：2017-04-26 14:38:37,736 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：240760 
+
+时间：2017-04-26 14:40:55,557 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (404) 未找到。 
+时间：30387 
+System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-04-26 14:41:24,266 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：59096 
+
+时间：2017-04-26 14:41:28,156 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：62986 
+
+时间：2017-04-26 14:42:55,929 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (404) 未找到。 
+时间：150759 
+System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-04-26 14:42:55,950 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：150780 
+
+时间：2017-04-26 14:44:07,169 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (404) 未找到。 
+时间：221999 
+System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-04-26 14:44:07,182 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：222012 
+
+时间：2017-04-26 14:47:50,919 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (404) 未找到。 
+时间：445749 
+System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-04-26 14:47:50,954 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：445784 
+
+时间：2017-04-26 14:47:55,338 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：450168 
+
+时间：2017-04-26 14:49:24,528 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：539358 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-04-26 14:49:24,557 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：539387 
+
+时间：2017-04-26 14:53:08,445 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：10838 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-04-26 14:53:08,507 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：10900 
+
+时间：2017-04-26 14:59:32,625 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：138689 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-04-26 14:59:32,680 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：138744 
+
+时间：2017-04-26 15:36:43,459 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：12589 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-04-26 15:36:43,637 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：12767 
+
+时间：2017-04-26 15:38:09,019 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：8579 
+
+时间：2017-04-26 16:15:32,723 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：49756 
+
+时间：2017-04-26 16:40:16,622 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：68253 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.wx.login.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\login.cs:行号 41
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 16:41:29,589 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：141221 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 X.App.Apis.wx.login.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\login.cs:行号 41
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 16:55:22,535 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败)","code":"T短信发送失败"} 
+时间：380443 
+
+时间：2017-04-26 17:15:52,337 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：17190 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 17:16:09,286 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：34139 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 17:18:14,940 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：31937 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 17:18:17,276 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：34273 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\Yfj\X.App\Apis\wx\user\deposit.cs:行号 51
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 17:20:44,268 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：121204 
+System.Data.Linq.ChangeConflictException: 找不到行或行已更改。
+   在 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   在 System.Data.Linq.DataContext.SubmitChanges()
+   在 X.App.Apis.wx.user.deposit.Execute()
+   在 X.Web.Apis.Api.GetResponse() 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\Apis\Api.cs:行号 30
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 C:\Users\Admin\Source\Repos\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-26 17:20:44,278 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T当前订单正在处理中，请稍后...)","code":"T当前订单正在处理中，请稍后..."} 
+时间：121214 
+
+时间：2017-04-26 17:21:26,805 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 订单号","code":"0x0003"} 
+时间：34049 
+
+时间：2017-04-26 17:21:39,371 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 订单号","code":"0x0003"} 
+时间：46615 
+
+时间：2017-04-26 17:21:56,075 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 订单号","code":"0x0003"} 
+时间：63319 
+
+时间：2017-04-26 17:22:28,322 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 订单号","code":"0x0003"} 
+时间：95566 
+
+时间：2017-04-26 17:25:31,944 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(C:\Users\Admin\Source\Repos\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"缺少参数 订单号","code":"0x0003"} 
+时间：38875 

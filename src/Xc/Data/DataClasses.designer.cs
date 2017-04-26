@@ -42,9 +42,6 @@ namespace X.Data
     partial void Insertx_user(x_user instance);
     partial void Updatex_user(x_user instance);
     partial void Deletex_user(x_user instance);
-    partial void Insertx_charge(x_charge instance);
-    partial void Updatex_charge(x_charge instance);
-    partial void Deletex_charge(x_charge instance);
     partial void Insertx_order_detail(x_order_detail instance);
     partial void Updatex_order_detail(x_order_detail instance);
     partial void Deletex_order_detail(x_order_detail instance);
@@ -72,6 +69,9 @@ namespace X.Data
     partial void Insertx_cart(x_cart instance);
     partial void Updatex_cart(x_cart instance);
     partial void Deletex_cart(x_cart instance);
+    partial void Insertx_charge(x_charge instance);
+    partial void Updatex_charge(x_charge instance);
+    partial void Deletex_charge(x_charge instance);
     #endregion
 		
 		public DataClassesDataContext() : 
@@ -133,14 +133,6 @@ namespace X.Data
 			get
 			{
 				return this.GetTable<x_user>();
-			}
-		}
-		
-		public System.Data.Linq.Table<x_charge> x_charge
-		{
-			get
-			{
-				return this.GetTable<x_charge>();
 			}
 		}
 		
@@ -213,6 +205,14 @@ namespace X.Data
 			get
 			{
 				return this.GetTable<x_cart>();
+			}
+		}
+		
+		public System.Data.Linq.Table<x_charge> x_charge
+		{
+			get
+			{
+				return this.GetTable<x_charge>();
 			}
 		}
 		
@@ -1410,13 +1410,13 @@ namespace X.Data
 		
 		private EntitySet<x_address> _x_address;
 		
-		private EntitySet<x_charge> _x_charge;
-		
 		private EntitySet<x_order> _x_order;
 		
 		private EntitySet<x_integral_log> _x_integral_log;
 		
 		private EntitySet<x_cart> _x_cart;
+		
+		private EntitySet<x_charge> _x_charge;
 		
     #region 可扩展性方法定义
     partial void OnLoaded();
@@ -1467,10 +1467,10 @@ namespace X.Data
 		public x_user()
 		{
 			this._x_address = new EntitySet<x_address>(new Action<x_address>(this.attach_x_address), new Action<x_address>(this.detach_x_address));
-			this._x_charge = new EntitySet<x_charge>(new Action<x_charge>(this.attach_x_charge), new Action<x_charge>(this.detach_x_charge));
 			this._x_order = new EntitySet<x_order>(new Action<x_order>(this.attach_x_order), new Action<x_order>(this.detach_x_order));
 			this._x_integral_log = new EntitySet<x_integral_log>(new Action<x_integral_log>(this.attach_x_integral_log), new Action<x_integral_log>(this.detach_x_integral_log));
 			this._x_cart = new EntitySet<x_cart>(new Action<x_cart>(this.attach_x_cart), new Action<x_cart>(this.detach_x_cart));
+			this._x_charge = new EntitySet<x_charge>(new Action<x_charge>(this.attach_x_charge), new Action<x_charge>(this.detach_x_charge));
 			OnCreated();
 		}
 		
@@ -1887,19 +1887,6 @@ namespace X.Data
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_charge", Storage="_x_charge", ThisKey="user_id", OtherKey="user_id")]
-		public EntitySet<x_charge> x_charge
-		{
-			get
-			{
-				return this._x_charge;
-			}
-			set
-			{
-				this._x_charge.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_order", Storage="_x_order", ThisKey="user_id", OtherKey="user_id")]
 		public EntitySet<x_order> x_order
 		{
@@ -1939,6 +1926,19 @@ namespace X.Data
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_charge", Storage="_x_charge", ThisKey="user_id", OtherKey="user_id")]
+		public EntitySet<x_charge> x_charge
+		{
+			get
+			{
+				return this._x_charge;
+			}
+			set
+			{
+				this._x_charge.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1966,18 +1966,6 @@ namespace X.Data
 		}
 		
 		private void detach_x_address(x_address entity)
-		{
-			this.SendPropertyChanging();
-			entity.x_user = null;
-		}
-		
-		private void attach_x_charge(x_charge entity)
-		{
-			this.SendPropertyChanging();
-			entity.x_user = this;
-		}
-		
-		private void detach_x_charge(x_charge entity)
 		{
 			this.SendPropertyChanging();
 			entity.x_user = null;
@@ -2018,300 +2006,17 @@ namespace X.Data
 			this.SendPropertyChanging();
 			entity.x_user = null;
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.x_charge")]
-	public partial class x_charge : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private long _charge_id;
-		
-		private System.Nullable<long> _user_id;
-		
-		private System.Nullable<long> _amount;
-		
-		private System.Nullable<System.DateTime> _ctime;
-		
-		private string _result;
-		
-		private string _fail_reason;
-		
-		private System.Nullable<int> _audit_status;
-		
-		private System.Nullable<long> _audit_user;
-		
-		private System.Nullable<System.DateTime> _audit_time;
-		
-		private EntityRef<x_user> _x_user;
-		
-    #region 可扩展性方法定义
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Oncharge_idChanging(long value);
-    partial void Oncharge_idChanged();
-    partial void Onuser_idChanging(System.Nullable<long> value);
-    partial void Onuser_idChanged();
-    partial void OnamountChanging(System.Nullable<long> value);
-    partial void OnamountChanged();
-    partial void OnctimeChanging(System.Nullable<System.DateTime> value);
-    partial void OnctimeChanged();
-    partial void OnresultChanging(string value);
-    partial void OnresultChanged();
-    partial void Onfail_reasonChanging(string value);
-    partial void Onfail_reasonChanged();
-    partial void Onaudit_statusChanging(System.Nullable<int> value);
-    partial void Onaudit_statusChanged();
-    partial void Onaudit_userChanging(System.Nullable<long> value);
-    partial void Onaudit_userChanged();
-    partial void Onaudit_timeChanging(System.Nullable<System.DateTime> value);
-    partial void Onaudit_timeChanged();
-    #endregion
-		
-		public x_charge()
+		private void attach_x_charge(x_charge entity)
 		{
-			this._x_user = default(EntityRef<x_user>);
-			OnCreated();
+			this.SendPropertyChanging();
+			entity.x_user = this;
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_charge_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public long charge_id
+		private void detach_x_charge(x_charge entity)
 		{
-			get
-			{
-				return this._charge_id;
-			}
-			set
-			{
-				if ((this._charge_id != value))
-				{
-					this.Oncharge_idChanging(value);
-					this.SendPropertyChanging();
-					this._charge_id = value;
-					this.SendPropertyChanged("charge_id");
-					this.Oncharge_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_id", DbType="BigInt")]
-		public System.Nullable<long> user_id
-		{
-			get
-			{
-				return this._user_id;
-			}
-			set
-			{
-				if ((this._user_id != value))
-				{
-					if (this._x_user.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onuser_idChanging(value);
-					this.SendPropertyChanging();
-					this._user_id = value;
-					this.SendPropertyChanged("user_id");
-					this.Onuser_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="BigInt")]
-		public System.Nullable<long> amount
-		{
-			get
-			{
-				return this._amount;
-			}
-			set
-			{
-				if ((this._amount != value))
-				{
-					this.OnamountChanging(value);
-					this.SendPropertyChanging();
-					this._amount = value;
-					this.SendPropertyChanged("amount");
-					this.OnamountChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ctime", DbType="DateTime")]
-		public System.Nullable<System.DateTime> ctime
-		{
-			get
-			{
-				return this._ctime;
-			}
-			set
-			{
-				if ((this._ctime != value))
-				{
-					this.OnctimeChanging(value);
-					this.SendPropertyChanging();
-					this._ctime = value;
-					this.SendPropertyChanged("ctime");
-					this.OnctimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_result", DbType="NVarChar(200)")]
-		public string result
-		{
-			get
-			{
-				return this._result;
-			}
-			set
-			{
-				if ((this._result != value))
-				{
-					this.OnresultChanging(value);
-					this.SendPropertyChanging();
-					this._result = value;
-					this.SendPropertyChanged("result");
-					this.OnresultChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fail_reason", DbType="NVarChar(400)")]
-		public string fail_reason
-		{
-			get
-			{
-				return this._fail_reason;
-			}
-			set
-			{
-				if ((this._fail_reason != value))
-				{
-					this.Onfail_reasonChanging(value);
-					this.SendPropertyChanging();
-					this._fail_reason = value;
-					this.SendPropertyChanged("fail_reason");
-					this.Onfail_reasonChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_audit_status", DbType="Int")]
-		public System.Nullable<int> audit_status
-		{
-			get
-			{
-				return this._audit_status;
-			}
-			set
-			{
-				if ((this._audit_status != value))
-				{
-					this.Onaudit_statusChanging(value);
-					this.SendPropertyChanging();
-					this._audit_status = value;
-					this.SendPropertyChanged("audit_status");
-					this.Onaudit_statusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_audit_user", DbType="BigInt")]
-		public System.Nullable<long> audit_user
-		{
-			get
-			{
-				return this._audit_user;
-			}
-			set
-			{
-				if ((this._audit_user != value))
-				{
-					this.Onaudit_userChanging(value);
-					this.SendPropertyChanging();
-					this._audit_user = value;
-					this.SendPropertyChanged("audit_user");
-					this.Onaudit_userChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_audit_time", DbType="DateTime")]
-		public System.Nullable<System.DateTime> audit_time
-		{
-			get
-			{
-				return this._audit_time;
-			}
-			set
-			{
-				if ((this._audit_time != value))
-				{
-					this.Onaudit_timeChanging(value);
-					this.SendPropertyChanging();
-					this._audit_time = value;
-					this.SendPropertyChanged("audit_time");
-					this.Onaudit_timeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_charge", Storage="_x_user", ThisKey="user_id", OtherKey="user_id", IsForeignKey=true)]
-		public x_user x_user
-		{
-			get
-			{
-				return this._x_user.Entity;
-			}
-			set
-			{
-				x_user previousValue = this._x_user.Entity;
-				if (((previousValue != value) 
-							|| (this._x_user.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._x_user.Entity = null;
-						previousValue.x_charge.Remove(this);
-					}
-					this._x_user.Entity = value;
-					if ((value != null))
-					{
-						value.x_charge.Add(this);
-						this._user_id = value.user_id;
-					}
-					else
-					{
-						this._user_id = default(Nullable<long>);
-					}
-					this.SendPropertyChanged("x_user");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
+			this.SendPropertyChanging();
+			entity.x_user = null;
 		}
 	}
 	
@@ -6000,6 +5705,301 @@ namespace X.Data
 					if ((value != null))
 					{
 						value.x_cart.Add(this);
+						this._user_id = value.user_id;
+					}
+					else
+					{
+						this._user_id = default(Nullable<long>);
+					}
+					this.SendPropertyChanged("x_user");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.x_charge")]
+	public partial class x_charge : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _charge_id;
+		
+		private System.Nullable<long> _user_id;
+		
+		private System.Nullable<decimal> _amount;
+		
+		private System.Nullable<System.DateTime> _ctime;
+		
+		private string _result;
+		
+		private string _fail_reason;
+		
+		private System.Nullable<int> _audit_status;
+		
+		private System.Nullable<long> _audit_user;
+		
+		private System.Nullable<System.DateTime> _audit_time;
+		
+		private EntityRef<x_user> _x_user;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Oncharge_idChanging(long value);
+    partial void Oncharge_idChanged();
+    partial void Onuser_idChanging(System.Nullable<long> value);
+    partial void Onuser_idChanged();
+    partial void OnamountChanging(System.Nullable<decimal> value);
+    partial void OnamountChanged();
+    partial void OnctimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnctimeChanged();
+    partial void OnresultChanging(string value);
+    partial void OnresultChanged();
+    partial void Onfail_reasonChanging(string value);
+    partial void Onfail_reasonChanged();
+    partial void Onaudit_statusChanging(System.Nullable<int> value);
+    partial void Onaudit_statusChanged();
+    partial void Onaudit_userChanging(System.Nullable<long> value);
+    partial void Onaudit_userChanged();
+    partial void Onaudit_timeChanging(System.Nullable<System.DateTime> value);
+    partial void Onaudit_timeChanged();
+    #endregion
+		
+		public x_charge()
+		{
+			this._x_user = default(EntityRef<x_user>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_charge_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long charge_id
+		{
+			get
+			{
+				return this._charge_id;
+			}
+			set
+			{
+				if ((this._charge_id != value))
+				{
+					this.Oncharge_idChanging(value);
+					this.SendPropertyChanging();
+					this._charge_id = value;
+					this.SendPropertyChanged("charge_id");
+					this.Oncharge_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_id", DbType="BigInt")]
+		public System.Nullable<long> user_id
+		{
+			get
+			{
+				return this._user_id;
+			}
+			set
+			{
+				if ((this._user_id != value))
+				{
+					if (this._x_user.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onuser_idChanging(value);
+					this.SendPropertyChanging();
+					this._user_id = value;
+					this.SendPropertyChanged("user_id");
+					this.Onuser_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> amount
+		{
+			get
+			{
+				return this._amount;
+			}
+			set
+			{
+				if ((this._amount != value))
+				{
+					this.OnamountChanging(value);
+					this.SendPropertyChanging();
+					this._amount = value;
+					this.SendPropertyChanged("amount");
+					this.OnamountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ctime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ctime
+		{
+			get
+			{
+				return this._ctime;
+			}
+			set
+			{
+				if ((this._ctime != value))
+				{
+					this.OnctimeChanging(value);
+					this.SendPropertyChanging();
+					this._ctime = value;
+					this.SendPropertyChanged("ctime");
+					this.OnctimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_result", DbType="NVarChar(200)")]
+		public string result
+		{
+			get
+			{
+				return this._result;
+			}
+			set
+			{
+				if ((this._result != value))
+				{
+					this.OnresultChanging(value);
+					this.SendPropertyChanging();
+					this._result = value;
+					this.SendPropertyChanged("result");
+					this.OnresultChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fail_reason", DbType="NVarChar(400)")]
+		public string fail_reason
+		{
+			get
+			{
+				return this._fail_reason;
+			}
+			set
+			{
+				if ((this._fail_reason != value))
+				{
+					this.Onfail_reasonChanging(value);
+					this.SendPropertyChanging();
+					this._fail_reason = value;
+					this.SendPropertyChanged("fail_reason");
+					this.Onfail_reasonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_audit_status", DbType="Int")]
+		public System.Nullable<int> audit_status
+		{
+			get
+			{
+				return this._audit_status;
+			}
+			set
+			{
+				if ((this._audit_status != value))
+				{
+					this.Onaudit_statusChanging(value);
+					this.SendPropertyChanging();
+					this._audit_status = value;
+					this.SendPropertyChanged("audit_status");
+					this.Onaudit_statusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_audit_user", DbType="BigInt")]
+		public System.Nullable<long> audit_user
+		{
+			get
+			{
+				return this._audit_user;
+			}
+			set
+			{
+				if ((this._audit_user != value))
+				{
+					this.Onaudit_userChanging(value);
+					this.SendPropertyChanging();
+					this._audit_user = value;
+					this.SendPropertyChanged("audit_user");
+					this.Onaudit_userChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_audit_time", DbType="DateTime")]
+		public System.Nullable<System.DateTime> audit_time
+		{
+			get
+			{
+				return this._audit_time;
+			}
+			set
+			{
+				if ((this._audit_time != value))
+				{
+					this.Onaudit_timeChanging(value);
+					this.SendPropertyChanging();
+					this._audit_time = value;
+					this.SendPropertyChanged("audit_time");
+					this.Onaudit_timeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_user_x_charge", Storage="_x_user", ThisKey="user_id", OtherKey="user_id", IsForeignKey=true)]
+		public x_user x_user
+		{
+			get
+			{
+				return this._x_user.Entity;
+			}
+			set
+			{
+				x_user previousValue = this._x_user.Entity;
+				if (((previousValue != value) 
+							|| (this._x_user.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._x_user.Entity = null;
+						previousValue.x_charge.Remove(this);
+					}
+					this._x_user.Entity = value;
+					if ((value != null))
+					{
+						value.x_charge.Add(this);
 						this._user_id = value.user_id;
 					}
 					else

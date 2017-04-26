@@ -43,30 +43,32 @@
             doapi("wx.user.deposit", { amount: amount }, function (d) {
                 if (!d.issucc) return;
                 //document.location.reload();
-                alert("充值成功!");
+
+
                 WeixinJSBridge.invoke(
-                   'getBrandWCPayRequest',
-                   {
-                       "appId": "$cfg.wx_appid",//公众号名称，由商户传入
-                       "timeStamp": d.ts,//时间戳，自1970年以来的秒数
-                       "nonceStr": d.ns, //随机串
-                       "package": d.pkg,
-                       "signType": "MD5",//微信签名方式：
-                       "paySign": d.sign //微信签名
-                   },
-                   function (res) {
-                       hideloading();
-                       alert(JSON.stringify(res));
-                       if (res.err_msg == "get_brand_wcpay_request:ok") {
-                           // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
-                           //if ("$!burl") document.location.href = "$!burl";
-                           //else history.back();
-                           document.location.href = "/wx/order/succ-" + d.id + ".html";
-                       } else {
-                           //$("#img_code").attr("src", "data:image/jpeg;base64," + d.msg).parent().show();
-                           alert("支付失败，请重试！！！");
-                       }
-                   }
+                    'getBrandWCPayRequest',
+                    {
+                        "appId": "$cfg.wx_appid",//公众号名称，由商户传入
+                        "timeStamp": d.ts,//时间戳，自1970年以来的秒数
+                        "nonceStr": d.ns, //随机串
+                        "package": d.pkg,
+                        "signType": "MD5",//微信签名方式：
+                        "paySign": d.sign //微信签名
+                    },
+                    function (res) {
+                        hideloading();
+                        alert(JSON.stringify(res));
+                        if (res.err_msg == "get_brand_wcpay_request:ok") {
+                            // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
+                            //if ("$!burl") document.location.href = "$!burl";
+                            //else history.back();
+                            document.location.href = "/wx/order/succ-" + d.id + ".html";
+                        } else {
+                            //$("#img_code").attr("src", "data:image/jpeg;base64," + d.msg).parent().show();
+                            alert("支付失败，请重试！！！");
+                        }
+                    }
+            )
             });
         }
     </script>

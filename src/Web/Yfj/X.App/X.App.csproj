@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="aliyun-net-sdk-core">
+      <HintPath>..\..\..\..\..\..\..\Desktop\aliyun-net-sdk-core.dll</HintPath>
+    </Reference>
+    <Reference Include="aliyun-net-sdk-sms">
+      <HintPath>..\..\..\..\..\..\..\Desktop\aliyun-net-sdk-sms.dll</HintPath>
+    </Reference>
+    <Reference Include="Aliyun.MNS">
+      <HintPath>..\..\..\..\..\..\..\Desktop\Aliyun.MNS.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
@@ -55,6 +64,9 @@
     <Compile Include="Apis\mgr\article\del.cs" />
     <Compile Include="Apis\mgr\article\list.cs" />
     <Compile Include="Apis\mgr\article\save.cs" />
+    <Compile Include="Apis\mgr\deposit\accept.cs" />
+    <Compile Include="Apis\mgr\deposit\list.cs" />
+    <Compile Include="Apis\mgr\deposit\refuse.cs" />
     <Compile Include="Apis\mgr\index.cs" />
     <Compile Include="Apis\mgr\order\Statistics.cs" />
     <Compile Include="Apis\mgr\refund\accept.cs" />
@@ -138,6 +150,7 @@
     <Compile Include="Views\mgr\cate\edit.cs" />
     <Compile Include="Views\mgr\cate\list.cs" />
     <Compile Include="Views\mgr\cate\select.cs" />
+    <Compile Include="Views\mgr\deposit\list.cs" />
     <Compile Include="Views\mgr\setup.cs" />
     <Compile Include="Views\mgr\article\edit.cs" />
     <Compile Include="Views\mgr\article\list.cs" />
