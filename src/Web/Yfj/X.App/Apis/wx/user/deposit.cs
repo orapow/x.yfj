@@ -11,7 +11,7 @@ using X.Web.Com;
 
 namespace X.App.Apis.wx.user {
     public class deposit : _wx {
-        public int amount { get; set; }
+        public decimal amount { get; set; }
 
         protected override XResp Execute() {
             if (amount > cfg.max_deposit || amount < cfg.min_deposit)
