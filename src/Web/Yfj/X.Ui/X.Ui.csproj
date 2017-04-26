@@ -278,6 +278,7 @@
     <Content Include="tpl\wx\order\list.html" />
     <Content Include="tpl\wx\order\detail.html" />
     <Content Include="tpl\wx\user\setting.html" />
+    <Content Include="tpl\wx\user\deposit.html" />
     <Content Include="tpl\wx\user\update.html" />
     <Content Include="tpl\wx\_foot.html" />
     <Content Include="tpl\wx\_head.html" />

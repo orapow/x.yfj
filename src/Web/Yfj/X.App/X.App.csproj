@@ -116,6 +116,7 @@
     <Compile Include="Apis\wx\order\pay.cs" />
     <Compile Include="Apis\wx\order\md.cs" />
     <Compile Include="Apis\wx\reg.cs" />
+    <Compile Include="Apis\wx\user\deposit.cs" />
     <Compile Include="Apis\wx\user\savepswd.cs" />
     <Compile Include="Apis\wx\user\save.cs" />
     <Compile Include="Apis\wx\_wx.cs" />
@@ -189,6 +190,7 @@
     <Compile Include="Views\wx\order\succ.cs" />
     <Compile Include="Views\wx\bind.cs" />
     <Compile Include="Views\wx\user\mpwd.cs" />
+    <Compile Include="Views\wx\user\deposit.cs" />
     <Compile Include="Views\wx\user\update.cs" />
     <Compile Include="Views\wx\user\index.cs" />
     <Compile Include="Views\wx\notify.cs" />
