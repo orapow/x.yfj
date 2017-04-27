@@ -31,7 +31,7 @@ namespace X.App.Views.wx.user
             }
             else
             {
-                decimal shipAmount = cu.x_cart.Where(o => o.calcfreight == 1).Sum(o => o.price).Value;//??
+                decimal shipAmount = cu.x_cart.Where(o => o.calcfreight == 1).Sum(o => o.price * o.count).Value;//??
                 decimal shipfee = shipAmount >= cfg.free_ship ? 0 : cfg.shipfee;
                 dict.Add("gs", cu.x_cart.ToList());
                 dict.Add("gc", cu.x_cart.Where(o => o.sel == true).Sum(o => o.count));

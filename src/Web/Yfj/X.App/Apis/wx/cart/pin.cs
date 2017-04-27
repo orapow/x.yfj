@@ -31,6 +31,7 @@ namespace X.App.Apis.wx.cart
                     price = gd.new_price,
                     total_price = gd.new_price,
                     user_id = cu.id,
+                    calcfreight=gd.calcfreight,
                     sel = true
                 };
                 cu.x_cart.Add(g);

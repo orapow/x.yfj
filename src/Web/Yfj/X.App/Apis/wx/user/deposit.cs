@@ -61,7 +61,7 @@ namespace X.App.Apis.wx.user {
 
             var r = new od() {
                 id = depositLog.charge_id,
-                amount = amount + "",
+                amount = depositLog.amount.Value,
                 ns = ps["nonceStr"],
                 ts = ps["timeStamp"],
                 pkg = ps["package"],
@@ -75,7 +75,7 @@ namespace X.App.Apis.wx.user {
             public long id {
                 get; set;
             }
-            public string amount {
+            public decimal amount {
                 get; set;
             }
             public string ts {

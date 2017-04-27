@@ -28,7 +28,8 @@ namespace X.App.Apis.com {
                 //key: LTAIP8aKCv1LUo4P
                 //t = Sms.SendCode(tel, Tools.GetRandRom(4, 1), "LTAIP8aKCv1LUo4P", "优辅家", "SMS_63315079");
                 //t = Sms.sendSmsViaSDK("优辅家", "LTAIP8aKCv1LUo4P", "S0DiD9VFx5gC4fhnCKWy3wMONy3J7z", "SMS_63315079",tel, Tools.GetRandRom(4, 1));
-                t = Sms.sendSmsViaMnsSDK("优辅家", "LTAIP8aKCv1LUo4P", "S0DiD9VFx5gC4fhnCKWy3wMONy3J7z", "SMS_63315079", tel, Tools.GetRandRom(4, 1), "https://1625487773132895.mns.cn-hangzhou.aliyuncs.com/", "sms.topic-cn-hangzhou");
+                t = Sms.sendSmsViaMnsSDK("优辅家", "LTAIP8aKCv1LUo4P", "S0DiD9VFx5gC4fhnCKWy3wMONy3J7z", "SMS_63315079", tel, 
+                    Tools.GetRandRom(4, 1), "https://1625487773132895.mns.cn-hangzhou.aliyuncs.com/", "sms.topic-cn-hangzhou");
             } catch(Exception e) {
 
                 t = false;
