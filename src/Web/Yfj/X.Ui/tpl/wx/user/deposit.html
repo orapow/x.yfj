@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>帐户充值</title>
+</head>
+<body style="background:#f4f4f4;">
+    <input type="file" id="bt_file" onchange="upload(this)" style="display:none;" />
+    <div class="guanli">
+        <ul>
+            <li>充值金额：($cfg.min_deposit 到 $cfg.max_deposit)</li>
+            <li><input type="number" id="id_deposit" /></li>
+            <!--<li>
+                <a href="#">修改用户头像</a>
+                <div class="shang">s
+                    <img src="/img/wx/gh.png" id="cp" /><input type="button" value="上传图片" class="txt06" onclick="$('#bt_file').click();" />
+                    <div class=" clear"=clear"></div>
+                </div>
+            </li>-->
+        </ul>
+        <div class="qr"><a href="javascript:;" style="color:white;display:block;height:100%;" onclick="doDeposit()">保存</a></div>
+    </div>
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+        function save() {
+            var d = {
+                ct: $("#ct").val(),
+                cn: $("#cn").val()
+            }
+            if (!cn) { alert("姓名不能为空"); return; }
+            doapi("wx.user.save", d, function (d) {
+                if (!d.issucc) return;
+                document.location.reload();
+            })
+        }
+
+        function doDeposit() {
+            var amount = $("#id_deposit").val();
+            if (!amount) {
+                alert("请输入金额");
+                return;
+            }
+            doapi("wx.user.deposit", { amount: amount }, function (d) {
+                if (!d.issucc) return;
+                //document.location.reload();
+
+
+                WeixinJSBridge.invoke(
+                    'getBrandWCPayRequest',
+                    {
+                        "appId": "$cfg.wx_appid",//公众号名称，由商户传入
+                        "timeStamp": d.ts,//时间戳，自1970年以来的秒数
+                        "nonceStr": d.ns, //随机串
+                        "package": d.pkg,
+                        "signType": "MD5",//微信签名方式：
+                        "paySign": d.sign //微信签名
+                    },
+                    function (res) {
+                        hideloading();
+                        alert(JSON.stringify(res));
+                        if (res.err_msg == "get_brand_wcpay_request:ok") {
+                            // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
+                            //if ("$!burl") document.location.href = "$!burl";
+                            //else history.back();
+                            document.location.href = "/wx/order/succ-" + d.id + ".html";
+                        } else {
+                            //$("#img_code").attr("src", "data:image/jpeg;base64," + d.msg).parent().show();
+                            alert("支付失败，请重试！！！");
+                        }
+                    }
+            )
+            });
+        }
+    </script>
+</body>
+</html>

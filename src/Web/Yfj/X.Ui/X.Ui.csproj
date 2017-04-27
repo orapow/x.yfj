@@ -228,6 +228,7 @@
     <Content Include="tpl\mgr\city\list.html" />
     <Content Include="tpl\mgr\cate\edit.html" />
     <Content Include="tpl\mgr\cate\list.html" />
+    <Content Include="tpl\mgr\deposit\list.html" />
     <Content Include="tpl\mgr\main.html" />
     <Content Include="tpl\mgr\refund\edit.html" />
     <Content Include="tpl\mgr\sman\stati.html" />
@@ -278,6 +279,7 @@
     <Content Include="tpl\wx\order\list.html" />
     <Content Include="tpl\wx\order\detail.html" />
     <Content Include="tpl\wx\user\setting.html" />
+    <Content Include="tpl\wx\user\deposit.html" />
     <Content Include="tpl\wx\user\update.html" />
     <Content Include="tpl\wx\_foot.html" />
     <Content Include="tpl\wx\_head.html" />
