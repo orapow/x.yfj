@@ -68,26 +68,26 @@
                 { t: "充值金额", f: "{amount}", w: 80, align: "left" },
                 { t: "发起时间", f: "{ctime}", w: 160, align: "left" },
                 { t: "充值结果", f: "{result}", w: 60, align: "left" },
-               // { t: "审核状态", f: "{status}", w: 60, align: "left" },
-                { t: "审核状态", f: {status}=="1"?"待审核": {status}==1?"已同意":"ddd", w: 60, align: "left" },
+                { t: "审核状态", f: "{statusDisplay}", w: 60, align: "left" },
                 
             ],
             btns: [
-                { txt: "详细", ico: "reorder", act: "detail", confirm: false }
+                //{ txt: "详细", ico: "reorder", act: "detail", confirm: false }
             ]
         };
 
         cfg.getbtns = function (o) {
             var btns = [];
             //refund.staus 1=待处理 2=同意 3=不同意
-            if (o.status == 1) {
-                btns.push({ txt: "同意", ico: "ok", act: "accept",confirm:false });
-                btns.push({ txt: "拒绝", ico: "remove", act: "refuse" });
-                //btns.push({txt:"编辑",ico:"edit",act:"edit"});
-            } else if (o.status == 2)
+            if (o.status == 2)
                 btns.push({ txt: "已同意", ico: "ok", act: "" });
             else if (o.status == 3)
                 btns.push({ txt: "已拒绝", ico: "remove", act: "" });
+            else {
+                btns.push({ txt: "同意", ico: "ok", act: "accept"});
+                btns.push({ txt: "拒绝", ico: "remove", act: "refuse" });
+                //btns.push({txt:"编辑",ico:"edit",act:"edit"});
+            }
             return btns;
         }
 
@@ -111,27 +111,21 @@
         var g = x.grid.init(cfg);
 
         function doRefuse(id) {
+            
             x.input("请输入拒绝原因", function (r) {
-                x.doapi("mgr.deposit.refuse", { id: id,reason:r }, function (d) {
+                x.doapi("mgr.deposit.refuse", { deposit_id: id, reason: r }, function (d) {
                     if (!d.issucc) return;
                     g.getlist();
                 })
             }, 2, true);
         }
         function doAccept(id) {
-            //x.doapi("mgr.refund.accept", { id: id }, function (d) {
-            //    if (!d.issucc) return;
-            //    g.getlist();
-            //});
-
-            //x.input("最后编辑并确认退款信息",
-            //    function (r) {
-            //        x.doapi("mgr.refund.accept", { id: id,remark:r,ramount:ramount }, function (d) {
-            //            if (!d.issucc) return;
-            //            g.getlist();
-            //        })
-            //}, 2, true);
-            show_edit(id);
+            x.doapi("mgr.deposit.accept", { deposit_id: id }, function (d) {
+                if (!d.issucc) return;
+                //x.alert("接受成功");//加载框咋去？？
+                g.getlist();
+                //x.closewin();
+            });
         }
 
         function show_edit(id) {

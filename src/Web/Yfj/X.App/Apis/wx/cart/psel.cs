@@ -16,7 +16,7 @@ namespace X.App.Apis.wx.cart
 
             g.sel = !g.sel;
             SubmitDBChanges();
-            decimal shipAmount = cu.x_cart.Where(o => o.calcfreight == 1).Sum(o => o.price).Value;
+            decimal shipAmount = cu.x_cart.Where(o => o.calcfreight == 1).Sum(o => o.price * o.count).Value;
             return new back()
             {
                 gs = cu.x_cart.Where(o => o.sel == true).Count(),

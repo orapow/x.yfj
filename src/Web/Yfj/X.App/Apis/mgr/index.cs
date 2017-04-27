@@ -17,7 +17,7 @@ namespace X.App.Apis.mgr {
 
             int[][] result=new int[3][];
             result[0]=Statistics.getOrderStati(startTime, 24, DB);
-            result[1] = Statistics.getOrderStati(startTime, 24, DB);
+            result[1] = Statistics.getMemberStati(startTime, 24, DB);
             result[2]=Statistics.getMemberStati(startTime, 24, DB);
             
             return new XResp() { 

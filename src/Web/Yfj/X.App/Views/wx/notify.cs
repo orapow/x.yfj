@@ -73,6 +73,9 @@ namespace X.App.Views.wx {
                 var depositItem = DB.x_charge.SingleOrDefault(o => o.charge_id == depositNo);
                 if (depositItem == null) {
                     Loger.Info("充值记录不存在，订单号：" + no);
+                    depositItem.ctime = DateTime.Now;
+                    depositItem.result = "FAIL";
+                    SubmitDBChanges();
                     return Encoding.UTF8.GetBytes(okxml);
                 }
                 depositItem.ctime = DateTime.Now;

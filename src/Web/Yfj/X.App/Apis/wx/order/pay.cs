@@ -9,15 +9,14 @@ using X.Data;
 using X.Web;
 using X.Web.Com;
 
-namespace X.App.Apis.wx.order
-{
-    public class pay : _wx
-    {
+namespace X.App.Apis.wx.order {
+    public class pay : _wx {
         [ParmsAttr(name = "订单id", min = 1)]
         public int id { get; set; }
 
-        protected override XResp Execute()
-        {
+        public int pay_way { get; set; }
+
+        private XResp wechatPay() {
             var c = CacheHelper.Get<string>("pay." + cu.id);
             if (!string.IsNullOrEmpty(c)) throw new XExcep("T当前订单正在处理中，请稍后...");
 
@@ -45,8 +44,7 @@ namespace X.App.Apis.wx.order
             ps.Add("package", "prepay_id=" + od.wx_no);
             ps.Add("signType", "MD5");
 
-            var r = new od()
-            {
+            var r = new od() {
                 id = od.order_id,
                 amount = od.yf_amount.Value.ToString("F2"),
                 ns = ps["nonceStr"],
@@ -56,10 +54,48 @@ namespace X.App.Apis.wx.order
             };
 
             return r;
-
         }
-        public class od : XResp
-        {
+
+        private XResp balancePay() {
+
+            var c = CacheHelper.Get<string>("pay." + cu.id);
+            if (!string.IsNullOrEmpty(c)) throw new XExcep("T当前订单正在处理中，请稍后...");
+
+            CacheHelper.Save("pay." + cu.id, "1");
+            var od = cu.x_order.FirstOrDefault(o => o.order_id == id);
+            if (od.pay_amount > 0) throw new XExcep("T当前订单已经支付，请不要重复支付");
+            if (od.status != 1) throw new XExcep("T当前订单状态不正确");
+
+            if (od.pay_way == 2) return new od() { amount = od.yf_amount.Value.ToString("F2"), id = od.order_id };
+
+            CacheHelper.Remove("pay." + cu.id);
+
+
+            //对订单状态的处理不通过回掉进行
+            if (cu.balance < od.amount)
+                throw new XExcep("T账户余额不足");
+            cu.balance -= od.amount;
+            od.pay_time = DateTime.Now;
+            od.pay_amount = od.yf_amount;
+            od.status = 2;
+            SubmitDBChanges();
+
+            var r = new od() {
+                id = od.order_id,
+                amount = od.yf_amount.Value.ToString("F2"),
+                
+            };
+
+            return r;
+        }
+
+        protected override XResp Execute() {
+            if ( pay_way == 1)
+                return wechatPay();
+            else
+                return balancePay();
+        }
+        public class od : XResp {
             public long id { get; set; }
             public string amount { get; set; }
             public string ts { get; set; }

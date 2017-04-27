@@ -41,10 +41,6 @@
                 return;
             }
             doapi("wx.user.deposit", { amount: amount }, function (d) {
-                if (!d.issucc) return;
-                //document.location.reload();
-
-
                 WeixinJSBridge.invoke(
                     'getBrandWCPayRequest',
                     {
@@ -57,18 +53,20 @@
                     },
                     function (res) {
                         hideloading();
-                        alert(JSON.stringify(res));
+                        //alert(JSON.stringify(res));
                         if (res.err_msg == "get_brand_wcpay_request:ok") {
                             // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
                             //if ("$!burl") document.location.href = "$!burl";
                             //else history.back();
-                            document.location.href = "/wx/order/succ-" + d.id + ".html";
+                            document.location.href = "/wx/order/succ-" + d.id + "-"+d.fromDeposit+".html";
                         } else {
                             //$("#img_code").attr("src", "data:image/jpeg;base64," + d.msg).parent().show();
                             alert("支付失败，请重试！！！");
                         }
                     }
             )
+               if (!d.issucc) return;
+                //document.location.reload();
             });
         }
     </script>
