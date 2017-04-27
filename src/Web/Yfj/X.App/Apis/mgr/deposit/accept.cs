@@ -10,10 +10,8 @@ using X.App.Com;
 
 namespace X.App.Apis.mgr.deposit {
     public class accept : xmg {
-        public int id { get; set; }
-        public Decimal ramount { get; set; }
-
-        public String remark { get; set; }
+        public int deposit_id { get; set; }
+        
         protected override int powercode {
             get {
                 return 1;
@@ -21,25 +19,13 @@ namespace X.App.Apis.mgr.deposit {
         }
 
         protected override XResp Execute() {
-            var od = DB.x_refund.FirstOrDefault(o => o.refund_id == id);
-
-            if (od == null) throw new XExcep("T订单不存在");
-            if (od.status != 1) throw new XExcep("T订单状态不正确");
-            od.remark = remark;
-            od.ramount = ramount;
-            var response = Wx.Pay.Refund(cfg.wx_appid, cfg.wx_mch_id, od.x_order.x_user.wx_opid, od.x_order.no, od.refund_id.ToString(),
-                (int)(od.x_order.yf_amount * 100) + "", ((int)(ramount * 100)).ToString(), cfg.wx_paykey, cfg.wx_certpath);
-            if(response.return_code.Equals("FAIL"))
-                throw new XExcep("T退款失败,原因: " + response.return_msg);
-            if (response.result_code.Equals("SUCCESS")) {
-                od.status = 2;
-                od.aname = mg.name;
-                od.atime = DateTime.Now;
-                
-                SubmitDBChanges();
-            } else
-                throw new XExcep("T退款失败,原因: " + response.err_code_des);
-
+            var depositItem = DB.x_charge.FirstOrDefault(o => o.charge_id == deposit_id);
+            if (depositItem ==null)
+                throw new XExcep("T充值记录不存在");
+            depositItem.audit_status = 2;
+            depositItem.audit_time = DateTime.Now;
+            depositItem.audit_user = mg.mgr_id;
+            SubmitDBChanges();
             return new XResp();
         }
     }

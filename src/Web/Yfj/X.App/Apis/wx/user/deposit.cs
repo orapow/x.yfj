@@ -22,6 +22,7 @@ namespace X.App.Apis.wx.user {
             depositLog.amount = amount;
             //depositLog.user_id=cu.user_id;
             depositLog.ctime = DateTime.Now;
+            depositLog.audit_status = 1;//1为待审核
             cu.x_charge.Add(depositLog);
             SubmitDBChanges();
 
@@ -41,6 +42,7 @@ namespace X.App.Apis.wx.user {
                 throw new XExcep(co.return_msg);
             }
             if (co.result_code == "FAIL") {
+                //DB.x_charge.DeleteOnSubmit(depositLog);
                 SubmitDBChanges();
                 throw new XExcep(co.err_code + "," + co.err_code_des);
             }
@@ -49,6 +51,7 @@ namespace X.App.Apis.wx.user {
                 throw new XExcep("T预付款号为空");
             }
             depositLog.result = "SUCCESS";
+            
             SubmitDBChanges();
             //od.wx_no = co.prepay_id;
 
@@ -65,7 +68,8 @@ namespace X.App.Apis.wx.user {
                 ns = ps["nonceStr"],
                 ts = ps["timeStamp"],
                 pkg = ps["package"],
-                sign = Wx.ToSign(ps, false, cfg.wx_paykey)
+                sign = Wx.ToSign(ps, false, cfg.wx_paykey),
+                fromDeposit=2
             };
 
             return r;
@@ -90,6 +94,7 @@ namespace X.App.Apis.wx.user {
             public string sign {
                 get; set;
             }
+            public int fromDeposit { get; set; }
         }
     }
 }

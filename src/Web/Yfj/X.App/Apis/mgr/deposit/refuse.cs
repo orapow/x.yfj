@@ -9,7 +9,7 @@ using X.Web.Com;
 
 namespace X.App.Apis.mgr.deposit {
     public class refuse : xmg {
-        public int id { get; set; }
+        public int deposit_id { get; set; }
         public string reason { get; set; }
         protected override int powercode {
             get {
@@ -18,16 +18,16 @@ namespace X.App.Apis.mgr.deposit {
         }
 
         protected override XResp Execute() {
-            var od = DB.x_refund.FirstOrDefault(o => o.refund_id == id);
+            var depositItem = DB.x_charge.FirstOrDefault(o => o.charge_id == deposit_id);
+            if (depositItem == null)
+                throw new XExcep("T充值记录不存在");
 
-            if (od == null) throw new XExcep("T订单不存在");
-            if (od.status != 1) throw new XExcep("T订单状态不正确");
+            ////可能的退款操作
 
-            od.status = 3;
-            od.aname = mg.name;
-            od.atime = DateTime.Now;//????服务器时间
-            od.remark = reason;
-
+            depositItem.audit_status = 3;
+            depositItem.audit_time = DateTime.Now;
+            depositItem.audit_user = mg.mgr_id;
+            depositItem.fail_reason = reason;
             SubmitDBChanges();
 
             return new XResp();

@@ -9,10 +9,8 @@ using X.Data;
 using X.Web;
 using X.Web.Com;
 
-namespace X.App.Apis.wx.order
-{
-    public class md : _wx
-    {
+namespace X.App.Apis.wx.order {
+    public class md : _wx {
         [ParmsAttr(name = "支付方式", min = 1)]
         public int way { get; set; }
         [ParmsAttr(name = "收货地址", min = 1)]
@@ -24,8 +22,7 @@ namespace X.App.Apis.wx.order
         [ParmsAttr(name = "送货时间", req = true)]
         public string time { get; set; }
         public string remark { get; set; }
-        protected override XResp Execute()
-        {
+        protected override XResp Execute() {
             var c = CacheHelper.Get<string>("pay." + cu.id);
             if (!string.IsNullOrEmpty(c)) throw new XExcep("T当前订单正在处理中，请稍后...");
 
@@ -44,14 +41,10 @@ namespace X.App.Apis.wx.order
 
             od.city = cu.city;
 
-            decimal shipamount = 0;
+            decimal shipamount = gds.Where(o => o.calcfreight == 1).Sum(o => o.price * o.count).Value;
 
-            foreach (var g in gds)
-            {
-                if (g.calcfreight==1)
-                shipamount += g.price.Value;
-                od.x_order_detail.Add(new x_order_detail()
-                {
+            foreach (var g in gds) {
+                od.x_order_detail.Add(new x_order_detail() {
                     count = g.count,
                     cover = g.cover,
                     goods_id = g.goods_id,
@@ -60,7 +53,7 @@ namespace X.App.Apis.wx.order
                     unit = g.unit,
                     stand = g.desc,
                     total_price = g.count * g.price
-                    
+
                 });
             }
 

@@ -120,7 +120,7 @@
             <p><span>联系人：</span>$od.rec_man</p>
             <p><span>联系电话：</span>$od.rec_tel</p>
             <p><span>收货时间：</span>$od.send_date.tostring("yyyy-MM-dd ") $od.send_time</p>
-            <p><span>支付方式：</span>#if($od.pay_way==1)在线支付#else货到付款#end</p>
+            <p><span>支付方式：</span>#if($od.pay_way==1)在线支付#elseif($od.pay_way==2)货到付款#else 余额支付#end</p>
             <p><span>是否付款：</span>#if($od.pay_amount>0)已付款 $!od.pay_time.tostring("yyyy-MM-dd HH:mm:ss") #else未付款#end</p>
             #if($od.send_man.length>0)<p><span>配送人：</span>$od.send_man</p>#end
             <p><span>订单备注：</span>$od.user_remark</p>
@@ -148,14 +148,24 @@
             <p>优惠金额：<span>-￥$od.fav_amount</span></p>
         </div>
     </div>
-    #if($od.status!=6&&$od.pay_way==1&&!($od.pay_amount>0))
+    #if($od.status!=6&&($od.pay_way==1||$od.pay_way==3)&&!($od.pay_amount>0))
     <div class="fuchen">
         <h2>金额：$od.yf_amount元</h2>
-        <input type="button" value="确认付款" class="but" onclick="dopay()" />
+        <input type="button" value="确认付款" class="but" onclick="checkout()" />
     </div>
     <script type="text/javascript">
+        function checkout() {
+            if ($od.pay_way == 1)
+                dopay();
+            else
+                doapi("wx.order.pay", { id: "$od.order_id", pay_way: 3 }, function (d) {
+                    if (!d.issucc) return;
+                    document.location.href = "/wx/order/succ-" + d.id + ".html";
+                });
+        }
+
         function dopay() {
-            doapi("wx.order.pay", { id: "$od.order_id" }, function (d) {
+            doapi("wx.order.pay", { id: "$od.order_id", pay_way: "$od.pay_way" }, function (d) {
                 if (!d.issucc) return;
                 WeixinJSBridge.invoke(
                     'getBrandWCPayRequest',

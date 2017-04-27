@@ -87,6 +87,7 @@
         <p>
             <input type="radio" name="pay" value="1" class="txt02 nn pay" onclick="selectpay(this)" /><span>在线支付</span>
             <input type="radio" name="pay" value="2" class="txt02 pay" onclick="selectpay(this)" /><span>货到付款</span>
+            <input type="radio" name="pay" value="3" class="txt02 pay" onclick="selectpay(this)" /><span>余额支付</span>
         </p>
         <p>
             <div class="clear"></div>
@@ -196,10 +197,12 @@
             if (ct == 0) $("[data-id='" + gid + "']").remove();
             $("[data-id='" + gid + "'] input").val(ct);
             $("span.am").text(ps + "元(共" + gc + "件)");
+            $("#id_shipfee").text("￥"+shipfee);
             if (sel != 2) {
                 $("[data-id='" + gid + "'] .sel").addClass("nn");
-               // $("#id_shipfee").val(shipfee);
-        }
+               
+            }
+            
         else $("[data-id='" + gid + "'] .sel").removeClass("nn");
         }
 

@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace X.App.Views.wx.order
-{
-    public class succ : _wx
-    {
+namespace X.App.Views.wx.order {
+    public class succ : _wx {
         public int id { get; set; }
-        protected override string GetParmNames
-        {
-            get
-            {
-                return "id";
+        public int fromDeposit { get; set; }
+        protected override string GetParmNames {
+            get {
+                return "id-fromDeposit";
             }
         }
-        protected override void InitDict()
-        {
+        protected override void InitDict() {
             base.InitDict();
-            dict.Add("od", cu.x_order.FirstOrDefault(o => o.order_id == id));
+            if (fromDeposit == 2)
+                dict.Add("od", cu.x_charge.FirstOrDefault(o => o.charge_id == id));
+            else
+                dict.Add("od", cu.x_order.FirstOrDefault(o => o.order_id == id));
         }
     }
 }
