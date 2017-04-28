@@ -15,6 +15,11 @@ namespace X.App.Apis.mgr.user
         public int sman { get; set; }
         public string name { get; set; }
         public string tel { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {

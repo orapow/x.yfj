@@ -17,6 +17,11 @@ namespace X.App.Apis.mgr.user
         public int limit { get; set; }
         public string key { get; set; }
         public int city { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {
@@ -26,7 +31,7 @@ namespace X.App.Apis.mgr.user
             var q = from u in DB.x_user
                     select u;
 
-            if (city > 0) q = q.Where(o => o.city == (mg.x_role.power == "###" ? city : mg.city));
+            //if (city > 0) q = q.Where(o => o.city == (mg.x_role.power == "###" ? city : mg.city));
             if (!string.IsNullOrEmpty(key)) q = q.Where(o => o.name.Contains(key) || o.tel.Contains(key) || o.nickname.Contains(key));
 
             var list = q.OrderByDescending(o => o.ctime).Skip((page - 1) * limit).Take(limit).ToList();

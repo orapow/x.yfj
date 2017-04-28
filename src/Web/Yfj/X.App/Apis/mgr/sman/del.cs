@@ -13,6 +13,11 @@ namespace X.App.Apis.mgr.sman
     {
         [ParmsAttr(min = 1)]
         public int id { get; set; }
+        protected override int powercode {
+            get {
+                return 2;
+            }
+        }
 
         protected override XResp Execute()
         {

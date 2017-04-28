@@ -16,6 +16,11 @@ namespace X.App.Apis.mgr.sman
         public string tel { get; set; }
         public string img { get; set; }
 
+        protected override int powercode {
+            get {
+                return 2;
+            }
+        }
         protected override XResp Execute()
         {
             x_dict ent = null;

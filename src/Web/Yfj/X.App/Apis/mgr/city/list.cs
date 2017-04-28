@@ -16,6 +16,11 @@ namespace X.App.Apis.mgr.city
         public string key { get; set; }
 
         string code = "sys.city";
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {

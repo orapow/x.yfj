@@ -12,6 +12,11 @@ namespace X.App.Apis.mgr.order
     public class ok : xmg
     {
         public int id { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {

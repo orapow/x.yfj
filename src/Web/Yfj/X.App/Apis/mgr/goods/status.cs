@@ -25,6 +25,12 @@ namespace X.App.Apis.mgr.goods
         /// </summary>
         public int type { get; set; }
 
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
+
         protected override XResp Execute()
         {
             var ent = DB.x_goods.FirstOrDefault(o => o.goods_id == id);

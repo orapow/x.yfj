@@ -15,6 +15,11 @@ namespace X.App.Apis.mgr.dict
         public string code { get; set; }
         [ParmsAttr(min = 1)]
         public int id { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {

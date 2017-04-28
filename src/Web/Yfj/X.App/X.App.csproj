@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="aliyun-net-sdk-core">
+      <HintPath>..\..\..\..\libs\aliyun-net-sdk-core.dll</HintPath>
+    </Reference>
+    <Reference Include="aliyun-net-sdk-sms">
+      <HintPath>..\..\..\..\libs\aliyun-net-sdk-sms.dll</HintPath>
+    </Reference>
+    <Reference Include="Aliyun.MNS">
+      <HintPath>..\..\..\..\libs\Aliyun.MNS.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
@@ -39,6 +48,10 @@
   <ItemGroup>
     <Compile Include="Apis\com\sendcode.cs" />
     <Compile Include="Apis\com\uploadbd.cs" />
+    <Compile Include="Apis\mgr\admin\setup.cs" />
+    <Compile Include="Apis\mgr\admin\del.cs" />
+    <Compile Include="Apis\mgr\admin\list.cs" />
+    <Compile Include="Apis\mgr\admin\save.cs" />
     <Compile Include="Apis\mgr\ads\del.cs" />
     <Compile Include="Apis\mgr\ads\list.cs" />
     <Compile Include="Apis\mgr\ads\save.cs" />
@@ -51,6 +64,10 @@
     <Compile Include="Apis\mgr\article\del.cs" />
     <Compile Include="Apis\mgr\article\list.cs" />
     <Compile Include="Apis\mgr\article\save.cs" />
+    <Compile Include="Apis\mgr\deposit\accept.cs" />
+    <Compile Include="Apis\mgr\deposit\list.cs" />
+    <Compile Include="Apis\mgr\deposit\refuse.cs" />
+    <Compile Include="Apis\mgr\deposit\manual.cs" />
     <Compile Include="Apis\mgr\index.cs" />
     <Compile Include="Apis\mgr\order\Statistics.cs" />
     <Compile Include="Apis\mgr\refund\accept.cs" />
@@ -112,6 +129,7 @@
     <Compile Include="Apis\wx\order\pay.cs" />
     <Compile Include="Apis\wx\order\md.cs" />
     <Compile Include="Apis\wx\reg.cs" />
+    <Compile Include="Apis\wx\user\deposit.cs" />
     <Compile Include="Apis\wx\user\savepswd.cs" />
     <Compile Include="Apis\wx\user\save.cs" />
     <Compile Include="Apis\wx\_wx.cs" />
@@ -124,6 +142,8 @@
     <Compile Include="Views\com\code.cs" />
     <Compile Include="Views\com\dict.cs" />
     <Compile Include="Views\com\getpos.cs" />
+    <Compile Include="Views\mgr\admin\edit.cs" />
+    <Compile Include="Views\mgr\admin\list.cs" />
     <Compile Include="Views\mgr\ads\edit.cs" />
     <Compile Include="Views\mgr\ads\list.cs" />
     <Compile Include="Views\mgr\city\edit.cs" />
@@ -131,7 +151,10 @@
     <Compile Include="Views\mgr\cate\edit.cs" />
     <Compile Include="Views\mgr\cate\list.cs" />
     <Compile Include="Views\mgr\cate\select.cs" />
-    <Compile Include="Views\mgr\config.cs" />
+    <Compile Include="Views\mgr\deposit\manual.cs" />
+    <Compile Include="Views\mgr\deposit\list.cs" />
+    <Compile Include="Views\mgr\order\manual.cs" />
+    <Compile Include="Views\mgr\setup.cs" />
     <Compile Include="Views\mgr\article\edit.cs" />
     <Compile Include="Views\mgr\article\list.cs" />
     <Compile Include="Views\mgr\main.cs" />
@@ -183,6 +206,7 @@
     <Compile Include="Views\wx\order\succ.cs" />
     <Compile Include="Views\wx\bind.cs" />
     <Compile Include="Views\wx\user\mpwd.cs" />
+    <Compile Include="Views\wx\user\deposit.cs" />
     <Compile Include="Views\wx\user\update.cs" />
     <Compile Include="Views\wx\user\index.cs" />
     <Compile Include="Views\wx\notify.cs" />

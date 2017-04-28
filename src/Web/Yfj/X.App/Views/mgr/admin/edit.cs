@@ -20,7 +20,7 @@ namespace X.App.Views.mgr.admin
             base.InitDict();
             if (id > 0)
             {
-                var ag = DB.x_admin.SingleOrDefault(o => o.admin_id == id);
+                var ag = DB.x_mgr.SingleOrDefault(o => o.mgr_id == id);
                 if (ag == null) throw new XExcep("0x0005");
                 dict.Add("item", ag);
             }

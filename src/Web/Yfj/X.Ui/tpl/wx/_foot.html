@@ -76,7 +76,7 @@
         doapi("wx.cart.pin", { gid: gid }, function (d) {
             if (!d.issucc) return;
             try {
-                cartchange(d.ct, d.gc, d.ps, gid);
+                cartchange(d.ct, d.gc, d.ps, gid,d.sel,d.shipfee);
             } catch (e) { }
         });
     }
@@ -85,7 +85,7 @@
         doapi("wx.cart.pout", { gid: gid, del: val == 0 ? 1 : 0 }, function (d) {
             if (!d.issucc) return;
             try {
-                cartchange(d.ct, d.gc, d.ps, gid);
+                cartchange(d.ct, d.gc, d.ps, gid,d.sel,d.shipfee);
             } catch (e) { }
         });
     }

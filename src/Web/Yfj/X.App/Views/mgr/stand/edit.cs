@@ -7,6 +7,13 @@ namespace X.App.Views.mgr.stand
     {
         public int id { get; set; }
         public string ct { get; set; }
+
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
+
         protected override string GetParmNames
         {
             get

@@ -19,7 +19,7 @@ namespace X.App.Views.wx.user
         }
         protected override void InitDict()
         {
-            base.InitDict();
+            base.InitDict();  
 
             if (cu.x_cart.Count() == 0)
             {
@@ -31,10 +31,12 @@ namespace X.App.Views.wx.user
             }
             else
             {
+                decimal shipAmount = cu.x_cart.Where(o => o.calcfreight == 1).Sum(o => o.price * o.count).Value;//??
+                decimal shipfee = shipAmount >= cfg.free_ship ? 0 : cfg.shipfee;
                 dict.Add("gs", cu.x_cart.ToList());
                 dict.Add("gc", cu.x_cart.Where(o => o.sel == true).Sum(o => o.count));
                 dict.Add("ps", cu.x_cart.Where(o => o.sel == true).Sum(o => o.price * o.count));
-
+                dict.Add("shipfee", shipfee);
                 x_address ad = cu.x_address.FirstOrDefault(o => o.address_id == aid);
                 if (ad == null) ad = cu.x_address.FirstOrDefault();
                 dict.Add("ad", ad);

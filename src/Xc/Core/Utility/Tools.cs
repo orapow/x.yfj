@@ -44,7 +44,7 @@ namespace X.Core.Utility
             {
                 result = HttpContext.Current.Request.UserHostAddress;
             }
-            return result;
+            return result.Split(',')[0];
         }
 
         /// <summary>

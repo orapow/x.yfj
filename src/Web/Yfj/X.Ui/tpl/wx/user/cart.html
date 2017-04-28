@@ -1,18 +1,53 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("wx/_head.html")
     <title>购物车</title>
     <style type="text/css">
-        .txt01 { margin-left: 20px; }
-        .shaop02 span { font-size: 18px; }
-        .shaop02 span.ut { left: auto; white-space: nowrap; }
-        .fudong { display: none; }
-        .diz { position: relative; }
-        .diz a span { line-height: normal; float: none; position: absolute; display: block; top: 50%; right: 10px; margin-top: -10px; }
-        .fangs01 { padding: 0px 0 20px; }
-        .shaop02 img { width: 70px; height: 70px; }
-        .jiaj { right: 0; bottom: 5px; }
+        .txt01 {
+            margin-left: 20px;
+        }
+
+        .shaop02 span {
+            font-size: 18px;
+        }
+
+            .shaop02 span.ut {
+                left: auto;
+                white-space: nowrap;
+            }
+
+        .fudong {
+            display: none;
+        }
+
+        .diz {
+            position: relative;
+        }
+
+            .diz a span {
+                line-height: normal;
+                float: none;
+                position: absolute;
+                display: block;
+                top: 50%;
+                right: 10px;
+                margin-top: -10px;
+            }
+
+        .fangs01 {
+            padding: 0px 0 20px;
+        }
+
+        .shaop02 img {
+            width: 70px;
+            height: 70px;
+        }
+
+        .jiaj {
+            right: 0;
+            bottom: 5px;
+        }
     </style>
 </head>
 <body style="background:#f4f4f4;">
@@ -25,7 +60,6 @@
         </div>
     </div>
     <div class="clear"></div>-->
-
     <div class="shaop">
         <div class="shaop01">
             <span>商品清单</span>
@@ -42,25 +76,23 @@
         </div>
         #end
     </div>
-
     <div class="diz">
         <h2 style="margin-bottom:10px;">收货地址</h2>
         <a href="/wx/addr/list-1.html">
             #if($ad)$ad.name $ad.tel<br />$ad.shi $ad.qu $ad.zhen $ad.addr#else点击选择收货地址#end<span><img src="/img/wx/tj_13.png" width="12" /></span>
         </a>
     </div>
-
     <div class="zhif">
         <h2>支付方式</h2>
         <p>
             <input type="radio" name="pay" value="1" class="txt02 nn pay" onclick="selectpay(this)" /><span>在线支付</span>
             <input type="radio" name="pay" value="2" class="txt02 pay" onclick="selectpay(this)" /><span>货到付款</span>
+            <input type="radio" name="pay" value="3" class="txt02 pay" onclick="selectpay(this)" /><span>余额支付</span>
         </p>
         <p>
             <div class="clear"></div>
         </p>
     </div>
-
     <!--<div class="zhif">
         <h2 class="ben"><p>是否需要搬运上楼</p><img src="/img/wx/iu.png" /></h2>
         <p>
@@ -79,7 +111,6 @@
             </div>
         </p>
     </div>-->
-
     <div class="zhif">
         <h2 class="ben"><p>配送时间</p></h2>
         <div class="clear"></div>
@@ -100,30 +131,25 @@
             <div class="clear"></div>
         </div>
     </div>
-
     <div class="zhif">
         <h2>订单备注</h2>
         <div class="clear"></div>
         <textarea name="rm" rows="3" style="width:100%; margin-bottom:20px;" placeholder="此处填写订单备注的内容"></textarea>
     </div>
-
     <div class="xiaox">
         <p>累计货款：<span class="am">￥$ps(共$gc件)</span></p>
         <!--<p>搬运费：<span>+￥0</span></p>-->
-        <p>运费：<span>+￥0</span></p>
+        <p>运费：<span id="id_shipfee">￥$shipfee</span></p>
         <p>优惠金额：<span>-￥0</span></p>
     </div>
-
     <div class="fuchen01">
         <h2> <input type="radio" class="txt02 sall" onclick="selectall(this)" />全选</h2>
         <input type="button" value="删除" class="but01" onclick="delall()" />
     </div>
-
     <div class="fuchen">
         <h2>金额：<span class="am">$ps元(共$gc件)</span></h2>
         <input type="button" value="提交订单" class="but" onclick="mdorder()" />
     </div>
-
     #parse("wx/_foot.html")
     <script type="text/javascript">
         $(function () {
@@ -161,18 +187,23 @@
                 doapi("wx.cart.psel", { gid: id }, function (d) {
                     if (!d.issucc) return;
                     try {
-                        cartchange(d.ct, d.gc, d.ps, id, d.sel);
+                        cartchange(d.ct, d.gc, d.ps, id, d.sel,d.shipfee);
                     } catch (e) { }
                 });
             }
         }
 
-        function cartchange(ct, gc, ps, gid, sel) {
+        function cartchange(ct, gc, ps, gid, sel,shipfee) {
             if (ct == 0) $("[data-id='" + gid + "']").remove();
             $("[data-id='" + gid + "'] input").val(ct);
             $("span.am").text(ps + "元(共" + gc + "件)");
-            if (sel != 2) $("[data-id='" + gid + "'] .sel").addClass("nn");
-            else $("[data-id='" + gid + "'] .sel").removeClass("nn");
+            $("#id_shipfee").text("￥"+shipfee);
+            if (sel != 2) {
+                $("[data-id='" + gid + "'] .sel").addClass("nn");
+               
+            }
+            
+        else $("[data-id='" + gid + "'] .sel").removeClass("nn");
         }
 
         function selectall(c) {
@@ -202,6 +233,5 @@
             });
         }
     </script>
-
 </body>
 </html>

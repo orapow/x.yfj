@@ -14,6 +14,11 @@ namespace X.App.Apis.mgr.refund {
         public Decimal ramount { get; set; }
 
         public String remark { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute() {
             var od = DB.x_refund.FirstOrDefault(o => o.refund_id == id);

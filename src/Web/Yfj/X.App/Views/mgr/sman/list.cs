@@ -7,5 +7,10 @@ namespace X.App.Views.mgr.sman
 {
     public class list : xmg
     {
+        protected override int powercode {
+            get {
+                return 2;
+            }
+        }
     }
 }

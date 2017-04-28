@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace X.App.Views.mgr.goods
-{
-    public class list : xmg
-    {
+namespace X.App.Views.mgr.goods {
+    public class list : xmg {
         /// <summary>
         /// 状态：
         /// 1、草稿
@@ -15,10 +13,14 @@ namespace X.App.Views.mgr.goods
         /// 4、已删除
         /// </summary>
         public int st { get; set; }
-        protected override string GetParmNames
-        {
-            get
-            {
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
+
+        protected override string GetParmNames {
+            get {
                 return "st";
             }
         }

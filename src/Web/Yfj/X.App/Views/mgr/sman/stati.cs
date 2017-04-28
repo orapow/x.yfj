@@ -7,5 +7,10 @@ namespace X.App.Views.mgr.sman
 {
     public class stati : xmg
     {
+        protected override int powercode {
+            get {
+                return 2;
+            }
+        }
     }
 }

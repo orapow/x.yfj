@@ -13,6 +13,11 @@ namespace X.App.Apis.mgr.brand
         public int limit { get; set; }
         public string key { get; set; }
         public string cate { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override Web.Com.XResp Execute()
         {

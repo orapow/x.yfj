@@ -20,6 +20,11 @@ namespace X.App.Apis.mgr.dict
         public string img { get; set; }
         public string jp { get; set; }
         public int sort { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {

@@ -24,6 +24,17 @@ namespace X.App.Apis.wx.order
 
             od.sign_time=DateTime.Now;
             od.status = 5;
+
+            //对订单积分的处理
+            var credit = new x_integral_log();
+            cu.invter+=(long)cfg.credit*(long)od.pay_amount;
+            credit.user_id = cu.id;
+            credit.val = (int)cfg.credit * (int)od.pay_amount;
+            credit.remark = "订单号：" + od.order_id + " 返积分: " + credit.val + " 应付金额： " + od.pay_amount;
+            credit.ctime = DateTime.Now;
+            cu.invter += credit.val;
+            DB.x_integral_log.InsertOnSubmit(credit);
+
             SubmitDBChanges();
 
             return new XResp();

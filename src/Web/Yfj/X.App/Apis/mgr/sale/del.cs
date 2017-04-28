@@ -13,6 +13,11 @@ namespace X.App.Apis.mgr.sale {
         /// 为4时彻底删除
         /// </summary>
         public int st { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute() {
             var ent = DB.x_sale.FirstOrDefault(o => o.sale_id == id);
