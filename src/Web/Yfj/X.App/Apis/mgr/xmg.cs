@@ -25,7 +25,7 @@ namespace X.App.Apis.mgr {
             //if (string.IsNullOrEmpty(key)) throw new XExcep("0x0006");
 
             mg = DB.x_mgr.FirstOrDefault(o => o.mgr_id == 1);// CacheHelper.Get<x_mgr>("mgr." + key);
-            if (mg == null) throw new XExcep("0x0006");
+            if (mg == null) throw new XExcep("0x0004");
 
             //CacheHelper.Save("mgr." + id, mg, 60 * 60);
 
@@ -44,7 +44,7 @@ namespace X.App.Apis.mgr {
         /// </summary>
         private void ValidPower() {
             if (!HasPower()) {
-                throw new XExcep("T当前用户没有权限");
+                throw new XExcep("0x0040");
             }
         }
     }

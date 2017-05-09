@@ -1,28 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using X.Core.Cache;
 using X.Core.Utility;
 using X.Web;
 using X.Web.Com;
 
-namespace X.App.Apis.wx.user {
-    public class savepswd : _wx {
-        public String tel { get; set; }
-        public String newPswd { get; set; }
-        public String checkCode { get; set; }
+namespace X.App.Apis.wx.user
+{
+    public class savepswd : _wx
+    {
+        [ParmsAttr(name = "电话", req = true)]
+        public string tel { get; set; }
+        [ParmsAttr(name = "密码", req = true)]
+        public string pwd { get; set; }
+        [ParmsAttr(name = "验证码", req = true)]
+        public string code { get; set; }
 
-        protected override XResp Execute() {
-            if (String.IsNullOrWhiteSpace(tel) || String.IsNullOrWhiteSpace(newPswd)
-                || String.IsNullOrWhiteSpace(checkCode))
-                throw new XExcep("T输入不正确");
-            if (!checkCode.Equals(CacheHelper.Get<string>("sms.code." + tel)))
-                throw new XExcep("T短信验证码不正确");
-            else
-                CacheHelper.Remove("sms.code." + tel);
-            cu.pwd = Secret.MD5(newPswd);
+        protected override bool nd_user
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        protected override XResp Execute()
+        {
+            var mcode = CacheHelper.Get<string>("sms.code." + tel);
+            if (string.IsNullOrEmpty(mcode) || mcode != code) throw new XExcep("0x0054");
+            CacheHelper.Remove("sms.code." + tel);
+
+            var u = DB.x_user.FirstOrDefault(o => o.tel == tel);
+            if (u == null) throw new XExcep("0x0039");
+
+            u.pwd = Secret.MD5(pwd);
             SubmitDBChanges();
+
             return new XResp();
         }
     }

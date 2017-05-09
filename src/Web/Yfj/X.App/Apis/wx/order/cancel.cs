@@ -19,7 +19,7 @@ namespace X.App.Apis.wx.order {
             if (od.status == 1 || od.status == 2)
                 od.status = 6;
             else 
-                throw new XExcep("T当前订单状态无法取消");
+                throw new XExcep("0x0047");
 
             SubmitDBChanges();
             return new XResp();

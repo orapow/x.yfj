@@ -13,8 +13,7 @@ namespace X.App.Apis.mgr.order {
         public static int[] getOrderStati(DateTime startTime, int size,DataClassesDataContext DB) {//应该可以改成table直接处理
             //startTime-开始查询的时间,此处需要已经处理好为当天时间（0:00）
             //size-实际可返回的数最大为24
-            if (startTime < limitFlag)
-                throw new XExcep("T查询的日期非法");
+            if (startTime < limitFlag)throw new XExcep("0x0030");
             int[] result = new int[size];
             int originCount = DB.x_order.Where(o => o.ctime < startTime).Count();
 
@@ -36,7 +35,7 @@ namespace X.App.Apis.mgr.order {
             //startTime-开始查询的时间,此处需要已经处理好为当天时间（0:00）
             //size-实际可返回的数最大为24
             if (startTime < limitFlag)
-                throw new XExcep("T查询的日期非法");
+                throw new XExcep("0x0030");
             int[] result = new int[size];
             int originCount = DB.x_user.Where(o => o.ctime < startTime).Count();
 

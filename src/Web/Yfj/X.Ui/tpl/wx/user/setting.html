@@ -8,28 +8,30 @@
     <div class="guanli">
         <ul>
             <li><a href="/wx/user/update.html" style="display:block">修改用户信息</a></li>
-            <li><a href="/wx/user/mpwd.html" style="display:block">修改登录密码</a></li>
+            <li><a href="/wx/fpwd.html" style="display:block">修改登录密码</a></li>
         </ul>
         #if(!$iswx)
-        <div class="qr"><a href="javascript:;" style="color:white;display:block;height:100%;display:block" onclick="signOut()">退出账号</a>
+        <div class="qr">
+            <a href="javascript:;" style="color:white;display:block;height:100%;display:block" onclick="signOut()">退出账号</a>
         </div>#end
     </div>
     <script>
         function signOut() {
             if (!confirm("是否确定退出当前账号?"))
                 return;
-            doapi("wx.logout", {},function(d){
-                if(!d.issucc) return;
-                document.location.href="/wx/index.html";
+            doapi("wx.logout", {}, function (d) {
+                if (!d.issucc) return;
+                document.location.href = "/wx/index.html";
             });
         }
+
         function deleteCookie(name) {
             var exp = new Date();
             exp.setTime(exp.getTime() - 1);
             var cval = getCookie(name);
-            if (cval != null)
-                document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+            if (cval != null) document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
         }
+
         function getCookie(name) {
             var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
             if (arr = document.cookie.match(reg))

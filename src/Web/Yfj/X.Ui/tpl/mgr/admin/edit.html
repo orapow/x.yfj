@@ -2,52 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("mgr/com/_head.html")
-    <title>商品资料 - $cfg.name</title>
-    <link href="/plug/um/themes/default/css/umeditor.min.css" rel="stylesheet" />
-    <script src="/plug/um/umeditor.config.js"></script>
-    <script src="/plug/um/umeditor.min.js"></script>
-    <style type="text/css">
-        .edui-container { display: inline-block; vertical-align: top; }
-        #id_desc { width: 600px; height: 300px; }
-        .imgs .img { padding: 2px; border: 1px solid #ccc; cursor: pointer; }
-        .imgs .img.on { border-color: red; }
-        .navs { border-bottom: 1px solid #ccc; width: 50%; }
-        .navs .btn { margin-right: -1px; margin-bottom: -1px; }
-        .tab { display: none; padding-top: 15px; }
-        .tab > .li { margin-bottom: 15px; }
-        .attr_list .btn { margin-right: 5px; }
-        .attr_list .li { margin-bottom: 10px; }
-        .stock_list .row { position: relative; }
-        .stock_list .st { margin-bottom: 5px; margin-right: 5px; }
-        .stock_list .st input { margin-right: -1px; }
-        .stock_list .panel { margin-left: 80px; }
-        .stock_list .row .lbe { position: absolute; top: 0; left: 0; }
-    </style>
+    <title>管理员信息 - $cfg.name</title>
 </head>
 <body>
     <div class="title">
-        <span class="main">#if($action)复制商品#else商品编辑#end</span> - <span class="sub">商品管理</span>
+        <span class="main">管理员信息</span> - <span class="sub">管理员管理</span>
     </div>
     <div class="form">
         <x:form api="mgr.admin.save">
-            <input type="hidden" name="id" value="$!item.goods_id" x-check="" />
-            <input type="hidden" name="iscp" value="$!cp" x-check="" />
-            <div class="tab" style="display:block">
-                <input type="hidden" name="cover" value="$!item.cover" x-check="" />
-                <x:text title="账号" name="uid" def="$!item.uid" size="4" chk="no" />
-                <x:text title="昵称" name="name" def="$!item.name"  size="4" chk="no" />
-                <x:pick src="loc:客服|财务" mode="2" name="role" count="1" title="角色"  chk="no" def="$!item.role_id"/>
-                <x:row>
-                   
-                    <!--<x:pick title="城市" src="dict:goods.brand" name="brand" count="1" def="$!item.brand" />-->
-                    <x:text title="密码"  name="password" size="4" chk="no" />
-                </x:row>
-                <x:row>
-                    <x:text title="E-mail" def="$!item.mail" name="mail" size="2" chk="no" />
-                    <x:text title="电话" name="tel" def="$!item.tel" size="2" chk="no" />
-                </x:row>
-               
-            </div>
+            <x:pick src="loc:客服|财务" mode="2" name="role" count="1" title="角色" chk="no" def="$!item.role_id" />
+            <input type="hidden" name="id" value="$!item.mgr_id" x-check="" />
+            <x:text title="昵称" name="name" def="$!item.name" size="2" chk="no" />
+            <x:text title="账号" name="uid" def="$!item.uid" size="3" chk="no" />
+            #if($!item.mgr_id>0)<x:text title="密码" tip="不修改请置空" name="password" size="3" />#else<x:text title="密码" name="password" size="3" chk="no" />#end
+            <x:text title="E-mail" def="$!item.mail" name="mail" size="4" />
+            <x:text title="电话" name="tel" def="$!item.tel" size="3" />
             <div class="btns">
                 <button type="submit" class="btn btn-primary">
                     <i class="icon-ok"></i>提交保存
@@ -61,24 +30,11 @@
     <br />
     <br />
     <script type="text/javascript">
-
         $(function () {
-            $(".imgs").delegate(".img", "click", function (evt) {
-                $(".img.on").removeClass("on");
-                $(this).addClass("on");
-                $("[name='cover']").val($(this).attr("x-val"));
-                return false;
-            });
-            if ("$!item.cover") $(".img[x-val='$!item.cover']").addClass("on");
-
             $("form:eq(0)").xform({
-                callback: function (d) { document.location.href = '/mgr/goods/list.html'; }
+                callback: function (d) { document.location.href = '/mgr/admin/list.html'; }
             });
-
         });
-
-        var um = UM.getEditor("id_desc");
-
     </script>
 </body>
 </html>

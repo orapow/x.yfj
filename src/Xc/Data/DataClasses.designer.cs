@@ -51,9 +51,6 @@ namespace X.Data
     partial void Insertx_sale(x_sale instance);
     partial void Updatex_sale(x_sale instance);
     partial void Deletex_sale(x_sale instance);
-    partial void Insertx_refund(x_refund instance);
-    partial void Updatex_refund(x_refund instance);
-    partial void Deletex_refund(x_refund instance);
     partial void Insertx_order(x_order instance);
     partial void Updatex_order(x_order instance);
     partial void Deletex_order(x_order instance);
@@ -72,6 +69,9 @@ namespace X.Data
     partial void Insertx_charge(x_charge instance);
     partial void Updatex_charge(x_charge instance);
     partial void Deletex_charge(x_charge instance);
+    partial void Insertx_refund(x_refund instance);
+    partial void Updatex_refund(x_refund instance);
+    partial void Deletex_refund(x_refund instance);
     #endregion
 		
 		public DataClassesDataContext() : 
@@ -160,14 +160,6 @@ namespace X.Data
 			}
 		}
 		
-		public System.Data.Linq.Table<x_refund> x_refund
-		{
-			get
-			{
-				return this.GetTable<x_refund>();
-			}
-		}
-		
 		public System.Data.Linq.Table<x_order> x_order
 		{
 			get
@@ -213,6 +205,14 @@ namespace X.Data
 			get
 			{
 				return this.GetTable<x_charge>();
+			}
+		}
+		
+		public System.Data.Linq.Table<x_refund> x_refund
+		{
+			get
+			{
+				return this.GetTable<x_refund>();
 			}
 		}
 		
@@ -2856,325 +2856,6 @@ namespace X.Data
 						this._goods_id = default(Nullable<long>);
 					}
 					this.SendPropertyChanged("x_goods");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.x_refund")]
-	public partial class x_refund : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private long _refund_id;
-		
-		private System.Nullable<long> _order_id;
-		
-		private string _reason;
-		
-		private System.Nullable<System.DateTime> _ctime;
-		
-		private System.Nullable<decimal> _amount;
-		
-		private System.Nullable<decimal> _ramount;
-		
-		private System.Nullable<int> _status;
-		
-		private string _remark;
-		
-		private string _aname;
-		
-		private System.Nullable<System.DateTime> _atime;
-		
-		private EntityRef<x_order> _x_order;
-		
-    #region 可扩展性方法定义
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onrefund_idChanging(long value);
-    partial void Onrefund_idChanged();
-    partial void Onorder_idChanging(System.Nullable<long> value);
-    partial void Onorder_idChanged();
-    partial void OnreasonChanging(string value);
-    partial void OnreasonChanged();
-    partial void OnctimeChanging(System.Nullable<System.DateTime> value);
-    partial void OnctimeChanged();
-    partial void OnamountChanging(System.Nullable<decimal> value);
-    partial void OnamountChanged();
-    partial void OnramountChanging(System.Nullable<decimal> value);
-    partial void OnramountChanged();
-    partial void OnstatusChanging(System.Nullable<int> value);
-    partial void OnstatusChanged();
-    partial void OnremarkChanging(string value);
-    partial void OnremarkChanged();
-    partial void OnanameChanging(string value);
-    partial void OnanameChanged();
-    partial void OnatimeChanging(System.Nullable<System.DateTime> value);
-    partial void OnatimeChanged();
-    #endregion
-		
-		public x_refund()
-		{
-			this._x_order = default(EntityRef<x_order>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_refund_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public long refund_id
-		{
-			get
-			{
-				return this._refund_id;
-			}
-			set
-			{
-				if ((this._refund_id != value))
-				{
-					this.Onrefund_idChanging(value);
-					this.SendPropertyChanging();
-					this._refund_id = value;
-					this.SendPropertyChanged("refund_id");
-					this.Onrefund_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_order_id", DbType="BigInt")]
-		public System.Nullable<long> order_id
-		{
-			get
-			{
-				return this._order_id;
-			}
-			set
-			{
-				if ((this._order_id != value))
-				{
-					if (this._x_order.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onorder_idChanging(value);
-					this.SendPropertyChanging();
-					this._order_id = value;
-					this.SendPropertyChanged("order_id");
-					this.Onorder_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_reason", DbType="NVarChar(400)")]
-		public string reason
-		{
-			get
-			{
-				return this._reason;
-			}
-			set
-			{
-				if ((this._reason != value))
-				{
-					this.OnreasonChanging(value);
-					this.SendPropertyChanging();
-					this._reason = value;
-					this.SendPropertyChanged("reason");
-					this.OnreasonChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ctime", DbType="DateTime")]
-		public System.Nullable<System.DateTime> ctime
-		{
-			get
-			{
-				return this._ctime;
-			}
-			set
-			{
-				if ((this._ctime != value))
-				{
-					this.OnctimeChanging(value);
-					this.SendPropertyChanging();
-					this._ctime = value;
-					this.SendPropertyChanged("ctime");
-					this.OnctimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> amount
-		{
-			get
-			{
-				return this._amount;
-			}
-			set
-			{
-				if ((this._amount != value))
-				{
-					this.OnamountChanging(value);
-					this.SendPropertyChanging();
-					this._amount = value;
-					this.SendPropertyChanged("amount");
-					this.OnamountChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ramount", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> ramount
-		{
-			get
-			{
-				return this._ramount;
-			}
-			set
-			{
-				if ((this._ramount != value))
-				{
-					this.OnramountChanging(value);
-					this.SendPropertyChanging();
-					this._ramount = value;
-					this.SendPropertyChanged("ramount");
-					this.OnramountChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="Int")]
-		public System.Nullable<int> status
-		{
-			get
-			{
-				return this._status;
-			}
-			set
-			{
-				if ((this._status != value))
-				{
-					this.OnstatusChanging(value);
-					this.SendPropertyChanging();
-					this._status = value;
-					this.SendPropertyChanged("status");
-					this.OnstatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_remark", DbType="NVarChar(400)")]
-		public string remark
-		{
-			get
-			{
-				return this._remark;
-			}
-			set
-			{
-				if ((this._remark != value))
-				{
-					this.OnremarkChanging(value);
-					this.SendPropertyChanging();
-					this._remark = value;
-					this.SendPropertyChanged("remark");
-					this.OnremarkChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_aname", DbType="NVarChar(40)")]
-		public string aname
-		{
-			get
-			{
-				return this._aname;
-			}
-			set
-			{
-				if ((this._aname != value))
-				{
-					this.OnanameChanging(value);
-					this.SendPropertyChanging();
-					this._aname = value;
-					this.SendPropertyChanged("aname");
-					this.OnanameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_atime", DbType="DateTime")]
-		public System.Nullable<System.DateTime> atime
-		{
-			get
-			{
-				return this._atime;
-			}
-			set
-			{
-				if ((this._atime != value))
-				{
-					this.OnatimeChanging(value);
-					this.SendPropertyChanging();
-					this._atime = value;
-					this.SendPropertyChanged("atime");
-					this.OnatimeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_order_x_refund", Storage="_x_order", ThisKey="order_id", OtherKey="order_id", IsForeignKey=true)]
-		public x_order x_order
-		{
-			get
-			{
-				return this._x_order.Entity;
-			}
-			set
-			{
-				x_order previousValue = this._x_order.Entity;
-				if (((previousValue != value) 
-							|| (this._x_order.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._x_order.Entity = null;
-						previousValue.x_refund.Remove(this);
-					}
-					this._x_order.Entity = value;
-					if ((value != null))
-					{
-						value.x_refund.Add(this);
-						this._order_id = value.order_id;
-					}
-					else
-					{
-						this._order_id = default(Nullable<long>);
-					}
-					this.SendPropertyChanged("x_order");
 				}
 			}
 		}
@@ -6007,6 +5688,349 @@ namespace X.Data
 						this._user_id = default(Nullable<long>);
 					}
 					this.SendPropertyChanged("x_user");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.x_refund")]
+	public partial class x_refund : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _refund_id;
+		
+		private System.Nullable<long> _order_id;
+		
+		private string _reason;
+		
+		private System.Nullable<System.DateTime> _ctime;
+		
+		private System.Nullable<decimal> _amount;
+		
+		private System.Nullable<decimal> _ramount;
+		
+		private string _rsource;
+		
+		private System.Nullable<int> _status;
+		
+		private string _remark;
+		
+		private string _aname;
+		
+		private System.Nullable<System.DateTime> _atime;
+		
+		private EntityRef<x_order> _x_order;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onrefund_idChanging(long value);
+    partial void Onrefund_idChanged();
+    partial void Onorder_idChanging(System.Nullable<long> value);
+    partial void Onorder_idChanged();
+    partial void OnreasonChanging(string value);
+    partial void OnreasonChanged();
+    partial void OnctimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnctimeChanged();
+    partial void OnamountChanging(System.Nullable<decimal> value);
+    partial void OnamountChanged();
+    partial void OnramountChanging(System.Nullable<decimal> value);
+    partial void OnramountChanged();
+    partial void OnrsourceChanging(string value);
+    partial void OnrsourceChanged();
+    partial void OnstatusChanging(System.Nullable<int> value);
+    partial void OnstatusChanged();
+    partial void OnremarkChanging(string value);
+    partial void OnremarkChanged();
+    partial void OnanameChanging(string value);
+    partial void OnanameChanged();
+    partial void OnatimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnatimeChanged();
+    #endregion
+		
+		public x_refund()
+		{
+			this._x_order = default(EntityRef<x_order>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_refund_id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long refund_id
+		{
+			get
+			{
+				return this._refund_id;
+			}
+			set
+			{
+				if ((this._refund_id != value))
+				{
+					this.Onrefund_idChanging(value);
+					this.SendPropertyChanging();
+					this._refund_id = value;
+					this.SendPropertyChanged("refund_id");
+					this.Onrefund_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_order_id", DbType="BigInt")]
+		public System.Nullable<long> order_id
+		{
+			get
+			{
+				return this._order_id;
+			}
+			set
+			{
+				if ((this._order_id != value))
+				{
+					if (this._x_order.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onorder_idChanging(value);
+					this.SendPropertyChanging();
+					this._order_id = value;
+					this.SendPropertyChanged("order_id");
+					this.Onorder_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_reason", DbType="NVarChar(400)")]
+		public string reason
+		{
+			get
+			{
+				return this._reason;
+			}
+			set
+			{
+				if ((this._reason != value))
+				{
+					this.OnreasonChanging(value);
+					this.SendPropertyChanging();
+					this._reason = value;
+					this.SendPropertyChanged("reason");
+					this.OnreasonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ctime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ctime
+		{
+			get
+			{
+				return this._ctime;
+			}
+			set
+			{
+				if ((this._ctime != value))
+				{
+					this.OnctimeChanging(value);
+					this.SendPropertyChanging();
+					this._ctime = value;
+					this.SendPropertyChanged("ctime");
+					this.OnctimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> amount
+		{
+			get
+			{
+				return this._amount;
+			}
+			set
+			{
+				if ((this._amount != value))
+				{
+					this.OnamountChanging(value);
+					this.SendPropertyChanging();
+					this._amount = value;
+					this.SendPropertyChanged("amount");
+					this.OnamountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ramount", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> ramount
+		{
+			get
+			{
+				return this._ramount;
+			}
+			set
+			{
+				if ((this._ramount != value))
+				{
+					this.OnramountChanging(value);
+					this.SendPropertyChanging();
+					this._ramount = value;
+					this.SendPropertyChanged("ramount");
+					this.OnramountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rsource", DbType="NVarChar(250)")]
+		public string rsource
+		{
+			get
+			{
+				return this._rsource;
+			}
+			set
+			{
+				if ((this._rsource != value))
+				{
+					this.OnrsourceChanging(value);
+					this.SendPropertyChanging();
+					this._rsource = value;
+					this.SendPropertyChanged("rsource");
+					this.OnrsourceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="Int")]
+		public System.Nullable<int> status
+		{
+			get
+			{
+				return this._status;
+			}
+			set
+			{
+				if ((this._status != value))
+				{
+					this.OnstatusChanging(value);
+					this.SendPropertyChanging();
+					this._status = value;
+					this.SendPropertyChanged("status");
+					this.OnstatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_remark", DbType="NVarChar(400)")]
+		public string remark
+		{
+			get
+			{
+				return this._remark;
+			}
+			set
+			{
+				if ((this._remark != value))
+				{
+					this.OnremarkChanging(value);
+					this.SendPropertyChanging();
+					this._remark = value;
+					this.SendPropertyChanged("remark");
+					this.OnremarkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_aname", DbType="NVarChar(40)")]
+		public string aname
+		{
+			get
+			{
+				return this._aname;
+			}
+			set
+			{
+				if ((this._aname != value))
+				{
+					this.OnanameChanging(value);
+					this.SendPropertyChanging();
+					this._aname = value;
+					this.SendPropertyChanged("aname");
+					this.OnanameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_atime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> atime
+		{
+			get
+			{
+				return this._atime;
+			}
+			set
+			{
+				if ((this._atime != value))
+				{
+					this.OnatimeChanging(value);
+					this.SendPropertyChanging();
+					this._atime = value;
+					this.SendPropertyChanged("atime");
+					this.OnatimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="x_order_x_refund", Storage="_x_order", ThisKey="order_id", OtherKey="order_id", IsForeignKey=true)]
+		public x_order x_order
+		{
+			get
+			{
+				return this._x_order.Entity;
+			}
+			set
+			{
+				x_order previousValue = this._x_order.Entity;
+				if (((previousValue != value) 
+							|| (this._x_order.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._x_order.Entity = null;
+						previousValue.x_refund.Remove(this);
+					}
+					this._x_order.Entity = value;
+					if ((value != null))
+					{
+						value.x_refund.Add(this);
+						this._order_id = value.order_id;
+					}
+					else
+					{
+						this._order_id = default(Nullable<long>);
+					}
+					this.SendPropertyChanged("x_order");
 				}
 			}
 		}

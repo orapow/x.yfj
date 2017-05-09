@@ -9,16 +9,11 @@
     <div class="guanli">
         <ul>
             <li>充值金额：($cfg.min_deposit 到 $cfg.max_deposit)</li>
-            <li><input type="number" id="id_deposit" /></li>
-            <!--<li>
-                <a href="#">修改用户头像</a>
-                <div class="shang">s
-                    <img src="/img/wx/gh.png" id="cp" /><input type="button" value="上传图片" class="txt06" onclick="$('#bt_file').click();" />
-                    <div class=" clear"=clear"></div>
-                </div>
-            </li>-->
+            <li>
+                <input type="number" id="id_deposit" style="border: none;display: block;margin: 5px 0;width: 100%;line-height: 36px;font-size: 16px;text-indent: 1em;" placeholder="请输入充值金额" value="$cfg.min_deposit" />
+            </li>
         </ul>
-        <div class="qr"><a href="javascript:;" style="color:white;display:block;height:100%;" onclick="doDeposit()">保存</a></div>
+        <div class="qr"><a href="javascript:;" class="btn" onclick="doDeposit()">立即充值</a></div>
     </div>
     #parse("wx/_foot.html")
     <script type="text/javascript">
@@ -58,14 +53,14 @@
                             // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
                             //if ("$!burl") document.location.href = "$!burl";
                             //else history.back();
-                            document.location.href = "/wx/order/succ-" + d.id + "-"+d.fromDeposit+".html";
+                            document.location.href = "/wx/order/succ-" + d.id + "-" + d.fromDeposit + ".html";
                         } else {
                             //$("#img_code").attr("src", "data:image/jpeg;base64," + d.msg).parent().show();
                             alert("支付失败，请重试！！！");
                         }
                     }
             )
-               if (!d.issucc) return;
+                if (!d.issucc) return;
                 //document.location.reload();
             });
         }

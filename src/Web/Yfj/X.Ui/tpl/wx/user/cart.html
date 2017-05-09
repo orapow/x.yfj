@@ -4,62 +4,21 @@
     #parse("wx/_head.html")
     <title>购物车</title>
     <style type="text/css">
-        .txt01 {
-            margin-left: 20px;
-        }
-
-        .shaop02 span {
-            font-size: 18px;
-        }
-
-            .shaop02 span.ut {
-                left: auto;
-                white-space: nowrap;
-            }
-
-        .fudong {
-            display: none;
-        }
-
-        .diz {
-            position: relative;
-        }
-
-            .diz a span {
-                line-height: normal;
-                float: none;
-                position: absolute;
-                display: block;
-                top: 50%;
-                right: 10px;
-                margin-top: -10px;
-            }
-
-        .fangs01 {
-            padding: 0px 0 20px;
-        }
-
-        .shaop02 img {
-            width: 70px;
-            height: 70px;
-        }
-
-        .jiaj {
-            right: 0;
-            bottom: 5px;
-        }
+        .txt01 { margin-left: 20px; }
+        .shaop02 span { font-size: 18px; }
+        .shaop02 span.ut { left: auto; white-space: nowrap; }
+        .shaop02 .img { width: 70px; height: 70px; display: block; position: absolute; left: 28px; top: 10px; }
+        .fudong { display: none; }
+        .diz { position: relative; }
+        .diz a span { line-height: normal; float: none; position: absolute; display: block; top: 50%; right: 10px; margin-top: -10px; }
+        .fangs01 { padding: 0px 0 20px; }
+        .shaop02 img { width: 70px; height: 70px; }
+        .jiaj { right: 0; bottom: 5px; }
+        .chk { top: 50%; margin-top: -10px; left: 10px; }
+        .zhif .txt02 { position: initial; }
     </style>
 </head>
 <body style="background:#f4f4f4;">
-    <!--<div class="top01">
-        <div class="w80">
-            <a class="bnt">
-                <img src="/img/wx/dd_03.png" />
-            </a>
-            优辅家建材
-        </div>
-    </div>
-    <div class="clear"></div>-->
     <div class="shaop">
         <div class="shaop01">
             <span>商品清单</span>
@@ -68,11 +27,11 @@
         #foreach($g in $gs)
         <div class="shaop02" data-id="$g.goods_id">
             <input type="checkbox" class="sel txt02 txt05 #if($g.sel)nn#end" onclick="dosel($g.goods_id)" />
-            <img src="$g.cover" />
+            <a class="img" href="/wx/goods/detail-${g.goods_id}.html" style="background: url($g.cover) no-repeat center center /cover;"></a>
             <h2>$g.goods_name</h2>
             <p>$!g.desc</p>
-            <span style="float:none;left:105px;">￥$g.price<span style="font-size:12px;" class="ut">/$g.unit</span></span>
-            <div class="jiaj"><span class="jian" onclick="outcart($g.goods_id,$(this).next().val())"></span><input type="number" value="$g.count" name="count" class="txt01" /><span class="jia" onclick="tocart($g.goods_id)"></span></div><div class="clear"></div>
+            <span style="float:none;left:105px;">￥$g.price<span style="font-size:12px;" class="ut">/$!g.unit</span></span>
+            <div class="jiaj"><span class="jian" onclick="outcart($g.goods_id,$(this).next().val())"></span><input type="number" value="$g.count" name="count" class="txt01" onchange="setcount($g.goods_id, this.value);" /><span class="jia" onclick="tocart($g.goods_id)"></span></div><div class="clear"></div>
         </div>
         #end
     </div>
@@ -85,9 +44,15 @@
     <div class="zhif">
         <h2>支付方式</h2>
         <p>
-            <input type="radio" name="pay" value="1" class="txt02 nn pay" onclick="selectpay(this)" /><span>在线支付</span>
-            <input type="radio" name="pay" value="2" class="txt02 pay" onclick="selectpay(this)" /><span>货到付款</span>
+            #if($cfg.pay_ways.contains("[1]"))
+            <input type="radio" name="pay" value="1" class="txt02 pay" onclick="selectpay(this)" /><span>微信支付</span>
+            #end
+            #if($cfg.pay_ways.contains("[2]"))
             <input type="radio" name="pay" value="3" class="txt02 pay" onclick="selectpay(this)" /><span>余额支付</span>
+            #end
+            #if($cfg.pay_ways.contains("[3]"))
+            <input type="radio" name="pay" value="2" class="txt02 pay" onclick="selectpay(this)" /><span>货到付款</span>
+            #end
         </p>
         <p>
             <div class="clear"></div>
@@ -143,11 +108,11 @@
         <p>优惠金额：<span>-￥0</span></p>
     </div>
     <div class="fuchen01">
-        <h2> <input type="radio" class="txt02 sall" onclick="selectall(this)" />全选</h2>
+        <h2> <input type="radio" class="txt02 sall chk" onclick="selectall(this)" />全选</h2>
         <input type="button" value="删除" class="but01" onclick="delall()" />
     </div>
     <div class="fuchen">
-        <h2>金额：<span class="am">$ps元(共$gc件)</span></h2>
+        <h2>金额：<span class="yam">$yf元(共$gc件)</span></h2>
         <input type="button" value="提交订单" class="but" onclick="mdorder()" />
     </div>
     #parse("wx/_foot.html")
@@ -161,7 +126,7 @@
             });
             $(".yichu").click(function () {
                 $(".fuchen").toggleClass("fenlei1_1");
-                if ($(".fuchen").hasClass("fenlei1_1")) $(this).text("取消");
+                if ($(".fuchen").hasClass("fenlei1_1")) $(this).text("完成");
                 else $(this).text("移除商品");
             });
         });
@@ -174,7 +139,7 @@
         function delall() {
             $(".sel.nn").each(function () {
                 var s = $(this);
-                outcart(s.parent().attr("data-id"), 0);
+                outcart(s.parent().attr("data-id"), 1, false);
             });
         }
 
@@ -187,23 +152,21 @@
                 doapi("wx.cart.psel", { gid: id }, function (d) {
                     if (!d.issucc) return;
                     try {
-                        cartchange(d.ct, d.gc, d.ps, id, d.sel,d.shipfee);
+                        cartchange(d.ct, d.gc, d.ps, id, d.sel, d.shipfee);
                     } catch (e) { }
                 });
             }
         }
 
-        function cartchange(ct, gc, ps, gid, sel,shipfee) {
+        function cartchange(ct, gc, ps, gid, sel, shipfee) {
             if (ct == 0) $("[data-id='" + gid + "']").remove();
             $("[data-id='" + gid + "'] input").val(ct);
-            $("span.am").text(ps + "元(共" + gc + "件)");
-            $("#id_shipfee").text("￥"+shipfee);
-            if (sel != 2) {
-                $("[data-id='" + gid + "'] .sel").addClass("nn");
-               
-            }
-            
-        else $("[data-id='" + gid + "'] .sel").removeClass("nn");
+            $("span.am").text((ps) + "元(共" + gc + "件)");
+            $("span.yam").text((ps + shipfee) + "元(共" + gc + "件)");
+            $("#id_shipfee").text("￥" + shipfee);
+            if (sel != 2) $("[data-id='" + gid + "'] .sel").addClass("nn");
+            else $("[data-id='" + gid + "'] .sel").removeClass("nn");
+            if ($(".shaop02").size() == 0) document.location.reload();
         }
 
         function selectall(c) {
@@ -231,6 +194,7 @@
                 if (dt.way == 2) { document.location.href = "/wx/order/succ-" + d.msg + ".html"; return; }
                 else document.location.href = "/wx/order/detail-" + d.msg + ".html";
             });
+
         }
     </script>
 </body>

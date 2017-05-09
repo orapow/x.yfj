@@ -19,7 +19,10 @@
                 <x:text title="名称" def="$!item.name" name="name" size="4" chk="no" />
                 <x:upload title="图片" name="pic" count="1" tp="img" def="$!item.pic" />
                 <x:pick title="位置" src="dict:ads.pos" name="pos" count="1" def="$!item.pos" />
-                <x:text title="链接" def="$!item.url" name="url" size="5" />
+                <x:row title="链接">
+                    <x:pick src="loc:自定义|单品|分类|文章" name="ltp" count="1" mode="2" callback="typeback" />
+                    <x:text def="$!item.url" name="url" size="5" />
+                </x:row>
                 <x:text title="排序" def="$!item.sort" name="sort" size="2" />
                 <x:text title="说明" name="desc" tp="3" size="5" def="$!item.remark" />
             </div>
@@ -38,12 +41,29 @@
     <script type="text/javascript">
 
         $(function () {
-
             $("form:eq(0)").xform({
                 callback: function (d) { document.location.href = '/mgr/ads/list.html'; }
             });
-
         });
+
+        function typeback(i, t) {
+            var url = "http://$cfg.domain/";
+            switch (i) {
+                case "1":
+                    url = "";
+                    break;
+                case "2":
+                    url += "wx/goods/detail-{id}.html";
+                    break;
+                case "3":
+                    url += "wx/goods/list-{id}.html";
+                    break;
+                case "4":
+                    url += "wx/arti/detail-{id}.html";
+                    break;
+            }
+            $("#id_url").val(url);
+        }
 
     </script>
 </body>

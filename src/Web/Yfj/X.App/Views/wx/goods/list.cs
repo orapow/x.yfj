@@ -20,7 +20,7 @@ namespace X.App.Views.wx.goods
         protected override void InitDict()
         {
             base.InitDict();
-            dict.Add("cts", GetDictList("goods.cate", "0").Take(5));
+            dict.Add("cts", GetDictList("goods.cate", "0").Take(6));
         }
     }
 }

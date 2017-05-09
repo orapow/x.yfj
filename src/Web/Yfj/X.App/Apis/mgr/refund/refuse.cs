@@ -20,8 +20,8 @@ namespace X.App.Apis.mgr.refund {
         protected override XResp Execute() {
             var od = DB.x_refund.FirstOrDefault(o => o.refund_id == id);
 
-            if (od == null) throw new XExcep("T订单不存在");
-            if (od.status != 1) throw new XExcep("T订单状态不正确");
+            if (od == null) throw new XExcep("0x0024");
+            if (od.status != 1) throw new XExcep("0x0026");
 
             od.status = 3;
             od.aname = mg.name;

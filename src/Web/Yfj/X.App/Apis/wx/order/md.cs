@@ -24,13 +24,13 @@ namespace X.App.Apis.wx.order {
         public string remark { get; set; }
         protected override XResp Execute() {
             var c = CacheHelper.Get<string>("pay." + cu.id);
-            if (!string.IsNullOrEmpty(c)) throw new XExcep("T当前订单正在处理中，请稍后...");
+            if (!string.IsNullOrEmpty(c)) throw new XExcep("0x0048");
 
             var adr = cu.x_address.FirstOrDefault(o => o.address_id == ad);
-            if (adr == null) throw new XExcep("T收货地址不存在");
+            if (adr == null) throw new XExcep("0x0041");
 
             var gds = cu.x_cart.Where(o => o.sel == true);
-            if (gds == null || gds.Count() == 0) throw new XExcep("T购物车内没有商品");
+            if (gds == null || gds.Count() == 0) throw new XExcep("0x0049");
 
             CacheHelper.Save("pay." + cu.id, "1");
 
@@ -53,7 +53,6 @@ namespace X.App.Apis.wx.order {
                     unit = g.unit,
                     stand = g.desc,
                     total_price = g.count * g.price
-
                 });
             }
 

@@ -27,12 +27,12 @@ namespace X.App.Apis.mgr
 
         protected override XResp Execute()
         {
-            var c = CacheHelper.Get<string>("code." + uid);
-            CacheHelper.Remove("code." + uid);
-            if (c == null || c != code) throw new XExcep("T验证码不正确");
+            var c = CacheHelper.Get<string>("img.code." + uid);
+            CacheHelper.Remove("img.code." + uid);
+            if (c == null || c != code) throw new XExcep("0x0022");
             var ad = DB.x_mgr.SingleOrDefault(o => o.uid == uid);
 
-            if (ad == null || ad.pwd != Secret.MD5(pwd)) throw new XExcep("用户名或密码不正确");
+            if (ad == null || ad.pwd != Secret.MD5(pwd)) throw new XExcep("0x0023");
             var ukey = Guid.NewGuid().ToString();
 
             CacheHelper.Save("mgr." + ad.ukey, ad, 60 * 20);

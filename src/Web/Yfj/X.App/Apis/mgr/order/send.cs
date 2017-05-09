@@ -12,10 +12,12 @@ namespace X.App.Apis.mgr.order
     public class send : xmg
     {
         public int id { get; set; }
-        public string name { get; set; }
-        public string tel { get; set; }
-        protected override int powercode {
-            get {
+        public string sid { get; set; }
+
+        protected override int powercode
+        {
+            get
+            {
                 return 1;
             }
         }
@@ -24,12 +26,15 @@ namespace X.App.Apis.mgr.order
         {
             var od = DB.x_order.FirstOrDefault(o => o.order_id == id);
 
-            if (od == null) throw new XExcep("T订单不存在");
-            if (od.city != mg.city) throw new XExcep("T订单不在当前城市");
-            if (od.status != 3) throw new XExcep("T订单状态不正确");
+            if (od == null) throw new XExcep("0x0024");
+            if (od.city != mg.city) throw new XExcep("0x0025");
+            if (od.status != 3) throw new XExcep("0x0026");
+
+            var sd = DB.x_dict.FirstOrDefault(o => o.code == "user.sender" && o.value == sid);
+            if (sd == null) throw new XExcep("0x0029");
 
             od.status = 4;
-            od.send_man = name + " " + tel;
+            od.send_man = sd.name + " " + sd.f3 + " " + sd.value;
             od.out_time = DateTime.Now;
 
             SubmitDBChanges();

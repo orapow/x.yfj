@@ -21,7 +21,7 @@ namespace X.App.Apis.mgr.sale {
 
         protected override XResp Execute() {
             var ent = DB.x_sale.FirstOrDefault(o => o.sale_id == id);
-            if (ent == null) throw new XExcep("T商品不存在");
+            if (ent == null) throw new XExcep("0x0020");
 
             //if (st == 4) {
             //    //var vals = DB.x_goods_val.Where(o => o.goods_id == id);

@@ -16,7 +16,6 @@ namespace X.App.Views.mgr.goods {
             }
         }
 
-
         protected override string GetParmNames {
             //传参数
             get {

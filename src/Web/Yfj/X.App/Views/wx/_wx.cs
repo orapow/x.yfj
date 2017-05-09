@@ -36,14 +36,14 @@ namespace X.App.Views.wx
         {
             if (cu != null) return;
 
-            if (!isWx && !nd_user) return;
+            //if (!isWx && !nd_user) return;
 
             if (!isWx && nd_user) if (Context.Request.RawUrl != "/wx/login.html") Context.Response.Redirect("/wx/login.html"); else return;
+            if (!isWx) return;
 
             var code = GetReqParms("code");
             if (string.IsNullOrEmpty(code)) toWxUrl("snsapi_base");
 
-            var opid = "";
             if (!string.IsNullOrEmpty(code))
             {
                 var tk = Wx.GetWebToken(cfg.wx_appid, cfg.wx_scr, code);
@@ -51,23 +51,26 @@ namespace X.App.Views.wx
                 opid = tk.openid;
             }
 
-            cu = DB.x_user.FirstOrDefault(o => o.wx_opid == opid);
-
-            if (cu == null) cu = new x_user() { ctime = DateTime.Now, etime = DateTime.Now, wx_opid = opid, balance = 0, group = 1, exp = 0, used_exp = 0, invter = 0 };
-
-            if (cu.id == 0 || cu.etime.Value.AddDays(7) < DateTime.Now)
+            if (nd_user)
             {
-                var uk = Wx.GetToken(cfg.wx_appid, cfg.wx_scr);
-                var us = Wx.User.GetUserInfo(cu.wx_opid, uk);
-                cu.nickname = us.nickname;
-                cu.headimg = us.headimgurl;
-                cu.sex = us.sex == 1 ? "男" : us.sex == 2 ? "女" : "未知";
+                cu = DB.x_user.FirstOrDefault(o => o.wx_opid == opid);
+
+                if (cu == null) cu = new x_user() { ctime = DateTime.Now, etime = DateTime.Now, wx_opid = opid, balance = 0, group = 1, exp = 0, used_exp = 0, invter = 0 };
+
+                if (cu.id == 0 || cu.etime.Value.AddDays(7) < DateTime.Now)
+                {
+                    var uk = Wx.GetToken(cfg.wx_appid, cfg.wx_scr);
+                    var us = Wx.User.GetUserInfo(cu.wx_opid, uk);
+                    cu.nickname = us.nickname;
+                    cu.headimg = us.headimgurl;
+                    cu.sex = us.sex == 1 ? "男" : us.sex == 2 ? "女" : "未知";
+                }
+
+                cu.ukey = Secret.MD5(Guid.NewGuid().ToString());
+                if (cu.id == 0) DB.x_user.InsertOnSubmit(cu);
+
+                Context.Response.SetCookie(new HttpCookie("cu_key", cu.ukey));
             }
-
-            cu.ukey = Secret.MD5(Guid.NewGuid().ToString());
-            if (cu.id == 0) DB.x_user.InsertOnSubmit(cu);
-
-            Context.Response.SetCookie(new HttpCookie("cu_key", cu.ukey));
         }
         private void toWxUrl(string scope)
         {

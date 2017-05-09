@@ -4,25 +4,10 @@
     #parse("mgr/com/_head.html")
     <title>充值记录 - $cfg.name</title>
     <style type="text/css">
-        td.ops {
-            white-space: normal;
-        }
-
-        .gd {
-            width: 40px;
-            border: 1px solid #ff6a00;
-            float: left;
-            margin: 0 2px 2px 0;
-        }
-
-        .table td.c_gs {
-            overflow: auto;
-            white-space: normal;
-        }
-
-        .table td.c_rec_man {
-            white-space: normal;
-        }
+        td.ops { white-space: normal; }
+        .gd { width: 40px; border: 1px solid #ff6a00; float: left; margin: 0 2px 2px 0; }
+        .table td.c_gs { overflow: auto; white-space: normal; }
+        .table td.c_rec_man { white-space: normal; }
     </style>
 </head>
 <body>
@@ -31,7 +16,8 @@
     </div>
     <div class="search">
         <x:form>
-            <x:text name="key" tip="商品名称、订单号、用户" size="4" />
+            <x:pick name="st" src="loc:全部|待审核" mode="2" callback="set_st" def="$st" />
+            <x:text name="key" tip="用户" size="2" />
             <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
             <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
         </x:form>
@@ -40,7 +26,7 @@
     </div>
     <script type="text/javascript">
         function getStatus(id) {
-            switch(id){
+            switch (id) {
                 case 1:
                     return "等待审核";
                 case 2:
@@ -57,6 +43,9 @@
                     g.getlist(d);
                 }
             });
+            $("#li_st .btn").click(function () {
+                $("form:eq(0)").submit();
+            });
         });
 
         var cfg = {
@@ -69,24 +58,15 @@
                 { t: "发起时间", f: "{ctime}", w: 160, align: "left" },
                 { t: "充值结果", f: "{result}", w: 60, align: "left" },
                 { t: "审核状态", f: "{statusDisplay}", w: 60, align: "left" },
-                
             ],
-            btns: [
-                //{ txt: "详细", ico: "reorder", act: "detail", confirm: false }
-            ]
+            btns: []
         };
 
         cfg.getbtns = function (o) {
             var btns = [];
-            //refund.staus 1=待处理 2=同意 3=不同意
-            if (o.status == 2)
-                btns.push({ txt: "已同意", ico: "ok", act: "" });
-            else if (o.status == 3)
-                btns.push({ txt: "已拒绝", ico: "remove", act: "" });
-            else {
-                btns.push({ txt: "同意", ico: "ok", act: "accept"});
+            if (o.status == 1) {
+                btns.push({ txt: "同意", ico: "ok", act: "accept" });
                 btns.push({ txt: "拒绝", ico: "remove", act: "refuse" });
-                //btns.push({txt:"编辑",ico:"edit",act:"edit"});
             }
             return btns;
         }
@@ -111,7 +91,7 @@
         var g = x.grid.init(cfg);
 
         function doRefuse(id) {
-            
+
             x.input("请输入拒绝原因", function (r) {
                 x.doapi("mgr.deposit.refuse", { deposit_id: id, reason: r }, function (d) {
                     if (!d.issucc) return;

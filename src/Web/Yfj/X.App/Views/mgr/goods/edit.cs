@@ -6,29 +6,37 @@ using X.Core.Utility;
 using X.Data;
 using X.Web;
 
-namespace X.App.Views.mgr.goods {
-    public class edit : xmg {
+namespace X.App.Views.mgr.goods
+{
+    public class edit : xmg
+    {
         public int id { get; set; }
         public int cp { get; set; }
-        protected override int powercode {
-            get {
+
+        protected override int powercode
+        {
+            get
+            {
                 return 1;
             }
         }
 
-
-        protected override string GetParmNames {
+        protected override string GetParmNames
+        {
             //传参数
-            get {
+            get
+            {
                 return "id-cp";
             }
         }
 
         //List<x_goods_field> fs = null;
 
-        protected override void InitDict() {
+        protected override void InitDict()
+        {
             base.InitDict();
-            if (id > 0) {
+            if (id > 0)
+            {
                 var ent = DB.x_goods.SingleOrDefault(o => o.goods_id == id);
                 if (ent == null) throw new XExcep("0x0005");
 
@@ -49,7 +57,9 @@ namespace X.App.Views.mgr.goods {
                 //}).ToList();
                 //dict.Add("stock", Serialize.ToJson(st));
 
-            } else {
+            }
+            else
+            {
                 dict.Add("red", 1);
                 dict.Add("rnd", 1);
             }

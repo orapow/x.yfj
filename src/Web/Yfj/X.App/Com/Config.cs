@@ -15,18 +15,11 @@ namespace X.App.Com
         /// 域名
         /// </summary>
         public string domain { get; set; }//
-
-
         /// <summary>
         /// 系统名称
         /// </summary>
         public string name { get; set; }//网站名
-
-
-        /// <summary>
-        /// 百度key
-        /// </summary>
-        public string bdkey { get; set; }
+        public string svr_tel { get; set; }
         /// <summary>
         /// 缓存设置
         /// 1、memcached
@@ -34,25 +27,29 @@ namespace X.App.Com
         /// </summary>
         public int cache { get; set; }
         /// <summary>
-        /// 城市
-        /// </summary>
-        public string city { get; set; }
-
-        /// <summary>
         /// 货到付款
         /// </summary>
-        public int pay_cod { get; set; }//
-
-        public string sms_cfg { get; set; }
+        public string pay_ways { get; set; }//
+        public int chg_audit { get; set; }
 
         public string wx_appid { get; set; }//
         public string wx_scr { get; set; }//
         public string wx_mch_id { get; set; }//
+
         /// <summary>
         /// 微信证书路径
         /// </summary>
         public string wx_certpath { get; set; }//
         public string wx_paykey { get; set; }//
+        public int max_deposit { get; set; }
+
+        public int min_deposit { get; set; }
+
+        public int credit { get; set; }
+
+        public int free_ship { get; set; }
+
+        public int shipfee { get; set; }
 
         private static string file = HttpContext.Current.Server.MapPath("/dat/cfg.x");//来自服务器的文件
         private static Config cfg = null;
@@ -79,14 +76,5 @@ namespace X.App.Com
             Tools.SaveFile(HttpContext.Current.Server.MapPath("/dat/cfg.x"), Serialize.ToJson(cfg));
         }
 
-        public int max_deposit { get; set; }
-
-        public int min_deposit { get; set; }
-
-        public int credit { get; set; }
-
-        public decimal free_ship { get; set; }
-
-        public decimal shipfee { get; set; }
     }
 }

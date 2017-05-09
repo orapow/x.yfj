@@ -10,6 +10,7 @@
 #if($iswx)
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript">
+
     wx.config({
         debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
         appId: '$!wx_appid', // 必填，公众号的唯一标识
@@ -43,7 +44,10 @@
     }
 
     wx.error(function (res) {
-        alert(JSON.stringify(res));
+        //alert(JSON.stringify(res));
+        doapi("wx.newtk", null, function () {
+            document.location.reload();
+        })
     });
 
 </script>
@@ -60,9 +64,8 @@
         if (showtip != false) showloading();
         jQuery.post("/api/" + api, ps, function (d) {
             if (showtip != false) hideloading();
-            if (!d.issucc) {
-                alert(d.msg);
-            } else if (callback) {
+            if (!d.issucc) alert(d.msg);
+            if (callback) {
                 try {
                     callback(d);
                 }
@@ -72,20 +75,24 @@
             }
         }, "json");
     }
-    function tocart(gid) {
-        doapi("wx.cart.pin", { gid: gid }, function (d) {
+    function setcount(gid, ct) {
+        if (ct == 0) outcart(gid, 1);
+        else tocart(gid, ct);
+    }
+    function tocart(gid, val) {
+        doapi("wx.cart.pin", { gid: gid, count: val }, function (d) {
             if (!d.issucc) return;
             try {
-                cartchange(d.ct, d.gc, d.ps, gid,d.sel,d.shipfee);
+                cartchange(d.ct, d.gc, d.ps, gid, d.sel, d.shipfee);
             } catch (e) { }
         });
     }
-    function outcart(gid, val) {
-        if (val == 1 && !confirm("是否要将此商品移出购物车？")) return;
-        doapi("wx.cart.pout", { gid: gid, del: val == 0 ? 1 : 0 }, function (d) {
+    function outcart(gid, val, cf) {
+        if (cf != false) if (val == 1 && !confirm("是否要将此商品移出购物车？")) return;
+        doapi("wx.cart.pout", { gid: gid, del: val == 1 ? 1 : 0 }, function (d) {
             if (!d.issucc) return;
             try {
-                cartchange(d.ct, d.gc, d.ps, gid,d.sel,d.shipfee);
+                cartchange(d.ct, d.gc, d.ps, gid, d.sel, d.shipfee);
             } catch (e) { }
         });
     }

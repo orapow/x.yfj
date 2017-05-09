@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>绑定配送员</title>
+    <style type="text/css">
+        input[type="tel"], input[type="number"] { outline: none; border: none; background: none; font-family: "微软雅黑"; }
+        .fudong { display: none; }
+        .dis { background-color: #999; }
+    </style>
+</head>
+<body style="background:#f4f4f4;">
+    <!--内容-->
+    <div style="padding: 10px;text-align: center;">
+        <img src="$img" width="60" /><span style="vertical-align:middle;font-size:16px;margin-top: 5px;display: block;">$nk</span>
+    </div>
+    <div class="zhil01" style="margin-top:0;">
+        <ul>
+            <li class="en03">
+                <p>手机号码</p>
+                <input type="tel" placeholder="请输入您的手机号码" id="bt_tel" onblur="if(this.value) $('.img_code').attr('src', '/com/code-' + this.value + '.html')" />
+            </li>
+            <li class="en03">
+                <p>图片验证码</p>
+                <input type="number" class="en20" placeholder="请输入图片验证码" id="bt_pcode" />
+                <img src="" style="margin-top:15px;" class="img_code" />
+            </li>
+        </ul>
+    </div>
+    <div class="qr" id="bt_stcode" style="background-color:#12b36d;width:50%;font-size: 14px; margin:10px auto;color:white;" onclick="sendcode();">获取验证码</div>
+    <div class="zhil01">
+        <ul>
+            <li class="en03">
+                <p>短信验证码</p>
+                <input type="text" placeholder="请输入短信验证码" id="bt_scode" />
+            </li>
+        </ul>
+    </div>
+    <div class="qr" style="color:white;font-size: 14px;" onclick="do_bind()">确定</div>
+    <br />
+    <br />
+    <br />
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+        var tel = "";
+        var count = 0;
+        function sendcode() {
+            if (count > 0) return;
+            tel = $("#bt_tel").val();
+            if (!tel) { alert("手机号码不能为空"); return; }
+            var pcode = $("#bt_pcode").val();
+            if (!pcode) { alert("图片验证码不能为空"); return; }
+            startcouting();
+            doapi("com.sendcode", { tel: tel, code: pcode }, function (d) {
+                if (!d.issucc) { count = 0; return; }
+                alert("短信已发送，请稍后查收。");
+            });
+        }
+
+        function startcouting() {
+            count = 120;
+            var btn = $("#bt_stcode");
+            btn.css("background-color", "#999");
+            var tr = setInterval(function () {
+                btn.text(count + "s 后重新获取");
+                count--;
+                if (count <= 0) {
+                    clearInterval(tr); btn.css("background-color", "#12b36d").text("获取验证码");
+                }
+            }, 1000);
+        }
+
+        function do_bind() {
+            var dt = {
+                tel: tel,
+                opid: "$!opid",
+                code: $("#bt_scode").val(),
+                img: "$!img"
+            };
+            if (!dt.tel) { alert("手机号码不能为空"); return; }
+            if (!dt.code) { alert("短信验证码不能为空"); return; }
+            doapi("sder.bind", dt, function (d) {
+                if (!d.issucc) return;
+                alert("绑定成功。");
+                document.location.href = "/sder/list.html";
+            })
+        }
+
+    </script>
+</body>
+</html>

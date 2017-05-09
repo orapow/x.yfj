@@ -2,10 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("mgr/com/_head.html")
-    <title>商品资料 - $cfg.name</title>
-    <link href="/plug/um/themes/default/css/umeditor.min.css" rel="stylesheet" />
-    <script src="/plug/um/umeditor.config.js"></script>
-    <script src="/plug/um/umeditor.min.js"></script>
+    <title>手动充值 - $cfg.name</title>
     <style type="text/css">
         .edui-container { display: inline-block; vertical-align: top; }
         #id_desc { width: 600px; height: 300px; }
@@ -26,7 +23,7 @@
 </head>
 <body>
     <div class="title">
-        <span class="main">#if($action)复制商品#else商品编辑#end</span> - <span class="sub">商品管理</span>
+        <span class="main">手动充值</span> - <span class="sub">会员充值</span>
     </div>
     <div class="form">
         <x:form api="mgr.deposit.manual">
@@ -34,18 +31,8 @@
             <input type="hidden" name="iscp" value="$!cp" x-check="" />
             <div class="tab" style="display:block">
                 <input type="hidden" name="cover" value="$!item.cover" x-check="" />
-                <x:text title="充值用户ID"  name="user_id" size="5" chk="no" />
-                <x:row>
-                    <x:text title="充值金额" name="amount" size="2" chk="no" />
-                    
-                    <!--<x:pick title="用户ID" src="dict:goods.brand" name="brand" count="1" def="$!item.brand" />-->
-                    
-                </x:row>
-                <x:row>
-                    <x:text title="充值事由" name="reason" size="5" chk="no" />
-                </x:row>
-                
-               
+                <x:text title="会员" tip="用户名或电话" name="uid" size="5" chk="no" />
+                <x:text title="充值金额" name="amount" size="2" chk="no" />
             </div>
             <div class="btns">
                 <button type="submit" class="btn btn-primary" onclick="doManualDeposit()">

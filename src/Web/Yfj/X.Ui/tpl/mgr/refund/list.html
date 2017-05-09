@@ -73,10 +73,7 @@
                 btns.push({ txt: "同意", ico: "ok", act: "accept",confirm:false });
                 btns.push({ txt: "拒绝", ico: "remove", act: "refuse" });
                 //btns.push({txt:"编辑",ico:"edit",act:"edit"});
-            } else if (o.status == 2)
-                btns.push({ txt: "已同意", ico: "ok", act: "" });
-            else if (o.status == 3)
-                btns.push({ txt: "已拒绝", ico: "remove", act: "" });
+            }
             return btns;
         }
 

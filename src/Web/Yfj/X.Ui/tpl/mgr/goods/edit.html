@@ -37,14 +37,13 @@
                 <x:text title="商品标题" def="$!item.name" name="name" size="5" chk="no" />
                 <x:text title="商品规格" def="$!item.alias" name="alias" size="4" chk="no" />
                 <x:row>
-                    <x:pick title="分类" src="url:/mgr/dict/select-goods.cate.html:::brand" name="cate" count="1" def="$!{cate}" />
+                    <x:pick title="分类" src="url:/mgr/dict/select-goods.cate.html" name="cate" count="1" def="$!{cate}" />
                     <x:pick title="品牌" src="dict:goods.brand" name="brand" count="1" def="$!item.brand" />
-                    
                 </x:row>
                 <x:row>
                     <x:text title="产品编号" def="$!item.no" name="no" size="2" chk="no" />
                     <x:pick src="loc:是|否" mode="2" name="hot" count="1" title="是否热销" def="$!item.hot" />
-                    <x:pick src="loc:是|否" mode="2" name="hot" count="1" title="计算邮费" def="$!item.calcfreight" />
+                    <x:pick src="loc:是|否" mode="2" name="calcfreight" count="1" title="运费另算" def="$!item.calcfreight" />
                 </x:row>
                 <x:row>
                     <x:text title="价格" def="$!item.new_price" name="np" size="2" chk="no" />

@@ -4,128 +4,78 @@
     #parse("wx/_head.html")
     <title>订单详情</title>
     <style type="text/css">
-        .goods_info li div:first-child span {
-            height: auto;
-        }
-
-        .lc {
-            margin: 0 auto;
-            width: 90%;
-        }
-
-        .st {
-            width: 30px;
-            background: url(/img/wx/fgf_06.png) top center no-repeat;
-            background-size: 18px;
-            position: absolute;
-            top: 35px;
-            left: 0;
-            margin-left: -15px;
-        }
-
-            .st.on {
-                background-image: url(/img/wx/fgf_03.png);
-                top: 30px;
-                left: 0;
-                background-size: 30px;
-            }
-
-                .st.on span {
-                    margin-top: 25px;
-                }
-
-        .lc01 {
-            width: 0px;
-        }
-
-            .lc01.s12 {
-                width: 25%;
-            }
-
-            .lc01.s13 {
-                width: 50%;
-            }
-
-            .lc01.s14 {
-                width: 75%;
-            }
-
-            .lc01.s15 {
-                width: 100%;
-            }
-
-            .lc01.s23 {
-                width: 33.33%;
-            }
-
-            .lc01.s24 {
-                width: 66.67%;
-            }
-
-            .lc01.s25 {
-                width: 100%;
-            }
-
-        .goods_info .hd span:first-child {
-            width: 63%;
-        }
-
-        .goods_info li div:first-child {
-            width: 63%;
-        }
-
-        .goods_info li div:nth-child(2) {
-            line-height: 50px;
-        }
-
-        .goods_info li div:last-child {
-            line-height: 50px;
-        }
-
-        .fudong {
-            display: none;
-        }
-
-        .xiangx span {
-            margin-right: 0;
-        }
+        .goods_info li div:first-child span { height: auto; }
+        .lc { margin: 0 auto; width: 90%; }
+        .st { width: 30px; background: url(/img/wx/fgf_06.png) top center no-repeat; background-size: 18px; position: absolute; top: 35px; left: 0; margin-left: -15px; }
+        .st.on { background-image: url(/img/wx/fgf_03.png); top: 30px; left: 0; background-size: 30px; }
+        .st.on span { margin-top: 25px; }
+        .lc01 { width: 0px; }
+        .lc01.s12 { width: 25%; }
+        .lc01.s13 { width: 50%; }
+        .lc01.s14 { width: 75%; }
+        .lc01.s15 { width: 100%; }
+        .lc01.s23 { width: 33.33%; }
+        .lc01.s24 { width: 66.67%; }
+        .lc01.s25 { width: 100%; }
+        .goods_info .hd span:first-child { width: 63%; }
+        .goods_info li div:first-child { width: 63%; }
+        .goods_info li div:nth-child(2) { line-height: 50px; }
+        .goods_info li div:last-child { line-height: 50px; }
+        .fudong { display: none; }
+        .xiangx span { margin-right: 0; }
     </style>
 </head>
 <body style="background:#f4f4f4;">
     <div class="top01">
-        <div class="w80"> <a class="bnt" href="list-${od.status}.html"> <img src="/img/wx/dd_03.png" /> </a> 优辅家建材 </div>
+        <div class="w80"> <a class="bnt" href="javascript:history.go(-1)"> <img src="/img/wx/dd_03.png" /> </a> 优辅家建材 </div>
     </div>
     <div class="clear"></div>
     <div class="min">
         <div class="lchen">
             <h2>订单号：$od.no<!--<span>$od.ctime.tostring("yyyy-MM-dd HH:mm:ss")</span>--></h2>
+            #if($od.status!=6)
             <div class="lc">
                 <div class="lc01 s${od.pay_way}$od.status"></div>
-                #if($od.pay_way==1)
-                <div class="st #if($od.status>=1)on#end"> <span>下单</span> </div>
-                <div class="st #if($od.status>=2)on#end" style="left:25%"><span>支付</span></div>
-                <div class="st #if($od.status>=3)on#end" style="left:50%"> <span>确认</span> </div>
-                <div class="st #if($od.status>=4)on#end" style="left:75%"> <span>出库</span> </div>
-                <div class="st #if($od.status>=5)on#end" style="left:100%"> <span>完成</span> </div>
-                #else
+                #if($od.pay_way==2)
                 <div class="st #if($od.status>=1)on#end"> <span>下单</span> </div>
                 <div class="st #if($od.status>=3)on#end" style="left:33.33%"> <span>确认</span> </div>
                 <div class="st #if($od.status>=4)on#end" style="left:66.67%"> <span>出库</span> </div>
                 <div class="st #if($od.status>=5)on#end" style="left:100%"> <span>完成</span> </div>
+                #else
+                <div class="st #if($od.status>=1)on#end"> <span>下单</span> </div>
+                <div class="st #if($od.status>=2)on#end" style="left:25%"> <span>支付</span></div>
+                <div class="st #if($od.status>=3)on#end" style="left:50%"> <span>确认</span> </div>
+                <div class="st #if($od.status>=4)on#end" style="left:75%"> <span>出库</span> </div>
+                <div class="st #if($od.status>=5)on#end" style="left:100%"> <span>完成</span> </div>
                 #end
             </div>
+            #else
+            <p style="font-size: 14px;padding-top: 10px;">订单已经取消</p>
+            #end
         </div>
         <div class="xiangx">
             <p><span>收货地址：</span>$od.rec_addr</p>
             <p><span>联系人：</span>$od.rec_man</p>
             <p><span>联系电话：</span>$od.rec_tel</p>
             <p><span>收货时间：</span>$od.send_date.tostring("yyyy-MM-dd ") $od.send_time</p>
-            <p><span>支付方式：</span>#if($od.pay_way==1)在线支付#elseif($od.pay_way==2)货到付款#else 余额支付#end</p>
-            <p><span>是否付款：</span>#if($od.pay_amount>0)已付款 $!od.pay_time.tostring("yyyy-MM-dd HH:mm:ss") #else未付款#end</p>
-            #if($od.send_man.length>0)<p><span>配送人：</span>$od.send_man</p>#end
-            <p><span>订单备注：</span>$od.user_remark</p>
             <div class="clear"></div>
         </div>
+        <div class="xiangx">
+            <p><span>支付方式：</span>#if($od.pay_way==1)微信支付#elseif($od.pay_way==2)货到付款#elseif($od.pay_way==3)余额支付#end</p>
+            <p><span>是否付款：</span>#if($od.pay_amount>0)已付款#else未付款#end</p>
+            #if($od.pay_amount>0)
+            <p><span>付款金额：</span>$od.pay_amount</p>
+            <p><span>付款时间：</span>$!od.pay_time.tostring("yyyy-MM-dd HH:mm:ss")</p>
+            #end
+            <div class="clear"></div>
+        </div>
+        #if($od.send_man.length>0)
+        <div class="xiangx">
+            <p><span>出库时间：</span>$od.out_time.tostring("yyyy-MM-dd HH:mm:ss")</p>
+            <p><span>配送人：</span>$sd.get_item(0) $sd.get_item(1) <a href="tel:$sd.get_item(1)">拔打</a></p>
+            <div class="clear"></div>
+        </div> 
+        #end
         <div class="goods_info">
             <div class="hd"><span>商品信息</span><span>数量</span><span>金额</span></div>
             <ul>
@@ -141,11 +91,17 @@
                 #end
             </ul>
         </div>
+        <div class="xiangx">
+            <p><span>订单备注：</span>$od.user_remark</p>
+            <div class="clear"></div>
+        </div> 
         <div class="xiaox01">
-            <p>累计货款：<span>￥$od.amount</span></p>
-            <!--<p>搬运费：<span>+￥$od.freight_amount</span></p>-->
-            <p>运费：<span>+￥$od.freight_amount</span></p>
-            <p>优惠金额：<span>-￥$od.fav_amount</span></p>
+            <p>累计货款：<span>$od.amount元</span></p>
+            <!--<p>搬运费：<span>+$od.freight_amount元</span></p>-->
+            <p>运费：<span>+$od.freight_amount元</span></p>
+            <p>优惠金额：<span>-$od.fav_amount元</span></p>
+            <hr style="background: #ccc;height: 1px;border: none;" />
+            <p>应付金额：<span>￥$od.yf_amount元</span></p>
         </div>
     </div>
     #if($od.status!=6&&($od.pay_way==1||$od.pay_way==3)&&!($od.pay_amount>0))
@@ -155,13 +111,13 @@
     </div>
     <script type="text/javascript">
         function checkout() {
-            if ($od.pay_way == 1)
-                dopay();
-            else
+            if ($od.pay_way == 1) dopay();
+            else {
                 doapi("wx.order.pay", { id: "$od.order_id", pay_way: 3 }, function (d) {
                     if (!d.issucc) return;
                     document.location.href = "/wx/order/succ-" + d.id + ".html";
                 });
+            }
         }
 
         function dopay() {
@@ -189,31 +145,29 @@
                             //$("#img_code").attr("src", "data:image/jpeg;base64," + d.msg).parent().show();
                             alert("支付失败，请重试！！！");
                         }
-                    }
-                    );
+                    });
             });
-            //showloading("下单成功，应付金额为：￥" + d.amount + "。\n正在拉起支付");
         }
     </script>
     #elseif($od.pay_way==1)
     <div class="fuchen">
         <h2>金额：$od.yf_amount元</h2>
         #if($itemRefund)
-            #if($itemRefund.status==1)
-                <input type="button" value="退款请求中" class="but" style="background:#999" disabled="disabled" />
-            #elseif($itemRefund.status==2)
-                <input type="button" value="退款已成功" class="but" style="background:#999" disabled="disabled" />
-            #elseif($itemRefund.status==3)
-                <input type="button" value="退款被拒绝" class="but" style="background:#999" disabled="disabled" />
-            #end
+        #if($itemRefund.status==1)
+        <input type="button" value="退款请求中" class="but" style="background:#999" disabled="disabled" />
+        #elseif($itemRefund.status==2)
+        <input type="button" value="退款已成功" class="but" style="background:#999" disabled="disabled" />
+        #elseif($itemRefund.status==3)
+        <input type="button" value="退款被拒绝" class="but" style="background:#999" disabled="disabled" />
+        #end
         #elseif($od.status==4)
-            <input type="button" value="确认收货" class="but" onclick="doacpt()" />
+        <input type="button" value="确认收货" class="but" onclick="doacpt()" />
         #elseif($od.status==5)
-            <input type="button" value="订单已完成" class="but" style="background:#999" disabled="disabled" />
+        <input type="button" value="订单已完成" class="but" style="background:#999" disabled="disabled" />
         #elseif($od.status==6)
-            <input type="button" value="订单已取消" class="but" style="background:#999" disabled="disabled" />
+        <input type="button" value="订单已取消" class="but" style="background:#999" disabled="disabled" />
         #else
-            <input type="button" value="等待处理" class="but" style="background:#999" disabled="disabled"  />
+        <input type="button" value="等待处理" class="but" style="background:#999" disabled="disabled" />
         #end
     </div>
     <script type="text/javascript">
@@ -222,7 +176,6 @@
                 if (!d.issucc) return;
             });
         }
-
         function showAlert(content) {
             alert(content);
         }

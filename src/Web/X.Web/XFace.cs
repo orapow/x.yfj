@@ -11,14 +11,6 @@ using X.Web.Cache;
 namespace X.Web {
     public abstract class XFace {
         /// <summary>
-        /// 当前网站标识
-        /// </summary>
-        protected int site_id = 0;
-        /// <summary>
-        /// 当前语言标识
-        /// </summary>
-        protected int lang_id = 0;
-        /// <summary>
         /// 数据库对象
         /// </summary>
         protected DataClassesDataContext DB = null;

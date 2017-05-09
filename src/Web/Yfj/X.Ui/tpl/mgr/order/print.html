@@ -2,27 +2,31 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/js/jq_2.1.4.js"></script>
     <title></title>
     <meta charset="utf-8" />
     <style type="text/css">
         table.grid { border-collapse: collapse; }
         table.grid, .grid th, .grid td { border: 1px solid black; padding: 5px; }
         html, body { height: 400px; overflow: auto; font-size: 12px; }
+        .showpr { display: none; }
     </style>
     <style type="text/css" media="print">
         .pc { display: none; }
         html, body { overflow: initial; height: auto; }
+        .showpr { display: none; }
     </style>
 </head>
 <body>
     <div class="pc">
         <button onclick="window.print();">打印</button>
+        <input type="checkbox" onclick="$('.pr').toggleClass('showpr');" value="价格" checked="checked">显示价格
         <br />
     </div>
     <div class="pring">
         <table width="100%">
             <tr>
-                <td height="50" align="left" style="font-size:18px;font-weight:bold;">$cfg.name 出货单</td>
+                <td height="50" align="left" style="font-size:18px;font-weight:bold;">$cfg.name 送货单</td>
                 <td align="right" style="font-size:18px;font-weight:bold;">订单号：$od.no</td>
             </tr>
             <tr>
@@ -39,27 +43,28 @@
                 <th height="20">名称</th>
                 <th width="">规格</th>
                 <th width="50">数量</th>
-                <th width="70">单价</th>
-                <th width="80">小计</th>
+                <th width="70" class="pr">单价</th>
+                <th width="80" class="pr">小计</th>
             </tr>
             #foreach($g in $gs)
             <tr>
                 <td height="20">$g.name</td>
                 <td>$g.stand</td>
-                <td align="center">$g.count $g.unit</td>
-                <td align="center">$g.price</td>
-                <td align="center">$g.total_price</td>
+                <td align="center">$g.count $!g.unit</td>
+                <td align="center" class="pr">$g.price</td>
+                <td align="center" class="pr">$g.total_price</td>
             </tr>
             #end
             <tr>
                 <td colspan="2" align="right" height="20"><b>合计：</b></td>
-                <td align="center">$sum件</td>
-                <td></td>
-                <td align="center">$od.yf_amount</td>
+                <td align="center">$sum 件</td>
+                <td class="pr"></td>
+                <td align="center" class="pr">$od.amount</td>
             </tr>
         </table>
         <table width="100%">
             <tr>
+                <td align="left" height="40" class="pr">运费：$!od.freight_amount</td>
                 <td align="right" height="40">打印日期：$dt</td>
             </tr>
         </table>

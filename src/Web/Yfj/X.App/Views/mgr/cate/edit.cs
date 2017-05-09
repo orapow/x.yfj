@@ -9,8 +9,10 @@ namespace X.App.Views.mgr.cate
         public int pid { get; set; }
 
         string code = "goods.cate";
-        protected override int powercode {
-            get {
+        protected override int powercode
+        {
+            get
+            {
                 return 1;
             }
         }
@@ -42,6 +44,7 @@ namespace X.App.Views.mgr.cate
             {
                 dict.Add("up", "0|无");
             }
+            dict.Add("code", code);
         }
     }
 }

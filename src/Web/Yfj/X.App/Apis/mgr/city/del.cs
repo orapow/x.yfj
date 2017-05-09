@@ -22,7 +22,7 @@ namespace X.App.Apis.mgr.city
         protected override XResp Execute()
         {
             var ent = DB.x_dict.FirstOrDefault(o => o.dict_id == id);
-            if (ent == null) throw new XExcep("T城市不存在");
+            if (ent == null) throw new XExcep("0x0015");
 
             DB.x_dict.DeleteOnSubmit(ent);
 

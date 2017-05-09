@@ -22,7 +22,7 @@ namespace X.App.Views.wx.order
             base.InitDict();
             var order = DB.x_order.FirstOrDefault(o => o.order_id == id);
             if (order == null)
-                throw new XExcep("T订单不存在"); ;
+                throw new XExcep("0x0024"); ;
             dict.Add("order", order);
         }
     }

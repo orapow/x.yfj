@@ -22,15 +22,14 @@ namespace X.App.Apis.wx.cart
 
             SubmitDBChanges();
 
-            decimal shipAmount = cu.x_cart.Where(o => o.calcfreight == 1).Sum(o => o.price * o.count).Value;
-
+            decimal shipAmount = cu.x_cart.Where(o => o.calcfreight == 2 && o.sel == true).Sum(o => o.price * o.count).Value;
             return new back()
             {
                 gs = cu.x_cart.Where(o => o.sel == true).Count(),
                 gc = cu.x_cart.Where(o => o.sel == true).Sum(o => o.count.Value),
                 ct = g.count.Value,
                 ps = cu.x_cart.Where(o => o.sel == true).Sum(o => o.price * o.count).Value,
-                shipfee = shipAmount>=cfg.free_ship?0:cfg.shipfee
+                shipfee = shipAmount >= cfg.free_ship || g.count == 0 ? 0 : cfg.shipfee
             };
         }
 

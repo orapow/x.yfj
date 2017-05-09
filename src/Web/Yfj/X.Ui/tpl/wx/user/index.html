@@ -4,21 +4,8 @@
     #parse("wx/_head.html")
     <title>个人中心</title>
     <style type="text/css">
-        span.badge {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: #f57629;
-            border-radius: 50%;
-            line-height: 20px;
-            color: white;
-            top: 5px;
-            right: 5px;
-        }
-
-        .fudong02 li {
-            position: relative;
-        }
+        span.badge { position: absolute; width: 20px; height: 20px; background-color: #f57629; border-radius: 50%; line-height: 20px; color: white; top: 5px; right: 5px; font-size: 12px; line-height: 20px; }
+        .fudong02 li { position: relative; }
     </style>
 </head>
 <body style="background:#f4f4f4;">
@@ -26,7 +13,7 @@
         <img onerr="this.src='/img/wx/gh.png'" src="$cu.headimg" />
         <h2 style="margin-top:5px;">#if($cu.name.length>0)$cu.name#else$cu.nickname#end ($city_name)</h2>
         <!--<h2>#if($cu.tel.length>0)$cu.tel#else<a href="/wx/bind.html" style="position:inherit;">绑定手机号</a>#end</h2>-->
-        <h2>账户余额：$!cu.balance 元</h2>
+        <h2>余额：$!cu.balance 元</h2>
         <a href="/wx/user/setting.html">账户管理<span><img src="/img/wx/tj_12.png" style="width: 12px;" /></span></a>
         <div class="clear"></div>
     </div>
@@ -43,18 +30,16 @@
     <div class="clear"></div>
     <div class="liebiao01">
         <ul>
-            <!--<li class="dizhi01"><a href="#"> <p>我的优惠劵</p><span style="color:#cc0000;">(0)</span></a></li>-->
             <li class="dizhi02"><a href="#"> <p>我常购买</p><img src="/img/wx/tj_13.png" /></a></li>
+            <li class="dizhi01"><a href="/wx/user/deposit.html"> <p>余额管理</p><img src="/img/wx/tj_13.png" /></a></li>
             <li class="dizhi03"><a href="/wx/addr/list.html"> <p>地址管理#if($ac>0)($!ac)#end</p><img src="/img/wx/tj_13.png" /></a></li>
-            <li class="dizhi05"><a href="/wx/user/deposit.html"> <p>余额充值</p></a></li>
         </ul>
         <div class="clear"></div>
     </div>
     <div class="liebiao01">
         <ul>
-            <li class="dizhi04"><a href="/wx/arti/detail-2.html"> <p>服务政策</p><img src="/img/wx/tj_13.png" /></a></li>
-            <div class="clear"></div>
-            <li class="dizhi05"><a href="tel:400-000-000"> <p>联系客服</p><span style="color:#f57629;">400-000-000</span></a></li>
+            <li class="dizhi04"><a href="/wx/arti/detail-4.html"> <p>服务政策</p><img src="/img/wx/tj_13.png" /></a></li>
+            <li class="dizhi05"><a href="tel:$!cfg.svr_tel"> <p>联系客服</p><span style="color:#f57629;">$!cfg.svr_tel</span></a></li>
             <div class="clear"></div>
         </ul>
         <div class="clear"></div>

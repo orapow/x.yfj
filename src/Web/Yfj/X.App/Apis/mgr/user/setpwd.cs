@@ -20,7 +20,7 @@ namespace X.App.Apis.mgr.user
         protected override XResp Execute()
         {
             var u = DB.x_user.FirstOrDefault(o => o.user_id == id);
-            if (u == null) throw new XExcep("T用户不存在");
+            if (u == null) throw new XExcep("0x0039");
 
             u.pwd = Secret.MD5("123456");
 

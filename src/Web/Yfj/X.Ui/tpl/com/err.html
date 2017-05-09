@@ -11,8 +11,8 @@
     <script type="text/javascript">
         x.alert("错误信息：$!rsp.msg 代号：$!rsp.code", function () {
             switch ("$rsp.code") {
-                case "0x0045":
-                    document.location.href = "/login-$!{backurl}.html";
+                case "0x0004":
+                    document.location.href = "/mgr/login-$!{backurl}.html";
                     break;
                 default:
                     history.go(-1);

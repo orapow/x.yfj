@@ -64,7 +64,7 @@ namespace X.Core.Plugin
             if (url_rules == null) return;
 
             string url = context.Request.FilePath;
-            if (File.Exists(context.Server.MapPath(url))) { return; }
+            if (!url.EndsWith(".x") && File.Exists(context.Server.MapPath(url))) { return; }
 
             string newurl = "";
             foreach (var r in url_rules.Keys)

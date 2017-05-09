@@ -1,0 +1,320 @@
+
+时间：2017-04-28 14:03:18,841 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：2887 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:03:36,263 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：20308 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:03:39,894 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：23940 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:03:52,622 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：36668 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:28,523 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：62258 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:33,925 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：67660 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:36,936 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：70672 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:37,882 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：71617 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:38,389 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：72125 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:38,673 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：72408 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:39,108 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：72843 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:39,432 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：73168 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:39,628 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：73363 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:40,356 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：74091 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:40,466 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：74201 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:40,620 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：74355 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:05:46,702 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：80437 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:08:20,457 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T图片验证码不正确)","code":"T图片验证码不正确"} 
+时间：5304 
+
+时间：2017-04-28 14:08:51,325 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:35) - 
+错误：远程服务器返回错误: (400) 错误的请求。 
+时间：36172 
+System.Net.WebException: 远程服务器返回错误: (400) 错误的请求。
+   在 System.Net.WebClient.OpenRead(Uri address)
+   在 System.Net.WebClient.OpenRead(String address)
+   在 X.Core.Utility.Tools.GetHttpData(String url, Encoding encd) 位置 D:\Pro\x.yfj\src\Xc\Core\Utility\Tools.cs:行号 369
+
+时间：2017-04-28 14:09:03,119 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"未知错误代码(T短信发送失败：远程服务器返回错误: (400) 错误的请求。)","code":"T短信发送失败：远程服务器返回错误: (400) 错误的请求。"} 
+时间：47966 
+
+时间：2017-04-28 14:09:09,277 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：54124 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:09:18,038 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：62885 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:09:47,416 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：92263 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 14:10:24,710 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：129557 
+System.ArgumentException: 参数无效。
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height, PixelFormat format)
+   在 System.Drawing.Bitmap..ctor(Int32 width, Int32 height)
+   在 X.Web.Views.Code.CreateImage(String randomcode) 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 50
+   在 X.Web.Views.Code.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\Code.cs:行号 40
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 15:46:20,694 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：155964 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'ali_notify.html'
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.App.Views.ali_notify.GetResponse() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\ali_notify.cs:行号 12
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
+
+时间：2017-04-28 15:57:52,916 
+级别：FATAL 
+出错类：X.Web.XApp property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Fatal(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:68) - 
+错误：致命错误 
+时间：848185 
+NVelocity.Exception.ResourceNotFoundException: Unable to find resource 'ali_notify.html'
+   在 X.Web.Views.View.GetResponse() 位置 D:\Pro\x.yfj\src\Web\X.Web\Views\View.cs:行号 108
+   在 X.App.Views.ali_notify.GetResponse() 位置 D:\Pro\x.yfj\src\Web\Yfj\X.App\Views\ali_notify.cs:行号 12
+   在 X.Web.XApp.ProcessRequest(HttpContext c) 位置 D:\Pro\x.yfj\src\Web\X.Web\XApp.cs:行号 31
