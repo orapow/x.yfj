@@ -36,6 +36,16 @@ namespace X.App.Apis.mgr.goods
         public int red { get; set; }//支持退款
         public int rnd { get; set; }//是否配送
 
+        public int hot { get; set; }//是否热销
+
+        public int calcfreight { get; set; }//是否计算邮费
+        protected override int powercode
+        {
+            get
+            {
+                return 1;
+            }
+        }
         protected override XResp Execute()
         {
             x_goods ent = null;
@@ -47,10 +57,10 @@ namespace X.App.Apis.mgr.goods
             if (ent == null || iscp == 1) ent = new x_goods() { ctime = DateTime.Now };
 
             var ct = DB.x_dict.FirstOrDefault(o => o.code == "goods.cate" && o.value == cate);
-            if (ct == null) throw new XExcep("T分类不存在");
+            if (ct == null) throw new XExcep("0x0013");
 
             ent.cate_id = cate;
-            ent.unit = ct.f3 ?? unit;
+            ent.unit = string.IsNullOrEmpty(unit) ? ct.f3 : unit;
             ent.city = mg.city;
             ent.name = name;
             ent.no = no;
@@ -69,6 +79,9 @@ namespace X.App.Apis.mgr.goods
             ent.return_exp = re_it;
             ent.refunded = red == 1;
             ent.sended = rnd == 1;
+            ent.hot = hot;
+            ent.calcfreight = calcfreight == 0 ? 1 : calcfreight;
+            ent.mtime = DateTime.Now;
             if (ent.goods_id == 0) ent.status = 2;
 
             if (ent.goods_id == 0)

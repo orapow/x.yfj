@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>手动充值 - $cfg.name</title>
+    <style type="text/css">
+        .edui-container { display: inline-block; vertical-align: top; }
+        #id_desc { width: 600px; height: 300px; }
+        .imgs .img { padding: 2px; border: 1px solid #ccc; cursor: pointer; }
+        .imgs .img.on { border-color: red; }
+        .navs { border-bottom: 1px solid #ccc; width: 50%; }
+        .navs .btn { margin-right: -1px; margin-bottom: -1px; }
+        .tab { display: none; padding-top: 15px; }
+        .tab > .li { margin-bottom: 15px; }
+        .attr_list .btn { margin-right: 5px; }
+        .attr_list .li { margin-bottom: 10px; }
+        .stock_list .row { position: relative; }
+        .stock_list .st { margin-bottom: 5px; margin-right: 5px; }
+        .stock_list .st input { margin-right: -1px; }
+        .stock_list .panel { margin-left: 80px; }
+        .stock_list .row .lbe { position: absolute; top: 0; left: 0; }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">手动充值</span> - <span class="sub">会员充值</span>
+    </div>
+    <div class="form">
+        <x:form api="mgr.deposit.manual">
+            <input type="hidden" name="id" value="$!item.goods_id" x-check="" />
+            <input type="hidden" name="iscp" value="$!cp" x-check="" />
+            <div class="tab" style="display:block">
+                <input type="hidden" name="cover" value="$!item.cover" x-check="" />
+                <x:text title="会员" tip="用户名或电话" name="uid" size="5" chk="no" />
+                <x:text title="充值金额" name="amount" size="2" chk="no" />
+            </div>
+            <div class="btns">
+                <button type="submit" class="btn btn-primary" onclick="doManualDeposit()">
+                    <i class="icon-ok"></i>提交保存
+                </button>
+                <a class="btn" onclick="history.go(-1)">
+                    <i class="icon-reply"></i>返回上一页
+                </a>
+            </div>
+        </x:form>
+    </div>
+    <br />
+    <br />
+    <script type="text/javascript">
+
+        $(function () {
+            $(".imgs").delegate(".img", "click", function (evt) {
+                $(".img.on").removeClass("on");
+                $(this).addClass("on");
+                $("[name='cover']").val($(this).attr("x-val"));
+                return false;
+            });
+            if ("$!item.cover") $(".img[x-val='$!item.cover']").addClass("on");
+
+            $("form:eq(0)").xform({
+                callback: function (d) { document.location.href = '/mgr/deposit/list.html'; }
+            });
+
+        });
+
+        var um = UM.getEditor("id_desc");
+
+        function doManualDeposit() {
+            if (confirm("请确定是否手动进行充值，操作无法取消")) {
+                history.go(-1);
+                //closewin(this);
+                //return;
+
+            }
+        }
+
+    </script>
+</body>
+</html>

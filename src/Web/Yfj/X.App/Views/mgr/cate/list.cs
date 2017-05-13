@@ -19,6 +19,11 @@ namespace X.App.Views.mgr.cate
                 return "hasc";
             }
         }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override void InitDict()
         {
             base.InitDict();

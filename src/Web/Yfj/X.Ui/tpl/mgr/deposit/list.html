@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>充值记录 - $cfg.name</title>
+    <style type="text/css">
+        td.ops { white-space: normal; }
+        .gd { width: 40px; border: 1px solid #ff6a00; float: left; margin: 0 2px 2px 0; }
+        .table td.c_gs { overflow: auto; white-space: normal; }
+        .table td.c_rec_man { white-space: normal; }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">全部记录</span> - <span class="sub">充值管理</span>
+    </div>
+    <div class="search">
+        <x:form>
+            <x:pick name="st" src="loc:全部|待审核" mode="2" callback="set_st" def="$st" />
+            <x:text name="key" tip="用户" size="2" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+        </x:form>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <script type="text/javascript">
+        function getStatus(id) {
+            switch (id) {
+                case 1:
+                    return "等待审核";
+                case 2:
+                    return "已同意";
+                case 3:
+                    return "已拒绝";
+            }
+        }
+
+        $(function () {
+            $("form:eq(0)").xform({
+                callback: function (d) {
+                    d.page = 1;
+                    g.getlist(d);
+                }
+            });
+            $("#li_st .btn").click(function () {
+                $("form:eq(0)").submit();
+            });
+        });
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30, st: "$!st" },
+            api: "mgr.deposit.list",
+            fs: [
+                { t: "用户", f: "<img src='{up}' style='height:45px;'/> {un}{name}", w: 120, align: "left" },
+                { t: "充值金额", f: "{amount}", w: 80, align: "left" },
+                { t: "发起时间", f: "{ctime}", w: 160, align: "left" },
+                { t: "充值结果", f: "{result}", w: 60, align: "left" },
+                { t: "审核状态", f: "{statusDisplay}", w: 60, align: "left" },
+            ],
+            btns: []
+        };
+
+        cfg.getbtns = function (o) {
+            var btns = [];
+            if (o.status == 1) {
+                btns.push({ txt: "同意", ico: "ok", act: "accept" });
+                btns.push({ txt: "拒绝", ico: "remove", act: "refuse" });
+            }
+            return btns;
+        }
+
+        cfg.cellclick = function (act, d) {
+            switch (act) {
+                case "accept":
+                    doAccept(d.id);
+                    break;
+                case "refuse":
+                    doRefuse(d.id);
+                    break;
+                case "detail":
+                    show_detail(d.order_id);
+                    break;
+                case "edit":
+                    show_edit(d.id);
+                    break;
+            }
+        };
+
+        var g = x.grid.init(cfg);
+
+        function doRefuse(id) {
+
+            x.input("请输入拒绝原因", function (r) {
+                x.doapi("mgr.deposit.refuse", { deposit_id: id, reason: r }, function (d) {
+                    if (!d.issucc) return;
+                    g.getlist();
+                })
+            }, 2, true);
+        }
+        function doAccept(id) {
+            x.doapi("mgr.deposit.accept", { deposit_id: id }, function (d) {
+                if (!d.issucc) return;
+                //x.alert("接受成功");//加载框咋去？？
+                g.getlist();
+                //x.closewin();
+            });
+        }
+
+        function show_edit(id) {
+            x.openwin("edit-" + id + ".html", "编辑退款请求", function () { g.getlist() }, { w: 400, h: 320 });
+        }
+
+        function show_detail(id) {
+            x.openwin("../order/detail-" + id + ".html", "订单详情", function () { g.getlist() }, { w: 600, h: 400 });
+        }
+
+        function show_send(id) {
+            x.openwin("send-" + id + ".html", "订单发货", function () { g.getlist() }, { w: 300, h: 200 });
+        }
+
+    </script>
+</body>
+</html>

@@ -33,8 +33,8 @@ namespace X.Web.Views
             GetPageParms();
             var c = "";
             var _ts = CacheHelper.Get<string>("code.key.ts" + ts);
-            if (_ts == null) c = Tools.GetRandRom(len);
-            CacheHelper.Save("code." + key, c);
+            if (string.IsNullOrEmpty(_ts)) c = Tools.GetRandRom(len);
+            CacheHelper.Save("img.code." + key, c);
             CacheHelper.Save("code.key.ts", ts, 1);
             Context.Response.ContentType = "image/gif";
             return CreateImage(c);

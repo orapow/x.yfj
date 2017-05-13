@@ -18,11 +18,11 @@
     <!--内容-->
     <div class="xiug">
         <div class="xiug01">
-            <span>联系人：</span><input type="text" class="txt07" name="name" value="$!ent.name" />
+            <span>联系人：</span><input type="text" class="txt07" name="name" value="#if($id>0)$!ent.name#else$cu.name#end" />
             <div class="clear"></div>
         </div>
         <div class="xiug01">
-            <span>联系方式：</span><input type="tel" class="txt07" name="tel" value="$!ent.tel" />
+            <span>联系方式：</span><input type="tel" class="txt07" name="tel" value="#if($id>0)$!ent.tel#else$cu.tel#end" />
             <div class="clear"></div>
         </div>
         <div class="xiug01">
@@ -75,7 +75,7 @@
                 tel: $("[name='tel']").val(),
                 addr: $("[name='addr']").val()
             }
-            if (!d.c1 || !d.c2) { alert("请选择地区和范围"); return; }
+            if (!d.c1) { alert("请选择地区和范围"); return; }
             if (!d.name) { alert("请填写联系人"); return; }
             if (!d.tel) { alert("请填写联系方式"); return; }
             if (!d.addr) { alert("请填写详细地址"); return; }

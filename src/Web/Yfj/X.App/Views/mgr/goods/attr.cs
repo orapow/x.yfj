@@ -5,24 +5,24 @@ using System.Text;
 using X.Data;
 using X.Web;
 
-namespace X.App.Views.mgr.goods
-{
-    public class attr : xmg
-    {
+namespace X.App.Views.mgr.goods {
+    public class attr : xmg {
         public int id { get; set; }
         [ParmsAttr(name = "字段ID")]
         public int fid { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
-        protected override string GetParmNames
-        {
+        protected override string GetParmNames {
             //传参数
-            get
-            {
+            get {
                 return "id-fid";
             }
         }
-        protected override void InitDict()
-        {
+        protected override void InitDict() {
             base.InitDict();
 
             //if (fid > 0)

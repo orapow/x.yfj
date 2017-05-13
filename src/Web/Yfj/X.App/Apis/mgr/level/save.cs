@@ -17,6 +17,11 @@ namespace X.App.Apis.mgr.level
         public int off { get; set; }
         public int nd { get; set; }
         public string img { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {

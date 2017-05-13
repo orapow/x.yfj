@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("wx/_head.html")
@@ -26,6 +26,30 @@
     </div>
     <div class="zaic" onclick="tourl($o.id)">
         <h3>收货地址：$o.rec_addr</h3>
+        <h3>
+            订单状态：
+            #if($o.itemRefund)
+            #if($o.itemRefund.status==1)
+            退款请求中
+            #elseif($o.itemRefund.status==2)
+            退款已成功
+            #elseif($o.itemRefund.status==3)
+            退款被拒绝
+            #end
+            #elseif($o.status==1) 待付款
+            #elseif($o.status==2) 待确认
+            #elseif($o.status==3) 待发货
+            #elseif($o.status==4) 待收货
+            #elseif($o.status==5) 待评价
+            #elseif($o.status==6) 已取消
+            #end
+        </h3>
+        #if($o.status==1||($o.status==2&&$o.pay_way==2))
+        <a onclick="cancelOrder('$!o.id');">取消订单 </a>
+        #end
+        #if(!$o.itemRefund &&(($o.status==2&&$o.pay_way!=2) ||$o.status==3))
+        <a onclick="requestRefund('$!o.id');">退款 </a>
+        #end
         <a href="/wx/order/detail-${o.id}.html">#if($o.status==1)立即支付#else详情#end</a>
         <span>全额：$o.yf_amount元</span>
         <div class="clear"></div>
@@ -37,8 +61,27 @@
     <br />
     #parse("wx/_foot.html")
     <script type="text/javascript">
+
+
         function tourl(id) {
             document.location.href = "/wx/order/detail-" + id + ".html";
+        }
+
+        function cancelOrder(id) {
+
+            if (!confirm("是否取消订单，该操作无法恢复"))
+                return;
+            doapi("wx.order.cancel", { id: id }, function (d) {
+                if (!d.issucc) return;//判断是否成功，如果成功则取消(即结束该函数)
+                document.location.reload();//刷新页面
+            });
+            console.log("cancel success");
+            event.stopPropagation();
+        }
+
+        function requestRefund(id) {
+            document.location.href = "/wx/order/refund-" + id + ".html";
+            event.stopPropagation();
         }
     </script>
 </body>

@@ -12,7 +12,7 @@
         <input type="hidden" name="id" value="$!item.dict_id" x-check="" />
         <x:pick title="上级" src="url:/mgr/dict/select-sys.city.html" name="upv" count="1" def="$!up" />
         <x:text title="名称" name="name" size="3" def="$!item.name" />
-        <x:text title="代号" name="code" size="3" def="$!item.f3" />
+        <x:text title="代号" name="no" size="3" def="$!item.f3" />
         <x:text title="排序" name="sort" size="3" def="#if($cid>0)$!item.sort#else 99#end" />
         <div class="btns">
             <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>提交保存</button>

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>搜索 $cfg.name</title>
+    <style type="text/css">
+        .chanpin { overflow-y: auto; }
+        .chanpin ul li h3 { font-size: 15px; line-height: 24px; }
+        .chanpin ul li h4 { line-height: 14px; }
+        .chanpin ul li h4 a { color: #999; }
+        #ul_list li.d0 .jian { display: none; }
+        #ul_list li.d0 .txt01 { display: none; }
+        .fenl .hd02 ul li { width: 16.66%; }
+        .fenl01 .hd03 ul li { overflow: hidden; }
+        .hd03 ul { overflow-y: auto; }
+        .chanpin ul li a.img { float: left; width: 70px; height: 70px; margin-right: 8px; border: 1px solid #E5E5E5; }
+        .jiaq { left: 82px; }
+        .dropload-up, .dropload-down { position: relative; height: 0; overflow: hidden; -webkit-transform: translateZ(0); transform: translateZ(0); }
+        .dropload-down { height: 50px; }
+        .dropload-refresh, .dropload-update, .dropload-load, .dropload-noData { height: 50px; line-height: 50px; text-align: center; font-size: 14px; }
+        .txt01 { margin: 0px 20px; }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="right01">
+            <input type="text" class="txt" id="tx_key" value="$!key" placeholder="搜商品、分类、规格、品牌" />
+            <span onclick="search()"></span>
+        </div>
+    </div>
+    <div class="chanpin">
+        <ul id="ul_list"></ul>
+    </div>
+    #parse("wx/_foot.html")
+    <script src="/js/wx/swp.min.js"></script>
+    <script type="text/javascript">
+        var drop_load = null;
+        var data = { page: 1, key: "$!key", limit: 10 }
+        var loading = false;
+
+        $(function () {
+            var h = $(document).height() - 93;
+            $(".chanpin").height(h);
+
+            drop_load = $('.chanpin').dropload({
+                scrollArea: $('.chanpin'),
+                loadUpFn: function (me) {
+                    data.page = 1;
+                    drop_load.isData = true;
+                    loaddata();
+                },
+                loadDownFn: function (me) {
+                    loaddata();
+                },
+                threshold: 50
+            });
+        });
+
+        function search() {
+            $("#ul_list").empty();
+            drop_load.isData = true;
+            drop_load.unlock();
+            drop_load.resetload();
+        }
+
+        function loaddata() {
+            if (loading) return;
+            data.key = $("#tx_key").val();
+            if (!data.key) return;
+            loading = true;
+            doapi("wx.goods.list", data, function (d) {
+                if (!d.issucc) return;
+                var list = $("#ul_list");
+                if (data.page == 1) list.empty();
+                for (var i in d.items) {
+                    var it = d.items[i];
+                    list.append(
+                        '<li data-id="' + it.id + '" class="d' + it.count + '">' +
+                            '<a class="img" href="/wx/goods/detail-' + it.id + '.html" style="background: url(' + it.cover + ') no-repeat center center /cover;"></a>' +
+                            '<h3><a href="/wx/goods/detail-' + it.id + '.html">' + it.name + '</a></h3>' +
+                            '<h4><a href="/wx/goods/detail-' + it.id + '.html">' + it.alias + '</a></h4>' +
+                            '<span class="jiaq" style="font-size:18px;">¥' + it.price + '<span style="float:none;font-size:12px;">/' + it.unit + '</span></span><div class="jiaj"><span class="jian" onclick="outcart(' + it.id + ',$(this).next().val())"></span><input type="tel" value="' + it.count + '" class="txt01" onchange="setcount(' + it.id + ', this.value); " /><span class="jia" onclick="tocart(' + it.id + ')"></span></div>' +
+                            '<div class="clear"></div>' +
+                        '</li>');
+                }
+                if (d.items.length < data.limit) { drop_load.lock(); drop_load.noData(true); console.log("no more") }
+                else { data.page++; }
+                drop_load.resetload();
+                loading = false;
+            }, false);
+        }
+
+        function cartchange(ct, gc, ps, gid, sel) {
+            var li = $("[data-id='" + gid + "']");
+            li.attr("class", "d" + ct);
+            li.find(".txt01").val(ct);
+            $(".ptc").text(gc).attr("class", "ptc p" + gc);
+        }
+
+    </script>
+</body>
+</html>

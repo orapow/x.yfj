@@ -31,24 +31,26 @@ namespace X.App.Views.wx.user
             }
             else
             {
+                decimal shipAmount = cu.x_cart.Where(o => o.calcfreight == 2).Sum(o => o.price * o.count).Value;//??
+                decimal shipfee = shipAmount >= cfg.free_ship || cu.x_cart.Where(o => o.sel == true).Count() == 0 ? 0 : cfg.shipfee;
                 dict.Add("gs", cu.x_cart.ToList());
                 dict.Add("gc", cu.x_cart.Where(o => o.sel == true).Sum(o => o.count));
                 dict.Add("ps", cu.x_cart.Where(o => o.sel == true).Sum(o => o.price * o.count));
-
+                dict.Add("yf", cu.x_cart.Where(o => o.sel == true).Sum(o => o.price * o.count) + shipfee);
+                dict.Add("shipfee", shipfee);
                 x_address ad = cu.x_address.FirstOrDefault(o => o.address_id == aid);
                 if (ad == null) ad = cu.x_address.FirstOrDefault();
                 dict.Add("ad", ad);
 
                 var ds = new List<string>();
                 var dt = DateTime.Now;
-                for (var i = 0; ds.Count() < 4;)
+                for (var i = 0; ds.Count() < 10;)
                 {
                     var d = dt.AddDays(i++);
-                    if (d.DayOfWeek == DayOfWeek.Saturday || d.DayOfWeek == DayOfWeek.Sunday) continue;
-                    ds.Add(d.ToString("yyyy-MM-dd"));
+                    //if (d.DayOfWeek == DayOfWeek.Saturday || d.DayOfWeek == DayOfWeek.Sunday) continue;
+                    ds.Add(d.ToString("yyyy-MM-dd") + " " + System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetDayName(d.DayOfWeek));
                 }
                 dict.Add("ds", ds);
-
             }
         }
         public override string GetTplFile()

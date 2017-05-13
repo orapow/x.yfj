@@ -4,23 +4,22 @@
     #parse("wx/_head.html")
     <title>绑定手机号</title>
 </head>
-
 <body style="background:#f4f4f4;">
     <!--内容-->
     <div class="zhil01">
         <ul>
             <li class="en03">
                 <p>手机号码</p>
-                <input type="text" placeholder="请输入您的手机号码" id="bt_tel" />
+                <input type="text" placeholder="请输入您的手机号码" id="bt_tel" onblur="if(this.value)$('.img_code').attr('src','/com/code-'+this.value+'.html')" />
             </li>
             <li class="en03">
                 <p>图片验证码</p>
                 <input type="text" class="en20" placeholder="请输入图片验证码" id="bt_pcode" />
-                <img src="/com/code-${key}.html" style="margin-top:15px;" />
+                <img src="" class="img_code" style="margin-top:15px;" />
             </li>
         </ul>
     </div>
-    <div class="qr" style="background-color:#12b36d;width:50%;font-size: 14px; margin:10px auto;color:white;" onclick="sendcode();">获取验证码</div>
+    <div class="qr" id="bt_stcode" style="background-color:#12b36d;width:50%;font-size: 14px; margin:10px auto;color:white;" onclick="sendcode();">获取验证码</div>
     <div class="zhil01">
         <ul>
             <li class="en03">
@@ -29,18 +28,49 @@
             </li>
         </ul>
     </div>
-    <div class="qr" style="color:white;font-size: 14px;">确定</div>
+    <div class="qr" style="color:white;font-size: 14px;" onclick="do_bind()">确定</div>
     #parse("wx/_foot.html")
     <script type="text/javascript">
         var tel = "";
+        var count = 0;
+
         function sendcode() {
+            if (count > 0) return;
             tel = $("#bt_tel").val();
             if (!tel) { alert("手机号码不能为空"); return; }
             var pcode = $("#bt_pcode").val();
             if (!pcode) { alert("图片验证码不能为空"); return; }
+            startcouting();
             doapi("com.sendcode", { tel: tel, code: pcode }, function (d) {
+                if (!d.issucc) { count = 0; return; }
+                alert("短信已发送，请稍后查收。");
+            });
+        }
+
+        function startcouting() {
+            count = 120;
+            var btn = $("#bt_stcode");
+            btn.css("background-color", "#999");
+            var tr = setInterval(function () {
+                btn.text(count + "s 后重新获取");
+                count--;
+                if (count <= 0) {
+                    clearInterval(tr); btn.css("background-color", "#12b36d").text("获取验证码");
+                }
+            }, 1000);
+        }
+
+        function do_bind() {
+            var data = {
+                code: $("#bt_scode").val(),
+                tel: tel
+            };
+            if (!data.tel) { alert("手机号码不能为空"); return; }
+            if (!data.code) { alert("短信验证码不能为空"); return; }
+            doapi("wx.user.bind", data, function (d) {
                 if (!d.issucc) return;
-            })
+                document.location.href = "/wx/user/index.html";
+            });
         }
     </script>
 </body>

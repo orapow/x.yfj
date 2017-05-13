@@ -18,6 +18,11 @@ namespace X.App.Apis.mgr.cate
         public string img { get; set; }
         public string unit { get; set; }
         public int sort { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {
@@ -36,7 +41,7 @@ namespace X.App.Apis.mgr.cate
             if (!string.IsNullOrEmpty(upv) && upv != "0")
             {
                 var up = DB.x_dict.FirstOrDefault(o => o.code == code && o.value == upv);
-                if (id > 0 && up.upval.StartsWith(ent.upval)) throw new XExcep("T不能将 " + name + " 调整到其下级分类里面");
+                if (id > 0 && up.value.StartsWith(ent.upval)) throw new XExcep("T不能将 " + name + " 调整到其下级里面");
                 if (up.upval == "0") ent.upval = up.value;
                 else ent.upval = up.upval + "-" + up.value;
             }
@@ -52,8 +57,7 @@ namespace X.App.Apis.mgr.cate
                     var childs = DB.x_dict.Where(o => o.upval == ent.value);
                     foreach (var e in childs.ToList())
                     {
-                        if (e.upval == ent.value) e.upval = upval;
-                        else e.upval = e.upval.Replace("-" + ent.value, "");
+                        if (e.upval != ent.value) e.upval = e.upval.Replace("-" + ent.value, "");
                     }
                 }
                 else

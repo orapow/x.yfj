@@ -1,0 +1,88 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>订单详情</title>
+    <style type="text/css">
+        .goods_info li div:first-child span { height: auto; }
+        .lc { margin: 0 auto; width: 90%; }
+        .st { width: 30px; background: url(/img/wx/fgf_06.png) top center no-repeat; background-size: 18px; position: absolute; top: 35px; left: 0; margin-left: -15px; }
+        .st.on { background-image: url(/img/wx/fgf_03.png); top: 30px; left: 0; background-size: 30px; }
+        .st.on span { margin-top: 25px; }
+        .lc01 { width: 0px; }
+        .lc01.s12 { width: 25%; }
+        .lc01.s13 { width: 50%; }
+        .lc01.s14 { width: 75%; }
+        .lc01.s15 { width: 100%; }
+        .lc01.s23 { width: 33.33%; }
+        .lc01.s24 { width: 66.67%; }
+        .lc01.s25 { width: 100%; }
+        .goods_info .hd span:first-child { width: 63%; }
+        .goods_info li div:first-child { width: 63%; }
+        .goods_info li div:nth-child(2) { line-height: 50px; }
+        .goods_info li div:last-child { line-height: 50px; }
+        .fudong { display: none; }
+        .xiangx span { margin-right: 0; }
+        .btn { text-align: center; }
+    </style>
+</head>
+<body style="background:#f4f4f4;">
+    <div class="top01">
+        <div class="w80"> <a class="bnt" href="list.html"> <img src="/img/wx/dd_03.png" /> </a> 优辅家建材 </div>
+    </div>
+    <div class="clear"></div>
+    <div class="min">
+        <div class="xiangx">
+            <p><span>收货地址：</span>$od.rec_addr</p>
+            <p><span>联系人：</span>$od.rec_man</p>
+            <p><span>联系电话：</span>$od.rec_tel <a href="tel:$od.rec_tel">拔打</a></p>
+            <p><span>收货时间：</span>$od.send_date.tostring("yyyy-MM-dd ") $od.send_time</p>
+            <div class="clear"></div>
+        </div>
+        #if($od.send_man.length>0)
+        <div class="xiangx">
+            <p><span>出库时间：</span>$od.out_time.tostring("yyyy-MM-dd HH:mm:ss")</p>
+            <p><span>配送人：</span>$sd.get_item(0) $sd.get_item(1)</p>
+            <div class="clear"></div>
+        </div>
+        #end
+        #if($od.status==5)
+        <div class="xiangx">
+            <p><span>收货状态：</span>已经签收</p>
+            <p><span>收货时间：</span>$od.sign_time.tostring("yyyy-MM-dd HH:mm:ss")</p>
+            <div class="clear"></div>
+        </div>
+        #end
+        <div class="goods_info">
+            <div class="hd"><span>商品信息</span><span>数量</span><!--<span>金额</span>--></div>
+            <ul>
+                #foreach($g in $od.x_order_detail)
+                <li id="product_10836">
+                    <div>
+                        <span class="pic"><img src="$g.cover" /></span>
+                        <p style="margin-left:70px;">$g.name <span style="font-size:12px;color:#999; border:none;width:auto;float: none;display: block;">$g.stand</span></p>
+                    </div>
+                    <div>$g.count</div>
+                    <!--<div>￥$g.total_price</div>-->
+                </li>
+                #end
+            </ul>
+        </div>
+        <div class="xiangx">
+            <p><span>订单备注：</span>$od.user_remark</p>
+            <div class="clear"></div>
+        </div>
+        <br />
+        #if($od.status==4)<div class="btn" onclick="do_acpt()">确认收货</div>#elseif($od.status==5)<div class="btn" style="background-color:#999">已确认收货</div>#end
+    </div>
+    #parse("wx/_foot.html");
+    <script type="text/javascript">
+        function do_acpt() {
+            doapi("sder.acpt", { id: "$od.order_id" }, function (d) {
+                if (!d.issucc) return;
+                document.location.reload();
+            })
+        }
+    </script>
+</body>
+</html>

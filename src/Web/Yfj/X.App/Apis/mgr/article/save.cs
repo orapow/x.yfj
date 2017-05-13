@@ -17,6 +17,11 @@ namespace X.App.Apis.mgr.article
         public string remark { get; set; }
         public string desc { get; set; }
         public int sort { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {
@@ -30,7 +35,7 @@ namespace X.App.Apis.mgr.article
             if (cate > 0)
             {
                 var ct = DB.x_dict.FirstOrDefault(o => o.code == "article.cate" && o.value == cate + "");
-                if (ct == null) throw new XExcep("T分类不存在");
+                if (ct == null) throw new XExcep("0x0013");
             }
 
             if (ent == null) ent = new x_article() { ctime = DateTime.Now, hits = 0 };

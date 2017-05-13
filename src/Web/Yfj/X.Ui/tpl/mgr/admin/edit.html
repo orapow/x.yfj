@@ -1,42 +1,39 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    #parse("com/_head.html")
-    <title>二房东资料 - $cfg.name</title>
-    <style type="text/css">
-        #img_logo { max-width: 120px; max-height: 90px; border: 1px solid #ccc; padding: 2px; }
-    </style>
+    #parse("mgr/com/_head.html")
+    <title>管理员信息 - $cfg.name</title>
 </head>
 <body>
+    <div class="title">
+        <span class="main">管理员信息</span> - <span class="sub">管理员管理</span>
+    </div>
     <div class="form">
-        <form method="post" id="frm_house" api="mgr.admin.save">
-            <div class="inputs">
-                <input type="hidden" name="id" value="$!item.id" data-check="" />
-
-                $F.GetPicker("status","等级","1","管理员","div:#admin_st")
-
-                $F.GetInput("uid","帐号","","$!item.uid")
-                $F.GetInput("pwd","密码","","")
-
-                $F.GetInput("name","联系人","","$!item.name")
-                $F.GetInput("tel","联系电话","","$!item.tel")
-            </div><hr />
-            <div class="btns" style="padding-left:90px">
-                <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>提交保存</button>
+        <x:form api="mgr.admin.save">
+            <x:pick src="loc:客服|财务" mode="2" name="role" count="1" title="角色" chk="no" def="$!item.role_id" />
+            <input type="hidden" name="id" value="$!item.mgr_id" x-check="" />
+            <x:text title="昵称" name="name" def="$!item.name" size="2" chk="no" />
+            <x:text title="账号" name="uid" def="$!item.uid" size="3" chk="no" />
+            #if($!item.mgr_id>0)<x:text title="密码" tip="不修改请置空" name="password" size="3" />#else<x:text title="密码" name="password" size="3" chk="no" />#end
+            <x:text title="E-mail" def="$!item.mail" name="mail" size="4" />
+            <x:text title="电话" name="tel" def="$!item.tel" size="3" />
+            <div class="btns">
+                <button type="submit" class="btn btn-primary">
+                    <i class="icon-ok"></i>提交保存
+                </button>
+                <a class="btn" onclick="history.go(-1)">
+                    <i class="icon-reply"></i>返回上一页
+                </a>
             </div>
-        </form>
+        </x:form>
     </div>
-    <div id="admin_st" style="display: none;" class="admin_st">
-        <span class="btn dict-item" data-val="1">管理员</span>
-        <span class="btn dict-item" data-val="2">客服</span>
-    </div>
+    <br />
+    <br />
     <script type="text/javascript">
-
-        x.form.init({
-            postedcallback: function (r) {
-                //x.com.closewin();
-                parent.x.com.closewin();
-            }
+        $(function () {
+            $("form:eq(0)").xform({
+                callback: function (d) { document.location.href = '/mgr/admin/list.html'; }
+            });
         });
     </script>
 </body>

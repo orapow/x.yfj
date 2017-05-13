@@ -2,32 +2,39 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("wx/_head.html")
-    <title>商品分类</title>
+    <title>分类 $cfg.name</title>
     <style type="text/css">
         .chanpin { overflow-y: auto; }
         .chanpin ul li h3 { font-size: 15px; line-height: 24px; }
         .chanpin ul li h4 { line-height: 14px; }
-        .chanpin ul li h4 a { color:#999; }
+        .chanpin ul li h4 a { color: #999; }
         #ul_list li.d0 .jian { display: none; }
         #ul_list li.d0 .txt01 { display: none; }
+        .fenl .hd02 ul li { width: 16.66%; }
         .fenl01 .hd03 ul li { overflow: hidden; }
         .hd03 ul { overflow-y: auto; }
-        .chanpin ul li img { width: 70px; height: 70px; margin-right: 5px; }
+        .chanpin ul li a.img { float: left; width: 70px; height: 70px; margin-right: 8px; border: 1px solid #E5E5E5; }
+        .jiaq { left: 82px; }
+        .dropload-up, .dropload-down { position: relative; height: 0; overflow: hidden; -webkit-transform: translateZ(0); transform: translateZ(0); }
+        .dropload-down { height: 50px; }
+        .dropload-refresh, .dropload-update, .dropload-load, .dropload-noData { height: 50px; line-height: 50px; text-align: center; font-size: 14px; }
+        .xuanze > ul > li { height: 36px; line-height: 36px; background-position-y: 8px; }
+        .tanc, .tanc01 { top: 37px; }
+        #ul_mds li, #ul_bds li { overflow: hidden; }
     </style>
 </head>
 <body>
     <div class="top">
         <div class="right01">
             <input type="text" class="txt" placeholder="搜商品、找品牌" />
-            <span></span>
+            <span onclick="search()"></span>
         </div>
     </div>
     <div class="indexqiehuan1 fenl">
         <div class="hd hd02">
             <ul>
                 #foreach($c in $cts)
-                <li class="" data-id="$c.value">$c.name</li>
-                #end
+                <li class="" data-id="$c.value">$c.name</li>#end
             </ul>
         </div>
         <div class="big27 fenl01">
@@ -37,41 +44,22 @@
             </div>
             <div class="bd03">
                 <div class="xuanze">
-                    <!--<ul>
-                        <li class="gge">
-                            规格
-                        </li>
+                    <ul>
+                        <li class="gge" onclick="$('.tanc01').hide(); $('.tanc').toggle()">规格</li>
                         <div class="tanc">
-                            <ul>
-                                <li class="hh"><a href="#">全部</a></li>
-                                <li><a href="#">20</a></li>
-                                <li><a href="#">30</a></li>
-                                <li><a href="#">40</a></li>
-                                <li><a href="#">50</a></li>
-                                <li><a href="#">60</a></li>
-                                <li><a href="#">70</a></li>
-                                <div class="clear"></div>
-                            </ul>
+                            <ul id="ul_mds"></ul>
                         </div>
-                        <li class="pingp">
+                        <li class="pingp" onclick="$('.tanc').hide();$('.tanc01').toggle()">
                             品牌
                             <span>|</span>
                         </li>
                         <div class="tanc01">
-                            <ul>
-                                <li class="hh"><a href="#">全部</a></li>
-                                <li><a href="#">伟星</a></li>
-                                <li><a href="#">伟星</a></li>
-                                <li><a href="#">伟星</a></li>
-                                <li><a href="#">伟星</a></li>
-                                <li><a href="#">伟星</a></li>
-                                <li><a href="#">伟星</a></li>
-                                <div class="clear"></div>
-                            </ul>
+                            <ul id="ul_bds"></ul>
                         </div>
                         <div class="clear"></div>
                     </ul>
-                    <div class="clear"></div>-->
+                    <div class="clear"></div>
+
                     <div class="chanpin">
                         <ul id="ul_list"></ul>
                     </div>
@@ -81,10 +69,14 @@
         </div>
     </div>
     #parse("wx/_foot.html")
-    <script src="/js/swp.min.js"></script>
+    <script src="/js/wx/swp.min.js"></script>
     <script type="text/javascript">
+        var drop_load = null;
+        var data = { page: 1, cate: "", limit: 10 }
+        var loading = false;
+        var ft = false;//是否加载规格和品牌
         $(function () {
-            var h = $(document).height() - 134;
+            var h = $(document).height() - 171;
             $(".hd03 ul").height(h);
             $(".chanpin").height(h);
 
@@ -93,14 +85,42 @@
                 $(this).addClass("on");
                 loadsub($(this).attr("data-id"));
             });
+
             if ("$!cid") $(".hd02 li[data-id='$cid']").click();
-            else $(".hd02 li:eq(0)").click();
+            else $(".hd02 li:eq(4)").click();
+
             $(".hd03").delegate("li", "click", function () {
                 $(".hd03 li").removeClass("on1");
                 $(this).addClass("on1");
-                loaddata($(this).attr("data-id"));
+                data.page = 1;
+                data.cate = $(this).attr("data-id");
+                $("#ul_list").empty();
+                drop_load.isData = true;
+                drop_load.unlock();
+                drop_load.resetload();
+                ft = false;
+            });
+
+            drop_load = $('.chanpin').dropload({
+                scrollArea: $('.chanpin'),
+                loadUpFn: function (me) {
+                    $(".hd03 .on1").click();
+                    data.page = 1;
+                    drop_load.isData = true;
+                    drop_load.unlock();
+                    drop_load.resetload();
+                },
+                loadDownFn: function (me) {
+                    loaddata();
+                },
+                threshold: 50
             });
         });
+
+        function search() {
+            var key = $(".txt").val();
+            if (key) document.location.href = "/wx/goods/search-" + encodeURI(encodeURI(key)) + ".html";
+        }
 
         function loadsub(id) {
             doapi("wx.goods.cate", { pid: id }, function (d) {
@@ -112,26 +132,67 @@
                     ul.append('<li class="" data-id="' + s.value + '">' + s.name + '</li>');
                 }
                 $(".hd03 li:eq(0)").click();
-            })
+            }, false)
         }
 
-        function loaddata(cid) {
-            doapi("wx.goods.list", { page: 1, limit: 10, cate: cid }, function (d) {
+        function screendata(t, o) {
+            var v = $(o).attr("data-val");
+            $(o).parent().parent().hide();
+            $(o).parent().find("li").removeClass("hh");
+            $(o).addClass("hh");
+            data[t == 1 ? "md" : "bd"] = v;
+            data.page = 1;
+            $("#ul_list").empty();
+            drop_load.isData = true;
+            drop_load.unlock();
+            drop_load.resetload();
+        }
+
+        function loaddata(callback) {
+            if (!data.cate || loading) return;
+            loading = true;
+            doapi("wx.goods.list", data, function (d) {
                 if (!d.issucc) return;
                 var list = $("#ul_list");
-                list.empty();
+                var bds = $("#ul_bds");
+                var mds = $("#ul_mds");
+
+                if (data.page == 1) {
+
+                    list.empty();
+
+                    if (!ft) {
+                        mds.empty();
+                        bds.empty();
+
+                        mds.append("<li class='hh' onclick='screendata(1,this)'>全部</li>");
+                        for (var c in d.mds) { if (!c) continue; mds.append("<li onclick='screendata(1,this)' data-val='" + d.mds[c] + "'>" + d.mds[c] + "</li>"); }
+                        mds.append("<div class='clear'></div>");
+
+                        bds.append("<li class='hh' onclick='screendata(2,this)'>全部</li>");
+                        for (var c in d.bds) { var b = d.bds[c]; if (b.id == "0" || !b.name) continue; bds.append("<li onclick='screendata(2,this)' data-val='" + b.id + "'>" + b.name + "</li>"); }
+                        bds.append("<div class='clear'></div>");
+                        ft = true;
+                    }
+                }
+
                 for (var i in d.items) {
                     var it = d.items[i];
                     list.append(
                         '<li data-id="' + it.id + '" class="d' + it.count + '">' +
-                            '<a href="/wx/goods/detail-' + it.id + '.html"><img src="' + it.cover + '" /></a>' +
+                            '<a class="img" href="/wx/goods/detail-' + it.id + '.html" style="background: url(' + it.cover + ') no-repeat center center /cover;"></a>' +
                             '<h3><a href="/wx/goods/detail-' + it.id + '.html">' + it.name + '</a></h3>' +
                             '<h4><a href="/wx/goods/detail-' + it.id + '.html">' + it.alias + '</a></h4>' +
-                            '<span class="jiaq" style="font-size:18px;">¥' + it.price + '<span style="float:none;font-size:12px;">/' + it.unit + '</span></span><div class="jiaj"><span class="jian" onclick="outcart(' + it.id + ',$(this).next().val())"></span><input type="tel" value="' + it.count + '" class="txt01" /><span class="jia" onclick="tocart(' + it.id + ')"></span></div>' +
+                            '<span class="jiaq" style="font-size:18px;">¥' + it.price + '<span style="float:none;font-size:12px;">/' + it.unit + '</span></span><div class="jiaj"><span class="jian" onclick="outcart(' + it.id + ',$(this).next().val())"></span><input type="tel" value="' + it.count + '" class="txt01" onchange="setcount(' + it.id + ', this.value); " /><span class="jia" onclick="tocart(' + it.id + ')"></span></div>' +
                             '<div class="clear"></div>' +
-                        '</li>'
-                    );
+                        '</li>');
                 }
+
+
+                if (d.items.length < data.limit) { drop_load.lock(); drop_load.noData(true); console.log("no more") }
+                else { data.page++; }
+                drop_load.resetload();
+                loading = false;
             }, false);
         }
 

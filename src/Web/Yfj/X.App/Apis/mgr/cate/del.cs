@@ -13,11 +13,16 @@ namespace X.App.Apis.mgr.cate
     {
         [ParmsAttr(min = 1)]
         public int id { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override XResp Execute()
         {
             var ent = DB.x_dict.FirstOrDefault(o => o.dict_id == id);
-            if (ent == null) throw new XExcep("T分类不存在");
+            if (ent == null) throw new XExcep("0x0013");
 
             var upv = "";
             if (ent.upval != "0") upv = ent.upval + "-" + ent.value;

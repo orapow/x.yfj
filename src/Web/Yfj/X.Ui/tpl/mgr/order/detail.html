@@ -19,13 +19,14 @@
         <p>当前状态：$st</p>
         <p>订单号：$od.no</p>
         <p>订单金额：$od.amount</p>
+        <p>运费：$!od.freight_amount</p>
         <p>优惠金额：$od.fav_amount</p>
         <p>优惠说明：$od.fav_remark</p>
     </div>
     <div class="pl">
         <h3>支付信息</h3>
         <p>应付金额：$od.yf_amount</p>
-        <p>支付方式：#if($od.pay_way==1)在线支付#else货到付款#end</p>
+        <p>支付方式：#if($od.pay_way==1)微信支付#elseif($od.pay_way==2)货到付款#elseif($od.pay_way==3)余额支付#end</p>
         <p>已付金额：$od.pay_amount</p>
         <p>付款时间：$!od.pay_time</p>
     </div>
@@ -34,10 +35,12 @@
         <p>收货人：$od.rec_man</p>
         <p>收货地址：$od.rec_addr</p>
         <p>联系电话：$od.rec_tel</p>
+        <p>收货日期：$!od.send_date.tostring("yyyy-MM-dd")</p>
+        <p>收货时间：$!od.send_time</p>
     </div>
     <div class="pl">
         <h3>送货信息</h3>
-        <p>发货时间：$od.send_time</p>
+        <p>发货时间：$!od.out_time.tostring("yyyy-MM-dd HH:mm")</p>
         <p>配送人：$!od.send_man</p>
     </div>
     <div class="pl goods">
@@ -55,7 +58,7 @@
                 <tr>
                     <td><img src="$g.cover" width="40" />$g.name</td>
                     <td>$g.stand</td>
-                    <td align="center">$g.count $g.unit</td>
+                    <td align="center">$g.count $!g.unit</td>
                     <td align="center">$g.price</td>
                     <td align="center">$g.total_price</td>
                 </tr>
@@ -69,5 +72,22 @@
             </table>
         </div>
     </div>
+    #if($itemRefund)
+    <div class="pl">
+        <h3>退款信息</h3>
+        <p>申请退款金额：$itemRefund.amount</p>
+        <p>退款原因：$itemRefund.reason</p>
+        <p>申请时间：$itemRefund.ctime</p>
+        <p>申请状态：#if($itemRefund.status==2)已接受#elseif($itemRefund.status==3) 已拒绝#else待处理#end</p>
+        #if($itemRefund.status!=1)
+        <p>已退金额：$!itemRefund.ramount</p><!--如果引擎引用的是个空值，$!会输出空，$会输出引用字符串-->
+        <p>审核时间：$itemRefund.atime</p>
+        #if($itemRefund.status==3)
+        <p>拒绝理由：$!itemRefund.remark</p>
+        #end
+        #end
+    </div>
+    #end
+
 </body>
 </html>

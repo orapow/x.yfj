@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>修改用户信息</title>
+</head>
+
+<body style="background:#f4f4f4;">
+    <div class="guanli">
+        <ul>
+            <!--<li>退款原因：<select class="select02" style="float: none;" id="ct">#foreach($c in $cs)#if($cu.city==$c.value)<option value="$c.value" selected="selected">$c.name</option>#else<option value="$c.value">$c.name</option>#end#end</select></li>-->
+            <li>退款原因：
+                <textarea id="id_reason" rows="3" style="width:100%; margin-bottom:20px;" placeholder="此处填写退款原因"></textarea>
+            </li>
+            <!--<li>退款金额: (最多$order.pay_amount元)<input type="text" id="id_count"/></li>-->
+            
+        </ul>
+        <div class="qr"><a href="javascript:;" style="color:white;display:block;height:100%;" onclick="commit()">提交</a></div>
+    </div>
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+        function commit() {
+            var reason = $("#id_reason").val();
+            if (!reason) { alert("退款原因不能为空"); return; }
+            //var count=$("#id_count").val();
+            //if ($order.pay_amount <= count)
+            //    alert("T退款金额不能大于支付金额");
+            doapi("wx.order.refund", {  id:"$id",reason:reason }, function (d) {
+                if (!d.issucc) return;
+                document.location.href = "/wx/order/list.html";
+
+            })
+        }
+    </script>
+</body>
+</html>

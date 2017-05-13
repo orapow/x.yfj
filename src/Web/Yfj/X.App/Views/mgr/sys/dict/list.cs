@@ -11,6 +11,11 @@ namespace X.App.Views.mgr.sys.dict
         public string code { get; set; }
         public string upval { get; set; }
         public string val { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override string GetParmNames
         {
             get

@@ -43,17 +43,17 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Aliyun.MNS.dll" />
     <Content Include="global.asax" />
-    <Content Include="favicon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="dat\cfg.x" />
-    <None Include="dat\urls.x" />
+    <Content Include="dat\urls.x" />
     <Content Include="App.ashx" />
-    <None Include="dat\codes.x" />
+    <Content Include="dat\codes.x" />
     <Content Include="res\css\wx\style.css" />
     <Content Include="res\css\x.dialog.css" />
     <Content Include="res\css\x.form.css" />
@@ -137,6 +137,7 @@
     <Content Include="res\img\wx\nk.png" />
     <Content Include="res\img\wx\sd.png" />
     <Content Include="res\img\wx\sf.png" />
+    <Content Include="res\img\wx\tel.png" />
     <Content Include="res\img\wx\tf.png" />
     <Content Include="res\img\wx\tj_12.png" />
     <Content Include="res\img\wx\tj_13.png" />
@@ -147,37 +148,14 @@
     <Content Include="res\img\wx\uih.png" />
     <Content Include="res\img\wx\vc.png" />
     <Content Include="res\img\wx\xc_06.jpg" />
-    <Content Include="res\img\wx\yf_04.png" />
     <Content Include="res\img\wx\zas.png" />
     <Content Include="res\img\wx\zd_03.png" />
-    <Content Include="res\img\wx\下拉.png" />
-    <Content Include="res\img\wx\个人 %281%29.png" />
-    <Content Include="res\img\wx\分类.png" />
-    <Content Include="res\img\wx\加入购物车.png" />
-    <Content Include="res\img\wx\加号.png" />
-    <Content Include="res\img\wx\勾 %281%29.png" />
-    <Content Include="res\img\wx\勾.png" />
-    <Content Include="res\img\wx\售后 %281%29.png" />
-    <Content Include="res\img\wx\售后 %282%29.png" />
-    <Content Include="res\img\wx\售后.png" />
-    <Content Include="res\img\wx\基础建材 %281%29.png" />
-    <Content Include="res\img\wx\基础建材 %282%29.png" />
-    <Content Include="res\img\wx\基础建材.png" />
-    <Content Include="res\img\wx\客服.png" />
-    <Content Include="res\img\wx\密码.png" />
-    <Content Include="res\img\wx\我的.png" />
-    <Content Include="res\img\wx\搜索_搜索.png" />
-    <Content Include="res\img\wx\时间.png" />
-    <Content Include="res\img\wx\正品安全.png" />
-    <Content Include="res\img\wx\油漆.png" />
-    <Content Include="res\img\wx\泥木.png" />
-    <Content Include="res\img\wx\电子电工.png" />
-    <Content Include="res\img\wx\确定.png" />
-    <Content Include="res\img\wx\购物车.png" />
-    <Content Include="res\img\wx\通知送货36.png" />
-    <Content Include="res\img\wx\限时购.png" />
-    <Content Include="res\img\wx\首页-首页.png" />
+    <Content Include="res\js\highcharts.js" />
+    <Content Include="res\js\jq_1.10.1.js" />
     <Content Include="res\js\jq_2.1.4.js" />
+    <Content Include="res\js\wx\scroll.js" />
+    <Content Include="res\js\wx\swiper.min.js" />
+    <Content Include="res\js\wx\swp.min.js" />
     <Content Include="res\js\v.js" />
     <Content Include="res\js\wx\jquery.SuperSlide.2.1.js" />
     <Content Include="res\plug\hchart\hcharts.js" />
@@ -221,11 +199,28 @@
     <Content Include="res\plug\um\umeditor.min - 复制.js" />
     <Content Include="res\plug\um\umeditor.min.js" />
     <Content Include="tpl\com\err.html" />
+    <Content Include="tpl\mgr\admin\edit.html" />
+    <Content Include="tpl\mgr\admin\list.html" />
     <Content Include="tpl\mgr\city\edit.html" />
     <Content Include="tpl\mgr\city\list.html" />
     <Content Include="tpl\mgr\cate\edit.html" />
     <Content Include="tpl\mgr\cate\list.html" />
-    <Content Include="tpl\mgr\config.html" />
+    <Content Include="tpl\mgr\deposit\manual.html" />
+    <Content Include="tpl\mgr\deposit\list.html" />
+    <Content Include="tpl\mgr\main.html" />
+    <Content Include="tpl\mgr\order\manual.html" />
+    <Content Include="tpl\mgr\refund\edit.html" />
+    <Content Include="tpl\mgr\sale\edit.html" />
+    <Content Include="tpl\mgr\sale\list.html" />
+    <Content Include="tpl\mgr\sender\edit.html" />
+    <Content Include="tpl\mgr\sender\list.html" />
+    <Content Include="tpl\mgr\sman\stati.html" />
+    <Content Include="tpl\wx\goods\search.html" />
+    <Content Include="tpl\wx\goods\list - 复制.html" />
+    <Content Include="tpl\wx\goods\sale.html" />
+    <Content Include="tpl\wx\order\refund.html" />
+    <Content Include="tpl\mgr\refund\list.html" />
+    <Content Include="tpl\mgr\setup.html" />
     <Content Include="tpl\mgr\ads\edit.html" />
     <Content Include="tpl\mgr\ads\list.html" />
     <Content Include="tpl\mgr\order\detail.html" />
@@ -263,12 +258,16 @@
     <Content Include="tpl\wx\index - 复制%282%29.html" />
     <Content Include="tpl\wx\index - 复制.html" />
     <Content Include="tpl\wx\index.html" />
+    <Content Include="tpl\sder\bind.html" />
+    <Content Include="tpl\sder\detail.html" />
+    <Content Include="tpl\sder\list.html" />
+    <Content Include="tpl\wx\user\mpwd.html" />
     <Content Include="tpl\wx\user\index.html" />
     <Content Include="tpl\wx\order\list.html" />
     <Content Include="tpl\wx\order\detail.html" />
     <Content Include="tpl\wx\user\setting.html" />
+    <Content Include="tpl\wx\user\deposit.html" />
     <Content Include="tpl\wx\user\update.html" />
-    <Content Include="tpl\wx\user\mpwd.html" />
     <Content Include="tpl\wx\_foot.html" />
     <Content Include="tpl\wx\_head.html" />
     <Content Include="tpl\wx\goods\detail.html" />
@@ -284,6 +283,7 @@
     </Content>
     <None Include="Properties\PublishProfiles\x.erp.pubxml" />
     <None Include="Properties\PublishProfiles\x.shop.pubxml" />
+    <None Include="Properties\PublishProfiles\x.yfj.pubxml" />
     <None Include="Properties\PublishProfiles\xc.site.pubxml" />
     <None Include="Properties\PublishProfiles\zfw.web.flash.pubxml" />
     <Content Include="res\plug\bs\bootstrap.zip" />

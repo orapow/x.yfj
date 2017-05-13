@@ -19,5 +19,10 @@ namespace X.App.Views.mgr.store
     #endregion
     public class list : xmg
     {
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
     }
 }

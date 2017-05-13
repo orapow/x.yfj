@@ -229,12 +229,16 @@
                 }
 
                 var vals = "";
+                var texts = "";
                 li.parent().find(".btn-primary").each(function () {
-                    if (ct == 1) { vals += $(this).attr("x-val"); }
-                    else { vals += "[" + $(this).attr("x-val") + "]"; }
+                    if (ct == 1) { vals = li.attr("x-val"); texts = li.text(); }
+                    else { vals += "[" + li.attr("x-val") + "]"; texts += li.text() + "、" }
                 });
 
                 li.parent().attr("x-val", vals);
+
+                var cb = li.parent().parent().attr("x-callback");
+                if (cb) eval(cb + "('" + vals + "','" + texts + "')");
 
             });
 
@@ -336,7 +340,7 @@
             case "url":
                 sethtml("<span class='loading'>视图正在加载中...</span>");
                 var u = "{key}-" + (pick.ct.attr("x-parms") || "");
-                u = d[1].replace("{p}", u);
+                u = d[1].replace("{p}", u).replace("{key}", "");
                 x.getview(u, function (data) {
                     sethtml(data);
                     loadback(d);

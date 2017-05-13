@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     #parse("mgr/com/_head.html")
-    <title>订单收款 - $cfg.name</title>
+    <title>订单发货 - $cfg.name</title>
     <style type="text/css">
         body { margin: 0; }
     </style>
@@ -10,8 +10,7 @@
 <body>
     <x:form api="mgr.order.send">
         <input type="hidden" name="id" value="$!id" x-check="" />
-        <x:text title="承运人" name="name" size="3" def="$!name" />
-        <x:text title="承运电话" name="tel" size="3" def="$!tel" />
+        <x:pick title="配送员" src="dict:user.sender" name="sid" chk="cp:1,0" />
         <div class="btns">
             <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>确认发货</button> <button type="button" class="btn" onclick="top.x.openwin('/mgr/order/print-${id}.html', '打印发货单', null, { w: 600, h: 400 });"><i class="icon-print"></i>打印发货单</button>
         </div>

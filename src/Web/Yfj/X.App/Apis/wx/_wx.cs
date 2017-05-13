@@ -18,7 +18,7 @@ namespace X.App.Apis.wx
             base.InitApi();
             var cu_key = GetReqParms("cu_key");
             if (!string.IsNullOrEmpty(cu_key)) cu = DB.x_user.FirstOrDefault(o => o.ukey == cu_key);
-            if (cu == null && nd_user) throw new XExcep("T用户登陆超时");
+            if (cu == null && nd_user) throw new XExcep("0x0004");
         }
     }
 }

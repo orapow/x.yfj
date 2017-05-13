@@ -25,10 +25,16 @@ namespace X.App.Apis.mgr.goods
         /// </summary>
         public int type { get; set; }
 
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
+
         protected override XResp Execute()
         {
             var ent = DB.x_goods.FirstOrDefault(o => o.goods_id == id);
-            if (ent == null) throw new XExcep("T商品不存在");
+            if (ent == null) throw new XExcep("0x0020");
 
             switch (type)
             {

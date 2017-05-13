@@ -10,6 +10,13 @@
         .gc { position: absolute; background: #f57629; color: white; width: 25px; border-radius: 50%; top: 5px; bottom: initial; right: 5px; line-height: 25px; height: 25px; }
         .gc_0 { display: none; }
         .jiar01 { margin-bottom: 8px; }
+        .detail img { max-width: 100%; margin: 10px 0; display: block; }
+        .scroll { width: 100%; margin: 20px auto 0 auto; position: relative; overflow: hidden; }
+        .mod_01 { float: left; height: 200px; }
+        .dotModule_new { padding: 0 5px; height: 11px; line-height: 6px; -webkit-border-radius: 11px; background: rgba(45,45,45,0.5); position: absolute; bottom: 5px; right: 10px; z-index: 11; }
+        #slide_01_dot { text-align: center; margin: 3px 0 0 0; }
+        #slide_01_dot span { display: inline-block; margin: 0 3px; width: 5px; height: 5px; vertical-align: middle; background: #f7f7f7; -webkit-border-radius: 5px; }
+        #slide_01_dot .selected { background: #f57629; }
     </style>
 </head>
 <body style="background:#f4f4f4;">
@@ -21,16 +28,12 @@
             优辅家建材
         </div>
     </div>
-    <div id="content">
-        <div id="focus" class="focus">
-            <div class="hd">
-                <ul></ul>
-            </div>
-            <div class="bd" style="height: 250px;">
-                <ul>
-                    #foreach($p in $pics)<li><a href="#"><img src="$!p" /></a></li>#end
-                </ul>
-            </div>
+    <div id="content" style="position:relative;">
+        <div class="slide_01" id="slide_01">
+            #foreach($p in $pics)<div class="mod_01" style="background:url($p) no-repeat center center /cover"></div>#end
+        </div>
+        <div class="dotModule_new">
+            <div id="slide_01_dot"></div>
         </div>
     </div>
     <div class="jiar">
@@ -38,20 +41,20 @@
             $g.name<br />
             <span style="font-size:12px;color:#999; float:none;">$g.alias</span>
         </h3>
-        <span class="p">￥$g.new_price/$g.unit</span>
+        <span class="p">￥$g.new_price/$!g.unit</span>
         #if($gc>0)
         <a href="javascript:;" onclick="tocart('$id')" id="toc" style="display:none;">加入购物车</a>
-        <div class="jiaj"><span class="jian" onclick="outcart('$id',$(this).next().val())"></span><input type="tel" name="count" value="$!gc" class="txt01" /><span class="jia" onclick="tocart('$id')"></span></div>
+        <div class="jiaj"><span class="jian" onclick="outcart('$id',$(this).next().val())"></span><input type="tel" name="count" value="$!gc" class="txt01" onchange="setcount($id, this.value);" /><span class="jia" onclick="tocart('$id')"></span></div>
         #else
         <a href="javascript:;" onclick="tocart('$id')" id="toc">加入购物车</a>
-        <div class="jiaj" style="display:none;"><span class="jian" onclick="outcart('$id',$(this).next().val())"></span><input type="tel" name="count" value="$!gc" class="txt01" /><span class="jia" onclick=" tocart('$id')"=tocart('$id')"></span></div>
+        <div class="jiaj" style="display:none;"><span class="jian" onclick="outcart('$id',$(this).next().val())"></span><input type="tel" name="count" value="$!gc" class="txt01" onchange="setcount($id, this.value);" /><span class="jia" onclick="tocart('$id')"></span></div>
         #end
         <div class="clear"></div>
     </div>
     <div class="jiar01">
         <p>15天内在不影响二次销售的情况下，可无理由退货</p>
         <p>产品本身质量有问题，可无理由退货</p>
-        <p>单笔满599元（不含沙石砖水泥类），免运费</p>
+        <p>单笔满$cfg.free_ship元（不含沙石砖水泥类），免运费</p>
     </div>
     <div class="detail" style="padding:15px;border-top:1px solid #eee; line-height:26px; background:white;font-size:16px;">
         $desc
@@ -62,19 +65,19 @@
     <br />
     <div class="fudong01">
         <ul>
-            <li class="no013"><a href="#">联系客服</a></li>
+            <li class="no013"><a href="tel:$cfg.svr_tel">联系客服</a></li>
             <li class="no014"><a href="/wx/user/cart.html">购物车</a><span class="gc gc_$!tc">$tc</span></li>
         </ul>
         #if($gc<=0)
         <div class="tis01">
-            满500元免运费
+            满$cfg.free_ship元免运费
         </div>
         <a href="/wx/user/cart.html" class="tis02" style="display:none;">
             选好了
         </a>
         #else
         <div class="tis01" style="display:none;">
-            满500元免运费
+            满$cfg.free_ship元免运费
         </div>
         <a href="/wx/user/cart.html" class="tis02">
             选好了
@@ -82,19 +85,24 @@
         #end
     </div>
     #parse("wx/_foot.html")
-    <script type="text/javascript" src="/js/wx/jquery.SuperSlide.2.1.js"></script>
+    <script type="text/javascript" src="/js/wx/scroll.js"></script>
     <script type="text/javascript">
         $(function () {
-            /* 调用SuperSlide */
-            $(".focus").slide({
-                titCell: ".hd ul", mainCell: ".bd ul", effect: "fold", autoPlay: true, autoPage: true, trigger: "click",
-                startFun: function (i) {
-                    var curLi = jQuery(".focus .bd li").eq(i); /* 当前大图的li */
-                    if (!!curLi.attr("_src")) {
-                        curLi.css("background-image", curLi.attr("_src")).removeAttr("_src") /* 将_src地址赋予li背景，然后删除_src */
-                    }
-                }
-            });
+
+            $(".mod_01").width(window.innerWidth);
+
+            var slide_01 = new ScrollPic();
+            slide_01.scrollContId = "slide_01"; //内容容器ID
+            slide_01.dotListId = "slide_01_dot";//点列表ID
+            slide_01.dotOnClassName = "selected";
+            slide_01.frameWidth = window.innerWidth;
+            slide_01.pageWidth = window.innerWidth;
+            slide_01.upright = false;
+            slide_01.speed = 10;
+            slide_01.space = 30;
+            slide_01.initialize(); //初始化
+
+
         });
         function cartchange(ct, gc) {
             if (ct <= 0) {
@@ -108,10 +116,8 @@
                 $(".tis01").hide();
                 $(".tis02").show();
             }
-            if (gc <= 0)
-                $(".gc").hide();
-            else
-                $(".gc").show();
+            if (gc <= 0) $(".gc").hide();
+            else $(".gc").show();
 
             $(".jiaj input").val(ct);
             $("span.gc").text(gc);

@@ -13,6 +13,14 @@ namespace X.App.Views.mgr.goods
         public int id { get; set; }
         public int cp { get; set; }
 
+        protected override int powercode
+        {
+            get
+            {
+                return 1;
+            }
+        }
+
         protected override string GetParmNames
         {
             //传参数

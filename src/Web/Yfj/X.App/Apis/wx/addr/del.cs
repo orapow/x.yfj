@@ -13,7 +13,7 @@ namespace X.App.Apis.wx.addr
         protected override XResp Execute()
         {
             var ad = cu.x_address.FirstOrDefault(o => o.address_id == id);
-            if (ad == null) throw new XExcep("T地址不存在");
+            if (ad == null) throw new XExcep("0x0041");
 
             DB.x_address.DeleteOnSubmit(ad);
             SubmitDBChanges();

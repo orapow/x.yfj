@@ -11,7 +11,8 @@ namespace X.App.Views.wx
     public class notify : _wx
     {
         [ParmsAttr(name = "订单号", req = true)]
-        public string no { get; set; }
+        public int id { get; set; }
+        public int tp { get; set; }
         protected override bool nd_user
         {
             get
@@ -23,7 +24,7 @@ namespace X.App.Views.wx
         {
             get
             {
-                return "no";
+                return "tp-id";
             }
         }
         public override byte[] GetResponse()
@@ -43,42 +44,56 @@ namespace X.App.Views.wx
                 return null;
             }
 
-            var no = dict.GetString("no");
-            if (string.IsNullOrEmpty(no)) return null;
-            if (nt.out_trade_no != no)
+            switch (tp)
             {
-                Loger.Info("订单号不正确，地址：" + Context.Request.RawUrl + "，提交单号：" + nt.out_trade_no);
-                return null;
+                case 1:
+                    ValidOrder(nt.transaction_id);
+                    break;
+                case 2:
+                    ValidCharge();
+                    break;
             }
 
-            var order = DB.x_order.SingleOrDefault(o => o.no == no);
+            SubmitDBChanges();
 
             var okxml = @"<xml>
                             <return_code><![CDATA[SUCCESS]]></return_code>
                             <return_msg><![CDATA[OK]]></return_msg>
                         </xml>";
 
-            if (order == null)
-            {
-                Loger.Info("订单不存在，订单号：" + no);
-                return Encoding.UTF8.GetBytes(okxml);
-            }
+            return Encoding.UTF8.GetBytes(okxml);
+        }
 
-            if (order.status != 1 || order.pay_way != 1)
-            {
-                Loger.Info("订单确认失败，订单号：" + no);
-                return Encoding.UTF8.GetBytes(okxml);
-            }
+        private void ValidCharge()
+        {
+            var chg = DB.x_charge.SingleOrDefault(o => o.charge_id == id);
+            if (chg == null) Loger.Info("充值记录不存在，订单号：" + id);
+            else if (!string.IsNullOrEmpty(chg.result)) return;
             else
             {
+                if (cfg.chg_audit == 2)
+                {
+                    chg.x_user.balance += chg.amount;
+                    chg.audit_status = 2;
+                    chg.audit_time = DateTime.Now;
+                }
+                chg.result = "成功";
+                chg.audit_status = 1;
+            }
+        }
+
+        private void ValidOrder(string wx_no)
+        {
+            var order = DB.x_order.SingleOrDefault(o => o.order_id == id);
+            if (order == null) Loger.Info("订单不存在，订单ID：" + id);
+            if (order.status != 1 || order.pay_way != 1) Loger.Info("订单确认失败，订单号：" + id);
+            else
+            {
+                order.wx_no = wx_no;
                 order.pay_time = DateTime.Now;
                 order.pay_amount = order.yf_amount;
                 order.status = 2;
             }
-
-            SubmitDBChanges();
-
-            return Encoding.UTF8.GetBytes(okxml);
         }
     }
 }

@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>秒杀 $cfg.name</title>
+    <style type="text/css">
+        .fudong { display: none; }
+        .txt01 { margin-left: 20px; }
+        .jiaj { position: absolute; right: 22px; width: 70px; top: 50%; height: 26px; margin-top: -13px; }
+        .gc { position: absolute; background: #f57629; color: white; width: 25px; border-radius: 50%; top: 5px; bottom: initial; right: 5px; line-height: 25px; height: 25px; }
+        .gc_0 { display: none; }
+        .jiar01 { margin-bottom: 8px; }
+        .detail img { width: 90%; margin: 0 auto; }
+        .jiar h3 { padding-bottom: 0; }
+        .jiar a { margin-top: 0; }
+        .scroll { width: 100%; margin: 20px auto 0 auto; position: relative; overflow: hidden; }
+        .mod_01 { float: left; height: 200px; }
+        .dotModule_new { padding: 0 5px; height: 11px; line-height: 6px; -webkit-border-radius: 11px; background: rgba(45,45,45,0.5); position: absolute; bottom: 5px; right: 10px; z-index: 11; }
+        #slide_01_dot { text-align: center; margin: 3px 0 0 0; }
+        #slide_01_dot span { display: inline-block; margin: 0 3px; width: 5px; height: 5px; vertical-align: middle; background: #f7f7f7; -webkit-border-radius: 5px; }
+        #slide_01_dot .selected { background: #f57629; }
+    </style>
+</head>
+<body style="background:#f4f4f4;">
+    <div class="top01">
+        <div class="w80">
+            <a class="bnt" href="/wx/index.html">
+                <img src="/img/wx/dd_03.png" />
+            </a>
+            优辅家建材
+        </div>
+    </div>
+    <div id="content" style="position:relative;">
+        <div class="slide_01" id="slide_01">
+            #foreach($p in $pics)<div class="mod_01" style="background:url($p) no-repeat center center /cover"></div>#end
+        </div>
+        <div class="dotModule_new">
+            <div id="slide_01_dot"></div>
+        </div>
+    </div>
+    <div class="miaos">
+        <div class="left02">
+            <h3>￥$sl.price/$!g.unit</h3>
+            <s>￥$g.new_price/$!g.unit</s>
+            <div class="shij">
+                <a href="#">00</a>天<a href="#">13</a>：<a href="#">04</a>：<a href="#">19</a>
+            </div>
+        </div>
+    </div>
+    <div class="jiar">
+        <h3>
+            $g.name<br />
+            <span style="font-size:12px;color:#999; float:none;">$g.alias</span>
+        </h3>
+        #if($gc>0)
+        <a href="javascript:;" onclick="tocart('$g.goods_id')" id="toc" style="display:none;">加入购物车</a>
+        <div class="jiaj"><span class="jian" onclick="outcart('$g.goods_id', $(this).next().val())"></span><input type="tel" name="count" value="$!gc" class="txt01" /><span class="jia" onclick="tocart('$g.goods_id')"></span></div>
+        #else
+        <a href="javascript:;" onclick="tocart('$g.goods_id')" id="toc">加入购物车</a>
+        <div class="jiaj" style="display:none;"><span class="jian" onclick="outcart('$g.goods_id',$(this).next().val())"></span><input type="tel" name="count" value="$!gc" class="txt01" /><span class="jia" onclick="tocart('$g.goods_id')"></span></div>
+        #end
+        <div class="clear"></div>
+    </div>
+    <div class="jiar01">
+        <p>15天内在不影响二次销售的情况下，可无理由退货</p>
+        <p>产品本身质量有问题，可无理由退货</p>
+        <p>单笔满$cfg.free_ship元（不含沙石砖水泥类），免运费</p>
+    </div>
+    <div class="detail" style="padding:15px;border-top:1px solid #eee; line-height:26px; background:white;font-size:16px;">
+        $desc
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="fudong01">
+        <ul>
+            <li class="no013"><a href="tel:$cfg.svr_tel">联系客服</a></li>
+            <li class="no014"><a href="/wx/user/cart.html">购物车</a><span class="gc gc_$!tc">$tc</span></li>
+        </ul>
+        #if($gc<=0)
+        <div class="tis01">
+            满$cfg.free_ship元免运费
+        </div>
+        <a href="/wx/user/cart.html" class="tis02" style="display:none;">
+            选好了
+        </a>
+        #else
+        <div class="tis01" style="display:none;">
+            满$cfg.free_ship元免运费
+        </div>
+        <a href="/wx/user/cart.html" class="tis02">
+            选好了
+        </a>
+        #end
+    </div>
+    #parse("wx/_foot.html")
+    <script type="text/javascript" src="/js/wx/scroll.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".mod_01").width(window.innerWidth);
+
+            var slide_01 = new ScrollPic();
+            slide_01.scrollContId = "slide_01"; //内容容器ID
+            slide_01.dotListId = "slide_01_dot";//点列表ID
+            slide_01.dotOnClassName = "selected";
+            slide_01.frameWidth = window.innerWidth;
+            slide_01.pageWidth = window.innerWidth;
+            slide_01.upright = false;
+            slide_01.speed = 10;
+            slide_01.space = 30;
+            slide_01.initialize(); //初始化
+
+        });
+        function cartchange(ct, gc) {
+            if (ct <= 0) {
+                $("#toc").show();
+                $(".jiaj").hide();
+                $(".tis01").show();
+                $(".tis02").hide();
+            } else {
+                $("#toc").hide();
+                $(".jiaj").show();
+                $(".tis01").hide();
+                $(".tis02").show();
+            }
+            if (gc <= 0) $(".gc").hide();
+            else $(".gc").show();
+
+            $(".jiaj input").val(ct);
+            $("span.gc").text(gc);
+        }
+
+        function showtime() {
+            var et = (new Date("$sl.etime").getTime() - new Date().getTime()) / 1000;
+            if (et <= 0) document.location.reload();
+
+            var d = 0;
+            if (et >= 86400) { d = Math.floor(et / 86400); et -= (86400 * d); }
+            var h = 0;
+            if (et >= 3600) { h = Math.floor(et / 3600); et -= (3600 * h) }
+            var m = 0;
+            if (et >= 60) { m = Math.floor(et / 60); et -= (60 * m); }
+            var s = Math.floor(et);
+
+            $(".shij").html('<a href="#">' + d.toFixed("00") + '</a>天<a href="#">' + h + '</a>：<a href="#">' + m + '</a>：<a href="#">' + s + '</a>');
+        }
+
+        showtime();
+
+        setInterval(showtime, 1000);
+
+    </script>
+</body>
+</html>

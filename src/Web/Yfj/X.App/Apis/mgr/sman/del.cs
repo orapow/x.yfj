@@ -13,11 +13,16 @@ namespace X.App.Apis.mgr.sman
     {
         [ParmsAttr(min = 1)]
         public int id { get; set; }
+        protected override int powercode {
+            get {
+                return 2;
+            }
+        }
 
         protected override XResp Execute()
         {
             var ent = DB.x_dict.FirstOrDefault(o => o.dict_id == id);
-            if (ent == null) throw new XExcep("T业务员不存在");
+            if (ent == null) throw new XExcep("0x0037");
 
             DB.x_dict.DeleteOnSubmit(ent);
 

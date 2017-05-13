@@ -11,6 +11,11 @@ namespace X.App.Views.mgr.article
     public class edit : xmg
     {
         public int id { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
 
         protected override string GetParmNames
         {
@@ -25,6 +30,7 @@ namespace X.App.Views.mgr.article
 
         protected override void InitDict()
         {
+           
             base.InitDict();
             if (id > 0)
             {

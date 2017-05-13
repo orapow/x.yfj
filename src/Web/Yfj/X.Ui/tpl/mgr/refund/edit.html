@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    #parse("mgr/com/_head.html")
+    <title>退款确认 - $cfg.name</title>
+    <style type="text/css">
+        .pl {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            font-size: 14px;
+            top: -28px;
+            left: 20px;
+            background: white;
+            position: absolute;
+            padding: 10px;
+            border: 1px solid #ccc;
+            line-height: 12px;
+            border-radius: 5px;
+        }
+
+        .pl p {
+            padding: 0 10px;
+            margin-bottom: 0;
+        }
+
+        html, body {
+            height: 400px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <x:form api="mgr.refund.accept">
+        <input type="hidden" name="id" value="$!itemRefund.refund_id" x-check="" />
+        <div class="pl">
+            <h3>退款信息</h3>
+            <p>申请退款金额：$!itemRefund.amount</p>
+            <p>退款原因：$itemRefund.reason</p>
+            <p>申请时间：$itemRefund.ctime</p>
+            <p>申请状态:#if($itemRefund.status==2)已接受#elseif($itemRefund.status==3) 已拒绝#else待处理#end</p>
+            #if($itemRefund.status!=1)
+            <p>已退金额：$!itemRefund.ramount</p><!--如果引擎引用的是个空值，$!会输出空，$会输出引用字符串-->
+            <p>审核时间：$itemRefund.atime</p>
+            #end
+        </div>
+        <x:text title="退款金额" def="$!itemRefund.amount" name="ramount" size="2" />
+        <x:text title="备注" name="remark" tp="3" size="5" def="$!itemRefund.remark" />
+
+        <div class="btns">
+            <button type="button" class="btn btn-primary" onclick="do_submit()">
+                <i class="icon-ok"></i>提交保存
+            </button>
+        </div>
+
+    </x:form>
+    <script type="text/javascript">
+        $(function () {
+
+            $("form:eq(0)").xform({
+                callback: function (d) {
+                    x.closewin();
+                }
+            });
+
+        });
+        function do_submit() {
+            x.confirm("是否确认?退款金额将直接退还买家", function () {
+                $("form:eq(0)").submit();
+            })
+        }
+    </script>
+    <!--<br /><br />
+
+    <p>实际退款金额</p>
+    <input title="退款金额" value="$!itemRefund.ramount" id="id_ramount" size="2" chk="no" />
+    <p>备注</p>
+    <input title="备注" value="$!itemRefund.remark" id="id_remark" size="2" chk="no" />
+    <button type="button" onclick="doAccept('$id')">确认退款</button>-->
+    <!--<script>
+        function doAccept(id) {
+            //if (!x.confirm("注意！确认后金额将直接退还给买家"))
+            //    return;
+            var ramount = $("#id_ramount").val();
+            var remark = $("#id_remark").val();
+            x.doapi("mgr.refund.accept", { id: id, remark: remark, ramount: ramount }, function (d) {
+                if (!d.issucc) return;
+                document.location.href = "list.html";
+            });
+        }
+    </script>-->
+</body>
+</html>

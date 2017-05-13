@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("wx/_head.html")
+    <title>待送订单</title>
+    <style type="text/css">
+        .hnav { overflow-x: auto; height: auto; padding: 5px; background-color: #f4f4f4; }
+        .hnav ul li { height: auto; width: auto; }
+        .hnav ul li:last-child { margin-right: 10px; }
+        .hnav ul li img { max-width: 80px; max-height: 60px; display: block; margin: 0 auto; width: auto; height: auto; }
+        .zaic { border-bottom-color: #eee; margin-bottom: 10px; }
+        h3 { line-height: 20px; background-color: white; border-top: 1px solid #eee; padding: 10px; position: relative; padding-right: 60px; margin: 10px; border-radius: 5px; }
+        h3.s1 { padding: 10px; }
+        h3 .btn { position: absolute; right: 10px; top: 50%; margin-top: -15px; line-height: normal; padding: 5px 10px; border-radius: 5px; }
+        .fudong { display: none; }
+    </style>
+</head>
+<body style="background:#f4f4f4;">
+    <div style="padding: 10px; display:none;">
+        <img src="$sd.img" width="40" style="display:inline-block;vertical-align:middle;" /><span style="vertical-align:middle;font-size:16px;margin-top: 5px;display:inline-block;">$sd.name $sd.f3</span>
+    </div>
+    #if($ods.count()==0)
+    <h3 class="s1" style="text-align:center;font-size:14px;">暂无待配送订单</h3>
+    #end
+    #foreach($o in $ods)
+    <h3 onclick="tourl($o.id)">
+        订单号：$o.no <br />
+        收货地址：$o.rec_addr<br />
+        收货人：$o.rec_man<br />
+        联系电话：$o.rec_tel<br />
+        <a href="detail-${o.id}.html" class="btn">详情</a>
+    </h3>
+    #end
+    <!--#if($ods1.count()>0)
+    <hr />
+    #foreach($o in $ods1)
+    <h3 onclick="tourl($o.id)" class="s1">
+        订单号：$o.no <br />
+        收货地址：$o.rec_addr<br />
+        收货人：$o.rec_man<br />
+        联系电话：$o.rec_tel
+    </h3>
+    #end
+    #end-->
+    <br />
+    <br />
+    <br />
+    <br />
+    #parse("wx/_foot.html")
+    <script type="text/javascript">
+
+        function tourl(id) {
+            document.location.href = "/sder/detail-" + id + ".html";
+        }
+
+    </script>
+</body>
+</html>

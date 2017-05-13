@@ -9,6 +9,12 @@ namespace X.App.Views.mgr.dict
         public int pid { get; set; }
         [ParmsAttr(name = "代号", req = true)]
         public string code { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
+
         protected override string GetParmNames
         {
             get

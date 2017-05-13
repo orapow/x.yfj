@@ -27,6 +27,7 @@ namespace X.Web.Apis
         {
             InitApi();
             Context.Response.ContentType = "text/json";
+            Context.Response.HeaderEncoding = Encoding.UTF8;
             var json = Serialize.ToJson(Execute());
             json = json.Replace(":null", ":\"\"");
             return Encoding.UTF8.GetBytes(json);

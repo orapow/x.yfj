@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using X.Web;
 
 namespace X.App.Views.wx.goods
@@ -35,6 +36,10 @@ namespace X.App.Views.wx.goods
                 dict.Add("tc", 0);
             }
             var gd = DB.x_goods.FirstOrDefault(o => o.goods_id == id);
+            var sl = gd.x_sale.FirstOrDefault(o => o.etime > DateTime.Now);
+
+            if (sl != null) Context.Response.Redirect("/wx/goods/sale-" + sl.sale_id + ".html");
+
             dict.Add("g", gd);
             dict.Add("pics", gd.imgs.Split(',').ToList());
             dict.Add("desc", Context.Server.HtmlDecode(gd.desc));

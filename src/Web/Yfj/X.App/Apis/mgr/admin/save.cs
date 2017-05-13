@@ -12,51 +12,45 @@ namespace X.App.Apis.mgr.admin
     public class save : xmg
     {
         public int id { get; set; }
-
         public string name { get; set; }//用户名称
         public string tel { get; set; }//联系电话
         public string uid { get; set; }//帐号
-        public string pwd { get; set; }//密码
-
-        public int status { get; set; }//权限(管理员:1,客服:2)
-
-        protected override void Validate()
+        public string password { get; set; }//密码
+        public String mail { get; set; }
+        public int role { get; set; }//权限(1:客服,2:财务)
+        protected override int powercode
         {
-            base.Validate();
-            Validator.CheckRange("status", status, 0, null);
-
-            Validator.Require("name", name);
-            Validator.Require("uid", uid);
-            Validator.Require("pwd", pwd);
-            Validator.Require("tel", tel);
-
+            get
+            {
+                return 1;
+            }
         }
+
+
 
         protected override Web.Com.XResp Execute()
         {
-            x_admin ad = new x_admin();
+            x_mgr ad = new x_mgr();
             if (id > 0)
             {
-                ad = DB.x_admin.SingleOrDefault(o => o.admin_id == id);
+                ad = DB.x_mgr.SingleOrDefault(o => o.mgr_id == id);
                 if (ad == null) throw new XExcep("0x0005");
             }
             else
             {
-                //判断用户是否已经存在(根据用户名或账户)
-                if (!string.IsNullOrEmpty(name) || !string.IsNullOrEmpty(uid))
-                {
-                    ad = DB.x_admin.SingleOrDefault(o => o.name == name || o.uid == uid);
-                    if (ad != null) throw new XExcep("0x0007"); else ad = new x_admin();
-                }
+                ad = DB.x_mgr.SingleOrDefault(o => o.name == name || o.uid == uid);
+                if (ad != null) throw new XExcep("0x0007");
+                ad = new x_mgr();
             }
             ad.uid = uid;
-            if (!string.IsNullOrEmpty(pwd)) ad.pwd = Secret.MD5(pwd);
+            if (!string.IsNullOrEmpty(password)) ad.pwd = Secret.MD5(password);
             ad.name = name;
             ad.tel = tel;
-            ad.time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            ad.role_id = role;
+            ad.email = mail;
+            ad.ctime = DateTime.Now;
 
-            if (ad.id == 0) DB.x_admin.InsertOnSubmit(ad);
-
+            if (ad.mgr_id == 0) DB.x_mgr.InsertOnSubmit(ad);
             SubmitDBChanges();
 
             return new XResp();

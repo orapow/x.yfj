@@ -18,6 +18,11 @@ namespace X.App.Apis.mgr.ads
         public string desc { get; set; }
         public int sort { get; set; }
 
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
         protected override XResp Execute()
         {
             x_ad ent = null;
@@ -30,7 +35,7 @@ namespace X.App.Apis.mgr.ads
             if (pos > 0)
             {
                 var ct = DB.x_dict.FirstOrDefault(o => o.code == "ads.pos" && o.value == pos + "");
-                if (ct == null) throw new XExcep("T广告位不存在");
+                if (ct == null) throw new XExcep("0x0011");
             }
 
             if (ent == null) ent = new x_ad() { ctime = DateTime.Now };

@@ -14,11 +14,17 @@ namespace X.App.Apis.mgr.user
     public class del : xmg
     {
         public int id { get; set; }
+        protected override int powercode {
+            get {
+                return 1;
+            }
+        }
+        
 
         protected override XResp Execute()
         {
             var u = DB.x_user.FirstOrDefault(o => o.user_id == id);
-            if (u == null) throw new XExcep("T用户不存在");
+            if (u == null) throw new XExcep("0x0039");
 
             var ode = DB.x_order_detail.Where(o => u.x_order.Select(c => c.order_id + "").Contains(o.order_id + ""));
             //var ods = DB.x_order_send.Where(o => u.x_order.Select(c => c.order_id + "").Contains(o.order_id + ""));

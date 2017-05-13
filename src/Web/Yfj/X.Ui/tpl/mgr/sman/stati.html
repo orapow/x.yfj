@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    #parse("mgr/com/_head.html")
+    <title>业务员管理 - $cfg.name</title>
+    <style type="text/css">
+        .img { width: 30px; }
+        .table td { height: 30px; line-height: 30px; }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <span class="main">业务员列表</span> - <span class="sub">业绩统计</span>
+    </div>
+    <div class="search">
+        <x:form>
+            <!--<x:text name="key" tip="搜索名称" size="4" />-->
+            <x:text id="ctime" title="开始时间" name="ctime" size="2" chk="no" />
+            <x:text id="etime" title="结束时间" name="etime" size="2" chk="no" />
+            <button type="submit" class="btn btn-primary"><i class="icon-search"></i>搜索</button>
+            <button type="submit" class="btn" onclick="doSearch('7天')">7天</button>
+            <button type="submit" class="btn" onclick="doSearch('本月')">本月</button>
+            <button type="submit" class="btn" onclick="doSearch('上月')">上月</button>
+            <button type="reset" class="btn"><i class="icon-remove"></i>清除</button>
+            <div class="btns">
+                
+                <a class="btn btn-primary" id="btn_add" onclick="show_edit()"><i class="icon-plus"></i>新增业务员</a>
+            </div>
+        </x:form>
+    </div>
+    <div class="gridpanel">
+    </div>
+    <script src="/plug/dp/v2.1.js"></script>
+    <link href="/plug/dp/v2.1.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(function () {
+            $("#id_ctime").datetimepicker({timepicker:false });
+            $("#id_etime").datetimepicker({timepicker: false });
+        });
+        $("form:eq(0)").xform({
+            callback: function (d) {
+                d.page = 1;
+                g.getlist(d);
+            }
+        })
+
+        function formateDate(date) {  
+             var y = date.getFullYear();  
+           var m = date.getMonth() + 1;  
+         m = m < 10 ? '0' + m : m;  
+        var d = date.getDate();  
+   d = d < 10 ? ('0' + d) : d;  
+       return y + '-' + m + '-' + d;  
+      }
+
+
+        function doSearch(condition) {
+            //x.doapi("mgr.sman.stati", {  key: condition }, function (d) {
+            //    //d.page = 1;
+            //    g.getlist(d);
+            //});
+            var now=new Date();
+            if (condition == "7天") {
+                $("#id_etime").val(formateDate(now));//.value = now;
+                $("#id_ctime").val(formateDate(new Date(now.setDate(now.getDate() - 7))));//.value = now.setDate(now.getDate() - 7);
+ 
+                
+            } else if (condition == "本月") {
+                $("#id_etime").val(formateDate(now));//.value = now;
+                $("#id_ctime").val(formateDate(new Date(now.setDate(1))));//.value = now.setDate(1);
+         
+            } else if (condition == "上月") {
+                $("#id_etime").val(formateDate(new Date(now.setDate(1))));//.value = now.setDate(1);
+                $("#id_ctime").val(formateDate(new Date(now.setMonth(now.getMonth() - 1))));//.value = now.setMonth(now.getMonth-1);
+            }
+
+        }
+
+        var cfg = {
+            el: ".gridpanel",
+            searchcon: { page: 1, limit: 30 },
+            api: "mgr.sman.stati",
+            fs: [
+                { t: "业务员姓名", f: "<img src='{img}' class='img'/> {name}", w: 120, align: "left" },
+                { t: "会员数", f: "{member_count}", w: 80, align: "center" },
+                { t: "订单数", f: "{order_total}", w: 80, align: "center" },
+                { t: "订单金额", f: "{order_amount}", w: 80, align: "center" },
+                { t: "已完成金额", f: "{finish_amount}", w: 120, align: "center" },
+            ],
+            btns: [
+                { txt: "编辑", ico: "edit", act: "edit", confirm: false },
+                { txt: "删除", ico: "remove", act: "del" },
+            ]
+        };
+
+        cfg.cellclick = function (act, d) {
+            switch (act) {
+                case "del":
+                    dodel(d.id);
+                    break;
+                case "edit":
+                    show_edit(d.id);
+                    break;
+            }
+        };
+
+        var g = x.grid.init(cfg);
+
+        function dodel(id) {
+            x.doapi("mgr.sman.del", { id: id, }, function () {
+                g.getlist();
+            });
+        }
+
+        function show_edit(id) {
+            x.openwin("edit-" + (id || "") + ".html", "编辑业务员", function () {
+                g.getlist();
+            }, { w: 400, h: 350 });
+        }
+    </script>
+</body>
+</html>
