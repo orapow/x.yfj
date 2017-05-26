@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using X.Web.Com;
 
-namespace X.App.Apis.mgr.goods {
-    public class list : xmg {
+namespace X.App.Apis.mgr.goods
+{
+    public class list : xmg
+    {
         /// <summary>
         /// 状态：
         /// 1、草稿
@@ -19,19 +21,24 @@ namespace X.App.Apis.mgr.goods {
         public int page { get; set; }
         public int limit { get; set; }
         public string key { get; set; }
-        protected override int powercode {
-            get {
+        protected override int powercode
+        {
+            get
+            {
                 return 1;
             }
         }
 
-        protected override Web.Com.XResp Execute() {
+        protected override Web.Com.XResp Execute()
+        {
             var r = new Resp_List();
             r.page = page;
 
             var q = from et in DB.x_goods
+                    where et.city == cityid
                     orderby et.goods_id descending
-                    select new {
+                    select new
+                    {
                         id = et.goods_id,
                         cate = GetDictName("goods.cate", et.cate_id),
                         cid = et.cate_id,
@@ -53,7 +60,8 @@ namespace X.App.Apis.mgr.goods {
 
 
             if (!string.IsNullOrEmpty(key)) q = q.Where(o => o.name.Contains(key) || o.remark.Contains(key));
-            if (!string.IsNullOrEmpty(cate)) {
+            if (!string.IsNullOrEmpty(cate))
+            {
                 var cids = DB.x_dict.Where(o => o.code == "goods.cate" && o.upval.Contains(cate) || o.value == cate).Select(o => o.value);
                 q = q.Where(o => cids.Contains(o.cid));
             }

@@ -5,29 +5,38 @@ using X.Core.Cache;
 using X.Data;
 using X.Web;
 
-namespace X.App.Apis.mgr {
-    public class xmg : xapi {
+namespace X.App.Apis.mgr
+{
+    public class xmg : xapi
+    {
         protected x_mgr mg = null;
+        protected long cityid = 0;
         /// <summary>
         /// 功能权限码
         /// #是默认码
         /// 为空说明不需要验证
         /// </summary>
-        protected virtual int powercode {
-            get {
+        protected virtual int powercode
+        {
+            get
+            {
                 return 3;
             }
         }
-        protected override void InitApi() {
+        protected override void InitApi()
+        {
             base.InitApi();
 
-            //var key = GetReqParms("mg_keys");
-            //if (string.IsNullOrEmpty(key)) throw new XExcep("0x0006");
+            var id = GetReqParms("mgr_ad");
+            if (string.IsNullOrEmpty("ad")) throw new XExcep("0x0006");
 
-            mg = DB.x_mgr.FirstOrDefault(o => o.mgr_id == 1);// CacheHelper.Get<x_mgr>("mgr." + key);
+            //mg = DB.x_mgr.FirstOrDefault(o => o.mgr_id == 1);
+            mg = CacheHelper.Get<x_mgr>("mgr." + id);
             if (mg == null) throw new XExcep("0x0004");
 
-            //CacheHelper.Save("mgr." + id, mg, 60 * 60);
+            if (mg.city == null || mg.city == 0) throw new XExcep("0x0060");
+            if (mg.city == 62 && mg.role_id == 3) long.TryParse(GetReqParms("mgr_ct"), out cityid);
+            if (cityid == 0) cityid = mg.city.Value;
 
             ValidPower();
         }
@@ -35,15 +44,18 @@ namespace X.App.Apis.mgr {
         /// <summary>
         /// 是否有权限
         /// </summary>
-        private bool HasPower() {
-            return mg.role_id < 3 ? mg.role_id == powercode : true;
+        private bool HasPower()
+        {
+            return mg.role_id < 3 ? mg.role_id == powercode || powercode == 0 : true;
         }
 
         /// <summary>
         /// 验证权限
         /// </summary>
-        private void ValidPower() {
-            if (!HasPower()) {
+        private void ValidPower()
+        {
+            if (!HasPower())
+            {
                 throw new XExcep("0x0040");
             }
         }

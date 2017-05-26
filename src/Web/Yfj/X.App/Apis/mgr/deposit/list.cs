@@ -27,11 +27,13 @@ namespace X.App.Apis.mgr.deposit
             r.page = page;
 
             var q = from d in DB.x_charge
+                    where d.x_user.city == cityid
                     orderby d.charge_id descending
                     select new
                     {
                         id = d.charge_id,
                         amount = d.amount,
+                        city = d.x_user.city,
                         uid = d.x_user.user_id,
                         name = d.x_user.name,
                         un = d.x_user.nickname,

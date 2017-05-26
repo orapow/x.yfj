@@ -24,6 +24,7 @@ namespace X.App.Apis.wx
         }
         protected override Web.Com.XResp Execute()
         {
+            cu = DB.x_user.FirstOrDefault(o => o.tel == tel);
             if (!string.IsNullOrEmpty(code))
             {
                 var mcode = CacheHelper.Get<string>("sms.code." + tel);
@@ -31,8 +32,7 @@ namespace X.App.Apis.wx
             }
             else if (!string.IsNullOrEmpty(pwd))
             {
-                var u = DB.x_user.FirstOrDefault(o => o.tel == tel);
-                if (u == null || u.pwd != Secret.MD5(pwd)) throw new XExcep("0x0023");
+                if (cu == null || cu.pwd != Secret.MD5(pwd)) throw new XExcep("0x0023");
             }
             else
             {

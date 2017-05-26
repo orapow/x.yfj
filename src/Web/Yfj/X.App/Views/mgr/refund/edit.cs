@@ -12,7 +12,7 @@ namespace X.App.Views.mgr.refund
         public string remark { get; set; }
         protected override int powercode {
             get {
-                return 1;
+                return 2;
             }
         }
         protected override string GetParmNames  

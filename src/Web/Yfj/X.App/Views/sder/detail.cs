@@ -23,7 +23,7 @@ namespace X.App.Views.sder
             var od = DB.x_order.FirstOrDefault(o => o.order_id == id);
             if (od == null) throw new XExcep("0x0024");
             dict.Add("od", od);
-            dict.Add("sd", od.send_man.Split(' '));
+            dict.Add("sdm", od.send_man.Split(' '));
         }
     }
 }

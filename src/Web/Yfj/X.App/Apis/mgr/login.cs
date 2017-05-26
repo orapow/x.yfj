@@ -10,7 +10,7 @@ using X.Web.Com;
 
 namespace X.App.Apis.mgr
 {
-    public class login : Api
+    public class login : xapi
     {
         /// <summary>
         /// 用户名
@@ -33,7 +33,7 @@ namespace X.App.Apis.mgr
             var ad = DB.x_mgr.SingleOrDefault(o => o.uid == uid);
 
             if (ad == null || ad.pwd != Secret.MD5(pwd)) throw new XExcep("0x0023");
-            var ukey = Guid.NewGuid().ToString();
+            ad.ukey = Guid.NewGuid().ToString();
 
             CacheHelper.Save("mgr." + ad.ukey, ad, 60 * 20);
 

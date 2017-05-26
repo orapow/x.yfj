@@ -99,7 +99,6 @@
     <Compile Include="Apis\mgr\goods\list.cs" />
     <Compile Include="Apis\mgr\goods\save.cs" />
     <Compile Include="Apis\mgr\goods\status.cs" />
-    <Compile Include="Apis\mgr\din.cs" />
     <Compile Include="Apis\mgr\sys\dict\del.cs" />
     <Compile Include="Apis\mgr\sys\dict\save.cs" />
     <Compile Include="Apis\mgr\user\del.cs" />
@@ -122,6 +121,7 @@
     <Compile Include="Apis\wx\logout.cs" />
     <Compile Include="Apis\wx\login.cs" />
     <Compile Include="Apis\wx\newtk.cs" />
+    <Compile Include="Apis\wx\order\del.cs" />
     <Compile Include="Apis\wx\order\refund.cs" />
     <Compile Include="Apis\wx\order\cancel.cs" />
     <Compile Include="Apis\sder\acpt.cs" />

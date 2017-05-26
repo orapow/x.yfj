@@ -5,7 +5,7 @@
     <title>订单管理 - $cfg.name</title>
     <style type="text/css">
         td.ops { white-space: normal; }
-        .gd { width: 40px; border: 1px solid #ff6a00; float: left; margin: 0 2px 2px 0; }
+        .gd { max-width: 40px; border: 1px solid #ff6a00; float: left; margin: 0 2px 2px 0; max-height: 24px; }
         .table td.c_gs { overflow: auto; white-space: normal; }
         .table td.c_rec_man { white-space: normal; }
     </style>
@@ -47,7 +47,6 @@
                 { t: "付款", f: "{way}<br/>应付：<b>￥{yf_amount}</b><br/>已付：<b style='color:red'>￥{pay_amount}</b>", w: 100, align: "left" }
             ],
             btns: [
-                { txt: "删除", ico: "remove", act: "del" },
                 { txt: "详细", ico: "reorder", act: "detail", confirm: false }
             ]
         };
@@ -93,7 +92,7 @@
             });
         }
         function doacpt(id) {
-            x.doapi("mgr.order.del", { id: id }, function (d) {
+            x.doapi("mgr.order.acpt", { id: id }, function (d) {
                 if (!d.issucc) return;
                 g.getlist();
             });

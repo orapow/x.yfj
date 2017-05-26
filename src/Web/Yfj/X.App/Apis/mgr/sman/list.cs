@@ -12,8 +12,10 @@ namespace X.App.Apis.mgr.sman
         public int page { get; set; }
         public int limit { get; set; }
         public string key { get; set; }
-        protected override int powercode {
-            get {
+        protected override int powercode
+        {
+            get
+            {
                 return 2;
             }
         }
@@ -24,6 +26,7 @@ namespace X.App.Apis.mgr.sman
             r.page = page;
 
             var q = from d in GetDictList("user.sman", "0")
+                    where d.f1 == cityid
                     select new
                     {
                         d.id,

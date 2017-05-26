@@ -44,10 +44,11 @@
     }
 
     wx.error(function (res) {
-        //alert(JSON.stringify(res));
-        doapi("wx.newtk", null, function () {
-            document.location.reload();
-        })
+        //alert(document.location.href+"<br/>$url");
+        //alert("$!wx_ts,$!wx_no,$!wx_sign,"+document.location.href);
+        //doapi("wx.newtk", null, function () {
+        //    document.location.reload();
+        //})
     });
 
 </script>
@@ -95,5 +96,8 @@
                 cartchange(d.ct, d.gc, d.ps, gid, d.sel, d.shipfee);
             } catch (e) { }
         });
+    }
+    if ("$!cu.user_id" && !"$!cu.tel" && document.location.href.indexOf("bind.html") < 0) {
+        if (confirm("您还未绑定手机号\n绑定手机号更方便我们提供服务哦，是否立即绑定？")) document.location.href = "/wx/bind.html";
     }
 </script>

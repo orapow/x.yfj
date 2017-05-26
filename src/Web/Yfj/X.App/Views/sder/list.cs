@@ -7,6 +7,15 @@ namespace X.App.Views.sder
 {
     public class list : _sd
     {
+        public int st { get; set; }
+        protected override string GetParmNames
+        {
+            get
+            {
+                return "st";
+            }
+        }
+
         protected override void InitDict()
         {
             base.InitDict();
@@ -23,10 +32,11 @@ namespace X.App.Views.sder
                         o.rec_tel
                     };
 
-            dict.Add("ods", q.Where(o => o.status == 4).ToList());
-            dict.Add("ods1", q.Where(o => o.status == 5).ToList());
+            if (st == 1) q = q.Where(o => o.status == 5);
+            else q = q.Where(o => o.status == 4);
+
+            dict.Add("ods", q.ToList());
 
         }
-
     }
 }

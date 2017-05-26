@@ -22,7 +22,7 @@ namespace X.App.Apis.mgr.refund
         protected override XResp Execute()
         {
             var r = new Resp_List();
-            var q = from o in DB.x_refund select o;
+            var q = from o in DB.x_refund where o.x_order.city == cityid select o;
 
             //if (mg.x_role.power != "###") q = q.Where(o => o.x_order.city == mg.city);
 

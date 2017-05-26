@@ -24,6 +24,10 @@
         .leftpan ul li ul { display: none; }
         .leftpan .arrow { position: absolute; height: 90px; width: 10px; top: 50%; right: -10px; background-color: red; }
         .rightpan { margin-left: 121px; }
+        .sel_city { position: absolute; left: 110px; top: 5px; }
+        .sel_city ul { display: none; max-height: 400px; overflow-y: auto; list-style: none; padding: 5px; margin: 1px 0 0; text-align: center; background-color: white; z-index: 99; position: absolute; border: 1px solid #ccc; width: 90px; font-size: 14px; }
+        .sel_city ul li { padding: 0; margin: 0; line-height: 22px; cursor: pointer; }
+        .sel_city .btn { padding: 4px 12px; }
     </style>
 </head>
 <body>
@@ -31,6 +35,18 @@
         <span class="btn btn-link" style="float: left; padding: 4px;">
             <img src="/img/logo.png" style="height: 32px;" />
         </span>
+        <div class="sel_city">
+            #if($mg.city==62)
+            <span class="btn" onclick="showlayer()"><span>$cityname</span> <i class="icon-angle-down"></i></span>
+            <ul>
+                #foreach($c in $cities)
+                <li data-val="$c.value" onclick="setcity($c.value,'$c.name')">$c.name</li>
+                #end
+            </ul>
+            #else
+            <span class="btn">$cityname</span>
+            #end
+        </div>
         <a class="btn btn-link btn-large m">
             <i class="icon-desktop"></i>内容
         </a><a class="btn btn-link btn-large m">
@@ -40,7 +56,7 @@
         </a><a class="btn btn-link btn-large m">
             <i class="icon-cog"></i>系统
         </a><a class="btn btn-link btn-large" href="main.html" style="border-left: 1px solid #3086c8;">
-            <i class="icon-user"></i>$!mg.Name（$cname） <i class="icon-angle-down"></i>
+            <i class="icon-user"></i>$!mg.Name
         </a><span class="btn btn-large btn-warning" style="color: white; border: none;" onclick="dologout()">
             <i class="icon-off" style="margin: 0;"></i>
         </span>
@@ -213,6 +229,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/mgr/order/list-5.html" class="btn">
+                            <i class="icon-angle-right"></i>已完成
+                        </a>
+                    </li>
+                    <li>
                         <a href="/mgr/order/list.html" class="btn">
                             <i class="icon-angle-right"></i>全部订单
                         </a>
@@ -360,11 +381,11 @@
             });
             $(window).resize();
             $(".menu .m").click(function () {
-                if (cmenu) { $(".leftpan .smenu:eq(" + (cmenu.index()) + ")").hide(); cmenu.removeClass("btn-primary"); }
+                if (cmenu) { $(".leftpan .smenu:eq(" + (cmenu.index() - 1) + ")").hide(); cmenu.removeClass("btn-primary"); }
                 cmenu = $(this).addClass("btn-primary");
                 if (!cmenu.hasClass("nosub")) {
                     $(".leftpan").show();
-                    $(".leftpan .smenu:eq(" + (cmenu.index()) + ")").show();//.find("li:eq(0) .m").click();
+                    $(".leftpan .smenu:eq(" + (cmenu.index() - 1) + ")").show();//.find("li:eq(0) .m").click();
                     $(".rightpan").css("margin-left", "121px");
                 }
                 else {
@@ -387,12 +408,23 @@
             });
         });
 
+        function showlayer() {
+            $(".sel_city ul").toggle();
+        }
+
+        function setcity(id, cn) {
+            x.cookie.set("mgr_ct", id);
+            $(".sel_city ul").hide();
+            $(".sel_city .btn span").text(cn)
+            mainifrm.document.location.reload();
+        }
+
         function dologout() {
             x.confirm("是否注销并退出当前帐号", function () {
                 x.doapi("mgr.logout", null, function (d) {
                     if (d.issucc) {
                         x.alert("当前帐户已经注销，系统安全退出", function () {
-                            document.location.href = "/login.html";
+                            document.location.href = "login.html";
                         });
                     }
                 });

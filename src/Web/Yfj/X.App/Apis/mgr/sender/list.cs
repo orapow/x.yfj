@@ -26,6 +26,7 @@ namespace X.App.Apis.mgr.sender
             r.page = page;
 
             var q = from d in GetDictList("user.sender", "0")
+                    where d.f1 == cityid
                     select new
                     {
                         d.id,

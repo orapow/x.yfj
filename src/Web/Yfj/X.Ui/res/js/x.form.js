@@ -232,7 +232,7 @@
                 var texts = "";
                 li.parent().find(".btn-primary").each(function () {
                     if (ct == 1) { vals = li.attr("x-val"); texts = li.text(); }
-                    else { vals += "[" + li.attr("x-val") + "]"; texts += li.text() + "、" }
+                    else { vals += "[" + $(this).attr("x-val") + "]"; texts += $(this).text() + "、" }
                 });
 
                 li.parent().attr("x-val", vals);

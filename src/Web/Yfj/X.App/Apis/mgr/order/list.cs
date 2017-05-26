@@ -12,8 +12,10 @@ namespace X.App.Apis.mgr.order
         public int limit { get; set; }
         public int st { get; set; }
         public string key { get; set; }
-        protected override int powercode {
-            get {
+        protected override int powercode
+        {
+            get
+            {
                 return 1;
             }
         }
@@ -21,6 +23,7 @@ namespace X.App.Apis.mgr.order
         {
             var r = new Resp_List();
             var q = from o in DB.x_order
+                    where o.city == cityid
                     select o;
 
             //if (mg.x_role.power != "###") q = q.Where(o => o.city == mg.city);
@@ -29,6 +32,7 @@ namespace X.App.Apis.mgr.order
             {
                 if (st == 1) q = q.Where(o => o.pay_way == 1);
                 if (st == 4) q = q.Where(o => o.pay_way == 2 && o.status > 2 && !(o.pay_amount > 0));
+                else if (st == 5) q = q.Where(o => o.pay_amount == o.yf_amount);
                 else q = q.Where(o => o.status == st);
             }
 

@@ -21,6 +21,7 @@ namespace X.App.Apis.mgr.sale {
             r.page = page;
 
             var q = from d in DB.x_sale
+                    where d.x_goods.city==cityid
                     orderby d.goods_id descending
                     select new {
                         id = d.sale_id,

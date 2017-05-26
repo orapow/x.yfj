@@ -16,8 +16,10 @@ namespace X.App.Apis.mgr.sman
         public string tel { get; set; }
         public string img { get; set; }
 
-        protected override int powercode {
-            get {
+        protected override int powercode
+        {
+            get
+            {
                 return 2;
             }
         }
@@ -31,6 +33,7 @@ namespace X.App.Apis.mgr.sman
             ent.name = name;
             ent.img = img;
             ent.sort = 0;
+            ent.f1 = (int)cityid;
             ent.f3 = tel;
             ent.upval = "0";
 

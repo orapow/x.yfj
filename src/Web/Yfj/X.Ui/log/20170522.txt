@@ -1,0 +1,294 @@
+
+时间：2017-05-22 11:03:20,107 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0004"} 
+时间：219307 
+
+时间：2017-05-22 11:03:21,986 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: PQ2C90202sz10 ]"} 
+时间：221186 
+
+时间：2017-05-22 11:03:28,356 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0004"} 
+时间：227555 
+
+时间：2017-05-22 11:03:29,744 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: 5eFrDa0209sz10 ]"} 
+时间：228944 
+
+时间：2017-05-22 11:04:34,316 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0004"} 
+时间：219 
+
+时间：2017-05-22 11:04:39,718 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: cg0279nsz5 ]"} 
+时间：5621 
+
+时间：2017-05-22 11:04:58,375 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0004"} 
+时间：588 
+
+时间：2017-05-22 11:05:00,554 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: rdmzAa0300sz11 ]"} 
+时间：2767 
+
+时间：2017-05-22 11:08:07,044 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: pDZ9Ha0487sz99 ]"} 
+时间：40190 
+
+时间：2017-05-22 11:08:16,756 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0004"} 
+时间：49901 
+
+时间：2017-05-22 11:13:57,686 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: f1WHHa0837z106 ]"} 
+时间：233247 
+
+时间：2017-05-22 11:13:57,687 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: dBJ3ga0837sz10 ]"} 
+时间：233248 
+
+时间：2017-05-22 11:16:12,616 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"issucc":false,"msg":"用户登陆超时 ","code":"0x0004"} 
+时间：368177 
+
+时间：2017-05-22 11:18:28,108 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: uIWY0108rsz9 ]"} 
+时间：503669 
+
+时间：2017-05-22 11:23:41,082 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: PuGzMA0421nsz5 ]"} 
+时间：816643 
+
+时间：2017-05-22 11:24:47,210 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: xt5gFA0487sz10 ]"} 
+时间：882771 
+
+时间：2017-05-22 11:30:56,533 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: 8_Y24a0856rsz9 ]"} 
+时间：10924 
+
+时间：2017-05-22 11:32:16,041 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: 13k2Qa0936nsz6 ]"} 
+时间：1915 
+
+时间：2017-05-22 11:32:51,884 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: NZrNkA0972nsz6 ]"} 
+时间：37758 
+
+时间：2017-05-22 11:37:14,164 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: LP0Fja0234sz10 ]"} 
+时间：300038 
+
+时间：2017-05-22 11:38:10,616 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: V0290rsz9 ]"} 
+时间：356490 
+
+时间：2017-05-22 11:38:19,229 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: GWnV0299sz11 ]"} 
+时间：365102 
+
+时间：2017-05-22 11:40:16,340 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: RtFlCa0416nsz6 ]"} 
+时间：482214 
+
+时间：2017-05-22 11:40:38,437 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: l7sfNa0438nsz6 ]"} 
+时间：504310 
+
+时间：2017-05-22 11:44:07,780 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: Q.r7na0647z106 ]"} 
+时间：15547 
+
+时间：2017-05-22 11:46:20,159 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: I3fBHA0780rsz9 ]"} 
+时间：6602 
+
+时间：2017-05-22 11:48:02,676 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: GhsR4a0882z105 ]"} 
+时间：16756 
+
+时间：2017-05-22 11:48:05,276 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: 2Oe6La0885sz10 ]"} 
+时间：19356 
+
+时间：2017-05-22 12:04:22,696 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: 96lxpA0862nsz5 ]"} 
+时间：1080 
+
+时间：2017-05-22 12:08:52,156 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: EaEZUa0132z106 ]"} 
+时间：467 
+
+时间：2017-05-22 12:09:25,588 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: Q13Era0165sz11 ]"} 
+时间：33899 
+
+时间：2017-05-22 12:09:30,247 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: fCb.Oa0170sz10 ]"} 
+时间：38558 
+
+时间：2017-05-22 12:09:52,930 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: cUNuoa0193z105 ]"} 
+时间：61242 
+
+时间：2017-05-22 12:10:13,005 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: ocCbjA0213z105 ]"} 
+时间：539 
+
+时间：2017-05-22 12:10:30,055 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: 8FrRSa0230nsz6 ]"} 
+时间：17589 
+
+时间：2017-05-22 12:16:08,128 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: YkENuA0568rsz9 ]"} 
+时间：961 
+
+时间：2017-05-22 12:16:13,390 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: eFxXIa0573sz10 ]"} 
+时间：6223 
+
+时间：2017-05-22 13:00:13,193 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40029,"errmsg":"invalid code, hints: [ req_id: cluboa0213nsz6 ]"} 
+时间：5820 
+
+时间：2017-05-22 13:03:09,646 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: mwM2GA0389nsz5 ]"} 
+时间：182273 
+
+时间：2017-05-22 13:04:07,926 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: Ds8BSA0448z106 ]"} 
+时间：847 
+
+时间：2017-05-22 13:05:08,512 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: ou0508z106 ]"} 
+时间：3117 
+
+时间：2017-05-22 13:05:33,811 
+级别：ERROR 
+出错类：Error property: [(null)] 
+出错位置：X.Core.Plugin.Loger.Error(D:\Pro\x.yfj\src\Xc\Core\Plugin\Loger.cs:46) - 
+错误：{"errcode":40163,"errmsg":"code been used, hints: [ req_id: mSq.za0533sz99 ]"} 
+时间：28416 

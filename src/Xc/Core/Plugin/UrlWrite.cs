@@ -88,7 +88,7 @@ namespace X.Core.Plugin
         {
             for (var i = 1; i < m.Groups.Count; i++)
             {
-                url = url.Replace("{" + (i - 1) + "}", m.Groups[i].Value);
+                url = url.Replace("{" + (i - 1) + "}", (new Regex("[\\u2E80-\\u9FFF]+").Match(m.Groups[i].Value).Success ? application.Context.Server.UrlEncode(m.Groups[i].Value) : m.Groups[i].Value));
             }
             if (!string.IsNullOrEmpty(query)) url += (url.IndexOf("?") >= 0 ? "&" : "?") + query;
             return url;

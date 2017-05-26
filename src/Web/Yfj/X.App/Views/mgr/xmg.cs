@@ -13,7 +13,7 @@ namespace X.App.Views.mgr
     public class xmg : xview
     {
         protected x_mgr mg = null;
-
+        protected long cityid = 0;
         /// <summary>
         /// 0、无权限
         /// 1、客服
@@ -51,20 +51,26 @@ namespace X.App.Views.mgr
         {
             base.InitDict();
 
-            var id = GetReqParms("mgr_ad");// Context.Request.Cookies["ad"];
-            if (string.IsNullOrEmpty("ad")) throw new XExcep("0x0006");
+            var key = GetReqParms("mgr_ad");// Context.Request.Cookies["ad"];
+            if (string.IsNullOrEmpty(key)) throw new XExcep("0x0004");
 
             //mg = DB.x_mgr.FirstOrDefault(o => o.mgr_id == 1);
-            mg = CacheHelper.Get<x_mgr>("mgr." + id); //CacheHelper.Get<x_mgr>("mgr." + id);
+            mg = CacheHelper.Get<x_mgr>("mgr." + key); //CacheHelper.Get<x_mgr>("mgr." + id);
             if (mg == null) throw new XExcep("0x0004");
-            var dt = DB.x_dict.FirstOrDefault(o => o.value == mg.city + "" && o.code == "sys.city");
 
-            dict.Add("isbase", dt.f1);
-            dict.Add("cname", dt.name);
+            if (mg.city == null || mg.city == 0) throw new XExcep("0x0060");
+            if (mg.city == 62 && mg.role_id == 3) long.TryParse(GetReqParms("mgr_ct"), out cityid);
+            if (cityid == 0) cityid = mg.city.Value;
+
+            dict.Add("cityid", cityid);
+            var dt = DB.x_dict.FirstOrDefault(o => o.value == cityid + "" && o.code == "sys.city");
+            dict.Add("cityname", dt.name);
 
             ValidPower();
 
-            CacheHelper.Save("mgr." + id, mg, 60 * 60);
+            Context.Response.SetCookie(new System.Web.HttpCookie("mgr_ct", cityid + ""));
+
+            CacheHelper.Save("mgr." + key, mg, 60 * 60);
             dict.Add("mg", mg);
         }
     }

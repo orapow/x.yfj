@@ -104,6 +104,13 @@
 
 
         });
+
+        sharedata = {
+            title: "$g.name - $cfg.name",
+            desc: "$g.alias ￥$g.new_price/$!g.unit",
+            img: "$g.cover"
+        }
+
         function cartchange(ct, gc) {
             if (ct <= 0) {
                 $("#toc").show();

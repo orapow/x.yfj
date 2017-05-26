@@ -7,6 +7,7 @@ using X.App.Com;
 using X.Core.Cache;
 using X.Core.Utility;
 using X.Data;
+using System.Text.RegularExpressions;
 
 namespace X.App.Views.wx
 {
@@ -94,6 +95,7 @@ namespace X.App.Views.wx
             var dt = new List<string>();
             dt.Add("noncestr=" + no);
             dt.Add("jsapi_ticket=" + tick);
+            dict.Add("tk", tick);
             dt.Add("timestamp=" + ts);
             dt.Add("url=http://" + cfg.domain + Context.Request.RawUrl);
             dt.Sort();

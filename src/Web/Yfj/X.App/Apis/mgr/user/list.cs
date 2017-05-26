@@ -17,8 +17,10 @@ namespace X.App.Apis.mgr.user
         public int limit { get; set; }
         public string key { get; set; }
         public int city { get; set; }
-        protected override int powercode {
-            get {
+        protected override int powercode
+        {
+            get
+            {
                 return 1;
             }
         }
@@ -29,6 +31,7 @@ namespace X.App.Apis.mgr.user
             r.page = page;
 
             var q = from u in DB.x_user
+                    where u.city == cityid
                     select u;
 
             //if (city > 0) q = q.Where(o => o.city == (mg.x_role.power == "###" ? city : mg.city));

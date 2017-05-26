@@ -42,7 +42,7 @@
         #if($od.send_man.length>0)
         <div class="xiangx">
             <p><span>出库时间：</span>$od.out_time.tostring("yyyy-MM-dd HH:mm:ss")</p>
-            <p><span>配送人：</span>$sd.get_item(0) $sd.get_item(1)</p>
+            <p><span>配送人：</span>$sdm.get_item(0) $sdm.get_item(1)</p>
             <div class="clear"></div>
         </div>
         #end
@@ -73,7 +73,7 @@
             <div class="clear"></div>
         </div>
         <br />
-        #if($od.status==4)<div class="btn" onclick="do_acpt()">确认收货</div>#elseif($od.status==5)<div class="btn" style="background-color:#999">已确认收货</div>#end
+        #if($od.status==4)<div class="btn" onclick="do_acpt()">货物已送到</div>#elseif($od.status==5)<div class="btn" style="background-color:#999">货物已签收</div>#end
     </div>
     #parse("wx/_foot.html");
     <script type="text/javascript">

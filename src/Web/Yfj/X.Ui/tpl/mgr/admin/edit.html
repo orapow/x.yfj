@@ -10,11 +10,18 @@
     </div>
     <div class="form">
         <x:form api="mgr.admin.save">
+            #if($item.mgr_id!=1||!$item)
+            #if($mg.city==62)<x:pick src="dict:sys.city" name="ct" count="1" title="城市" chk="no" def="$!item.city" />#end
+            #if($mg.city==62)
+            <x:pick src="loc:客服|财务|管理员" mode="2" name="role" count="1" title="角色" chk="no" def="$!item.role_id" />
+            #else
             <x:pick src="loc:客服|财务" mode="2" name="role" count="1" title="角色" chk="no" def="$!item.role_id" />
+            #end
+            #end
             <input type="hidden" name="id" value="$!item.mgr_id" x-check="" />
             <x:text title="昵称" name="name" def="$!item.name" size="2" chk="no" />
             <x:text title="账号" name="uid" def="$!item.uid" size="3" chk="no" />
-            #if($!item.mgr_id>0)<x:text title="密码" tip="不修改请置空" name="password" size="3" />#else<x:text title="密码" name="password" size="3" chk="no" />#end
+            #if($!item.mgr_id>0)<x:text title="密码" tip="不修改请置空" name="pwd" size="3" />#else<x:text title="密码" name="pwd" size="3" chk="no" />#end
             <x:text title="E-mail" def="$!item.mail" name="mail" size="4" />
             <x:text title="电话" name="tel" def="$!item.tel" size="3" />
             <div class="btns">

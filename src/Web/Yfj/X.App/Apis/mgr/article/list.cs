@@ -39,6 +39,7 @@ namespace X.App.Apis.mgr.article
                 mtime = et.mtime.Value.ToString("yyyy-MM-dd HH:mm")
             });
             r.count = q.Count();
+
             return r;
         }
 

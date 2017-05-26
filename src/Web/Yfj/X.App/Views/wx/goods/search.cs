@@ -3,6 +3,7 @@ namespace X.App.Views.wx.goods
 {
     public class search : _wx
     {
+        public string key { get; set; }
         protected override bool nd_user
         {
             get
@@ -18,10 +19,6 @@ namespace X.App.Views.wx.goods
                 return "key";
             }
         }
-        protected override void InitDict()
-        {
-            base.InitDict();
-            dict["key"] = Context.Server.UrlDecode(dict["key"] + "");
-        }
+
     }
 }

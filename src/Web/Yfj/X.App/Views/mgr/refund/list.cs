@@ -7,7 +7,7 @@ namespace X.App.Views.mgr.refund {
     public class list : xmg {
         protected override int powercode {
             get {
-                return 1;
+                return 2;
             }
         }
         protected override string GetParmNames {

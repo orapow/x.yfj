@@ -35,6 +35,7 @@ namespace X.App.Apis.mgr.sender
             ent.name = name;
             ent.img = img;
             ent.sort = 0;
+            ent.f1 = (int)cityid;
             ent.f3 = tel;
             ent.upval = "0";
 

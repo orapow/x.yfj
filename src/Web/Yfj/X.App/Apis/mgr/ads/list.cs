@@ -41,6 +41,7 @@ namespace X.App.Apis.mgr.ads
                 ctime = et.ctime.Value.ToString("yyyy-MM-dd HH;mm")
             });
             r.count = q.Count();
+
             return r;
         }
 

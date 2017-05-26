@@ -12,7 +12,7 @@ namespace X.App.Views.mgr.deposit
         {
             get
             {
-                return 1;
+                return 2;
             }
         }
         protected override string GetParmNames
