@@ -25,7 +25,7 @@
                     <ul>
                         <li class="en03">
                             <p>手机号码</p>
-                            <input type="text" class="en20" placeholder="请输入您的号码" required="required" id="bt_tel"  onblur="if(this.value) $('.img_code').attr('src', '/com/code-' + this.value + '.html')" />
+                            <input type="text" class="en20" placeholder="请输入您的号码" required="required" id="bt_tel" onblur="if(this.value) $('.img_code').attr('src', '/com/code-' + this.value + '.html')" />
                         </li>
                         <li class="en03">
                             <p>图片验证码</p>
@@ -53,9 +53,8 @@
                         </li>
                         <li class="en03">
                             <p>登录密码</p>
-                            <input type="text" placeholder="请输入密码" required="required" id="id_password" />
+                            <input type="password" placeholder="请输入密码" required="required" id="id_password" style="border: none;outline: none;font-family: 微软雅黑;" />
                         </li>
-
                     </ul>
                 </div>
                 <div class="qr"><a href="javascript:;" style="color:white;display:block;height:100%;" onclick="passwordLogin()">登陆</a></div>
@@ -111,7 +110,7 @@
             var password = $("#id_password").val();
             if (!tel) { alert("手机号不能为空"); return; }
             if (!password) { alert("密码不能为空"); return; }
-            doapi("wx.login", { tel: tel, password: password }, function (d) {
+            doapi("wx.login", { tel: tel, pwd: password }, function (d) {
                 if (!d.issucc) return;
                 document.location.href = "/wx/index.html";
             });
